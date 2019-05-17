@@ -2,6 +2,7 @@ grammar org.xtext.avi.PdfMk with org.eclipse.xtext.common.Terminals
 
 generate pdfMk "http://www.xtext.org/avi/PdfMk"
 
+
 DocDefinition:
 	roots+=Content;
 
@@ -19,10 +20,16 @@ AlignementDefinition:
 	"alignment:" (TextAlignmentType);
 	
 TextAlignmentType:
-	type=('center'|'left'|'right');
+	value=('center'|'left'|'right');
+	
+TypeFaceDefinition:
+	value=Boolean;
+
+Boolean:
+	"true"|"false";
 
 JsonElement: 
-	"avi";
+	"...";
 
 Element: 
 	element=(StringElement|JsonElement);
