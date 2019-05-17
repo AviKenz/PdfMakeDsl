@@ -1,0 +1,33 @@
+grammar org.xtext.avi.PdfMk with org.eclipse.xtext.common.Terminals
+
+generate pdfMk "http://www.xtext.org/avi/PdfMk"
+
+DocDefinition:
+	roots+=Content;
+
+StringElement: 
+	STRING;
+	
+TextDefinition:
+	"text:" STRING;
+
+// TODO [L] checken ob sich der style name im root element 'styles' befindet	
+StyleDefinition:
+	"style:" STRING;
+	
+AlignementDefinition:
+	"alignment:" (TextAlignmentType);
+	
+TextAlignmentType:
+	type=('center'|'left'|'right');
+
+JsonElement: 
+	"avi";
+
+Element: 
+	element=(StringElement|JsonElement);
+
+Content:
+	"content:[]"; 
+
+	
