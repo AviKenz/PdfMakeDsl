@@ -4,8 +4,11 @@
 package org.xtext.avi.pdfMk.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -21,7 +24,7 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ElementImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.ElementImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +32,14 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
 public class ElementImpl extends MinimalEObjectImpl.Container implements Element
 {
   /**
-   * The default value of the '{@link #getElement() <em>Element</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElement()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final String ELEMENT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getElement()
-   * @generated
-   * @ordered
-   */
-  protected String element = ELEMENT_EDEFAULT;
+  protected EObject value;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +67,9 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getElement()
+  public EObject getValue()
   {
-    return element;
+    return value;
   }
 
   /**
@@ -84,12 +77,53 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setElement(String newElement)
+  public NotificationChain basicSetValue(EObject newValue, NotificationChain msgs)
   {
-    String oldElement = element;
-    element = newElement;
+    EObject oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.ELEMENT__ELEMENT, oldElement, element));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PdfMkPackage.ELEMENT__VALUE, oldValue, newValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(EObject newValue)
+  {
+    if (newValue != value)
+    {
+      NotificationChain msgs = null;
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PdfMkPackage.ELEMENT__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PdfMkPackage.ELEMENT__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.ELEMENT__VALUE, newValue, newValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case PdfMkPackage.ELEMENT__VALUE:
+        return basicSetValue(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -102,8 +136,8 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
   {
     switch (featureID)
     {
-      case PdfMkPackage.ELEMENT__ELEMENT:
-        return getElement();
+      case PdfMkPackage.ELEMENT__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +152,8 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
   {
     switch (featureID)
     {
-      case PdfMkPackage.ELEMENT__ELEMENT:
-        setElement((String)newValue);
+      case PdfMkPackage.ELEMENT__VALUE:
+        setValue((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +169,8 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
   {
     switch (featureID)
     {
-      case PdfMkPackage.ELEMENT__ELEMENT:
-        setElement(ELEMENT_EDEFAULT);
+      case PdfMkPackage.ELEMENT__VALUE:
+        setValue((EObject)null);
         return;
     }
     super.eUnset(featureID);
@@ -152,27 +186,10 @@ public class ElementImpl extends MinimalEObjectImpl.Container implements Element
   {
     switch (featureID)
     {
-      case PdfMkPackage.ELEMENT__ELEMENT:
-        return ELEMENT_EDEFAULT == null ? element != null : !ELEMENT_EDEFAULT.equals(element);
+      case PdfMkPackage.ELEMENT__VALUE:
+        return value != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (element: ");
-    result.append(element);
-    result.append(')');
-    return result.toString();
   }
 
 } //ElementImpl

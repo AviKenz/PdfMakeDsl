@@ -6,13 +6,21 @@ package org.xtext.avi.pdfMk.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.avi.pdfMk.Content;
 import org.xtext.avi.pdfMk.DocDefinition;
 import org.xtext.avi.pdfMk.Element;
+import org.xtext.avi.pdfMk.Elements;
 import org.xtext.avi.pdfMk.PdfMkFactory;
 import org.xtext.avi.pdfMk.PdfMkPackage;
+import org.xtext.avi.pdfMk.StringElement;
+import org.xtext.avi.pdfMk.Styles;
+import org.xtext.avi.pdfMk.TextAlignmentDefinition;
+import org.xtext.avi.pdfMk.TextElement;
+import org.xtext.avi.pdfMk.TypeFaceDefinition;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +42,56 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass stringElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textAlignmentDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeFaceDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass elementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass elementsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stylesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass contentEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -114,9 +171,99 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDocDefinition_Roots()
+  public EReference getDocDefinition_Content()
   {
-    return (EAttribute)docDefinitionEClass.getEStructuralFeatures().get(0);
+    return (EReference)docDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDocDefinition_Styles()
+  {
+    return (EReference)docDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStringElement()
+  {
+    return stringElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStringElement_Value()
+  {
+    return (EAttribute)stringElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextAlignmentDefinition()
+  {
+    return textAlignmentDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextAlignmentDefinition_Key()
+  {
+    return (EAttribute)textAlignmentDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTypeFaceDefinition()
+  {
+    return typeFaceDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTypeFaceDefinition_Value()
+  {
+    return (EAttribute)typeFaceDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextElement()
+  {
+    return textElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextElement_Value()
+  {
+    return (EAttribute)textElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -134,9 +281,69 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getElement_Element()
+  public EReference getElement_Value()
   {
-    return (EAttribute)elementEClass.getEStructuralFeatures().get(0);
+    return (EReference)elementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getElements()
+  {
+    return elementsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getElements_Value()
+  {
+    return (EReference)elementsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStyles()
+  {
+    return stylesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStyles_Key()
+  {
+    return (EAttribute)stylesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStyles_Value()
+  {
+    return (EAttribute)stylesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContent()
+  {
+    return contentEClass;
   }
 
   /**
@@ -170,10 +377,32 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
 
     // Create classes and their features
     docDefinitionEClass = createEClass(DOC_DEFINITION);
-    createEAttribute(docDefinitionEClass, DOC_DEFINITION__ROOTS);
+    createEReference(docDefinitionEClass, DOC_DEFINITION__CONTENT);
+    createEReference(docDefinitionEClass, DOC_DEFINITION__STYLES);
+
+    stringElementEClass = createEClass(STRING_ELEMENT);
+    createEAttribute(stringElementEClass, STRING_ELEMENT__VALUE);
+
+    textAlignmentDefinitionEClass = createEClass(TEXT_ALIGNMENT_DEFINITION);
+    createEAttribute(textAlignmentDefinitionEClass, TEXT_ALIGNMENT_DEFINITION__KEY);
+
+    typeFaceDefinitionEClass = createEClass(TYPE_FACE_DEFINITION);
+    createEAttribute(typeFaceDefinitionEClass, TYPE_FACE_DEFINITION__VALUE);
+
+    textElementEClass = createEClass(TEXT_ELEMENT);
+    createEAttribute(textElementEClass, TEXT_ELEMENT__VALUE);
 
     elementEClass = createEClass(ELEMENT);
-    createEAttribute(elementEClass, ELEMENT__ELEMENT);
+    createEReference(elementEClass, ELEMENT__VALUE);
+
+    elementsEClass = createEClass(ELEMENTS);
+    createEReference(elementsEClass, ELEMENTS__VALUE);
+
+    stylesEClass = createEClass(STYLES);
+    createEAttribute(stylesEClass, STYLES__KEY);
+    createEAttribute(stylesEClass, STYLES__VALUE);
+
+    contentEClass = createEClass(CONTENT);
   }
 
   /**
@@ -205,13 +434,37 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    textAlignmentDefinitionEClass.getESuperTypes().add(this.getTextElement());
+    elementsEClass.getESuperTypes().add(this.getContent());
 
     // Initialize classes and features; add operations and parameters
     initEClass(docDefinitionEClass, DocDefinition.class, "DocDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDocDefinition_Roots(), ecorePackage.getEString(), "roots", null, 0, -1, DocDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDocDefinition_Content(), this.getContent(), null, "content", null, 0, 1, DocDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDocDefinition_Styles(), this.getStyles(), null, "styles", null, 0, 1, DocDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(stringElementEClass, StringElement.class, "StringElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStringElement_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textAlignmentDefinitionEClass, TextAlignmentDefinition.class, "TextAlignmentDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTextAlignmentDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, TextAlignmentDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeFaceDefinitionEClass, TypeFaceDefinition.class, "TypeFaceDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTypeFaceDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, TypeFaceDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textElementEClass, TextElement.class, "TextElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTextElement_Value(), ecorePackage.getEString(), "value", null, 0, 1, TextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getElement_Element(), ecorePackage.getEString(), "element", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getElement_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(elementsEClass, Elements.class, "Elements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getElements_Value(), this.getElement(), null, "value", null, 0, -1, Elements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(stylesEClass, Styles.class, "Styles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStyles_Key(), ecorePackage.getEString(), "key", null, 0, 1, Styles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getStyles_Value(), ecorePackage.getEString(), "value", null, 0, 1, Styles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(contentEClass, Content.class, "Content", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

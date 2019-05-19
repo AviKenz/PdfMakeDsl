@@ -11,10 +11,18 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.avi.pdfMk.DocDefinition;
 import org.xtext.avi.pdfMk.Element;
+import org.xtext.avi.pdfMk.Elements;
 import org.xtext.avi.pdfMk.PdfMkPackage;
+import org.xtext.avi.pdfMk.StringElement;
+import org.xtext.avi.pdfMk.Styles;
+import org.xtext.avi.pdfMk.TextAlignmentDefinition;
+import org.xtext.avi.pdfMk.TextElement;
+import org.xtext.avi.pdfMk.TypeFaceDefinition;
 import org.xtext.avi.services.PdfMkGrammarAccess;
 
 @SuppressWarnings("all")
@@ -37,6 +45,24 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PdfMkPackage.ELEMENT:
 				sequence_Element(context, (Element) semanticObject); 
 				return; 
+			case PdfMkPackage.ELEMENTS:
+				sequence_Elements(context, (Elements) semanticObject); 
+				return; 
+			case PdfMkPackage.STRING_ELEMENT:
+				sequence_StringElement(context, (StringElement) semanticObject); 
+				return; 
+			case PdfMkPackage.STYLES:
+				sequence_Styles(context, (Styles) semanticObject); 
+				return; 
+			case PdfMkPackage.TEXT_ALIGNMENT_DEFINITION:
+				sequence_TextAlignmentDefinition(context, (TextAlignmentDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.TEXT_ELEMENT:
+				sequence_TextAlignmentDefinition_TextElement(context, (TextElement) semanticObject); 
+				return; 
+			case PdfMkPackage.TYPE_FACE_DEFINITION:
+				sequence_TypeFaceDefinition(context, (TypeFaceDefinition) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -47,7 +73,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     DocDefinition returns DocDefinition
 	 *
 	 * Constraint:
-	 *     roots+=Content
+	 *     (content=Content styles=Styles?)
 	 */
 	protected void sequence_DocDefinition(ISerializationContext context, DocDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -59,10 +85,113 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Element returns Element
 	 *
 	 * Constraint:
-	 *     (element=TextElement | element=JsonElement)
+	 *     (value=StringElement | value=TextElement)
 	 */
 	protected void sequence_Element(ISerializationContext context, Element semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Elements returns Elements
+	 *     Content returns Elements
+	 *
+	 * Constraint:
+	 *     ((value+=Element value+=Element+) | value+=Element+)?
+	 */
+	protected void sequence_Elements(ISerializationContext context, Elements semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     StringElement returns StringElement
+	 *
+	 * Constraint:
+	 *     value=STRING
+	 */
+	protected void sequence_StringElement(ISerializationContext context, StringElement semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.STRING_ELEMENT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.STRING_ELEMENT__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStringElementAccess().getValueSTRINGTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Styles returns Styles
+	 *
+	 * Constraint:
+	 *     (key='styles' value='{')
+	 */
+	protected void sequence_Styles(ISerializationContext context, Styles semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.STYLES__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.STYLES__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.STYLES__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.STYLES__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStylesAccess().getKeyStylesKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getStylesAccess().getValueLeftCurlyBracketKeyword_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TextAlignmentDefinition returns TextAlignmentDefinition
+	 *
+	 * Constraint:
+	 *     (key='alignment' value=STRING)
+	 */
+	protected void sequence_TextAlignmentDefinition(ISerializationContext context, TextAlignmentDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_ALIGNMENT_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_ALIGNMENT_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_ELEMENT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_ELEMENT__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTextAlignmentDefinitionAccess().getKeyAlignmentKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getTextAlignmentDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TextElement returns TextElement
+	 *
+	 * Constraint:
+	 *     (value='{' (key='alignment' value=STRING)?)
+	 */
+	protected void sequence_TextAlignmentDefinition_TextElement(ISerializationContext context, TextElement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TypeFaceDefinition returns TypeFaceDefinition
+	 *
+	 * Constraint:
+	 *     value=Boolean
+	 */
+	protected void sequence_TypeFaceDefinition(ISerializationContext context, TypeFaceDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TYPE_FACE_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TYPE_FACE_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTypeFaceDefinitionAccess().getValueBooleanParserRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	

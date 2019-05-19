@@ -3,8 +3,6 @@
  */
 package org.xtext.avi.pdfMk;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.DocDefinition#getRoots <em>Roots</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.DocDefinition#getContent <em>Content</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.DocDefinition#getStyles <em>Styles</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getDocDefinition()
@@ -26,19 +25,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface DocDefinition extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Roots</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Roots</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Content</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Roots</em>' attribute list.
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getDocDefinition_Roots()
-   * @model unique="false"
+   * @return the value of the '<em>Content</em>' containment reference.
+   * @see #setContent(Content)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getDocDefinition_Content()
+   * @model containment="true"
    * @generated
    */
-  EList<String> getRoots();
+  Content getContent();
+
+  /**
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.DocDefinition#getContent <em>Content</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Content</em>' containment reference.
+   * @see #getContent()
+   * @generated
+   */
+  void setContent(Content value);
+
+  /**
+   * Returns the value of the '<em><b>Styles</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Styles</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Styles</em>' containment reference.
+   * @see #setStyles(Styles)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getDocDefinition_Styles()
+   * @model containment="true"
+   * @generated
+   */
+  Styles getStyles();
+
+  /**
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.DocDefinition#getStyles <em>Styles</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Styles</em>' containment reference.
+   * @see #getStyles()
+   * @generated
+   */
+  void setStyles(Styles value);
 
 } // DocDefinition

@@ -10,6 +10,7 @@ import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
+import org.eclipse.xtext.Group;
 import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
@@ -23,81 +24,403 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class DocDefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.DocDefinition");
-		private final Assignment cRootsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cRootsContentParserRuleCall_0 = (RuleCall)cRootsAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cVarKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cDdKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cContentAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cContentContentParserRuleCall_4_0 = (RuleCall)cContentAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cStylesAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cStylesStylesParserRuleCall_5_1_0 = (RuleCall)cStylesAssignment_5_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DocDefinition:
-		//	roots+=Content;
+		//	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//roots+=Content
-		public Assignment getRootsAssignment() { return cRootsAssignment; }
+		//"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}"
+		public Group getGroup() { return cGroup; }
+		
+		//"var"
+		public Keyword getVarKeyword_0() { return cVarKeyword_0; }
+		
+		//"dd"
+		public Keyword getDdKeyword_1() { return cDdKeyword_1; }
+		
+		//"="
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
+		
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		
+		//content=Content
+		public Assignment getContentAssignment_4() { return cContentAssignment_4; }
 		
 		//Content
-		public RuleCall getRootsContentParserRuleCall_0() { return cRootsContentParserRuleCall_0; }
+		public RuleCall getContentContentParserRuleCall_4_0() { return cContentContentParserRuleCall_4_0; }
+		
+		//("," styles=Styles)?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//","
+		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
+		
+		//styles=Styles
+		public Assignment getStylesAssignment_5_1() { return cStylesAssignment_5_1; }
+		
+		//Styles
+		public RuleCall getStylesStylesParserRuleCall_5_1_0() { return cStylesStylesParserRuleCall_5_1_0; }
+		
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+	public class StringElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.StringElement");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueSTRINGTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		//StringElement:
+		//	value=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value=STRING
+		public Assignment getValueAssignment() { return cValueAssignment; }
+		
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_0() { return cValueSTRINGTerminalRuleCall_0; }
+	}
+	public class TextAlignmentTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextAlignmentType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cCenterKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cLeftKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cRightKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		
+		//TextAlignmentType:
+		//	"center" | "left" | "right";
+		@Override public ParserRule getRule() { return rule; }
+		
+		//"center" | "left" | "right"
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//"center"
+		public Keyword getCenterKeyword_0() { return cCenterKeyword_0; }
+		
+		//"left"
+		public Keyword getLeftKeyword_1() { return cLeftKeyword_1; }
+		
+		//"right"
+		public Keyword getRightKeyword_2() { return cRightKeyword_2; }
+	}
+	public class TextDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextDefinition");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cTextKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		
+		//TextDefinition:
+		//	"text:" STRING | "[" STRING "]";
+		@Override public ParserRule getRule() { return rule; }
+		
+		//"text:" STRING | "[" STRING "]"
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//"text:" STRING
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//"text:"
+		public Keyword getTextKeyword_0_0() { return cTextKeyword_0_0; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_0_1() { return cSTRINGTerminalRuleCall_0_1; }
+		
+		//"[" STRING "]"
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//"["
+		public Keyword getLeftSquareBracketKeyword_1_0() { return cLeftSquareBracketKeyword_1_0; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1_1() { return cSTRINGTerminalRuleCall_1_1; }
+		
+		//"]"
+		public Keyword getRightSquareBracketKeyword_1_2() { return cRightSquareBracketKeyword_1_2; }
+	}
+	public class StyleDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.StyleDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStyleKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//// TODO [L] checken ob sich der style name im root element 'styles' befindet	
+		//StyleDefinition:
+		//	"style:" STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//"style:" STRING
+		public Group getGroup() { return cGroup; }
+		
+		//"style:"
+		public Keyword getStyleKeyword_0() { return cStyleKeyword_0; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+	}
+	public class TextAlignmentDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextAlignmentDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyAlignmentKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//// TODO [L] add validattion rule (Enums String are not supported)
+		//TextAlignmentDefinition:
+		//	key="alignment" ":" value=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="alignment" ":" value=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//key="alignment"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"alignment"
+		public Keyword getKeyAlignmentKeyword_0_0() { return cKeyAlignmentKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value=STRING
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
+	}
+	public class TypeFaceDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TypeFaceDefinition");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueBooleanParserRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		//TypeFaceDefinition:
+		//	value=Boolean;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value=Boolean
+		public Assignment getValueAssignment() { return cValueAssignment; }
+		
+		//Boolean
+		public RuleCall getValueBooleanParserRuleCall_0() { return cValueBooleanParserRuleCall_0; }
+	}
+	public class BooleanElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.Boolean");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cTrueKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cFalseKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		
+		//Boolean:
+		//	"true" | "false";
+		@Override public ParserRule getRule() { return rule; }
+		
+		//"true" | "false"
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//"true"
+		public Keyword getTrueKeyword_0() { return cTrueKeyword_0; }
+		
+		//"false"
+		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
 	}
 	public class TextElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextElement");
-		private final RuleCall cSTRINGTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cValueLeftCurlyBracketKeyword_0_0 = (Keyword)cValueAssignment_0.eContents().get(0);
+		private final RuleCall cTextDefinitionParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final RuleCall cStyleDefinitionParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final RuleCall cTextAlignmentDefinitionParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//TextElement:
-		//	STRING;
+		//	value="{" TextDefinition ("," StyleDefinition)? ("," TextAlignmentDefinition)? "}";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall() { return cSTRINGTerminalRuleCall; }
-	}
-	public class JsonElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.JsonElement");
-		private final Keyword cAviKeyword = (Keyword)rule.eContents().get(1);
+		//value="{" TextDefinition ("," StyleDefinition)? ("," TextAlignmentDefinition)? "}"
+		public Group getGroup() { return cGroup; }
 		
-		//JsonElement:
-		//	"avi";
-		@Override public ParserRule getRule() { return rule; }
+		//value="{"
+		public Assignment getValueAssignment_0() { return cValueAssignment_0; }
 		
-		//"avi"
-		public Keyword getAviKeyword() { return cAviKeyword; }
+		//"{"
+		public Keyword getValueLeftCurlyBracketKeyword_0_0() { return cValueLeftCurlyBracketKeyword_0_0; }
+		
+		//TextDefinition
+		public RuleCall getTextDefinitionParserRuleCall_1() { return cTextDefinitionParserRuleCall_1; }
+		
+		//("," StyleDefinition)?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//","
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		
+		//StyleDefinition
+		public RuleCall getStyleDefinitionParserRuleCall_2_1() { return cStyleDefinitionParserRuleCall_2_1; }
+		
+		//("," TextAlignmentDefinition)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		
+		//TextAlignmentDefinition
+		public RuleCall getTextAlignmentDefinitionParserRuleCall_3_1() { return cTextAlignmentDefinitionParserRuleCall_3_1; }
+		
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class ElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.Element");
-		private final Assignment cElementAssignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cElementAlternatives_0 = (Alternatives)cElementAssignment.eContents().get(0);
-		private final RuleCall cElementTextElementParserRuleCall_0_0 = (RuleCall)cElementAlternatives_0.eContents().get(0);
-		private final RuleCall cElementJsonElementParserRuleCall_0_1 = (RuleCall)cElementAlternatives_0.eContents().get(1);
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cValueAlternatives_0 = (Alternatives)cValueAssignment.eContents().get(0);
+		private final RuleCall cValueStringElementParserRuleCall_0_0 = (RuleCall)cValueAlternatives_0.eContents().get(0);
+		private final RuleCall cValueTextElementParserRuleCall_0_1 = (RuleCall)cValueAlternatives_0.eContents().get(1);
 		
 		//Element:
-		//	element=(TextElement | JsonElement);
+		//	value=(StringElement | TextElement);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//element=(TextElement | JsonElement)
-		public Assignment getElementAssignment() { return cElementAssignment; }
+		//value=(StringElement | TextElement)
+		public Assignment getValueAssignment() { return cValueAssignment; }
 		
-		//(TextElement | JsonElement)
-		public Alternatives getElementAlternatives_0() { return cElementAlternatives_0; }
+		//(StringElement | TextElement)
+		public Alternatives getValueAlternatives_0() { return cValueAlternatives_0; }
+		
+		//StringElement
+		public RuleCall getValueStringElementParserRuleCall_0_0() { return cValueStringElementParserRuleCall_0_0; }
 		
 		//TextElement
-		public RuleCall getElementTextElementParserRuleCall_0_0() { return cElementTextElementParserRuleCall_0_0; }
+		public RuleCall getValueTextElementParserRuleCall_0_1() { return cValueTextElementParserRuleCall_0_1; }
+	}
+	public class ElementsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.Elements");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cValueElementParserRuleCall_0_0 = (RuleCall)cValueAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cValueAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cValueElementParserRuleCall_1_1_0 = (RuleCall)cValueAssignment_1_1.eContents().get(0);
 		
-		//JsonElement
-		public RuleCall getElementJsonElementParserRuleCall_0_1() { return cElementJsonElementParserRuleCall_0_1; }
+		//Elements:
+		//	value+=Element? ("," value+=Element)*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value+=Element? ("," value+=Element)*
+		public Group getGroup() { return cGroup; }
+		
+		//value+=Element?
+		public Assignment getValueAssignment_0() { return cValueAssignment_0; }
+		
+		//Element
+		public RuleCall getValueElementParserRuleCall_0_0() { return cValueElementParserRuleCall_0_0; }
+		
+		//("," value+=Element)*
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+		
+		//value+=Element
+		public Assignment getValueAssignment_1_1() { return cValueAssignment_1_1; }
+		
+		//Element
+		public RuleCall getValueElementParserRuleCall_1_1_0() { return cValueElementParserRuleCall_1_1_0; }
+	}
+	public class StylesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.Styles");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyStylesKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cValueLeftCurlyBracketKeyword_2_0 = (Keyword)cValueAssignment_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//Styles:
+		//	key="styles" ":" value="{" "}";
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="styles" ":" value="{" "}"
+		public Group getGroup() { return cGroup; }
+		
+		//key="styles"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"styles"
+		public Keyword getKeyStylesKeyword_0_0() { return cKeyStylesKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value="{"
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//"{"
+		public Keyword getValueLeftCurlyBracketKeyword_2_0() { return cValueLeftCurlyBracketKeyword_2_0; }
+		
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	public class ContentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.Content");
-		private final Keyword cContentKeyword = (Keyword)rule.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cContentKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cElementsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Content:
-		//	"content:[]";
+		//	"content:[" Elements "]";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"content:[]"
-		public Keyword getContentKeyword() { return cContentKeyword; }
+		//"content:[" Elements "]"
+		public Group getGroup() { return cGroup; }
+		
+		//"content:["
+		public Keyword getContentKeyword_0() { return cContentKeyword_0; }
+		
+		//Elements
+		public RuleCall getElementsParserRuleCall_1() { return cElementsParserRuleCall_1; }
+		
+		//"]"
+		public Keyword getRightSquareBracketKeyword_2() { return cRightSquareBracketKeyword_2; }
 	}
 	
 	
 	private final DocDefinitionElements pDocDefinition;
+	private final StringElementElements pStringElement;
+	private final TextAlignmentTypeElements pTextAlignmentType;
+	private final TextDefinitionElements pTextDefinition;
+	private final StyleDefinitionElements pStyleDefinition;
+	private final TextAlignmentDefinitionElements pTextAlignmentDefinition;
+	private final TypeFaceDefinitionElements pTypeFaceDefinition;
+	private final BooleanElements pBoolean;
 	private final TextElementElements pTextElement;
-	private final JsonElementElements pJsonElement;
 	private final ElementElements pElement;
+	private final ElementsElements pElements;
+	private final StylesElements pStyles;
 	private final ContentElements pContent;
 	
 	private final Grammar grammar;
@@ -110,9 +433,17 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pDocDefinition = new DocDefinitionElements();
+		this.pStringElement = new StringElementElements();
+		this.pTextAlignmentType = new TextAlignmentTypeElements();
+		this.pTextDefinition = new TextDefinitionElements();
+		this.pStyleDefinition = new StyleDefinitionElements();
+		this.pTextAlignmentDefinition = new TextAlignmentDefinitionElements();
+		this.pTypeFaceDefinition = new TypeFaceDefinitionElements();
+		this.pBoolean = new BooleanElements();
 		this.pTextElement = new TextElementElements();
-		this.pJsonElement = new JsonElementElements();
 		this.pElement = new ElementElements();
+		this.pElements = new ElementsElements();
+		this.pStyles = new StylesElements();
 		this.pContent = new ContentElements();
 	}
 	
@@ -144,7 +475,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//DocDefinition:
-	//	roots+=Content;
+	//	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
 	public DocDefinitionElements getDocDefinitionAccess() {
 		return pDocDefinition;
 	}
@@ -153,8 +484,80 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getDocDefinitionAccess().getRule();
 	}
 	
+	//StringElement:
+	//	value=STRING;
+	public StringElementElements getStringElementAccess() {
+		return pStringElement;
+	}
+	
+	public ParserRule getStringElementRule() {
+		return getStringElementAccess().getRule();
+	}
+	
+	//TextAlignmentType:
+	//	"center" | "left" | "right";
+	public TextAlignmentTypeElements getTextAlignmentTypeAccess() {
+		return pTextAlignmentType;
+	}
+	
+	public ParserRule getTextAlignmentTypeRule() {
+		return getTextAlignmentTypeAccess().getRule();
+	}
+	
+	//TextDefinition:
+	//	"text:" STRING | "[" STRING "]";
+	public TextDefinitionElements getTextDefinitionAccess() {
+		return pTextDefinition;
+	}
+	
+	public ParserRule getTextDefinitionRule() {
+		return getTextDefinitionAccess().getRule();
+	}
+	
+	//// TODO [L] checken ob sich der style name im root element 'styles' befindet	
+	//StyleDefinition:
+	//	"style:" STRING;
+	public StyleDefinitionElements getStyleDefinitionAccess() {
+		return pStyleDefinition;
+	}
+	
+	public ParserRule getStyleDefinitionRule() {
+		return getStyleDefinitionAccess().getRule();
+	}
+	
+	//// TODO [L] add validattion rule (Enums String are not supported)
+	//TextAlignmentDefinition:
+	//	key="alignment" ":" value=STRING;
+	public TextAlignmentDefinitionElements getTextAlignmentDefinitionAccess() {
+		return pTextAlignmentDefinition;
+	}
+	
+	public ParserRule getTextAlignmentDefinitionRule() {
+		return getTextAlignmentDefinitionAccess().getRule();
+	}
+	
+	//TypeFaceDefinition:
+	//	value=Boolean;
+	public TypeFaceDefinitionElements getTypeFaceDefinitionAccess() {
+		return pTypeFaceDefinition;
+	}
+	
+	public ParserRule getTypeFaceDefinitionRule() {
+		return getTypeFaceDefinitionAccess().getRule();
+	}
+	
+	//Boolean:
+	//	"true" | "false";
+	public BooleanElements getBooleanAccess() {
+		return pBoolean;
+	}
+	
+	public ParserRule getBooleanRule() {
+		return getBooleanAccess().getRule();
+	}
+	
 	//TextElement:
-	//	STRING;
+	//	value="{" TextDefinition ("," StyleDefinition)? ("," TextAlignmentDefinition)? "}";
 	public TextElementElements getTextElementAccess() {
 		return pTextElement;
 	}
@@ -163,18 +566,8 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getTextElementAccess().getRule();
 	}
 	
-	//JsonElement:
-	//	"avi";
-	public JsonElementElements getJsonElementAccess() {
-		return pJsonElement;
-	}
-	
-	public ParserRule getJsonElementRule() {
-		return getJsonElementAccess().getRule();
-	}
-	
 	//Element:
-	//	element=(TextElement | JsonElement);
+	//	value=(StringElement | TextElement);
 	public ElementElements getElementAccess() {
 		return pElement;
 	}
@@ -183,8 +576,28 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getElementAccess().getRule();
 	}
 	
+	//Elements:
+	//	value+=Element? ("," value+=Element)*;
+	public ElementsElements getElementsAccess() {
+		return pElements;
+	}
+	
+	public ParserRule getElementsRule() {
+		return getElementsAccess().getRule();
+	}
+	
+	//Styles:
+	//	key="styles" ":" value="{" "}";
+	public StylesElements getStylesAccess() {
+		return pStyles;
+	}
+	
+	public ParserRule getStylesRule() {
+		return getStylesAccess().getRule();
+	}
+	
 	//Content:
-	//	"content:[]";
+	//	"content:[" Elements "]";
 	public ContentElements getContentAccess() {
 		return pContent;
 	}

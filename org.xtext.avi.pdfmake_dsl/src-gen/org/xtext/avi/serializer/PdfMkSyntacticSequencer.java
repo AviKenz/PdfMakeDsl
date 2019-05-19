@@ -10,6 +10,9 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
+import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.xtext.avi.services.PdfMkGrammarAccess;
@@ -18,17 +21,42 @@ import org.xtext.avi.services.PdfMkGrammarAccess;
 public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected PdfMkGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_TextElement___CommaKeyword_2_0_StyleDefinitionParserRuleCall_2_1__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (PdfMkGrammarAccess) access;
+		match_TextElement___CommaKeyword_2_0_StyleDefinitionParserRuleCall_2_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTextElementAccess().getCommaKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getTextElementAccess().getStyleDefinitionParserRuleCall_2_1()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (ruleCall.getRule() == grammarAccess.getStyleDefinitionRule())
+			return getStyleDefinitionToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getTextDefinitionRule())
+			return getTextDefinitionToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * StyleDefinition:
+	 * 	"style:" STRING;
+	 */
+	protected String getStyleDefinitionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "style:\"\"";
+	}
+	
+	/**
+	 * TextDefinition:
+	 * 	"text:" STRING | "[" STRING "]";
+	 */
+	protected String getTextDefinitionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "text:\"\"";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -36,8 +64,22 @@ public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			acceptNodes(getLastNavigableState(), syntaxNodes);
+			if (match_TextElement___CommaKeyword_2_0_StyleDefinitionParserRuleCall_2_1__q.equals(syntax))
+				emit_TextElement___CommaKeyword_2_0_StyleDefinitionParserRuleCall_2_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     (',' StyleDefinition)?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     value='{' TextDefinition (ambiguity) ',' key='alignment'
+	 *     value='{' TextDefinition (ambiguity) '}' (rule end)
+	 */
+	protected void emit_TextElement___CommaKeyword_2_0_StyleDefinitionParserRuleCall_2_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 }

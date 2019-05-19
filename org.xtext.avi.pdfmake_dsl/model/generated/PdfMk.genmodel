@@ -7,10 +7,31 @@
   <genPackages prefix="PdfMk" basePackage="org.xtext.avi" disposableProviderFactory="true"
       fileExtensions="pdfmk" ecorePackage="PdfMk.ecore#/">
     <genClasses ecoreClass="PdfMk.ecore#//DocDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//DocDefinition/roots"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//DocDefinition/content"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//DocDefinition/styles"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//StringElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//StringElement/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TextAlignmentDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextAlignmentDefinition/key"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TypeFaceDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TypeFaceDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextElement/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//Element">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//Element/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//Element/value"/>
     </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//Elements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//Elements/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//Styles">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//Styles/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//Styles/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//Content"/>
   </genPackages>
 </genmodel:GenModel>

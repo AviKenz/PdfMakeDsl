@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.Element#getElement <em>Element</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.Element#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getElement()
@@ -24,29 +24,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Element extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Element</b></em>' attribute.
+   * Returns the value of the '<em><b>Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Element</em>' attribute isn't clear,
+   * If the meaning of the '<em>Value</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Element</em>' attribute.
-   * @see #setElement(String)
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getElement_Element()
-   * @model
+   * @return the value of the '<em>Value</em>' containment reference.
+   * @see #setValue(EObject)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getElement_Value()
+   * @model containment="true"
    * @generated
    */
-  String getElement();
+  EObject getValue();
 
   /**
-   * Sets the value of the '{@link org.xtext.avi.pdfMk.Element#getElement <em>Element</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.Element#getValue <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Element</em>' attribute.
-   * @see #getElement()
+   * @param value the new value of the '<em>Value</em>' containment reference.
+   * @see #getValue()
    * @generated
    */
-  void setElement(String value);
+  void setValue(EObject value);
 
 } // Element

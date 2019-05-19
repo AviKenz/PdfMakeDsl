@@ -66,7 +66,14 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
     switch (eClass.getClassifierID())
     {
       case PdfMkPackage.DOC_DEFINITION: return createDocDefinition();
+      case PdfMkPackage.STRING_ELEMENT: return createStringElement();
+      case PdfMkPackage.TEXT_ALIGNMENT_DEFINITION: return createTextAlignmentDefinition();
+      case PdfMkPackage.TYPE_FACE_DEFINITION: return createTypeFaceDefinition();
+      case PdfMkPackage.TEXT_ELEMENT: return createTextElement();
       case PdfMkPackage.ELEMENT: return createElement();
+      case PdfMkPackage.ELEMENTS: return createElements();
+      case PdfMkPackage.STYLES: return createStyles();
+      case PdfMkPackage.CONTENT: return createContent();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -88,10 +95,87 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public StringElement createStringElement()
+  {
+    StringElementImpl stringElement = new StringElementImpl();
+    return stringElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextAlignmentDefinition createTextAlignmentDefinition()
+  {
+    TextAlignmentDefinitionImpl textAlignmentDefinition = new TextAlignmentDefinitionImpl();
+    return textAlignmentDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeFaceDefinition createTypeFaceDefinition()
+  {
+    TypeFaceDefinitionImpl typeFaceDefinition = new TypeFaceDefinitionImpl();
+    return typeFaceDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextElement createTextElement()
+  {
+    TextElementImpl textElement = new TextElementImpl();
+    return textElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Element createElement()
   {
     ElementImpl element = new ElementImpl();
     return element;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Elements createElements()
+  {
+    ElementsImpl elements = new ElementsImpl();
+    return elements;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Styles createStyles()
+  {
+    StylesImpl styles = new StylesImpl();
+    return styles;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Content createContent()
+  {
+    ContentImpl content = new ContentImpl();
+    return content;
   }
 
   /**

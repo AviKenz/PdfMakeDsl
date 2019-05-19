@@ -2,39 +2,64 @@ grammar org.xtext.avi.PdfMk with org.eclipse.xtext.common.Terminals
 
 generate pdfMk "http://www.xtext.org/avi/PdfMk"
 
+// TODO [?] how to make it orderless
+/******************** ********************/
 
+
+
+
+/************ Root Model ****************/
 DocDefinition:
-	roots+=Content;
+	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
 
+
+
+
+/******************** Types definition ********************/
 StringElement: 
-	STRING;
-	
-TextDefinition:
-	"text:" STRING;
-
-// TODO [L] checken ob sich der style name im root element 'styles' befindet	
-StyleDefinition:
-	"style:" STRING;
-	
-AlignementDefinition:
-	"alignment:" (TextAlignmentType);
+	value=STRING;
 	
 TextAlignmentType:
-	value=('center'|'left'|'right');
+	"center" | "left" | "right";
 	
 TypeFaceDefinition:
-	value=Boolean;
-
-Boolean:
+	value=BooleanDefinition;
+	
+BooleanDefinition:
 	"true"|"false";
+	
+// TODO [L] checken ob sich der style name im root element 'styles' befindet	
+StyleDefinition:
+	key="style" ":" value=STRING;
+	
+TextDefinition:
+	"text:" STRING | "[" STRING "]";
+	
+// TODO [L] add validattion rule (Enums String are not supported)
+TextAlignmentDefinition:
+	"alignment" ":" STRING;
+	
 
-JsonElement: 
-	"...";
+
+
+/******************** Elements definition ********************/
+TextElement: 
+	value="{" TextDefinition (","  StyleDefinition)? ("," TextAlignmentDefinition)? "}";
 
 Element: 
-	element=(StringElement|JsonElement);
+	value=(StringElement|TextElement);
+	
+Elements:
+	(value+=Element)?
+	("," value+=Element)*;
+
+
+
+/******************** Root Elements definition ********************/
+Styles:
+	key="styles" ":" value="{" "}";
 
 Content:
-	"content:[]"; 
+	"content:[" Elements "]"; 
 
 	

@@ -33,6 +33,42 @@ public interface PdfMkFactory extends EFactory
   DocDefinition createDocDefinition();
 
   /**
+   * Returns a new object of class '<em>String Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Element</em>'.
+   * @generated
+   */
+  StringElement createStringElement();
+
+  /**
+   * Returns a new object of class '<em>Text Alignment Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Alignment Definition</em>'.
+   * @generated
+   */
+  TextAlignmentDefinition createTextAlignmentDefinition();
+
+  /**
+   * Returns a new object of class '<em>Type Face Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Face Definition</em>'.
+   * @generated
+   */
+  TypeFaceDefinition createTypeFaceDefinition();
+
+  /**
+   * Returns a new object of class '<em>Text Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Element</em>'.
+   * @generated
+   */
+  TextElement createTextElement();
+
+  /**
    * Returns a new object of class '<em>Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -40,6 +76,33 @@ public interface PdfMkFactory extends EFactory
    * @generated
    */
   Element createElement();
+
+  /**
+   * Returns a new object of class '<em>Elements</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Elements</em>'.
+   * @generated
+   */
+  Elements createElements();
+
+  /**
+   * Returns a new object of class '<em>Styles</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Styles</em>'.
+   * @generated
+   */
+  Styles createStyles();
+
+  /**
+   * Returns a new object of class '<em>Content</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Content</em>'.
+   * @generated
+   */
+  Content createContent();
 
   /**
    * Returns the package supported by this factory.

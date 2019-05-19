@@ -31,9 +31,35 @@ public class PdfMkParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, PdfMkGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getElementAccess().getElementAlternatives_0(), "rule__Element__ElementAlternatives_0");
-			builder.put(grammarAccess.getDocDefinitionAccess().getRootsAssignment(), "rule__DocDefinition__RootsAssignment");
-			builder.put(grammarAccess.getElementAccess().getElementAssignment(), "rule__Element__ElementAssignment");
+			builder.put(grammarAccess.getTextAlignmentTypeAccess().getAlternatives(), "rule__TextAlignmentType__Alternatives");
+			builder.put(grammarAccess.getTextDefinitionAccess().getAlternatives(), "rule__TextDefinition__Alternatives");
+			builder.put(grammarAccess.getBooleanAccess().getAlternatives(), "rule__Boolean__Alternatives");
+			builder.put(grammarAccess.getElementAccess().getValueAlternatives_0(), "rule__Element__ValueAlternatives_0");
+			builder.put(grammarAccess.getDocDefinitionAccess().getGroup(), "rule__DocDefinition__Group__0");
+			builder.put(grammarAccess.getDocDefinitionAccess().getGroup_5(), "rule__DocDefinition__Group_5__0");
+			builder.put(grammarAccess.getTextDefinitionAccess().getGroup_0(), "rule__TextDefinition__Group_0__0");
+			builder.put(grammarAccess.getTextDefinitionAccess().getGroup_1(), "rule__TextDefinition__Group_1__0");
+			builder.put(grammarAccess.getStyleDefinitionAccess().getGroup(), "rule__StyleDefinition__Group__0");
+			builder.put(grammarAccess.getTextAlignmentDefinitionAccess().getGroup(), "rule__TextAlignmentDefinition__Group__0");
+			builder.put(grammarAccess.getTextElementAccess().getGroup(), "rule__TextElement__Group__0");
+			builder.put(grammarAccess.getTextElementAccess().getGroup_2(), "rule__TextElement__Group_2__0");
+			builder.put(grammarAccess.getTextElementAccess().getGroup_3(), "rule__TextElement__Group_3__0");
+			builder.put(grammarAccess.getElementsAccess().getGroup(), "rule__Elements__Group__0");
+			builder.put(grammarAccess.getElementsAccess().getGroup_1(), "rule__Elements__Group_1__0");
+			builder.put(grammarAccess.getStylesAccess().getGroup(), "rule__Styles__Group__0");
+			builder.put(grammarAccess.getContentAccess().getGroup(), "rule__Content__Group__0");
+			builder.put(grammarAccess.getDocDefinitionAccess().getContentAssignment_4(), "rule__DocDefinition__ContentAssignment_4");
+			builder.put(grammarAccess.getDocDefinitionAccess().getStylesAssignment_5_1(), "rule__DocDefinition__StylesAssignment_5_1");
+			builder.put(grammarAccess.getStringElementAccess().getValueAssignment(), "rule__StringElement__ValueAssignment");
+			builder.put(grammarAccess.getTextAlignmentDefinitionAccess().getKeyAssignment_0(), "rule__TextAlignmentDefinition__KeyAssignment_0");
+			builder.put(grammarAccess.getTextAlignmentDefinitionAccess().getValueAssignment_2(), "rule__TextAlignmentDefinition__ValueAssignment_2");
+			builder.put(grammarAccess.getTypeFaceDefinitionAccess().getValueAssignment(), "rule__TypeFaceDefinition__ValueAssignment");
+			builder.put(grammarAccess.getTextElementAccess().getValueAssignment_0(), "rule__TextElement__ValueAssignment_0");
+			builder.put(grammarAccess.getElementAccess().getValueAssignment(), "rule__Element__ValueAssignment");
+			builder.put(grammarAccess.getElementsAccess().getValueAssignment_0(), "rule__Elements__ValueAssignment_0");
+			builder.put(grammarAccess.getElementsAccess().getValueAssignment_1_1(), "rule__Elements__ValueAssignment_1_1");
+			builder.put(grammarAccess.getStylesAccess().getKeyAssignment_0(), "rule__Styles__KeyAssignment_0");
+			builder.put(grammarAccess.getStylesAccess().getValueAssignment_2(), "rule__Styles__ValueAssignment_2");
 		}
 	}
 	

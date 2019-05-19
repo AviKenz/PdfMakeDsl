@@ -1,0 +1,7 @@
+grammar org.xtext.avi.Enums
+
+generate enums "http://www.xtext.org/avi/Enums"
+
+
+TextAlignmentType:
+	"center" | "left" | "right";

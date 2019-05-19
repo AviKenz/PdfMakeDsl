@@ -6,6 +6,7 @@ package org.xtext.avi.pdfMk;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,13 +68,22 @@ public interface PdfMkPackage extends EPackage
   int DOC_DEFINITION = 0;
 
   /**
-   * The feature id for the '<em><b>Roots</b></em>' attribute list.
+   * The feature id for the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOC_DEFINITION__ROOTS = 0;
+  int DOC_DEFINITION__CONTENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Styles</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOC_DEFINITION__STYLES = 1;
 
   /**
    * The number of structural features of the '<em>Doc Definition</em>' class.
@@ -82,7 +92,128 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOC_DEFINITION_FEATURE_COUNT = 1;
+  int DOC_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.StringElementImpl <em>String Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.StringElementImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStringElement()
+   * @generated
+   */
+  int STRING_ELEMENT = 1;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_ELEMENT__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>String Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_ELEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextElementImpl <em>Text Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TextElementImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextElement()
+   * @generated
+   */
+  int TEXT_ELEMENT = 4;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_ELEMENT__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>Text Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_ELEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextAlignmentDefinitionImpl <em>Text Alignment Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TextAlignmentDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextAlignmentDefinition()
+   * @generated
+   */
+  int TEXT_ALIGNMENT_DEFINITION = 2;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_ALIGNMENT_DEFINITION__VALUE = TEXT_ELEMENT__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_ALIGNMENT_DEFINITION__KEY = TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Text Alignment Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_ALIGNMENT_DEFINITION_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TypeFaceDefinitionImpl <em>Type Face Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TypeFaceDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTypeFaceDefinition()
+   * @generated
+   */
+  int TYPE_FACE_DEFINITION = 3;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FACE_DEFINITION__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>Type Face Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FACE_DEFINITION_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ElementImpl <em>Element</em>}' class.
@@ -92,16 +223,16 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getElement()
    * @generated
    */
-  int ELEMENT = 1;
+  int ELEMENT = 5;
 
   /**
-   * The feature id for the '<em><b>Element</b></em>' attribute.
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ELEMENT__ELEMENT = 0;
+  int ELEMENT__VALUE = 0;
 
   /**
    * The number of structural features of the '<em>Element</em>' class.
@@ -111,6 +242,90 @@ public interface PdfMkPackage extends EPackage
    * @ordered
    */
   int ELEMENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ContentImpl <em>Content</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ContentImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContent()
+   * @generated
+   */
+  int CONTENT = 8;
+
+  /**
+   * The number of structural features of the '<em>Content</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ElementsImpl <em>Elements</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ElementsImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getElements()
+   * @generated
+   */
+  int ELEMENTS = 6;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELEMENTS__VALUE = CONTENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Elements</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELEMENTS_FEATURE_COUNT = CONTENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.StylesImpl <em>Styles</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.StylesImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyles()
+   * @generated
+   */
+  int STYLES = 7;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STYLES__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STYLES__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Styles</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STYLES_FEATURE_COUNT = 2;
 
 
   /**
@@ -124,15 +339,110 @@ public interface PdfMkPackage extends EPackage
   EClass getDocDefinition();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.avi.pdfMk.DocDefinition#getRoots <em>Roots</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.DocDefinition#getContent <em>Content</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Roots</em>'.
-   * @see org.xtext.avi.pdfMk.DocDefinition#getRoots()
+   * @return the meta object for the containment reference '<em>Content</em>'.
+   * @see org.xtext.avi.pdfMk.DocDefinition#getContent()
    * @see #getDocDefinition()
    * @generated
    */
-  EAttribute getDocDefinition_Roots();
+  EReference getDocDefinition_Content();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.DocDefinition#getStyles <em>Styles</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Styles</em>'.
+   * @see org.xtext.avi.pdfMk.DocDefinition#getStyles()
+   * @see #getDocDefinition()
+   * @generated
+   */
+  EReference getDocDefinition_Styles();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.StringElement <em>String Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>String Element</em>'.
+   * @see org.xtext.avi.pdfMk.StringElement
+   * @generated
+   */
+  EClass getStringElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StringElement#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.StringElement#getValue()
+   * @see #getStringElement()
+   * @generated
+   */
+  EAttribute getStringElement_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextAlignmentDefinition <em>Text Alignment Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text Alignment Definition</em>'.
+   * @see org.xtext.avi.pdfMk.TextAlignmentDefinition
+   * @generated
+   */
+  EClass getTextAlignmentDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextAlignmentDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.TextAlignmentDefinition#getKey()
+   * @see #getTextAlignmentDefinition()
+   * @generated
+   */
+  EAttribute getTextAlignmentDefinition_Key();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TypeFaceDefinition <em>Type Face Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Face Definition</em>'.
+   * @see org.xtext.avi.pdfMk.TypeFaceDefinition
+   * @generated
+   */
+  EClass getTypeFaceDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TypeFaceDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.TypeFaceDefinition#getValue()
+   * @see #getTypeFaceDefinition()
+   * @generated
+   */
+  EAttribute getTypeFaceDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextElement <em>Text Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text Element</em>'.
+   * @see org.xtext.avi.pdfMk.TextElement
+   * @generated
+   */
+  EClass getTextElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextElement#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.TextElement#getValue()
+   * @see #getTextElement()
+   * @generated
+   */
+  EAttribute getTextElement_Value();
 
   /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.Element <em>Element</em>}'.
@@ -145,15 +455,78 @@ public interface PdfMkPackage extends EPackage
   EClass getElement();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.Element#getElement <em>Element</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.Element#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Element</em>'.
-   * @see org.xtext.avi.pdfMk.Element#getElement()
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.Element#getValue()
    * @see #getElement()
    * @generated
    */
-  EAttribute getElement_Element();
+  EReference getElement_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.Elements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Elements</em>'.
+   * @see org.xtext.avi.pdfMk.Elements
+   * @generated
+   */
+  EClass getElements();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.Elements#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.Elements#getValue()
+   * @see #getElements()
+   * @generated
+   */
+  EReference getElements_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.Styles <em>Styles</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Styles</em>'.
+   * @see org.xtext.avi.pdfMk.Styles
+   * @generated
+   */
+  EClass getStyles();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.Styles#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.Styles#getKey()
+   * @see #getStyles()
+   * @generated
+   */
+  EAttribute getStyles_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.Styles#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.Styles#getValue()
+   * @see #getStyles()
+   * @generated
+   */
+  EAttribute getStyles_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.Content <em>Content</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Content</em>'.
+   * @see org.xtext.avi.pdfMk.Content
+   * @generated
+   */
+  EClass getContent();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -189,12 +562,92 @@ public interface PdfMkPackage extends EPackage
     EClass DOC_DEFINITION = eINSTANCE.getDocDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Roots</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DOC_DEFINITION__ROOTS = eINSTANCE.getDocDefinition_Roots();
+    EReference DOC_DEFINITION__CONTENT = eINSTANCE.getDocDefinition_Content();
+
+    /**
+     * The meta object literal for the '<em><b>Styles</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DOC_DEFINITION__STYLES = eINSTANCE.getDocDefinition_Styles();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.StringElementImpl <em>String Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.StringElementImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStringElement()
+     * @generated
+     */
+    EClass STRING_ELEMENT = eINSTANCE.getStringElement();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING_ELEMENT__VALUE = eINSTANCE.getStringElement_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextAlignmentDefinitionImpl <em>Text Alignment Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TextAlignmentDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextAlignmentDefinition()
+     * @generated
+     */
+    EClass TEXT_ALIGNMENT_DEFINITION = eINSTANCE.getTextAlignmentDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_ALIGNMENT_DEFINITION__KEY = eINSTANCE.getTextAlignmentDefinition_Key();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TypeFaceDefinitionImpl <em>Type Face Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TypeFaceDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTypeFaceDefinition()
+     * @generated
+     */
+    EClass TYPE_FACE_DEFINITION = eINSTANCE.getTypeFaceDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_FACE_DEFINITION__VALUE = eINSTANCE.getTypeFaceDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextElementImpl <em>Text Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TextElementImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextElement()
+     * @generated
+     */
+    EClass TEXT_ELEMENT = eINSTANCE.getTextElement();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_ELEMENT__VALUE = eINSTANCE.getTextElement_Value();
 
     /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ElementImpl <em>Element</em>}' class.
@@ -207,12 +660,66 @@ public interface PdfMkPackage extends EPackage
     EClass ELEMENT = eINSTANCE.getElement();
 
     /**
-     * The meta object literal for the '<em><b>Element</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ELEMENT__ELEMENT = eINSTANCE.getElement_Element();
+    EReference ELEMENT__VALUE = eINSTANCE.getElement_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ElementsImpl <em>Elements</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ElementsImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getElements()
+     * @generated
+     */
+    EClass ELEMENTS = eINSTANCE.getElements();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ELEMENTS__VALUE = eINSTANCE.getElements_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.StylesImpl <em>Styles</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.StylesImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyles()
+     * @generated
+     */
+    EClass STYLES = eINSTANCE.getStyles();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLES__KEY = eINSTANCE.getStyles_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLES__VALUE = eINSTANCE.getStyles_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ContentImpl <em>Content</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ContentImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContent()
+     * @generated
+     */
+    EClass CONTENT = eINSTANCE.getContent();
 
   }
 
