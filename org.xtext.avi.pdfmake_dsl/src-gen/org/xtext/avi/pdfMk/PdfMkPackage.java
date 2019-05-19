@@ -400,13 +400,22 @@ public interface PdfMkPackage extends EPackage
   int STYLE_OBJECT = 8;
 
   /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STYLE_OBJECT__KEY = 0;
+
+  /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STYLE_OBJECT__VALUE = 0;
+  int STYLE_OBJECT__VALUE = 1;
 
   /**
    * The feature id for the '<em><b>Font Size</b></em>' attribute.
@@ -415,7 +424,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STYLE_OBJECT__FONT_SIZE = 1;
+  int STYLE_OBJECT__FONT_SIZE = 2;
 
   /**
    * The feature id for the '<em><b>Type Face</b></em>' attribute.
@@ -424,7 +433,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STYLE_OBJECT__TYPE_FACE = 2;
+  int STYLE_OBJECT__TYPE_FACE = 3;
 
   /**
    * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -433,7 +442,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STYLE_OBJECT__ALIGNMENT = 3;
+  int STYLE_OBJECT__ALIGNMENT = 4;
 
   /**
    * The feature id for the '<em><b>Italics</b></em>' attribute.
@@ -442,7 +451,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STYLE_OBJECT__ITALICS = 4;
+  int STYLE_OBJECT__ITALICS = 5;
 
   /**
    * The number of structural features of the '<em>Style Object</em>' class.
@@ -451,7 +460,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STYLE_OBJECT_FEATURE_COUNT = 5;
+  int STYLE_OBJECT_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectsImpl <em>Style Objects</em>}' class.
@@ -923,6 +932,17 @@ public interface PdfMkPackage extends EPackage
   EClass getStyleObject();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#getKey()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_Key();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1376,6 +1396,14 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EClass STYLE_OBJECT = eINSTANCE.getStyleObject();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__KEY = eINSTANCE.getStyleObject_Key();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.

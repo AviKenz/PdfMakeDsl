@@ -132,7 +132,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getContentAccess().getKeyContentKeyword_0_0(), semanticObject.getKey());
-		feeder.accept(grammarAccess.getContentAccess().getValueContentObjectsParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getContentAccess().getValueContentObjectsParserRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -235,7 +235,14 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     StyleObject returns StyleObject
 	 *
 	 * Constraint:
-	 *     (value='{' fontSize?=FontSizeDefinition? typeFace?=TypeFaceDefinition? alignment?=TextAlignmentDefinition? italics?=ItalicsDefinition?)
+	 *     (
+	 *         key=STRING 
+	 *         value='{' 
+	 *         fontSize?=FontSizeDefinition? 
+	 *         typeFace?=TypeFaceDefinition? 
+	 *         alignment?=TextAlignmentDefinition? 
+	 *         italics?=ItalicsDefinition?
+	 *     )
 	 */
 	protected void sequence_StyleObject(ISerializationContext context, StyleObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

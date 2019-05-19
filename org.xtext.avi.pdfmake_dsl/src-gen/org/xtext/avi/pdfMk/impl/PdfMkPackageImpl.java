@@ -491,7 +491,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStyleObject_Value()
+  public EAttribute getStyleObject_Key()
   {
     return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(0);
   }
@@ -501,7 +501,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStyleObject_FontSize()
+  public EAttribute getStyleObject_Value()
   {
     return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(1);
   }
@@ -511,7 +511,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStyleObject_TypeFace()
+  public EAttribute getStyleObject_FontSize()
   {
     return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(2);
   }
@@ -521,7 +521,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStyleObject_Alignment()
+  public EAttribute getStyleObject_TypeFace()
   {
     return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(3);
   }
@@ -531,9 +531,19 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStyleObject_Italics()
+  public EAttribute getStyleObject_Alignment()
   {
     return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStyleObject_Italics()
+  {
+    return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -723,6 +733,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(textObjectEClass, TEXT_OBJECT__ITALICS);
 
     styleObjectEClass = createEClass(STYLE_OBJECT);
+    createEAttribute(styleObjectEClass, STYLE_OBJECT__KEY);
     createEAttribute(styleObjectEClass, STYLE_OBJECT__VALUE);
     createEAttribute(styleObjectEClass, STYLE_OBJECT__FONT_SIZE);
     createEAttribute(styleObjectEClass, STYLE_OBJECT__TYPE_FACE);
@@ -815,6 +826,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getTextObject_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(styleObjectEClass, StyleObject.class, "StyleObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStyleObject_Key(), ecorePackage.getEString(), "key", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStyleObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStyleObject_FontSize(), ecorePackage.getEBoolean(), "fontSize", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStyleObject_TypeFace(), ecorePackage.getEBoolean(), "typeFace", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

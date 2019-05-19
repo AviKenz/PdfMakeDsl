@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.avi.pdfMk.StyleObject#getKey <em>Key</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isFontSize <em>Font Size</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isTypeFace <em>Type Face</em>}</li>
@@ -27,6 +28,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface StyleObject extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Key</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Key</em>' attribute.
+   * @see #setKey(String)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_Key()
+   * @model
+   * @generated
+   */
+  String getKey();
+
+  /**
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.StyleObject#getKey <em>Key</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Key</em>' attribute.
+   * @see #getKey()
+   * @generated
+   */
+  void setKey(String value);
+
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->

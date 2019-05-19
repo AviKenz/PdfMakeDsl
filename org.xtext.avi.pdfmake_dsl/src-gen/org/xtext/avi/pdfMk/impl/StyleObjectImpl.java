@@ -21,6 +21,7 @@ import org.xtext.avi.pdfMk.StyleObject;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isFontSize <em>Font Size</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isTypeFace <em>Type Face</em>}</li>
@@ -32,6 +33,26 @@ import org.xtext.avi.pdfMk.StyleObject;
  */
 public class StyleObjectImpl extends MinimalEObjectImpl.Container implements StyleObject
 {
+  /**
+   * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKey()
+   * @generated
+   * @ordered
+   */
+  protected static final String KEY_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getKey() <em>Key</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKey()
+   * @generated
+   * @ordered
+   */
+  protected String key = KEY_EDEFAULT;
+
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -151,6 +172,29 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
   protected EClass eStaticClass()
   {
     return PdfMkPackage.Literals.STYLE_OBJECT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getKey()
+  {
+    return key;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setKey(String newKey)
+  {
+    String oldKey = key;
+    key = newKey;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLE_OBJECT__KEY, oldKey, key));
   }
 
   /**
@@ -278,6 +322,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
   {
     switch (featureID)
     {
+      case PdfMkPackage.STYLE_OBJECT__KEY:
+        return getKey();
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         return getValue();
       case PdfMkPackage.STYLE_OBJECT__FONT_SIZE:
@@ -302,6 +348,9 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
   {
     switch (featureID)
     {
+      case PdfMkPackage.STYLE_OBJECT__KEY:
+        setKey((String)newValue);
+        return;
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         setValue((String)newValue);
         return;
@@ -331,6 +380,9 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
   {
     switch (featureID)
     {
+      case PdfMkPackage.STYLE_OBJECT__KEY:
+        setKey(KEY_EDEFAULT);
+        return;
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
@@ -360,6 +412,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
   {
     switch (featureID)
     {
+      case PdfMkPackage.STYLE_OBJECT__KEY:
+        return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
       case PdfMkPackage.STYLE_OBJECT__FONT_SIZE:
@@ -385,7 +439,9 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (value: ");
+    result.append(" (key: ");
+    result.append(key);
+    result.append(", value: ");
     result.append(value);
     result.append(", fontSize: ");
     result.append(fontSize);

@@ -2,7 +2,8 @@ grammar org.xtext.avi.PdfMk with org.eclipse.xtext.common.Terminals
 
 generate pdfMk "http://www.xtext.org/avi/PdfMk"
 
-// TODO [?] how to make it orderless
+// TODO [?] missmatched input "header" expecting "}" in style3.pdfmk
+// TODO [?] missing EOF at "}"
 /******************** ********************/
 
 
@@ -62,31 +63,37 @@ TextObject:
 		   "}";
 
 StyleObject: 
-	value="{" (fontSize?=FontSizeDefinition)? 
+	key=STRING ":" 
+	value="{" 
+	  		  (fontSize?=FontSizeDefinition)? 
 			  ("," typeFace?=TypeFaceDefinition)? 
 			  ("," alignment?=TextAlignmentDefinition)? 
 			  ("," italics?=ItalicsDefinition)? 
 		  "}";
 
 StyleObjects: 
-	(value+=StyleObject)?
-	("," value+=StyleObject)*;
+	"{" 
+		(value+=StyleObject)?
+		("," value+=StyleObject)* 
+	"}";
 		
 ContentObject: 
 	value=(StringObject|TextObject);
 	
 ContentObjects:
-	(value+=ContentObject)?
-	("," value+=ContentObject)*;
+	"[" 
+		(value+=ContentObject)?
+		("," value+=ContentObject)* 
+	"]";
 
 
 
 
-/******************** Root Elements definition ********************/
+/******************** Root Objects definition ********************/
 Styles:
 	key="styles" ":" value=StyleObjects;
 
 Content:
-	key="content" ":" "[" value=ContentObjects "]"; 
+	key="content" ":" value=ContentObjects; 
 
 	
