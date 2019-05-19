@@ -16,20 +16,20 @@ DocDefinition:
 
 
 /******************** Types definition ********************/
-StringElement: 
+StringObject: 
 	value=STRING;
 	
 TextAlignmentType:
 	"center" | "left" | "right";
 	
 TypeFaceDefinition:
-	value=BooleanDefinition;
+	key="bold" ":" value=BooleanDefinition;
 	
 BooleanDefinition:
 	"true"|"false";
 	
 // TODO [L] checken ob sich der style name im root element 'styles' befindet	
-StyleDefinition:
+TextStyleDefinition:
 	key="style" ":" value=STRING;
 	
 TextDefinition:
@@ -39,27 +39,54 @@ TextDefinition:
 TextAlignmentDefinition:
 	"alignment" ":" STRING;
 	
+ItalicsDefinition:
+	key="italics" ":" value=BooleanDefinition
+;
+FontSizeDefinition:
+	key="fontSize" ":" value=INT;
 
-
-
-/******************** Elements definition ********************/
-TextElement: 
-	value="{" TextDefinition (","  StyleDefinition)? ("," TextAlignmentDefinition)? "}";
-
-Element: 
-	value=(StringElement|TextElement);
+StyleDefinition:
+	key=STRING ":" value=StyleObject;
 	
-Elements:
-	(value+=Element)?
-	("," value+=Element)*;
+
+
+
+/******************** Objects definition ********************/
+TextObject: 
+	value="{" text?=TextDefinition 
+			  ("," style?=TextStyleDefinition)? 
+			  ("," fontSize?=FontSizeDefinition)? 
+			  ("," alignment?=TextAlignmentDefinition)? 
+			  ("," typeFace?=TypeFaceDefinition)? 
+			  ("," italics?=ItalicsDefinition)? 
+		   "}";
+
+StyleObject: 
+	value="{" (fontSize?=FontSizeDefinition)? 
+			  ("," typeFace?=TypeFaceDefinition)? 
+			  ("," alignment?=TextAlignmentDefinition)? 
+			  ("," italics?=ItalicsDefinition)? 
+		  "}";
+
+StyleObjects: 
+	(value+=StyleObject)?
+	("," value+=StyleObject)*;
+		
+ContentObject: 
+	value=(StringObject|TextObject);
+	
+ContentObjects:
+	(value+=ContentObject)?
+	("," value+=ContentObject)*;
+
 
 
 
 /******************** Root Elements definition ********************/
 Styles:
-	key="styles" ":" value="{" "}";
+	key="styles" ":" value=StyleObjects;
 
 Content:
-	"content:[" Elements "]"; 
+	key="content" ":" "[" value=ContentObjects "]"; 
 
 	

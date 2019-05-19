@@ -4,13 +4,16 @@
 package org.xtext.avi.pdfMk.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.avi.pdfMk.PdfMkPackage;
+import org.xtext.avi.pdfMk.StyleObjects;
 import org.xtext.avi.pdfMk.Styles;
 
 /**
@@ -50,24 +53,14 @@ public class StylesImpl extends MinimalEObjectImpl.Container implements Styles
   protected String key = KEY_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
+  protected StyleObjects value;
 
   /**
    * <!-- begin-user-doc -->
@@ -118,7 +111,7 @@ public class StylesImpl extends MinimalEObjectImpl.Container implements Styles
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public StyleObjects getValue()
   {
     return value;
   }
@@ -128,12 +121,53 @@ public class StylesImpl extends MinimalEObjectImpl.Container implements Styles
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public NotificationChain basicSetValue(StyleObjects newValue, NotificationChain msgs)
   {
-    String oldValue = value;
+    StyleObjects oldValue = value;
     value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLES__VALUE, oldValue, value));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLES__VALUE, oldValue, newValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(StyleObjects newValue)
+  {
+    if (newValue != value)
+    {
+      NotificationChain msgs = null;
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PdfMkPackage.STYLES__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PdfMkPackage.STYLES__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLES__VALUE, newValue, newValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case PdfMkPackage.STYLES__VALUE:
+        return basicSetValue(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -168,7 +202,7 @@ public class StylesImpl extends MinimalEObjectImpl.Container implements Styles
         setKey((String)newValue);
         return;
       case PdfMkPackage.STYLES__VALUE:
-        setValue((String)newValue);
+        setValue((StyleObjects)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -188,7 +222,7 @@ public class StylesImpl extends MinimalEObjectImpl.Container implements Styles
         setKey(KEY_EDEFAULT);
         return;
       case PdfMkPackage.STYLES__VALUE:
-        setValue(VALUE_EDEFAULT);
+        setValue((StyleObjects)null);
         return;
     }
     super.eUnset(featureID);
@@ -207,7 +241,7 @@ public class StylesImpl extends MinimalEObjectImpl.Container implements Styles
       case PdfMkPackage.STYLES__KEY:
         return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
       case PdfMkPackage.STYLES__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+        return value != null;
     }
     return super.eIsSet(featureID);
   }
@@ -225,8 +259,6 @@ public class StylesImpl extends MinimalEObjectImpl.Container implements Styles
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (key: ");
     result.append(key);
-    result.append(", value: ");
-    result.append(value);
     result.append(')');
     return result.toString();
   }

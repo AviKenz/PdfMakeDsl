@@ -66,12 +66,17 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
     switch (eClass.getClassifierID())
     {
       case PdfMkPackage.DOC_DEFINITION: return createDocDefinition();
-      case PdfMkPackage.STRING_ELEMENT: return createStringElement();
-      case PdfMkPackage.TEXT_ALIGNMENT_DEFINITION: return createTextAlignmentDefinition();
+      case PdfMkPackage.STRING_OBJECT: return createStringObject();
       case PdfMkPackage.TYPE_FACE_DEFINITION: return createTypeFaceDefinition();
-      case PdfMkPackage.TEXT_ELEMENT: return createTextElement();
-      case PdfMkPackage.ELEMENT: return createElement();
-      case PdfMkPackage.ELEMENTS: return createElements();
+      case PdfMkPackage.TEXT_STYLE_DEFINITION: return createTextStyleDefinition();
+      case PdfMkPackage.ITALICS_DEFINITION: return createItalicsDefinition();
+      case PdfMkPackage.FONT_SIZE_DEFINITION: return createFontSizeDefinition();
+      case PdfMkPackage.STYLE_DEFINITION: return createStyleDefinition();
+      case PdfMkPackage.TEXT_OBJECT: return createTextObject();
+      case PdfMkPackage.STYLE_OBJECT: return createStyleObject();
+      case PdfMkPackage.STYLE_OBJECTS: return createStyleObjects();
+      case PdfMkPackage.CONTENT_OBJECT: return createContentObject();
+      case PdfMkPackage.CONTENT_OBJECTS: return createContentObjects();
       case PdfMkPackage.STYLES: return createStyles();
       case PdfMkPackage.CONTENT: return createContent();
       default:
@@ -95,21 +100,10 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public StringElement createStringElement()
+  public StringObject createStringObject()
   {
-    StringElementImpl stringElement = new StringElementImpl();
-    return stringElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TextAlignmentDefinition createTextAlignmentDefinition()
-  {
-    TextAlignmentDefinitionImpl textAlignmentDefinition = new TextAlignmentDefinitionImpl();
-    return textAlignmentDefinition;
+    StringObjectImpl stringObject = new StringObjectImpl();
+    return stringObject;
   }
 
   /**
@@ -128,10 +122,10 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TextElement createTextElement()
+  public TextStyleDefinition createTextStyleDefinition()
   {
-    TextElementImpl textElement = new TextElementImpl();
-    return textElement;
+    TextStyleDefinitionImpl textStyleDefinition = new TextStyleDefinitionImpl();
+    return textStyleDefinition;
   }
 
   /**
@@ -139,10 +133,10 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Element createElement()
+  public ItalicsDefinition createItalicsDefinition()
   {
-    ElementImpl element = new ElementImpl();
-    return element;
+    ItalicsDefinitionImpl italicsDefinition = new ItalicsDefinitionImpl();
+    return italicsDefinition;
   }
 
   /**
@@ -150,10 +144,76 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Elements createElements()
+  public FontSizeDefinition createFontSizeDefinition()
   {
-    ElementsImpl elements = new ElementsImpl();
-    return elements;
+    FontSizeDefinitionImpl fontSizeDefinition = new FontSizeDefinitionImpl();
+    return fontSizeDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StyleDefinition createStyleDefinition()
+  {
+    StyleDefinitionImpl styleDefinition = new StyleDefinitionImpl();
+    return styleDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextObject createTextObject()
+  {
+    TextObjectImpl textObject = new TextObjectImpl();
+    return textObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StyleObject createStyleObject()
+  {
+    StyleObjectImpl styleObject = new StyleObjectImpl();
+    return styleObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StyleObjects createStyleObjects()
+  {
+    StyleObjectsImpl styleObjects = new StyleObjectsImpl();
+    return styleObjects;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContentObject createContentObject()
+  {
+    ContentObjectImpl contentObject = new ContentObjectImpl();
+    return contentObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContentObjects createContentObjects()
+  {
+    ContentObjectsImpl contentObjects = new ContentObjectsImpl();
+    return contentObjects;
   }
 
   /**

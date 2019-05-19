@@ -81,14 +81,9 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createDocDefinitionAdapter();
       }
       @Override
-      public Adapter caseStringElement(StringElement object)
+      public Adapter caseStringObject(StringObject object)
       {
-        return createStringElementAdapter();
-      }
-      @Override
-      public Adapter caseTextAlignmentDefinition(TextAlignmentDefinition object)
-      {
-        return createTextAlignmentDefinitionAdapter();
+        return createStringObjectAdapter();
       }
       @Override
       public Adapter caseTypeFaceDefinition(TypeFaceDefinition object)
@@ -96,19 +91,49 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createTypeFaceDefinitionAdapter();
       }
       @Override
-      public Adapter caseTextElement(TextElement object)
+      public Adapter caseTextStyleDefinition(TextStyleDefinition object)
       {
-        return createTextElementAdapter();
+        return createTextStyleDefinitionAdapter();
       }
       @Override
-      public Adapter caseElement(Element object)
+      public Adapter caseItalicsDefinition(ItalicsDefinition object)
       {
-        return createElementAdapter();
+        return createItalicsDefinitionAdapter();
       }
       @Override
-      public Adapter caseElements(Elements object)
+      public Adapter caseFontSizeDefinition(FontSizeDefinition object)
       {
-        return createElementsAdapter();
+        return createFontSizeDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseStyleDefinition(StyleDefinition object)
+      {
+        return createStyleDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseTextObject(TextObject object)
+      {
+        return createTextObjectAdapter();
+      }
+      @Override
+      public Adapter caseStyleObject(StyleObject object)
+      {
+        return createStyleObjectAdapter();
+      }
+      @Override
+      public Adapter caseStyleObjects(StyleObjects object)
+      {
+        return createStyleObjectsAdapter();
+      }
+      @Override
+      public Adapter caseContentObject(ContentObject object)
+      {
+        return createContentObjectAdapter();
+      }
+      @Override
+      public Adapter caseContentObjects(ContentObjects object)
+      {
+        return createContentObjectsAdapter();
       }
       @Override
       public Adapter caseStyles(Styles object)
@@ -158,31 +183,16 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.StringElement <em>String Element</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.StringObject <em>String Object</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.StringElement
+   * @see org.xtext.avi.pdfMk.StringObject
    * @generated
    */
-  public Adapter createStringElementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextAlignmentDefinition <em>Text Alignment Definition</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.TextAlignmentDefinition
-   * @generated
-   */
-  public Adapter createTextAlignmentDefinitionAdapter()
+  public Adapter createStringObjectAdapter()
   {
     return null;
   }
@@ -203,46 +213,136 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextElement <em>Text Element</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextStyleDefinition <em>Text Style Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.TextElement
+   * @see org.xtext.avi.pdfMk.TextStyleDefinition
    * @generated
    */
-  public Adapter createTextElementAdapter()
+  public Adapter createTextStyleDefinitionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.Element <em>Element</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ItalicsDefinition <em>Italics Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.Element
+   * @see org.xtext.avi.pdfMk.ItalicsDefinition
    * @generated
    */
-  public Adapter createElementAdapter()
+  public Adapter createItalicsDefinitionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.Elements <em>Elements</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.FontSizeDefinition <em>Font Size Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.Elements
+   * @see org.xtext.avi.pdfMk.FontSizeDefinition
    * @generated
    */
-  public Adapter createElementsAdapter()
+  public Adapter createFontSizeDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.StyleDefinition <em>Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.StyleDefinition
+   * @generated
+   */
+  public Adapter createStyleDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TextObject
+   * @generated
+   */
+  public Adapter createTextObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.StyleObject <em>Style Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.StyleObject
+   * @generated
+   */
+  public Adapter createStyleObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.StyleObjects <em>Style Objects</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.StyleObjects
+   * @generated
+   */
+  public Adapter createStyleObjectsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ContentObject <em>Content Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ContentObject
+   * @generated
+   */
+  public Adapter createContentObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ContentObjects <em>Content Objects</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ContentObjects
+   * @generated
+   */
+  public Adapter createContentObjectsAdapter()
   {
     return null;
   }

@@ -80,18 +80,10 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PdfMkPackage.STRING_ELEMENT:
+      case PdfMkPackage.STRING_OBJECT:
       {
-        StringElement stringElement = (StringElement)theEObject;
-        T result = caseStringElement(stringElement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PdfMkPackage.TEXT_ALIGNMENT_DEFINITION:
-      {
-        TextAlignmentDefinition textAlignmentDefinition = (TextAlignmentDefinition)theEObject;
-        T result = caseTextAlignmentDefinition(textAlignmentDefinition);
-        if (result == null) result = caseTextElement(textAlignmentDefinition);
+        StringObject stringObject = (StringObject)theEObject;
+        T result = caseStringObject(stringObject);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -102,25 +94,66 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PdfMkPackage.TEXT_ELEMENT:
+      case PdfMkPackage.TEXT_STYLE_DEFINITION:
       {
-        TextElement textElement = (TextElement)theEObject;
-        T result = caseTextElement(textElement);
+        TextStyleDefinition textStyleDefinition = (TextStyleDefinition)theEObject;
+        T result = caseTextStyleDefinition(textStyleDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PdfMkPackage.ELEMENT:
+      case PdfMkPackage.ITALICS_DEFINITION:
       {
-        Element element = (Element)theEObject;
-        T result = caseElement(element);
+        ItalicsDefinition italicsDefinition = (ItalicsDefinition)theEObject;
+        T result = caseItalicsDefinition(italicsDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PdfMkPackage.ELEMENTS:
+      case PdfMkPackage.FONT_SIZE_DEFINITION:
       {
-        Elements elements = (Elements)theEObject;
-        T result = caseElements(elements);
-        if (result == null) result = caseContent(elements);
+        FontSizeDefinition fontSizeDefinition = (FontSizeDefinition)theEObject;
+        T result = caseFontSizeDefinition(fontSizeDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.STYLE_DEFINITION:
+      {
+        StyleDefinition styleDefinition = (StyleDefinition)theEObject;
+        T result = caseStyleDefinition(styleDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.TEXT_OBJECT:
+      {
+        TextObject textObject = (TextObject)theEObject;
+        T result = caseTextObject(textObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.STYLE_OBJECT:
+      {
+        StyleObject styleObject = (StyleObject)theEObject;
+        T result = caseStyleObject(styleObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.STYLE_OBJECTS:
+      {
+        StyleObjects styleObjects = (StyleObjects)theEObject;
+        T result = caseStyleObjects(styleObjects);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.CONTENT_OBJECT:
+      {
+        ContentObject contentObject = (ContentObject)theEObject;
+        T result = caseContentObject(contentObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.CONTENT_OBJECTS:
+      {
+        ContentObjects contentObjects = (ContentObjects)theEObject;
+        T result = caseContentObjects(contentObjects);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -159,33 +192,17 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>String Element</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>String Object</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>String Element</em>'.
+   * @return the result of interpreting the object as an instance of '<em>String Object</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStringElement(StringElement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Text Alignment Definition</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Text Alignment Definition</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTextAlignmentDefinition(TextAlignmentDefinition object)
+  public T caseStringObject(StringObject object)
   {
     return null;
   }
@@ -207,49 +224,145 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Text Element</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Text Style Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Text Element</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Text Style Definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTextElement(TextElement object)
+  public T caseTextStyleDefinition(TextStyleDefinition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Italics Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Italics Definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseElement(Element object)
+  public T caseItalicsDefinition(ItalicsDefinition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Elements</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Font Size Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Elements</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Font Size Definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseElements(Elements object)
+  public T caseFontSizeDefinition(FontSizeDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Style Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStyleDefinition(StyleDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Text Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Text Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextObject(TextObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Style Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Style Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStyleObject(StyleObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Style Objects</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Style Objects</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStyleObjects(StyleObjects object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Content Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Content Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContentObject(ContentObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Content Objects</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Content Objects</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContentObjects(ContentObjects object)
   {
     return null;
   }

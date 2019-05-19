@@ -33,22 +33,13 @@ public interface PdfMkFactory extends EFactory
   DocDefinition createDocDefinition();
 
   /**
-   * Returns a new object of class '<em>String Element</em>'.
+   * Returns a new object of class '<em>String Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>String Element</em>'.
+   * @return a new object of class '<em>String Object</em>'.
    * @generated
    */
-  StringElement createStringElement();
-
-  /**
-   * Returns a new object of class '<em>Text Alignment Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Text Alignment Definition</em>'.
-   * @generated
-   */
-  TextAlignmentDefinition createTextAlignmentDefinition();
+  StringObject createStringObject();
 
   /**
    * Returns a new object of class '<em>Type Face Definition</em>'.
@@ -60,31 +51,85 @@ public interface PdfMkFactory extends EFactory
   TypeFaceDefinition createTypeFaceDefinition();
 
   /**
-   * Returns a new object of class '<em>Text Element</em>'.
+   * Returns a new object of class '<em>Text Style Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Text Element</em>'.
+   * @return a new object of class '<em>Text Style Definition</em>'.
    * @generated
    */
-  TextElement createTextElement();
+  TextStyleDefinition createTextStyleDefinition();
 
   /**
-   * Returns a new object of class '<em>Element</em>'.
+   * Returns a new object of class '<em>Italics Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Element</em>'.
+   * @return a new object of class '<em>Italics Definition</em>'.
    * @generated
    */
-  Element createElement();
+  ItalicsDefinition createItalicsDefinition();
 
   /**
-   * Returns a new object of class '<em>Elements</em>'.
+   * Returns a new object of class '<em>Font Size Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Elements</em>'.
+   * @return a new object of class '<em>Font Size Definition</em>'.
    * @generated
    */
-  Elements createElements();
+  FontSizeDefinition createFontSizeDefinition();
+
+  /**
+   * Returns a new object of class '<em>Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Style Definition</em>'.
+   * @generated
+   */
+  StyleDefinition createStyleDefinition();
+
+  /**
+   * Returns a new object of class '<em>Text Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Object</em>'.
+   * @generated
+   */
+  TextObject createTextObject();
+
+  /**
+   * Returns a new object of class '<em>Style Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Style Object</em>'.
+   * @generated
+   */
+  StyleObject createStyleObject();
+
+  /**
+   * Returns a new object of class '<em>Style Objects</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Style Objects</em>'.
+   * @generated
+   */
+  StyleObjects createStyleObjects();
+
+  /**
+   * Returns a new object of class '<em>Content Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Content Object</em>'.
+   * @generated
+   */
+  ContentObject createContentObject();
+
+  /**
+   * Returns a new object of class '<em>Content Objects</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Content Objects</em>'.
+   * @generated
+   */
+  ContentObjects createContentObjects();
 
   /**
    * Returns a new object of class '<em>Styles</em>'.
