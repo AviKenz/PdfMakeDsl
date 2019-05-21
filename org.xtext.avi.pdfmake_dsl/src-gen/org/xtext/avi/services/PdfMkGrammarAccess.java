@@ -37,7 +37,10 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStylesStylesParserRuleCall_5_1_0 = (RuleCall)cStylesAssignment_5_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//// TODO [?] how to make it orderless
+		//// TODO [?] missmatched input "header" expecting "}" in style3.pdfmk
+		//// TODO [?] missing EOF at "}"
+		//// TODO [?] enum strings
+		//// TODO [L] autovervollstaendigung beim style
 		///******************** ********************/ /************ Root Model ****************/ DocDefinition:
 		//	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
 		@Override public ParserRule getRule() { return rule; }
@@ -383,7 +386,8 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cItalicsItalicsDefinitionParserRuleCall_6_1_0 = (RuleCall)cItalicsAssignment_6_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		///******************** Objects definition ********************/ TextObject:
+		///******************** Objects definition ********************/ // TODO [M] write grammar to support text in []. see playground-style3
+		//TextObject:
 		//	value="{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
 		//	alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)?
 		//	"}";
@@ -472,7 +476,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.StyleObject");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cKeySTRINGTerminalRuleCall_0_0 = (RuleCall)cKeyAssignment_0.eContents().get(0);
+		private final RuleCall cKeyIDTerminalRuleCall_0_0 = (RuleCall)cKeyAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final Keyword cValueLeftCurlyBracketKeyword_2_0 = (Keyword)cValueAssignment_2.eContents().get(0);
@@ -493,22 +497,22 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//StyleObject:
-		//	key=STRING ":"
+		//	key=ID ":"
 		//	value="{"
 		//	fontSize?=FontSizeDefinition? ("," typeFace?=TypeFaceDefinition)? ("," alignment?=TextAlignmentDefinition)? (","
 		//	italics?=ItalicsDefinition)?
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//key=STRING ":" value="{" fontSize?=FontSizeDefinition? ("," typeFace?=TypeFaceDefinition)? (","
+		//key=ID ":" value="{" fontSize?=FontSizeDefinition? ("," typeFace?=TypeFaceDefinition)? (","
 		//alignment?=TextAlignmentDefinition)? ("," italics?=ItalicsDefinition)? "}"
 		public Group getGroup() { return cGroup; }
 		
-		//key=STRING
+		//key=ID
 		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
 		
-		//STRING
-		public RuleCall getKeySTRINGTerminalRuleCall_0_0() { return cKeySTRINGTerminalRuleCall_0_0; }
+		//ID
+		public RuleCall getKeyIDTerminalRuleCall_0_0() { return cKeyIDTerminalRuleCall_0_0; }
 		
 		//":"
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
@@ -636,46 +640,49 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ContentObjects");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLeftSquareBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueContentObjectParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cValueAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cValueContentObjectParserRuleCall_2_1_0 = (RuleCall)cValueAssignment_2_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cValueContentObjectParserRuleCall_1_0_0 = (RuleCall)cValueAssignment_1_0.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
+		private final Keyword cCommaKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cValueAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cValueContentObjectParserRuleCall_1_1_1_0 = (RuleCall)cValueAssignment_1_1_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//ContentObjects:
-		//	"["
-		//	value+=ContentObject? ("," value+=ContentObject)*
+		//	"[" (value+=ContentObject ("," value+=ContentObject)*)?
 		//	"]";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"[" value+=ContentObject? ("," value+=ContentObject)* "]"
+		//"[" (value+=ContentObject ("," value+=ContentObject)*)? "]"
 		public Group getGroup() { return cGroup; }
 		
 		//"["
 		public Keyword getLeftSquareBracketKeyword_0() { return cLeftSquareBracketKeyword_0; }
 		
-		//value+=ContentObject?
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
-		
-		//ContentObject
-		public RuleCall getValueContentObjectParserRuleCall_1_0() { return cValueContentObjectParserRuleCall_1_0; }
-		
-		//("," value+=ContentObject)*
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+		//(value+=ContentObject ("," value+=ContentObject)*)?
+		public Group getGroup_1() { return cGroup_1; }
 		
 		//value+=ContentObject
-		public Assignment getValueAssignment_2_1() { return cValueAssignment_2_1; }
+		public Assignment getValueAssignment_1_0() { return cValueAssignment_1_0; }
 		
 		//ContentObject
-		public RuleCall getValueContentObjectParserRuleCall_2_1_0() { return cValueContentObjectParserRuleCall_2_1_0; }
+		public RuleCall getValueContentObjectParserRuleCall_1_0_0() { return cValueContentObjectParserRuleCall_1_0_0; }
+		
+		//("," value+=ContentObject)*
+		public Group getGroup_1_1() { return cGroup_1_1; }
+		
+		//","
+		public Keyword getCommaKeyword_1_1_0() { return cCommaKeyword_1_1_0; }
+		
+		//value+=ContentObject
+		public Assignment getValueAssignment_1_1_1() { return cValueAssignment_1_1_1; }
+		
+		//ContentObject
+		public RuleCall getValueContentObjectParserRuleCall_1_1_1_0() { return cValueContentObjectParserRuleCall_1_1_1_0; }
 		
 		//"]"
-		public Keyword getRightSquareBracketKeyword_3() { return cRightSquareBracketKeyword_3; }
+		public Keyword getRightSquareBracketKeyword_2() { return cRightSquareBracketKeyword_2; }
 	}
 	public class StylesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.Styles");
@@ -816,7 +823,10 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//// TODO [?] how to make it orderless
+	//// TODO [?] missmatched input "header" expecting "}" in style3.pdfmk
+	//// TODO [?] missing EOF at "}"
+	//// TODO [?] enum strings
+	//// TODO [L] autovervollstaendigung beim style
 	///******************** ********************/ /************ Root Model ****************/ DocDefinition:
 	//	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
 	public DocDefinitionElements getDocDefinitionAccess() {
@@ -929,7 +939,8 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getStyleDefinitionAccess().getRule();
 	}
 	
-	///******************** Objects definition ********************/ TextObject:
+	///******************** Objects definition ********************/ // TODO [M] write grammar to support text in []. see playground-style3
+	//TextObject:
 	//	value="{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
 	//	alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)?
 	//	"}";
@@ -942,7 +953,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//StyleObject:
-	//	key=STRING ":"
+	//	key=ID ":"
 	//	value="{"
 	//	fontSize?=FontSizeDefinition? ("," typeFace?=TypeFaceDefinition)? ("," alignment?=TextAlignmentDefinition)? (","
 	//	italics?=ItalicsDefinition)?
@@ -978,8 +989,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ContentObjects:
-	//	"["
-	//	value+=ContentObject? ("," value+=ContentObject)*
+	//	"[" (value+=ContentObject ("," value+=ContentObject)*)?
 	//	"]";
 	public ContentObjectsElements getContentObjectsAccess() {
 		return pContentObjects;

@@ -6625,7 +6625,7 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
             int alt14=2;
             int LA14_0 = input.LA(1);
 
-            if ( (LA14_0==RULE_STRING) ) {
+            if ( (LA14_0==RULE_ID) ) {
                 alt14=1;
             }
             switch (alt14) {
@@ -6848,7 +6848,7 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
             // InternalPdfMk.g:2274:1: ( rule__StyleObjects__Group_2__0__Impl rule__StyleObjects__Group_2__1 )
             // InternalPdfMk.g:2275:2: rule__StyleObjects__Group_2__0__Impl rule__StyleObjects__Group_2__1
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_23);
             rule__StyleObjects__Group_2__0__Impl();
 
             state._fsp--;
@@ -7003,7 +7003,7 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
             // InternalPdfMk.g:2328:1: ( rule__ContentObjects__Group__0__Impl rule__ContentObjects__Group__1 )
             // InternalPdfMk.g:2329:2: rule__ContentObjects__Group__0__Impl rule__ContentObjects__Group__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__ContentObjects__Group__0__Impl();
 
             state._fsp--;
@@ -7078,7 +7078,7 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
             // InternalPdfMk.g:2355:1: ( rule__ContentObjects__Group__1__Impl rule__ContentObjects__Group__2 )
             // InternalPdfMk.g:2356:2: rule__ContentObjects__Group__1__Impl rule__ContentObjects__Group__2
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__ContentObjects__Group__1__Impl();
 
             state._fsp--;
@@ -7107,20 +7107,20 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ContentObjects__Group__1__Impl"
-    // InternalPdfMk.g:2363:1: rule__ContentObjects__Group__1__Impl : ( ( rule__ContentObjects__ValueAssignment_1 )? ) ;
+    // InternalPdfMk.g:2363:1: rule__ContentObjects__Group__1__Impl : ( ( rule__ContentObjects__Group_1__0 )? ) ;
     public final void rule__ContentObjects__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2367:1: ( ( ( rule__ContentObjects__ValueAssignment_1 )? ) )
-            // InternalPdfMk.g:2368:1: ( ( rule__ContentObjects__ValueAssignment_1 )? )
+            // InternalPdfMk.g:2367:1: ( ( ( rule__ContentObjects__Group_1__0 )? ) )
+            // InternalPdfMk.g:2368:1: ( ( rule__ContentObjects__Group_1__0 )? )
             {
-            // InternalPdfMk.g:2368:1: ( ( rule__ContentObjects__ValueAssignment_1 )? )
-            // InternalPdfMk.g:2369:2: ( rule__ContentObjects__ValueAssignment_1 )?
+            // InternalPdfMk.g:2368:1: ( ( rule__ContentObjects__Group_1__0 )? )
+            // InternalPdfMk.g:2369:2: ( rule__ContentObjects__Group_1__0 )?
             {
-             before(grammarAccess.getContentObjectsAccess().getValueAssignment_1()); 
-            // InternalPdfMk.g:2370:2: ( rule__ContentObjects__ValueAssignment_1 )?
+             before(grammarAccess.getContentObjectsAccess().getGroup_1()); 
+            // InternalPdfMk.g:2370:2: ( rule__ContentObjects__Group_1__0 )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -7129,10 +7129,10 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
             }
             switch (alt16) {
                 case 1 :
-                    // InternalPdfMk.g:2370:3: rule__ContentObjects__ValueAssignment_1
+                    // InternalPdfMk.g:2370:3: rule__ContentObjects__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__ContentObjects__ValueAssignment_1();
+                    rule__ContentObjects__Group_1__0();
 
                     state._fsp--;
 
@@ -7142,7 +7142,7 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getContentObjectsAccess().getValueAssignment_1()); 
+             after(grammarAccess.getContentObjectsAccess().getGroup_1()); 
 
             }
 
@@ -7165,22 +7165,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ContentObjects__Group__2"
-    // InternalPdfMk.g:2378:1: rule__ContentObjects__Group__2 : rule__ContentObjects__Group__2__Impl rule__ContentObjects__Group__3 ;
+    // InternalPdfMk.g:2378:1: rule__ContentObjects__Group__2 : rule__ContentObjects__Group__2__Impl ;
     public final void rule__ContentObjects__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2382:1: ( rule__ContentObjects__Group__2__Impl rule__ContentObjects__Group__3 )
-            // InternalPdfMk.g:2383:2: rule__ContentObjects__Group__2__Impl rule__ContentObjects__Group__3
+            // InternalPdfMk.g:2382:1: ( rule__ContentObjects__Group__2__Impl )
+            // InternalPdfMk.g:2383:2: rule__ContentObjects__Group__2__Impl
             {
-            pushFollow(FOLLOW_23);
-            rule__ContentObjects__Group__2__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__ContentObjects__Group__3();
+            rule__ContentObjects__Group__2__Impl();
 
             state._fsp--;
 
@@ -7203,49 +7198,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ContentObjects__Group__2__Impl"
-    // InternalPdfMk.g:2390:1: rule__ContentObjects__Group__2__Impl : ( ( rule__ContentObjects__Group_2__0 )* ) ;
+    // InternalPdfMk.g:2389:1: rule__ContentObjects__Group__2__Impl : ( ']' ) ;
     public final void rule__ContentObjects__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2394:1: ( ( ( rule__ContentObjects__Group_2__0 )* ) )
-            // InternalPdfMk.g:2395:1: ( ( rule__ContentObjects__Group_2__0 )* )
+            // InternalPdfMk.g:2393:1: ( ( ']' ) )
+            // InternalPdfMk.g:2394:1: ( ']' )
             {
-            // InternalPdfMk.g:2395:1: ( ( rule__ContentObjects__Group_2__0 )* )
-            // InternalPdfMk.g:2396:2: ( rule__ContentObjects__Group_2__0 )*
+            // InternalPdfMk.g:2394:1: ( ']' )
+            // InternalPdfMk.g:2395:2: ']'
             {
-             before(grammarAccess.getContentObjectsAccess().getGroup_2()); 
-            // InternalPdfMk.g:2397:2: ( rule__ContentObjects__Group_2__0 )*
-            loop17:
-            do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
-
-                if ( (LA17_0==18) ) {
-                    alt17=1;
-                }
-
-
-                switch (alt17) {
-            	case 1 :
-            	    // InternalPdfMk.g:2397:3: rule__ContentObjects__Group_2__0
-            	    {
-            	    pushFollow(FOLLOW_22);
-            	    rule__ContentObjects__Group_2__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop17;
-                }
-            } while (true);
-
-             after(grammarAccess.getContentObjectsAccess().getGroup_2()); 
+             before(grammarAccess.getContentObjectsAccess().getRightSquareBracketKeyword_2()); 
+            match(input,22,FOLLOW_2); 
+             after(grammarAccess.getContentObjectsAccess().getRightSquareBracketKeyword_2()); 
 
             }
 
@@ -7267,93 +7234,23 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ContentObjects__Group__2__Impl"
 
 
-    // $ANTLR start "rule__ContentObjects__Group__3"
-    // InternalPdfMk.g:2405:1: rule__ContentObjects__Group__3 : rule__ContentObjects__Group__3__Impl ;
-    public final void rule__ContentObjects__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__ContentObjects__Group_1__0"
+    // InternalPdfMk.g:2405:1: rule__ContentObjects__Group_1__0 : rule__ContentObjects__Group_1__0__Impl rule__ContentObjects__Group_1__1 ;
+    public final void rule__ContentObjects__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2409:1: ( rule__ContentObjects__Group__3__Impl )
-            // InternalPdfMk.g:2410:2: rule__ContentObjects__Group__3__Impl
+            // InternalPdfMk.g:2409:1: ( rule__ContentObjects__Group_1__0__Impl rule__ContentObjects__Group_1__1 )
+            // InternalPdfMk.g:2410:2: rule__ContentObjects__Group_1__0__Impl rule__ContentObjects__Group_1__1
             {
-            pushFollow(FOLLOW_2);
-            rule__ContentObjects__Group__3__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ContentObjects__Group__3"
-
-
-    // $ANTLR start "rule__ContentObjects__Group__3__Impl"
-    // InternalPdfMk.g:2416:1: rule__ContentObjects__Group__3__Impl : ( ']' ) ;
-    public final void rule__ContentObjects__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPdfMk.g:2420:1: ( ( ']' ) )
-            // InternalPdfMk.g:2421:1: ( ']' )
-            {
-            // InternalPdfMk.g:2421:1: ( ']' )
-            // InternalPdfMk.g:2422:2: ']'
-            {
-             before(grammarAccess.getContentObjectsAccess().getRightSquareBracketKeyword_3()); 
-            match(input,22,FOLLOW_2); 
-             after(grammarAccess.getContentObjectsAccess().getRightSquareBracketKeyword_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__ContentObjects__Group__3__Impl"
-
-
-    // $ANTLR start "rule__ContentObjects__Group_2__0"
-    // InternalPdfMk.g:2432:1: rule__ContentObjects__Group_2__0 : rule__ContentObjects__Group_2__0__Impl rule__ContentObjects__Group_2__1 ;
-    public final void rule__ContentObjects__Group_2__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalPdfMk.g:2436:1: ( rule__ContentObjects__Group_2__0__Impl rule__ContentObjects__Group_2__1 )
-            // InternalPdfMk.g:2437:2: rule__ContentObjects__Group_2__0__Impl rule__ContentObjects__Group_2__1
-            {
-            pushFollow(FOLLOW_24);
-            rule__ContentObjects__Group_2__0__Impl();
+            pushFollow(FOLLOW_25);
+            rule__ContentObjects__Group_1__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__ContentObjects__Group_2__1();
+            rule__ContentObjects__Group_1__1();
 
             state._fsp--;
 
@@ -7372,25 +7269,208 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ContentObjects__Group_2__0"
+    // $ANTLR end "rule__ContentObjects__Group_1__0"
 
 
-    // $ANTLR start "rule__ContentObjects__Group_2__0__Impl"
-    // InternalPdfMk.g:2444:1: rule__ContentObjects__Group_2__0__Impl : ( ',' ) ;
-    public final void rule__ContentObjects__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ContentObjects__Group_1__0__Impl"
+    // InternalPdfMk.g:2417:1: rule__ContentObjects__Group_1__0__Impl : ( ( rule__ContentObjects__ValueAssignment_1_0 ) ) ;
+    public final void rule__ContentObjects__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2448:1: ( ( ',' ) )
-            // InternalPdfMk.g:2449:1: ( ',' )
+            // InternalPdfMk.g:2421:1: ( ( ( rule__ContentObjects__ValueAssignment_1_0 ) ) )
+            // InternalPdfMk.g:2422:1: ( ( rule__ContentObjects__ValueAssignment_1_0 ) )
             {
-            // InternalPdfMk.g:2449:1: ( ',' )
-            // InternalPdfMk.g:2450:2: ','
+            // InternalPdfMk.g:2422:1: ( ( rule__ContentObjects__ValueAssignment_1_0 ) )
+            // InternalPdfMk.g:2423:2: ( rule__ContentObjects__ValueAssignment_1_0 )
             {
-             before(grammarAccess.getContentObjectsAccess().getCommaKeyword_2_0()); 
+             before(grammarAccess.getContentObjectsAccess().getValueAssignment_1_0()); 
+            // InternalPdfMk.g:2424:2: ( rule__ContentObjects__ValueAssignment_1_0 )
+            // InternalPdfMk.g:2424:3: rule__ContentObjects__ValueAssignment_1_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__ContentObjects__ValueAssignment_1_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getContentObjectsAccess().getValueAssignment_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ContentObjects__Group_1__0__Impl"
+
+
+    // $ANTLR start "rule__ContentObjects__Group_1__1"
+    // InternalPdfMk.g:2432:1: rule__ContentObjects__Group_1__1 : rule__ContentObjects__Group_1__1__Impl ;
+    public final void rule__ContentObjects__Group_1__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPdfMk.g:2436:1: ( rule__ContentObjects__Group_1__1__Impl )
+            // InternalPdfMk.g:2437:2: rule__ContentObjects__Group_1__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__ContentObjects__Group_1__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ContentObjects__Group_1__1"
+
+
+    // $ANTLR start "rule__ContentObjects__Group_1__1__Impl"
+    // InternalPdfMk.g:2443:1: rule__ContentObjects__Group_1__1__Impl : ( ( rule__ContentObjects__Group_1_1__0 )* ) ;
+    public final void rule__ContentObjects__Group_1__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPdfMk.g:2447:1: ( ( ( rule__ContentObjects__Group_1_1__0 )* ) )
+            // InternalPdfMk.g:2448:1: ( ( rule__ContentObjects__Group_1_1__0 )* )
+            {
+            // InternalPdfMk.g:2448:1: ( ( rule__ContentObjects__Group_1_1__0 )* )
+            // InternalPdfMk.g:2449:2: ( rule__ContentObjects__Group_1_1__0 )*
+            {
+             before(grammarAccess.getContentObjectsAccess().getGroup_1_1()); 
+            // InternalPdfMk.g:2450:2: ( rule__ContentObjects__Group_1_1__0 )*
+            loop17:
+            do {
+                int alt17=2;
+                int LA17_0 = input.LA(1);
+
+                if ( (LA17_0==18) ) {
+                    alt17=1;
+                }
+
+
+                switch (alt17) {
+            	case 1 :
+            	    // InternalPdfMk.g:2450:3: rule__ContentObjects__Group_1_1__0
+            	    {
+            	    pushFollow(FOLLOW_22);
+            	    rule__ContentObjects__Group_1_1__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop17;
+                }
+            } while (true);
+
+             after(grammarAccess.getContentObjectsAccess().getGroup_1_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ContentObjects__Group_1__1__Impl"
+
+
+    // $ANTLR start "rule__ContentObjects__Group_1_1__0"
+    // InternalPdfMk.g:2459:1: rule__ContentObjects__Group_1_1__0 : rule__ContentObjects__Group_1_1__0__Impl rule__ContentObjects__Group_1_1__1 ;
+    public final void rule__ContentObjects__Group_1_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPdfMk.g:2463:1: ( rule__ContentObjects__Group_1_1__0__Impl rule__ContentObjects__Group_1_1__1 )
+            // InternalPdfMk.g:2464:2: rule__ContentObjects__Group_1_1__0__Impl rule__ContentObjects__Group_1_1__1
+            {
+            pushFollow(FOLLOW_26);
+            rule__ContentObjects__Group_1_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__ContentObjects__Group_1_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ContentObjects__Group_1_1__0"
+
+
+    // $ANTLR start "rule__ContentObjects__Group_1_1__0__Impl"
+    // InternalPdfMk.g:2471:1: rule__ContentObjects__Group_1_1__0__Impl : ( ',' ) ;
+    public final void rule__ContentObjects__Group_1_1__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalPdfMk.g:2475:1: ( ( ',' ) )
+            // InternalPdfMk.g:2476:1: ( ',' )
+            {
+            // InternalPdfMk.g:2476:1: ( ',' )
+            // InternalPdfMk.g:2477:2: ','
+            {
+             before(grammarAccess.getContentObjectsAccess().getCommaKeyword_1_1_0()); 
             match(input,18,FOLLOW_2); 
-             after(grammarAccess.getContentObjectsAccess().getCommaKeyword_2_0()); 
+             after(grammarAccess.getContentObjectsAccess().getCommaKeyword_1_1_0()); 
 
             }
 
@@ -7409,21 +7489,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ContentObjects__Group_2__0__Impl"
+    // $ANTLR end "rule__ContentObjects__Group_1_1__0__Impl"
 
 
-    // $ANTLR start "rule__ContentObjects__Group_2__1"
-    // InternalPdfMk.g:2459:1: rule__ContentObjects__Group_2__1 : rule__ContentObjects__Group_2__1__Impl ;
-    public final void rule__ContentObjects__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__ContentObjects__Group_1_1__1"
+    // InternalPdfMk.g:2486:1: rule__ContentObjects__Group_1_1__1 : rule__ContentObjects__Group_1_1__1__Impl ;
+    public final void rule__ContentObjects__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2463:1: ( rule__ContentObjects__Group_2__1__Impl )
-            // InternalPdfMk.g:2464:2: rule__ContentObjects__Group_2__1__Impl
+            // InternalPdfMk.g:2490:1: ( rule__ContentObjects__Group_1_1__1__Impl )
+            // InternalPdfMk.g:2491:2: rule__ContentObjects__Group_1_1__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__ContentObjects__Group_2__1__Impl();
+            rule__ContentObjects__Group_1_1__1__Impl();
 
             state._fsp--;
 
@@ -7442,35 +7522,35 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ContentObjects__Group_2__1"
+    // $ANTLR end "rule__ContentObjects__Group_1_1__1"
 
 
-    // $ANTLR start "rule__ContentObjects__Group_2__1__Impl"
-    // InternalPdfMk.g:2470:1: rule__ContentObjects__Group_2__1__Impl : ( ( rule__ContentObjects__ValueAssignment_2_1 ) ) ;
-    public final void rule__ContentObjects__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ContentObjects__Group_1_1__1__Impl"
+    // InternalPdfMk.g:2497:1: rule__ContentObjects__Group_1_1__1__Impl : ( ( rule__ContentObjects__ValueAssignment_1_1_1 ) ) ;
+    public final void rule__ContentObjects__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2474:1: ( ( ( rule__ContentObjects__ValueAssignment_2_1 ) ) )
-            // InternalPdfMk.g:2475:1: ( ( rule__ContentObjects__ValueAssignment_2_1 ) )
+            // InternalPdfMk.g:2501:1: ( ( ( rule__ContentObjects__ValueAssignment_1_1_1 ) ) )
+            // InternalPdfMk.g:2502:1: ( ( rule__ContentObjects__ValueAssignment_1_1_1 ) )
             {
-            // InternalPdfMk.g:2475:1: ( ( rule__ContentObjects__ValueAssignment_2_1 ) )
-            // InternalPdfMk.g:2476:2: ( rule__ContentObjects__ValueAssignment_2_1 )
+            // InternalPdfMk.g:2502:1: ( ( rule__ContentObjects__ValueAssignment_1_1_1 ) )
+            // InternalPdfMk.g:2503:2: ( rule__ContentObjects__ValueAssignment_1_1_1 )
             {
-             before(grammarAccess.getContentObjectsAccess().getValueAssignment_2_1()); 
-            // InternalPdfMk.g:2477:2: ( rule__ContentObjects__ValueAssignment_2_1 )
-            // InternalPdfMk.g:2477:3: rule__ContentObjects__ValueAssignment_2_1
+             before(grammarAccess.getContentObjectsAccess().getValueAssignment_1_1_1()); 
+            // InternalPdfMk.g:2504:2: ( rule__ContentObjects__ValueAssignment_1_1_1 )
+            // InternalPdfMk.g:2504:3: rule__ContentObjects__ValueAssignment_1_1_1
             {
             pushFollow(FOLLOW_2);
-            rule__ContentObjects__ValueAssignment_2_1();
+            rule__ContentObjects__ValueAssignment_1_1_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getContentObjectsAccess().getValueAssignment_2_1()); 
+             after(grammarAccess.getContentObjectsAccess().getValueAssignment_1_1_1()); 
 
             }
 
@@ -7489,18 +7569,18 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ContentObjects__Group_2__1__Impl"
+    // $ANTLR end "rule__ContentObjects__Group_1_1__1__Impl"
 
 
     // $ANTLR start "rule__Styles__Group__0"
-    // InternalPdfMk.g:2486:1: rule__Styles__Group__0 : rule__Styles__Group__0__Impl rule__Styles__Group__1 ;
+    // InternalPdfMk.g:2513:1: rule__Styles__Group__0 : rule__Styles__Group__0__Impl rule__Styles__Group__1 ;
     public final void rule__Styles__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2490:1: ( rule__Styles__Group__0__Impl rule__Styles__Group__1 )
-            // InternalPdfMk.g:2491:2: rule__Styles__Group__0__Impl rule__Styles__Group__1
+            // InternalPdfMk.g:2517:1: ( rule__Styles__Group__0__Impl rule__Styles__Group__1 )
+            // InternalPdfMk.g:2518:2: rule__Styles__Group__0__Impl rule__Styles__Group__1
             {
             pushFollow(FOLLOW_9);
             rule__Styles__Group__0__Impl();
@@ -7531,21 +7611,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Styles__Group__0__Impl"
-    // InternalPdfMk.g:2498:1: rule__Styles__Group__0__Impl : ( ( rule__Styles__KeyAssignment_0 ) ) ;
+    // InternalPdfMk.g:2525:1: rule__Styles__Group__0__Impl : ( ( rule__Styles__KeyAssignment_0 ) ) ;
     public final void rule__Styles__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2502:1: ( ( ( rule__Styles__KeyAssignment_0 ) ) )
-            // InternalPdfMk.g:2503:1: ( ( rule__Styles__KeyAssignment_0 ) )
+            // InternalPdfMk.g:2529:1: ( ( ( rule__Styles__KeyAssignment_0 ) ) )
+            // InternalPdfMk.g:2530:1: ( ( rule__Styles__KeyAssignment_0 ) )
             {
-            // InternalPdfMk.g:2503:1: ( ( rule__Styles__KeyAssignment_0 ) )
-            // InternalPdfMk.g:2504:2: ( rule__Styles__KeyAssignment_0 )
+            // InternalPdfMk.g:2530:1: ( ( rule__Styles__KeyAssignment_0 ) )
+            // InternalPdfMk.g:2531:2: ( rule__Styles__KeyAssignment_0 )
             {
              before(grammarAccess.getStylesAccess().getKeyAssignment_0()); 
-            // InternalPdfMk.g:2505:2: ( rule__Styles__KeyAssignment_0 )
-            // InternalPdfMk.g:2505:3: rule__Styles__KeyAssignment_0
+            // InternalPdfMk.g:2532:2: ( rule__Styles__KeyAssignment_0 )
+            // InternalPdfMk.g:2532:3: rule__Styles__KeyAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Styles__KeyAssignment_0();
@@ -7578,14 +7658,14 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Styles__Group__1"
-    // InternalPdfMk.g:2513:1: rule__Styles__Group__1 : rule__Styles__Group__1__Impl rule__Styles__Group__2 ;
+    // InternalPdfMk.g:2540:1: rule__Styles__Group__1 : rule__Styles__Group__1__Impl rule__Styles__Group__2 ;
     public final void rule__Styles__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2517:1: ( rule__Styles__Group__1__Impl rule__Styles__Group__2 )
-            // InternalPdfMk.g:2518:2: rule__Styles__Group__1__Impl rule__Styles__Group__2
+            // InternalPdfMk.g:2544:1: ( rule__Styles__Group__1__Impl rule__Styles__Group__2 )
+            // InternalPdfMk.g:2545:2: rule__Styles__Group__1__Impl rule__Styles__Group__2
             {
             pushFollow(FOLLOW_5);
             rule__Styles__Group__1__Impl();
@@ -7616,17 +7696,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Styles__Group__1__Impl"
-    // InternalPdfMk.g:2525:1: rule__Styles__Group__1__Impl : ( ':' ) ;
+    // InternalPdfMk.g:2552:1: rule__Styles__Group__1__Impl : ( ':' ) ;
     public final void rule__Styles__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2529:1: ( ( ':' ) )
-            // InternalPdfMk.g:2530:1: ( ':' )
+            // InternalPdfMk.g:2556:1: ( ( ':' ) )
+            // InternalPdfMk.g:2557:1: ( ':' )
             {
-            // InternalPdfMk.g:2530:1: ( ':' )
-            // InternalPdfMk.g:2531:2: ':'
+            // InternalPdfMk.g:2557:1: ( ':' )
+            // InternalPdfMk.g:2558:2: ':'
             {
              before(grammarAccess.getStylesAccess().getColonKeyword_1()); 
             match(input,19,FOLLOW_2); 
@@ -7653,14 +7733,14 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Styles__Group__2"
-    // InternalPdfMk.g:2540:1: rule__Styles__Group__2 : rule__Styles__Group__2__Impl ;
+    // InternalPdfMk.g:2567:1: rule__Styles__Group__2 : rule__Styles__Group__2__Impl ;
     public final void rule__Styles__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2544:1: ( rule__Styles__Group__2__Impl )
-            // InternalPdfMk.g:2545:2: rule__Styles__Group__2__Impl
+            // InternalPdfMk.g:2571:1: ( rule__Styles__Group__2__Impl )
+            // InternalPdfMk.g:2572:2: rule__Styles__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Styles__Group__2__Impl();
@@ -7686,21 +7766,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Styles__Group__2__Impl"
-    // InternalPdfMk.g:2551:1: rule__Styles__Group__2__Impl : ( ( rule__Styles__ValueAssignment_2 ) ) ;
+    // InternalPdfMk.g:2578:1: rule__Styles__Group__2__Impl : ( ( rule__Styles__ValueAssignment_2 ) ) ;
     public final void rule__Styles__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2555:1: ( ( ( rule__Styles__ValueAssignment_2 ) ) )
-            // InternalPdfMk.g:2556:1: ( ( rule__Styles__ValueAssignment_2 ) )
+            // InternalPdfMk.g:2582:1: ( ( ( rule__Styles__ValueAssignment_2 ) ) )
+            // InternalPdfMk.g:2583:1: ( ( rule__Styles__ValueAssignment_2 ) )
             {
-            // InternalPdfMk.g:2556:1: ( ( rule__Styles__ValueAssignment_2 ) )
-            // InternalPdfMk.g:2557:2: ( rule__Styles__ValueAssignment_2 )
+            // InternalPdfMk.g:2583:1: ( ( rule__Styles__ValueAssignment_2 ) )
+            // InternalPdfMk.g:2584:2: ( rule__Styles__ValueAssignment_2 )
             {
              before(grammarAccess.getStylesAccess().getValueAssignment_2()); 
-            // InternalPdfMk.g:2558:2: ( rule__Styles__ValueAssignment_2 )
-            // InternalPdfMk.g:2558:3: rule__Styles__ValueAssignment_2
+            // InternalPdfMk.g:2585:2: ( rule__Styles__ValueAssignment_2 )
+            // InternalPdfMk.g:2585:3: rule__Styles__ValueAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Styles__ValueAssignment_2();
@@ -7733,14 +7813,14 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__Group__0"
-    // InternalPdfMk.g:2567:1: rule__Content__Group__0 : rule__Content__Group__0__Impl rule__Content__Group__1 ;
+    // InternalPdfMk.g:2594:1: rule__Content__Group__0 : rule__Content__Group__0__Impl rule__Content__Group__1 ;
     public final void rule__Content__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2571:1: ( rule__Content__Group__0__Impl rule__Content__Group__1 )
-            // InternalPdfMk.g:2572:2: rule__Content__Group__0__Impl rule__Content__Group__1
+            // InternalPdfMk.g:2598:1: ( rule__Content__Group__0__Impl rule__Content__Group__1 )
+            // InternalPdfMk.g:2599:2: rule__Content__Group__0__Impl rule__Content__Group__1
             {
             pushFollow(FOLLOW_9);
             rule__Content__Group__0__Impl();
@@ -7771,21 +7851,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__Group__0__Impl"
-    // InternalPdfMk.g:2579:1: rule__Content__Group__0__Impl : ( ( rule__Content__KeyAssignment_0 ) ) ;
+    // InternalPdfMk.g:2606:1: rule__Content__Group__0__Impl : ( ( rule__Content__KeyAssignment_0 ) ) ;
     public final void rule__Content__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2583:1: ( ( ( rule__Content__KeyAssignment_0 ) ) )
-            // InternalPdfMk.g:2584:1: ( ( rule__Content__KeyAssignment_0 ) )
+            // InternalPdfMk.g:2610:1: ( ( ( rule__Content__KeyAssignment_0 ) ) )
+            // InternalPdfMk.g:2611:1: ( ( rule__Content__KeyAssignment_0 ) )
             {
-            // InternalPdfMk.g:2584:1: ( ( rule__Content__KeyAssignment_0 ) )
-            // InternalPdfMk.g:2585:2: ( rule__Content__KeyAssignment_0 )
+            // InternalPdfMk.g:2611:1: ( ( rule__Content__KeyAssignment_0 ) )
+            // InternalPdfMk.g:2612:2: ( rule__Content__KeyAssignment_0 )
             {
              before(grammarAccess.getContentAccess().getKeyAssignment_0()); 
-            // InternalPdfMk.g:2586:2: ( rule__Content__KeyAssignment_0 )
-            // InternalPdfMk.g:2586:3: rule__Content__KeyAssignment_0
+            // InternalPdfMk.g:2613:2: ( rule__Content__KeyAssignment_0 )
+            // InternalPdfMk.g:2613:3: rule__Content__KeyAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Content__KeyAssignment_0();
@@ -7818,16 +7898,16 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__Group__1"
-    // InternalPdfMk.g:2594:1: rule__Content__Group__1 : rule__Content__Group__1__Impl rule__Content__Group__2 ;
+    // InternalPdfMk.g:2621:1: rule__Content__Group__1 : rule__Content__Group__1__Impl rule__Content__Group__2 ;
     public final void rule__Content__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2598:1: ( rule__Content__Group__1__Impl rule__Content__Group__2 )
-            // InternalPdfMk.g:2599:2: rule__Content__Group__1__Impl rule__Content__Group__2
+            // InternalPdfMk.g:2625:1: ( rule__Content__Group__1__Impl rule__Content__Group__2 )
+            // InternalPdfMk.g:2626:2: rule__Content__Group__1__Impl rule__Content__Group__2
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_27);
             rule__Content__Group__1__Impl();
 
             state._fsp--;
@@ -7856,17 +7936,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__Group__1__Impl"
-    // InternalPdfMk.g:2606:1: rule__Content__Group__1__Impl : ( ':' ) ;
+    // InternalPdfMk.g:2633:1: rule__Content__Group__1__Impl : ( ':' ) ;
     public final void rule__Content__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2610:1: ( ( ':' ) )
-            // InternalPdfMk.g:2611:1: ( ':' )
+            // InternalPdfMk.g:2637:1: ( ( ':' ) )
+            // InternalPdfMk.g:2638:1: ( ':' )
             {
-            // InternalPdfMk.g:2611:1: ( ':' )
-            // InternalPdfMk.g:2612:2: ':'
+            // InternalPdfMk.g:2638:1: ( ':' )
+            // InternalPdfMk.g:2639:2: ':'
             {
              before(grammarAccess.getContentAccess().getColonKeyword_1()); 
             match(input,19,FOLLOW_2); 
@@ -7893,14 +7973,14 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__Group__2"
-    // InternalPdfMk.g:2621:1: rule__Content__Group__2 : rule__Content__Group__2__Impl ;
+    // InternalPdfMk.g:2648:1: rule__Content__Group__2 : rule__Content__Group__2__Impl ;
     public final void rule__Content__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2625:1: ( rule__Content__Group__2__Impl )
-            // InternalPdfMk.g:2626:2: rule__Content__Group__2__Impl
+            // InternalPdfMk.g:2652:1: ( rule__Content__Group__2__Impl )
+            // InternalPdfMk.g:2653:2: rule__Content__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Content__Group__2__Impl();
@@ -7926,21 +8006,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__Group__2__Impl"
-    // InternalPdfMk.g:2632:1: rule__Content__Group__2__Impl : ( ( rule__Content__ValueAssignment_2 ) ) ;
+    // InternalPdfMk.g:2659:1: rule__Content__Group__2__Impl : ( ( rule__Content__ValueAssignment_2 ) ) ;
     public final void rule__Content__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2636:1: ( ( ( rule__Content__ValueAssignment_2 ) ) )
-            // InternalPdfMk.g:2637:1: ( ( rule__Content__ValueAssignment_2 ) )
+            // InternalPdfMk.g:2663:1: ( ( ( rule__Content__ValueAssignment_2 ) ) )
+            // InternalPdfMk.g:2664:1: ( ( rule__Content__ValueAssignment_2 ) )
             {
-            // InternalPdfMk.g:2637:1: ( ( rule__Content__ValueAssignment_2 ) )
-            // InternalPdfMk.g:2638:2: ( rule__Content__ValueAssignment_2 )
+            // InternalPdfMk.g:2664:1: ( ( rule__Content__ValueAssignment_2 ) )
+            // InternalPdfMk.g:2665:2: ( rule__Content__ValueAssignment_2 )
             {
              before(grammarAccess.getContentAccess().getValueAssignment_2()); 
-            // InternalPdfMk.g:2639:2: ( rule__Content__ValueAssignment_2 )
-            // InternalPdfMk.g:2639:3: rule__Content__ValueAssignment_2
+            // InternalPdfMk.g:2666:2: ( rule__Content__ValueAssignment_2 )
+            // InternalPdfMk.g:2666:3: rule__Content__ValueAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Content__ValueAssignment_2();
@@ -7973,17 +8053,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DocDefinition__ContentAssignment_4"
-    // InternalPdfMk.g:2648:1: rule__DocDefinition__ContentAssignment_4 : ( ruleContent ) ;
+    // InternalPdfMk.g:2675:1: rule__DocDefinition__ContentAssignment_4 : ( ruleContent ) ;
     public final void rule__DocDefinition__ContentAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2652:1: ( ( ruleContent ) )
-            // InternalPdfMk.g:2653:2: ( ruleContent )
+            // InternalPdfMk.g:2679:1: ( ( ruleContent ) )
+            // InternalPdfMk.g:2680:2: ( ruleContent )
             {
-            // InternalPdfMk.g:2653:2: ( ruleContent )
-            // InternalPdfMk.g:2654:3: ruleContent
+            // InternalPdfMk.g:2680:2: ( ruleContent )
+            // InternalPdfMk.g:2681:3: ruleContent
             {
              before(grammarAccess.getDocDefinitionAccess().getContentContentParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -8014,17 +8094,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DocDefinition__StylesAssignment_5_1"
-    // InternalPdfMk.g:2663:1: rule__DocDefinition__StylesAssignment_5_1 : ( ruleStyles ) ;
+    // InternalPdfMk.g:2690:1: rule__DocDefinition__StylesAssignment_5_1 : ( ruleStyles ) ;
     public final void rule__DocDefinition__StylesAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2667:1: ( ( ruleStyles ) )
-            // InternalPdfMk.g:2668:2: ( ruleStyles )
+            // InternalPdfMk.g:2694:1: ( ( ruleStyles ) )
+            // InternalPdfMk.g:2695:2: ( ruleStyles )
             {
-            // InternalPdfMk.g:2668:2: ( ruleStyles )
-            // InternalPdfMk.g:2669:3: ruleStyles
+            // InternalPdfMk.g:2695:2: ( ruleStyles )
+            // InternalPdfMk.g:2696:3: ruleStyles
             {
              before(grammarAccess.getDocDefinitionAccess().getStylesStylesParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8055,17 +8135,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StringObject__ValueAssignment"
-    // InternalPdfMk.g:2678:1: rule__StringObject__ValueAssignment : ( RULE_STRING ) ;
+    // InternalPdfMk.g:2705:1: rule__StringObject__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__StringObject__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2682:1: ( ( RULE_STRING ) )
-            // InternalPdfMk.g:2683:2: ( RULE_STRING )
+            // InternalPdfMk.g:2709:1: ( ( RULE_STRING ) )
+            // InternalPdfMk.g:2710:2: ( RULE_STRING )
             {
-            // InternalPdfMk.g:2683:2: ( RULE_STRING )
-            // InternalPdfMk.g:2684:3: RULE_STRING
+            // InternalPdfMk.g:2710:2: ( RULE_STRING )
+            // InternalPdfMk.g:2711:3: RULE_STRING
             {
              before(grammarAccess.getStringObjectAccess().getValueSTRINGTerminalRuleCall_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -8092,21 +8172,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeFaceDefinition__KeyAssignment_0"
-    // InternalPdfMk.g:2693:1: rule__TypeFaceDefinition__KeyAssignment_0 : ( ( 'bold' ) ) ;
+    // InternalPdfMk.g:2720:1: rule__TypeFaceDefinition__KeyAssignment_0 : ( ( 'bold' ) ) ;
     public final void rule__TypeFaceDefinition__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2697:1: ( ( ( 'bold' ) ) )
-            // InternalPdfMk.g:2698:2: ( ( 'bold' ) )
+            // InternalPdfMk.g:2724:1: ( ( ( 'bold' ) ) )
+            // InternalPdfMk.g:2725:2: ( ( 'bold' ) )
             {
-            // InternalPdfMk.g:2698:2: ( ( 'bold' ) )
-            // InternalPdfMk.g:2699:3: ( 'bold' )
+            // InternalPdfMk.g:2725:2: ( ( 'bold' ) )
+            // InternalPdfMk.g:2726:3: ( 'bold' )
             {
              before(grammarAccess.getTypeFaceDefinitionAccess().getKeyBoldKeyword_0_0()); 
-            // InternalPdfMk.g:2700:3: ( 'bold' )
-            // InternalPdfMk.g:2701:4: 'bold'
+            // InternalPdfMk.g:2727:3: ( 'bold' )
+            // InternalPdfMk.g:2728:4: 'bold'
             {
              before(grammarAccess.getTypeFaceDefinitionAccess().getKeyBoldKeyword_0_0()); 
             match(input,24,FOLLOW_2); 
@@ -8137,17 +8217,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeFaceDefinition__ValueAssignment_2"
-    // InternalPdfMk.g:2712:1: rule__TypeFaceDefinition__ValueAssignment_2 : ( ruleBooleanDefinition ) ;
+    // InternalPdfMk.g:2739:1: rule__TypeFaceDefinition__ValueAssignment_2 : ( ruleBooleanDefinition ) ;
     public final void rule__TypeFaceDefinition__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2716:1: ( ( ruleBooleanDefinition ) )
-            // InternalPdfMk.g:2717:2: ( ruleBooleanDefinition )
+            // InternalPdfMk.g:2743:1: ( ( ruleBooleanDefinition ) )
+            // InternalPdfMk.g:2744:2: ( ruleBooleanDefinition )
             {
-            // InternalPdfMk.g:2717:2: ( ruleBooleanDefinition )
-            // InternalPdfMk.g:2718:3: ruleBooleanDefinition
+            // InternalPdfMk.g:2744:2: ( ruleBooleanDefinition )
+            // InternalPdfMk.g:2745:3: ruleBooleanDefinition
             {
              before(grammarAccess.getTypeFaceDefinitionAccess().getValueBooleanDefinitionParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -8178,21 +8258,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextStyleDefinition__KeyAssignment_0"
-    // InternalPdfMk.g:2727:1: rule__TextStyleDefinition__KeyAssignment_0 : ( ( 'style' ) ) ;
+    // InternalPdfMk.g:2754:1: rule__TextStyleDefinition__KeyAssignment_0 : ( ( 'style' ) ) ;
     public final void rule__TextStyleDefinition__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2731:1: ( ( ( 'style' ) ) )
-            // InternalPdfMk.g:2732:2: ( ( 'style' ) )
+            // InternalPdfMk.g:2758:1: ( ( ( 'style' ) ) )
+            // InternalPdfMk.g:2759:2: ( ( 'style' ) )
             {
-            // InternalPdfMk.g:2732:2: ( ( 'style' ) )
-            // InternalPdfMk.g:2733:3: ( 'style' )
+            // InternalPdfMk.g:2759:2: ( ( 'style' ) )
+            // InternalPdfMk.g:2760:3: ( 'style' )
             {
              before(grammarAccess.getTextStyleDefinitionAccess().getKeyStyleKeyword_0_0()); 
-            // InternalPdfMk.g:2734:3: ( 'style' )
-            // InternalPdfMk.g:2735:4: 'style'
+            // InternalPdfMk.g:2761:3: ( 'style' )
+            // InternalPdfMk.g:2762:4: 'style'
             {
              before(grammarAccess.getTextStyleDefinitionAccess().getKeyStyleKeyword_0_0()); 
             match(input,25,FOLLOW_2); 
@@ -8223,17 +8303,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextStyleDefinition__ValueAssignment_2"
-    // InternalPdfMk.g:2746:1: rule__TextStyleDefinition__ValueAssignment_2 : ( RULE_STRING ) ;
+    // InternalPdfMk.g:2773:1: rule__TextStyleDefinition__ValueAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TextStyleDefinition__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2750:1: ( ( RULE_STRING ) )
-            // InternalPdfMk.g:2751:2: ( RULE_STRING )
+            // InternalPdfMk.g:2777:1: ( ( RULE_STRING ) )
+            // InternalPdfMk.g:2778:2: ( RULE_STRING )
             {
-            // InternalPdfMk.g:2751:2: ( RULE_STRING )
-            // InternalPdfMk.g:2752:3: RULE_STRING
+            // InternalPdfMk.g:2778:2: ( RULE_STRING )
+            // InternalPdfMk.g:2779:3: RULE_STRING
             {
              before(grammarAccess.getTextStyleDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -8260,21 +8340,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicsDefinition__KeyAssignment_0"
-    // InternalPdfMk.g:2761:1: rule__ItalicsDefinition__KeyAssignment_0 : ( ( 'italics' ) ) ;
+    // InternalPdfMk.g:2788:1: rule__ItalicsDefinition__KeyAssignment_0 : ( ( 'italics' ) ) ;
     public final void rule__ItalicsDefinition__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2765:1: ( ( ( 'italics' ) ) )
-            // InternalPdfMk.g:2766:2: ( ( 'italics' ) )
+            // InternalPdfMk.g:2792:1: ( ( ( 'italics' ) ) )
+            // InternalPdfMk.g:2793:2: ( ( 'italics' ) )
             {
-            // InternalPdfMk.g:2766:2: ( ( 'italics' ) )
-            // InternalPdfMk.g:2767:3: ( 'italics' )
+            // InternalPdfMk.g:2793:2: ( ( 'italics' ) )
+            // InternalPdfMk.g:2794:3: ( 'italics' )
             {
              before(grammarAccess.getItalicsDefinitionAccess().getKeyItalicsKeyword_0_0()); 
-            // InternalPdfMk.g:2768:3: ( 'italics' )
-            // InternalPdfMk.g:2769:4: 'italics'
+            // InternalPdfMk.g:2795:3: ( 'italics' )
+            // InternalPdfMk.g:2796:4: 'italics'
             {
              before(grammarAccess.getItalicsDefinitionAccess().getKeyItalicsKeyword_0_0()); 
             match(input,26,FOLLOW_2); 
@@ -8305,17 +8385,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicsDefinition__ValueAssignment_2"
-    // InternalPdfMk.g:2780:1: rule__ItalicsDefinition__ValueAssignment_2 : ( ruleBooleanDefinition ) ;
+    // InternalPdfMk.g:2807:1: rule__ItalicsDefinition__ValueAssignment_2 : ( ruleBooleanDefinition ) ;
     public final void rule__ItalicsDefinition__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2784:1: ( ( ruleBooleanDefinition ) )
-            // InternalPdfMk.g:2785:2: ( ruleBooleanDefinition )
+            // InternalPdfMk.g:2811:1: ( ( ruleBooleanDefinition ) )
+            // InternalPdfMk.g:2812:2: ( ruleBooleanDefinition )
             {
-            // InternalPdfMk.g:2785:2: ( ruleBooleanDefinition )
-            // InternalPdfMk.g:2786:3: ruleBooleanDefinition
+            // InternalPdfMk.g:2812:2: ( ruleBooleanDefinition )
+            // InternalPdfMk.g:2813:3: ruleBooleanDefinition
             {
              before(grammarAccess.getItalicsDefinitionAccess().getValueBooleanDefinitionParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -8346,21 +8426,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FontSizeDefinition__KeyAssignment_0"
-    // InternalPdfMk.g:2795:1: rule__FontSizeDefinition__KeyAssignment_0 : ( ( 'fontSize' ) ) ;
+    // InternalPdfMk.g:2822:1: rule__FontSizeDefinition__KeyAssignment_0 : ( ( 'fontSize' ) ) ;
     public final void rule__FontSizeDefinition__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2799:1: ( ( ( 'fontSize' ) ) )
-            // InternalPdfMk.g:2800:2: ( ( 'fontSize' ) )
+            // InternalPdfMk.g:2826:1: ( ( ( 'fontSize' ) ) )
+            // InternalPdfMk.g:2827:2: ( ( 'fontSize' ) )
             {
-            // InternalPdfMk.g:2800:2: ( ( 'fontSize' ) )
-            // InternalPdfMk.g:2801:3: ( 'fontSize' )
+            // InternalPdfMk.g:2827:2: ( ( 'fontSize' ) )
+            // InternalPdfMk.g:2828:3: ( 'fontSize' )
             {
              before(grammarAccess.getFontSizeDefinitionAccess().getKeyFontSizeKeyword_0_0()); 
-            // InternalPdfMk.g:2802:3: ( 'fontSize' )
-            // InternalPdfMk.g:2803:4: 'fontSize'
+            // InternalPdfMk.g:2829:3: ( 'fontSize' )
+            // InternalPdfMk.g:2830:4: 'fontSize'
             {
              before(grammarAccess.getFontSizeDefinitionAccess().getKeyFontSizeKeyword_0_0()); 
             match(input,27,FOLLOW_2); 
@@ -8391,17 +8471,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FontSizeDefinition__ValueAssignment_2"
-    // InternalPdfMk.g:2814:1: rule__FontSizeDefinition__ValueAssignment_2 : ( RULE_INT ) ;
+    // InternalPdfMk.g:2841:1: rule__FontSizeDefinition__ValueAssignment_2 : ( RULE_INT ) ;
     public final void rule__FontSizeDefinition__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2818:1: ( ( RULE_INT ) )
-            // InternalPdfMk.g:2819:2: ( RULE_INT )
+            // InternalPdfMk.g:2845:1: ( ( RULE_INT ) )
+            // InternalPdfMk.g:2846:2: ( RULE_INT )
             {
-            // InternalPdfMk.g:2819:2: ( RULE_INT )
-            // InternalPdfMk.g:2820:3: RULE_INT
+            // InternalPdfMk.g:2846:2: ( RULE_INT )
+            // InternalPdfMk.g:2847:3: RULE_INT
             {
              before(grammarAccess.getFontSizeDefinitionAccess().getValueINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8428,21 +8508,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextObject__ValueAssignment_0"
-    // InternalPdfMk.g:2829:1: rule__TextObject__ValueAssignment_0 : ( ( '{' ) ) ;
+    // InternalPdfMk.g:2856:1: rule__TextObject__ValueAssignment_0 : ( ( '{' ) ) ;
     public final void rule__TextObject__ValueAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2833:1: ( ( ( '{' ) ) )
-            // InternalPdfMk.g:2834:2: ( ( '{' ) )
+            // InternalPdfMk.g:2860:1: ( ( ( '{' ) ) )
+            // InternalPdfMk.g:2861:2: ( ( '{' ) )
             {
-            // InternalPdfMk.g:2834:2: ( ( '{' ) )
-            // InternalPdfMk.g:2835:3: ( '{' )
+            // InternalPdfMk.g:2861:2: ( ( '{' ) )
+            // InternalPdfMk.g:2862:3: ( '{' )
             {
              before(grammarAccess.getTextObjectAccess().getValueLeftCurlyBracketKeyword_0_0()); 
-            // InternalPdfMk.g:2836:3: ( '{' )
-            // InternalPdfMk.g:2837:4: '{'
+            // InternalPdfMk.g:2863:3: ( '{' )
+            // InternalPdfMk.g:2864:4: '{'
             {
              before(grammarAccess.getTextObjectAccess().getValueLeftCurlyBracketKeyword_0_0()); 
             match(input,16,FOLLOW_2); 
@@ -8473,17 +8553,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextObject__TextAssignment_1"
-    // InternalPdfMk.g:2848:1: rule__TextObject__TextAssignment_1 : ( ruleTextDefinition ) ;
+    // InternalPdfMk.g:2875:1: rule__TextObject__TextAssignment_1 : ( ruleTextDefinition ) ;
     public final void rule__TextObject__TextAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2852:1: ( ( ruleTextDefinition ) )
-            // InternalPdfMk.g:2853:2: ( ruleTextDefinition )
+            // InternalPdfMk.g:2879:1: ( ( ruleTextDefinition ) )
+            // InternalPdfMk.g:2880:2: ( ruleTextDefinition )
             {
-            // InternalPdfMk.g:2853:2: ( ruleTextDefinition )
-            // InternalPdfMk.g:2854:3: ruleTextDefinition
+            // InternalPdfMk.g:2880:2: ( ruleTextDefinition )
+            // InternalPdfMk.g:2881:3: ruleTextDefinition
             {
              before(grammarAccess.getTextObjectAccess().getTextTextDefinitionParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8514,17 +8594,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextObject__StyleAssignment_2_1"
-    // InternalPdfMk.g:2863:1: rule__TextObject__StyleAssignment_2_1 : ( ruleTextStyleDefinition ) ;
+    // InternalPdfMk.g:2890:1: rule__TextObject__StyleAssignment_2_1 : ( ruleTextStyleDefinition ) ;
     public final void rule__TextObject__StyleAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2867:1: ( ( ruleTextStyleDefinition ) )
-            // InternalPdfMk.g:2868:2: ( ruleTextStyleDefinition )
+            // InternalPdfMk.g:2894:1: ( ( ruleTextStyleDefinition ) )
+            // InternalPdfMk.g:2895:2: ( ruleTextStyleDefinition )
             {
-            // InternalPdfMk.g:2868:2: ( ruleTextStyleDefinition )
-            // InternalPdfMk.g:2869:3: ruleTextStyleDefinition
+            // InternalPdfMk.g:2895:2: ( ruleTextStyleDefinition )
+            // InternalPdfMk.g:2896:3: ruleTextStyleDefinition
             {
              before(grammarAccess.getTextObjectAccess().getStyleTextStyleDefinitionParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8555,17 +8635,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextObject__FontSizeAssignment_3_1"
-    // InternalPdfMk.g:2878:1: rule__TextObject__FontSizeAssignment_3_1 : ( ruleFontSizeDefinition ) ;
+    // InternalPdfMk.g:2905:1: rule__TextObject__FontSizeAssignment_3_1 : ( ruleFontSizeDefinition ) ;
     public final void rule__TextObject__FontSizeAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2882:1: ( ( ruleFontSizeDefinition ) )
-            // InternalPdfMk.g:2883:2: ( ruleFontSizeDefinition )
+            // InternalPdfMk.g:2909:1: ( ( ruleFontSizeDefinition ) )
+            // InternalPdfMk.g:2910:2: ( ruleFontSizeDefinition )
             {
-            // InternalPdfMk.g:2883:2: ( ruleFontSizeDefinition )
-            // InternalPdfMk.g:2884:3: ruleFontSizeDefinition
+            // InternalPdfMk.g:2910:2: ( ruleFontSizeDefinition )
+            // InternalPdfMk.g:2911:3: ruleFontSizeDefinition
             {
              before(grammarAccess.getTextObjectAccess().getFontSizeFontSizeDefinitionParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8596,17 +8676,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextObject__AlignmentAssignment_4_1"
-    // InternalPdfMk.g:2893:1: rule__TextObject__AlignmentAssignment_4_1 : ( ruleTextAlignmentDefinition ) ;
+    // InternalPdfMk.g:2920:1: rule__TextObject__AlignmentAssignment_4_1 : ( ruleTextAlignmentDefinition ) ;
     public final void rule__TextObject__AlignmentAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2897:1: ( ( ruleTextAlignmentDefinition ) )
-            // InternalPdfMk.g:2898:2: ( ruleTextAlignmentDefinition )
+            // InternalPdfMk.g:2924:1: ( ( ruleTextAlignmentDefinition ) )
+            // InternalPdfMk.g:2925:2: ( ruleTextAlignmentDefinition )
             {
-            // InternalPdfMk.g:2898:2: ( ruleTextAlignmentDefinition )
-            // InternalPdfMk.g:2899:3: ruleTextAlignmentDefinition
+            // InternalPdfMk.g:2925:2: ( ruleTextAlignmentDefinition )
+            // InternalPdfMk.g:2926:3: ruleTextAlignmentDefinition
             {
              before(grammarAccess.getTextObjectAccess().getAlignmentTextAlignmentDefinitionParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8637,17 +8717,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextObject__TypeFaceAssignment_5_1"
-    // InternalPdfMk.g:2908:1: rule__TextObject__TypeFaceAssignment_5_1 : ( ruleTypeFaceDefinition ) ;
+    // InternalPdfMk.g:2935:1: rule__TextObject__TypeFaceAssignment_5_1 : ( ruleTypeFaceDefinition ) ;
     public final void rule__TextObject__TypeFaceAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2912:1: ( ( ruleTypeFaceDefinition ) )
-            // InternalPdfMk.g:2913:2: ( ruleTypeFaceDefinition )
+            // InternalPdfMk.g:2939:1: ( ( ruleTypeFaceDefinition ) )
+            // InternalPdfMk.g:2940:2: ( ruleTypeFaceDefinition )
             {
-            // InternalPdfMk.g:2913:2: ( ruleTypeFaceDefinition )
-            // InternalPdfMk.g:2914:3: ruleTypeFaceDefinition
+            // InternalPdfMk.g:2940:2: ( ruleTypeFaceDefinition )
+            // InternalPdfMk.g:2941:3: ruleTypeFaceDefinition
             {
              before(grammarAccess.getTextObjectAccess().getTypeFaceTypeFaceDefinitionParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8678,17 +8758,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TextObject__ItalicsAssignment_6_1"
-    // InternalPdfMk.g:2923:1: rule__TextObject__ItalicsAssignment_6_1 : ( ruleItalicsDefinition ) ;
+    // InternalPdfMk.g:2950:1: rule__TextObject__ItalicsAssignment_6_1 : ( ruleItalicsDefinition ) ;
     public final void rule__TextObject__ItalicsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2927:1: ( ( ruleItalicsDefinition ) )
-            // InternalPdfMk.g:2928:2: ( ruleItalicsDefinition )
+            // InternalPdfMk.g:2954:1: ( ( ruleItalicsDefinition ) )
+            // InternalPdfMk.g:2955:2: ( ruleItalicsDefinition )
             {
-            // InternalPdfMk.g:2928:2: ( ruleItalicsDefinition )
-            // InternalPdfMk.g:2929:3: ruleItalicsDefinition
+            // InternalPdfMk.g:2955:2: ( ruleItalicsDefinition )
+            // InternalPdfMk.g:2956:3: ruleItalicsDefinition
             {
              before(grammarAccess.getTextObjectAccess().getItalicsItalicsDefinitionParserRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8719,21 +8799,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObject__KeyAssignment_0"
-    // InternalPdfMk.g:2938:1: rule__StyleObject__KeyAssignment_0 : ( RULE_STRING ) ;
+    // InternalPdfMk.g:2965:1: rule__StyleObject__KeyAssignment_0 : ( RULE_ID ) ;
     public final void rule__StyleObject__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2942:1: ( ( RULE_STRING ) )
-            // InternalPdfMk.g:2943:2: ( RULE_STRING )
+            // InternalPdfMk.g:2969:1: ( ( RULE_ID ) )
+            // InternalPdfMk.g:2970:2: ( RULE_ID )
             {
-            // InternalPdfMk.g:2943:2: ( RULE_STRING )
-            // InternalPdfMk.g:2944:3: RULE_STRING
+            // InternalPdfMk.g:2970:2: ( RULE_ID )
+            // InternalPdfMk.g:2971:3: RULE_ID
             {
-             before(grammarAccess.getStyleObjectAccess().getKeySTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getStyleObjectAccess().getKeySTRINGTerminalRuleCall_0_0()); 
+             before(grammarAccess.getStyleObjectAccess().getKeyIDTerminalRuleCall_0_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getStyleObjectAccess().getKeyIDTerminalRuleCall_0_0()); 
 
             }
 
@@ -8756,21 +8836,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObject__ValueAssignment_2"
-    // InternalPdfMk.g:2953:1: rule__StyleObject__ValueAssignment_2 : ( ( '{' ) ) ;
+    // InternalPdfMk.g:2980:1: rule__StyleObject__ValueAssignment_2 : ( ( '{' ) ) ;
     public final void rule__StyleObject__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2957:1: ( ( ( '{' ) ) )
-            // InternalPdfMk.g:2958:2: ( ( '{' ) )
+            // InternalPdfMk.g:2984:1: ( ( ( '{' ) ) )
+            // InternalPdfMk.g:2985:2: ( ( '{' ) )
             {
-            // InternalPdfMk.g:2958:2: ( ( '{' ) )
-            // InternalPdfMk.g:2959:3: ( '{' )
+            // InternalPdfMk.g:2985:2: ( ( '{' ) )
+            // InternalPdfMk.g:2986:3: ( '{' )
             {
              before(grammarAccess.getStyleObjectAccess().getValueLeftCurlyBracketKeyword_2_0()); 
-            // InternalPdfMk.g:2960:3: ( '{' )
-            // InternalPdfMk.g:2961:4: '{'
+            // InternalPdfMk.g:2987:3: ( '{' )
+            // InternalPdfMk.g:2988:4: '{'
             {
              before(grammarAccess.getStyleObjectAccess().getValueLeftCurlyBracketKeyword_2_0()); 
             match(input,16,FOLLOW_2); 
@@ -8801,17 +8881,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObject__FontSizeAssignment_3"
-    // InternalPdfMk.g:2972:1: rule__StyleObject__FontSizeAssignment_3 : ( ruleFontSizeDefinition ) ;
+    // InternalPdfMk.g:2999:1: rule__StyleObject__FontSizeAssignment_3 : ( ruleFontSizeDefinition ) ;
     public final void rule__StyleObject__FontSizeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2976:1: ( ( ruleFontSizeDefinition ) )
-            // InternalPdfMk.g:2977:2: ( ruleFontSizeDefinition )
+            // InternalPdfMk.g:3003:1: ( ( ruleFontSizeDefinition ) )
+            // InternalPdfMk.g:3004:2: ( ruleFontSizeDefinition )
             {
-            // InternalPdfMk.g:2977:2: ( ruleFontSizeDefinition )
-            // InternalPdfMk.g:2978:3: ruleFontSizeDefinition
+            // InternalPdfMk.g:3004:2: ( ruleFontSizeDefinition )
+            // InternalPdfMk.g:3005:3: ruleFontSizeDefinition
             {
              before(grammarAccess.getStyleObjectAccess().getFontSizeFontSizeDefinitionParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -8842,17 +8922,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObject__TypeFaceAssignment_4_1"
-    // InternalPdfMk.g:2987:1: rule__StyleObject__TypeFaceAssignment_4_1 : ( ruleTypeFaceDefinition ) ;
+    // InternalPdfMk.g:3014:1: rule__StyleObject__TypeFaceAssignment_4_1 : ( ruleTypeFaceDefinition ) ;
     public final void rule__StyleObject__TypeFaceAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:2991:1: ( ( ruleTypeFaceDefinition ) )
-            // InternalPdfMk.g:2992:2: ( ruleTypeFaceDefinition )
+            // InternalPdfMk.g:3018:1: ( ( ruleTypeFaceDefinition ) )
+            // InternalPdfMk.g:3019:2: ( ruleTypeFaceDefinition )
             {
-            // InternalPdfMk.g:2992:2: ( ruleTypeFaceDefinition )
-            // InternalPdfMk.g:2993:3: ruleTypeFaceDefinition
+            // InternalPdfMk.g:3019:2: ( ruleTypeFaceDefinition )
+            // InternalPdfMk.g:3020:3: ruleTypeFaceDefinition
             {
              before(grammarAccess.getStyleObjectAccess().getTypeFaceTypeFaceDefinitionParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8883,17 +8963,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObject__AlignmentAssignment_5_1"
-    // InternalPdfMk.g:3002:1: rule__StyleObject__AlignmentAssignment_5_1 : ( ruleTextAlignmentDefinition ) ;
+    // InternalPdfMk.g:3029:1: rule__StyleObject__AlignmentAssignment_5_1 : ( ruleTextAlignmentDefinition ) ;
     public final void rule__StyleObject__AlignmentAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3006:1: ( ( ruleTextAlignmentDefinition ) )
-            // InternalPdfMk.g:3007:2: ( ruleTextAlignmentDefinition )
+            // InternalPdfMk.g:3033:1: ( ( ruleTextAlignmentDefinition ) )
+            // InternalPdfMk.g:3034:2: ( ruleTextAlignmentDefinition )
             {
-            // InternalPdfMk.g:3007:2: ( ruleTextAlignmentDefinition )
-            // InternalPdfMk.g:3008:3: ruleTextAlignmentDefinition
+            // InternalPdfMk.g:3034:2: ( ruleTextAlignmentDefinition )
+            // InternalPdfMk.g:3035:3: ruleTextAlignmentDefinition
             {
              before(grammarAccess.getStyleObjectAccess().getAlignmentTextAlignmentDefinitionParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8924,17 +9004,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObject__ItalicsAssignment_6_1"
-    // InternalPdfMk.g:3017:1: rule__StyleObject__ItalicsAssignment_6_1 : ( ruleItalicsDefinition ) ;
+    // InternalPdfMk.g:3044:1: rule__StyleObject__ItalicsAssignment_6_1 : ( ruleItalicsDefinition ) ;
     public final void rule__StyleObject__ItalicsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3021:1: ( ( ruleItalicsDefinition ) )
-            // InternalPdfMk.g:3022:2: ( ruleItalicsDefinition )
+            // InternalPdfMk.g:3048:1: ( ( ruleItalicsDefinition ) )
+            // InternalPdfMk.g:3049:2: ( ruleItalicsDefinition )
             {
-            // InternalPdfMk.g:3022:2: ( ruleItalicsDefinition )
-            // InternalPdfMk.g:3023:3: ruleItalicsDefinition
+            // InternalPdfMk.g:3049:2: ( ruleItalicsDefinition )
+            // InternalPdfMk.g:3050:3: ruleItalicsDefinition
             {
              before(grammarAccess.getStyleObjectAccess().getItalicsItalicsDefinitionParserRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -8965,17 +9045,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObjects__ValueAssignment_1"
-    // InternalPdfMk.g:3032:1: rule__StyleObjects__ValueAssignment_1 : ( ruleStyleObject ) ;
+    // InternalPdfMk.g:3059:1: rule__StyleObjects__ValueAssignment_1 : ( ruleStyleObject ) ;
     public final void rule__StyleObjects__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3036:1: ( ( ruleStyleObject ) )
-            // InternalPdfMk.g:3037:2: ( ruleStyleObject )
+            // InternalPdfMk.g:3063:1: ( ( ruleStyleObject ) )
+            // InternalPdfMk.g:3064:2: ( ruleStyleObject )
             {
-            // InternalPdfMk.g:3037:2: ( ruleStyleObject )
-            // InternalPdfMk.g:3038:3: ruleStyleObject
+            // InternalPdfMk.g:3064:2: ( ruleStyleObject )
+            // InternalPdfMk.g:3065:3: ruleStyleObject
             {
              before(grammarAccess.getStyleObjectsAccess().getValueStyleObjectParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -9006,17 +9086,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StyleObjects__ValueAssignment_2_1"
-    // InternalPdfMk.g:3047:1: rule__StyleObjects__ValueAssignment_2_1 : ( ruleStyleObject ) ;
+    // InternalPdfMk.g:3074:1: rule__StyleObjects__ValueAssignment_2_1 : ( ruleStyleObject ) ;
     public final void rule__StyleObjects__ValueAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3051:1: ( ( ruleStyleObject ) )
-            // InternalPdfMk.g:3052:2: ( ruleStyleObject )
+            // InternalPdfMk.g:3078:1: ( ( ruleStyleObject ) )
+            // InternalPdfMk.g:3079:2: ( ruleStyleObject )
             {
-            // InternalPdfMk.g:3052:2: ( ruleStyleObject )
-            // InternalPdfMk.g:3053:3: ruleStyleObject
+            // InternalPdfMk.g:3079:2: ( ruleStyleObject )
+            // InternalPdfMk.g:3080:3: ruleStyleObject
             {
              before(grammarAccess.getStyleObjectsAccess().getValueStyleObjectParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -9047,21 +9127,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ContentObject__ValueAssignment"
-    // InternalPdfMk.g:3062:1: rule__ContentObject__ValueAssignment : ( ( rule__ContentObject__ValueAlternatives_0 ) ) ;
+    // InternalPdfMk.g:3089:1: rule__ContentObject__ValueAssignment : ( ( rule__ContentObject__ValueAlternatives_0 ) ) ;
     public final void rule__ContentObject__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3066:1: ( ( ( rule__ContentObject__ValueAlternatives_0 ) ) )
-            // InternalPdfMk.g:3067:2: ( ( rule__ContentObject__ValueAlternatives_0 ) )
+            // InternalPdfMk.g:3093:1: ( ( ( rule__ContentObject__ValueAlternatives_0 ) ) )
+            // InternalPdfMk.g:3094:2: ( ( rule__ContentObject__ValueAlternatives_0 ) )
             {
-            // InternalPdfMk.g:3067:2: ( ( rule__ContentObject__ValueAlternatives_0 ) )
-            // InternalPdfMk.g:3068:3: ( rule__ContentObject__ValueAlternatives_0 )
+            // InternalPdfMk.g:3094:2: ( ( rule__ContentObject__ValueAlternatives_0 ) )
+            // InternalPdfMk.g:3095:3: ( rule__ContentObject__ValueAlternatives_0 )
             {
              before(grammarAccess.getContentObjectAccess().getValueAlternatives_0()); 
-            // InternalPdfMk.g:3069:3: ( rule__ContentObject__ValueAlternatives_0 )
-            // InternalPdfMk.g:3069:4: rule__ContentObject__ValueAlternatives_0
+            // InternalPdfMk.g:3096:3: ( rule__ContentObject__ValueAlternatives_0 )
+            // InternalPdfMk.g:3096:4: rule__ContentObject__ValueAlternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__ContentObject__ValueAlternatives_0();
@@ -9093,26 +9173,26 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ContentObject__ValueAssignment"
 
 
-    // $ANTLR start "rule__ContentObjects__ValueAssignment_1"
-    // InternalPdfMk.g:3077:1: rule__ContentObjects__ValueAssignment_1 : ( ruleContentObject ) ;
-    public final void rule__ContentObjects__ValueAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__ContentObjects__ValueAssignment_1_0"
+    // InternalPdfMk.g:3104:1: rule__ContentObjects__ValueAssignment_1_0 : ( ruleContentObject ) ;
+    public final void rule__ContentObjects__ValueAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3081:1: ( ( ruleContentObject ) )
-            // InternalPdfMk.g:3082:2: ( ruleContentObject )
+            // InternalPdfMk.g:3108:1: ( ( ruleContentObject ) )
+            // InternalPdfMk.g:3109:2: ( ruleContentObject )
             {
-            // InternalPdfMk.g:3082:2: ( ruleContentObject )
-            // InternalPdfMk.g:3083:3: ruleContentObject
+            // InternalPdfMk.g:3109:2: ( ruleContentObject )
+            // InternalPdfMk.g:3110:3: ruleContentObject
             {
-             before(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_0()); 
+             before(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
             ruleContentObject();
 
             state._fsp--;
 
-             after(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_0()); 
+             after(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_0_0()); 
 
             }
 
@@ -9131,29 +9211,29 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ContentObjects__ValueAssignment_1"
+    // $ANTLR end "rule__ContentObjects__ValueAssignment_1_0"
 
 
-    // $ANTLR start "rule__ContentObjects__ValueAssignment_2_1"
-    // InternalPdfMk.g:3092:1: rule__ContentObjects__ValueAssignment_2_1 : ( ruleContentObject ) ;
-    public final void rule__ContentObjects__ValueAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__ContentObjects__ValueAssignment_1_1_1"
+    // InternalPdfMk.g:3119:1: rule__ContentObjects__ValueAssignment_1_1_1 : ( ruleContentObject ) ;
+    public final void rule__ContentObjects__ValueAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3096:1: ( ( ruleContentObject ) )
-            // InternalPdfMk.g:3097:2: ( ruleContentObject )
+            // InternalPdfMk.g:3123:1: ( ( ruleContentObject ) )
+            // InternalPdfMk.g:3124:2: ( ruleContentObject )
             {
-            // InternalPdfMk.g:3097:2: ( ruleContentObject )
-            // InternalPdfMk.g:3098:3: ruleContentObject
+            // InternalPdfMk.g:3124:2: ( ruleContentObject )
+            // InternalPdfMk.g:3125:3: ruleContentObject
             {
-             before(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_2_1_0()); 
+             before(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_1_1_0()); 
             pushFollow(FOLLOW_2);
             ruleContentObject();
 
             state._fsp--;
 
-             after(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_2_1_0()); 
+             after(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_1_1_0()); 
 
             }
 
@@ -9172,25 +9252,25 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__ContentObjects__ValueAssignment_2_1"
+    // $ANTLR end "rule__ContentObjects__ValueAssignment_1_1_1"
 
 
     // $ANTLR start "rule__Styles__KeyAssignment_0"
-    // InternalPdfMk.g:3107:1: rule__Styles__KeyAssignment_0 : ( ( 'styles' ) ) ;
+    // InternalPdfMk.g:3134:1: rule__Styles__KeyAssignment_0 : ( ( 'styles' ) ) ;
     public final void rule__Styles__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3111:1: ( ( ( 'styles' ) ) )
-            // InternalPdfMk.g:3112:2: ( ( 'styles' ) )
+            // InternalPdfMk.g:3138:1: ( ( ( 'styles' ) ) )
+            // InternalPdfMk.g:3139:2: ( ( 'styles' ) )
             {
-            // InternalPdfMk.g:3112:2: ( ( 'styles' ) )
-            // InternalPdfMk.g:3113:3: ( 'styles' )
+            // InternalPdfMk.g:3139:2: ( ( 'styles' ) )
+            // InternalPdfMk.g:3140:3: ( 'styles' )
             {
              before(grammarAccess.getStylesAccess().getKeyStylesKeyword_0_0()); 
-            // InternalPdfMk.g:3114:3: ( 'styles' )
-            // InternalPdfMk.g:3115:4: 'styles'
+            // InternalPdfMk.g:3141:3: ( 'styles' )
+            // InternalPdfMk.g:3142:4: 'styles'
             {
              before(grammarAccess.getStylesAccess().getKeyStylesKeyword_0_0()); 
             match(input,28,FOLLOW_2); 
@@ -9221,17 +9301,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Styles__ValueAssignment_2"
-    // InternalPdfMk.g:3126:1: rule__Styles__ValueAssignment_2 : ( ruleStyleObjects ) ;
+    // InternalPdfMk.g:3153:1: rule__Styles__ValueAssignment_2 : ( ruleStyleObjects ) ;
     public final void rule__Styles__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3130:1: ( ( ruleStyleObjects ) )
-            // InternalPdfMk.g:3131:2: ( ruleStyleObjects )
+            // InternalPdfMk.g:3157:1: ( ( ruleStyleObjects ) )
+            // InternalPdfMk.g:3158:2: ( ruleStyleObjects )
             {
-            // InternalPdfMk.g:3131:2: ( ruleStyleObjects )
-            // InternalPdfMk.g:3132:3: ruleStyleObjects
+            // InternalPdfMk.g:3158:2: ( ruleStyleObjects )
+            // InternalPdfMk.g:3159:3: ruleStyleObjects
             {
              before(grammarAccess.getStylesAccess().getValueStyleObjectsParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -9262,21 +9342,21 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__KeyAssignment_0"
-    // InternalPdfMk.g:3141:1: rule__Content__KeyAssignment_0 : ( ( 'content' ) ) ;
+    // InternalPdfMk.g:3168:1: rule__Content__KeyAssignment_0 : ( ( 'content' ) ) ;
     public final void rule__Content__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3145:1: ( ( ( 'content' ) ) )
-            // InternalPdfMk.g:3146:2: ( ( 'content' ) )
+            // InternalPdfMk.g:3172:1: ( ( ( 'content' ) ) )
+            // InternalPdfMk.g:3173:2: ( ( 'content' ) )
             {
-            // InternalPdfMk.g:3146:2: ( ( 'content' ) )
-            // InternalPdfMk.g:3147:3: ( 'content' )
+            // InternalPdfMk.g:3173:2: ( ( 'content' ) )
+            // InternalPdfMk.g:3174:3: ( 'content' )
             {
              before(grammarAccess.getContentAccess().getKeyContentKeyword_0_0()); 
-            // InternalPdfMk.g:3148:3: ( 'content' )
-            // InternalPdfMk.g:3149:4: 'content'
+            // InternalPdfMk.g:3175:3: ( 'content' )
+            // InternalPdfMk.g:3176:4: 'content'
             {
              before(grammarAccess.getContentAccess().getKeyContentKeyword_0_0()); 
             match(input,29,FOLLOW_2); 
@@ -9307,17 +9387,17 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Content__ValueAssignment_2"
-    // InternalPdfMk.g:3160:1: rule__Content__ValueAssignment_2 : ( ruleContentObjects ) ;
+    // InternalPdfMk.g:3187:1: rule__Content__ValueAssignment_2 : ( ruleContentObjects ) ;
     public final void rule__Content__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPdfMk.g:3164:1: ( ( ruleContentObjects ) )
-            // InternalPdfMk.g:3165:2: ( ruleContentObjects )
+            // InternalPdfMk.g:3191:1: ( ( ruleContentObjects ) )
+            // InternalPdfMk.g:3192:2: ( ruleContentObjects )
             {
-            // InternalPdfMk.g:3165:2: ( ruleContentObjects )
-            // InternalPdfMk.g:3166:3: ruleContentObjects
+            // InternalPdfMk.g:3192:2: ( ruleContentObjects )
+            // InternalPdfMk.g:3193:3: ruleContentObjects
             {
              before(grammarAccess.getContentAccess().getValueContentObjectsParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -9371,10 +9451,12 @@ public class InternalPdfMkParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000008060000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000060010L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000060040L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000450010L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000410010L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000010010L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000200000L});
 
 }

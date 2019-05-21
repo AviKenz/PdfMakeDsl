@@ -109,7 +109,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ContentObjects returns ContentObjects
 	 *
 	 * Constraint:
-	 *     ((value+=ContentObject value+=ContentObject+) | value+=ContentObject+)?
+	 *     (value+=ContentObject value+=ContentObject*)
 	 */
 	protected void sequence_ContentObjects(ISerializationContext context, ContentObjects semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -236,7 +236,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *
 	 * Constraint:
 	 *     (
-	 *         key=STRING 
+	 *         key=ID 
 	 *         value='{' 
 	 *         fontSize?=FontSizeDefinition? 
 	 *         typeFace?=TypeFaceDefinition? 

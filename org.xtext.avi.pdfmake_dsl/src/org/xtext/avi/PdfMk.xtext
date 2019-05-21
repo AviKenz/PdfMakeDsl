@@ -4,6 +4,8 @@ generate pdfMk "http://www.xtext.org/avi/PdfMk"
 
 // TODO [?] missmatched input "header" expecting "}" in style3.pdfmk
 // TODO [?] missing EOF at "}"
+// TODO [?] enum strings
+// TODO [L] autovervollstaendigung beim style
 /******************** ********************/
 
 
@@ -53,6 +55,7 @@ StyleDefinition:
 
 
 /******************** Objects definition ********************/
+// TODO [M] write grammar to support text in []. see playground-style3
 TextObject: 
 	value="{" text?=TextDefinition 
 			  ("," style?=TextStyleDefinition)? 
@@ -63,7 +66,7 @@ TextObject:
 		   "}";
 
 StyleObject: 
-	key=STRING ":" 
+	key=ID ":" 
 	value="{" 
 	  		  (fontSize?=FontSizeDefinition)? 
 			  ("," typeFace?=TypeFaceDefinition)? 
@@ -82,8 +85,10 @@ ContentObject:
 	
 ContentObjects:
 	"[" 
-		(value+=ContentObject)?
+		(value+=ContentObject
 		("," value+=ContentObject)* 
+		
+		)?
 	"]";
 
 

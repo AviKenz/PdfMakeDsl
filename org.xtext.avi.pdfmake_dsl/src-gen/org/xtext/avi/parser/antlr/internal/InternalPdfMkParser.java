@@ -1711,7 +1711,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyleObject"
-    // InternalPdfMk.g:711:1: ruleStyleObject returns [EObject current=null] : ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' ) ;
+    // InternalPdfMk.g:711:1: ruleStyleObject returns [EObject current=null] : ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' ) ;
     public final EObject ruleStyleObject() throws RecognitionException {
         EObject current = null;
 
@@ -1735,21 +1735,21 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:717:2: ( ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' ) )
-            // InternalPdfMk.g:718:2: ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' )
+            // InternalPdfMk.g:717:2: ( ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' ) )
+            // InternalPdfMk.g:718:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' )
             {
-            // InternalPdfMk.g:718:2: ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' )
-            // InternalPdfMk.g:719:3: ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}'
+            // InternalPdfMk.g:718:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' )
+            // InternalPdfMk.g:719:3: ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}'
             {
-            // InternalPdfMk.g:719:3: ( (lv_key_0_0= RULE_STRING ) )
-            // InternalPdfMk.g:720:4: (lv_key_0_0= RULE_STRING )
+            // InternalPdfMk.g:719:3: ( (lv_key_0_0= RULE_ID ) )
+            // InternalPdfMk.g:720:4: (lv_key_0_0= RULE_ID )
             {
-            // InternalPdfMk.g:720:4: (lv_key_0_0= RULE_STRING )
-            // InternalPdfMk.g:721:5: lv_key_0_0= RULE_STRING
+            // InternalPdfMk.g:720:4: (lv_key_0_0= RULE_ID )
+            // InternalPdfMk.g:721:5: lv_key_0_0= RULE_ID
             {
-            lv_key_0_0=(Token)match(input,RULE_STRING,FOLLOW_10); 
+            lv_key_0_0=(Token)match(input,RULE_ID,FOLLOW_10); 
 
-            					newLeafNode(lv_key_0_0, grammarAccess.getStyleObjectAccess().getKeySTRINGTerminalRuleCall_0_0());
+            					newLeafNode(lv_key_0_0, grammarAccess.getStyleObjectAccess().getKeyIDTerminalRuleCall_0_0());
             				
 
             					if (current==null) {
@@ -1759,7 +1759,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
             						current,
             						"key",
             						lv_key_0_0,
-            						"org.eclipse.xtext.common.Terminals.STRING");
+            						"org.eclipse.xtext.common.Terminals.ID");
             				
 
             }
@@ -2092,7 +2092,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_STRING) ) {
+            if ( (LA13_0==RULE_ID) ) {
                 alt13=1;
             }
             switch (alt13) {
@@ -2145,7 +2145,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalPdfMk.g:896:4: otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) )
             	    {
-            	    otherlv_2=(Token)match(input,15,FOLLOW_12); 
+            	    otherlv_2=(Token)match(input,15,FOLLOW_23); 
 
             	    				newLeafNode(otherlv_2, grammarAccess.getStyleObjectsAccess().getCommaKeyword_2_0());
             	    			
@@ -2406,7 +2406,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContentObjects"
-    // InternalPdfMk.g:989:1: ruleContentObjects returns [EObject current=null] : (otherlv_0= '[' ( (lv_value_1_0= ruleContentObject ) )? (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* otherlv_4= ']' ) ;
+    // InternalPdfMk.g:989:1: ruleContentObjects returns [EObject current=null] : (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' ) ;
     public final EObject ruleContentObjects() throws RecognitionException {
         EObject current = null;
 
@@ -2422,51 +2422,116 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:995:2: ( (otherlv_0= '[' ( (lv_value_1_0= ruleContentObject ) )? (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* otherlv_4= ']' ) )
-            // InternalPdfMk.g:996:2: (otherlv_0= '[' ( (lv_value_1_0= ruleContentObject ) )? (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* otherlv_4= ']' )
+            // InternalPdfMk.g:995:2: ( (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' ) )
+            // InternalPdfMk.g:996:2: (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' )
             {
-            // InternalPdfMk.g:996:2: (otherlv_0= '[' ( (lv_value_1_0= ruleContentObject ) )? (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* otherlv_4= ']' )
-            // InternalPdfMk.g:997:3: otherlv_0= '[' ( (lv_value_1_0= ruleContentObject ) )? (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* otherlv_4= ']'
+            // InternalPdfMk.g:996:2: (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' )
+            // InternalPdfMk.g:997:3: otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']'
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_23); 
+            otherlv_0=(Token)match(input,23,FOLLOW_24); 
 
             			newLeafNode(otherlv_0, grammarAccess.getContentObjectsAccess().getLeftSquareBracketKeyword_0());
             		
-            // InternalPdfMk.g:1001:3: ( (lv_value_1_0= ruleContentObject ) )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // InternalPdfMk.g:1001:3: ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==RULE_STRING||LA16_0==14) ) {
-                alt16=1;
+            if ( (LA17_0==RULE_STRING||LA17_0==14) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
-                    // InternalPdfMk.g:1002:4: (lv_value_1_0= ruleContentObject )
+                    // InternalPdfMk.g:1002:4: ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )*
                     {
-                    // InternalPdfMk.g:1002:4: (lv_value_1_0= ruleContentObject )
-                    // InternalPdfMk.g:1003:5: lv_value_1_0= ruleContentObject
+                    // InternalPdfMk.g:1002:4: ( (lv_value_1_0= ruleContentObject ) )
+                    // InternalPdfMk.g:1003:5: (lv_value_1_0= ruleContentObject )
+                    {
+                    // InternalPdfMk.g:1003:5: (lv_value_1_0= ruleContentObject )
+                    // InternalPdfMk.g:1004:6: lv_value_1_0= ruleContentObject
                     {
 
-                    					newCompositeNode(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_0());
-                    				
-                    pushFollow(FOLLOW_24);
+                    						newCompositeNode(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_0_0());
+                    					
+                    pushFollow(FOLLOW_25);
                     lv_value_1_0=ruleContentObject();
 
                     state._fsp--;
 
 
-                    					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getContentObjectsRule());
-                    					}
-                    					add(
-                    						current,
-                    						"value",
-                    						lv_value_1_0,
-                    						"org.xtext.avi.PdfMk.ContentObject");
-                    					afterParserOrEnumRuleCall();
-                    				
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getContentObjectsRule());
+                    						}
+                    						add(
+                    							current,
+                    							"value",
+                    							lv_value_1_0,
+                    							"org.xtext.avi.PdfMk.ContentObject");
+                    						afterParserOrEnumRuleCall();
+                    					
 
                     }
+
+
+                    }
+
+                    // InternalPdfMk.g:1021:4: (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )*
+                    loop16:
+                    do {
+                        int alt16=2;
+                        int LA16_0 = input.LA(1);
+
+                        if ( (LA16_0==15) ) {
+                            alt16=1;
+                        }
+
+
+                        switch (alt16) {
+                    	case 1 :
+                    	    // InternalPdfMk.g:1022:5: otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) )
+                    	    {
+                    	    otherlv_2=(Token)match(input,15,FOLLOW_26); 
+
+                    	    					newLeafNode(otherlv_2, grammarAccess.getContentObjectsAccess().getCommaKeyword_1_1_0());
+                    	    				
+                    	    // InternalPdfMk.g:1026:5: ( (lv_value_3_0= ruleContentObject ) )
+                    	    // InternalPdfMk.g:1027:6: (lv_value_3_0= ruleContentObject )
+                    	    {
+                    	    // InternalPdfMk.g:1027:6: (lv_value_3_0= ruleContentObject )
+                    	    // InternalPdfMk.g:1028:7: lv_value_3_0= ruleContentObject
+                    	    {
+
+                    	    							newCompositeNode(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_1_1_0());
+                    	    						
+                    	    pushFollow(FOLLOW_25);
+                    	    lv_value_3_0=ruleContentObject();
+
+                    	    state._fsp--;
+
+
+                    	    							if (current==null) {
+                    	    								current = createModelElementForParent(grammarAccess.getContentObjectsRule());
+                    	    							}
+                    	    							add(
+                    	    								current,
+                    	    								"value",
+                    	    								lv_value_3_0,
+                    	    								"org.xtext.avi.PdfMk.ContentObject");
+                    	    							afterParserOrEnumRuleCall();
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop16;
+                        }
+                    } while (true);
 
 
                     }
@@ -2474,68 +2539,9 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1020:3: (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )*
-            loop17:
-            do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
-
-                if ( (LA17_0==15) ) {
-                    alt17=1;
-                }
-
-
-                switch (alt17) {
-            	case 1 :
-            	    // InternalPdfMk.g:1021:4: otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) )
-            	    {
-            	    otherlv_2=(Token)match(input,15,FOLLOW_25); 
-
-            	    				newLeafNode(otherlv_2, grammarAccess.getContentObjectsAccess().getCommaKeyword_2_0());
-            	    			
-            	    // InternalPdfMk.g:1025:4: ( (lv_value_3_0= ruleContentObject ) )
-            	    // InternalPdfMk.g:1026:5: (lv_value_3_0= ruleContentObject )
-            	    {
-            	    // InternalPdfMk.g:1026:5: (lv_value_3_0= ruleContentObject )
-            	    // InternalPdfMk.g:1027:6: lv_value_3_0= ruleContentObject
-            	    {
-
-            	    						newCompositeNode(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_2_1_0());
-            	    					
-            	    pushFollow(FOLLOW_24);
-            	    lv_value_3_0=ruleContentObject();
-
-            	    state._fsp--;
-
-
-            	    						if (current==null) {
-            	    							current = createModelElementForParent(grammarAccess.getContentObjectsRule());
-            	    						}
-            	    						add(
-            	    							current,
-            	    							"value",
-            	    							lv_value_3_0,
-            	    							"org.xtext.avi.PdfMk.ContentObject");
-            	    						afterParserOrEnumRuleCall();
-            	    					
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop17;
-                }
-            } while (true);
-
             otherlv_4=(Token)match(input,24,FOLLOW_2); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getContentObjectsAccess().getRightSquareBracketKeyword_3());
+            			newLeafNode(otherlv_4, grammarAccess.getContentObjectsAccess().getRightSquareBracketKeyword_2());
             		
 
             }
@@ -2560,7 +2566,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStyles"
-    // InternalPdfMk.g:1053:1: entryRuleStyles returns [EObject current=null] : iv_ruleStyles= ruleStyles EOF ;
+    // InternalPdfMk.g:1055:1: entryRuleStyles returns [EObject current=null] : iv_ruleStyles= ruleStyles EOF ;
     public final EObject entryRuleStyles() throws RecognitionException {
         EObject current = null;
 
@@ -2568,8 +2574,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1053:47: (iv_ruleStyles= ruleStyles EOF )
-            // InternalPdfMk.g:1054:2: iv_ruleStyles= ruleStyles EOF
+            // InternalPdfMk.g:1055:47: (iv_ruleStyles= ruleStyles EOF )
+            // InternalPdfMk.g:1056:2: iv_ruleStyles= ruleStyles EOF
             {
              newCompositeNode(grammarAccess.getStylesRule()); 
             pushFollow(FOLLOW_1);
@@ -2596,7 +2602,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyles"
-    // InternalPdfMk.g:1060:1: ruleStyles returns [EObject current=null] : ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) ;
+    // InternalPdfMk.g:1062:1: ruleStyles returns [EObject current=null] : ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) ;
     public final EObject ruleStyles() throws RecognitionException {
         EObject current = null;
 
@@ -2609,17 +2615,17 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1066:2: ( ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) )
-            // InternalPdfMk.g:1067:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
+            // InternalPdfMk.g:1068:2: ( ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) )
+            // InternalPdfMk.g:1069:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
             {
-            // InternalPdfMk.g:1067:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
-            // InternalPdfMk.g:1068:3: ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) )
+            // InternalPdfMk.g:1069:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
+            // InternalPdfMk.g:1070:3: ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) )
             {
-            // InternalPdfMk.g:1068:3: ( (lv_key_0_0= 'styles' ) )
-            // InternalPdfMk.g:1069:4: (lv_key_0_0= 'styles' )
+            // InternalPdfMk.g:1070:3: ( (lv_key_0_0= 'styles' ) )
+            // InternalPdfMk.g:1071:4: (lv_key_0_0= 'styles' )
             {
-            // InternalPdfMk.g:1069:4: (lv_key_0_0= 'styles' )
-            // InternalPdfMk.g:1070:5: lv_key_0_0= 'styles'
+            // InternalPdfMk.g:1071:4: (lv_key_0_0= 'styles' )
+            // InternalPdfMk.g:1072:5: lv_key_0_0= 'styles'
             {
             lv_key_0_0=(Token)match(input,28,FOLLOW_10); 
 
@@ -2641,11 +2647,11 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getStylesAccess().getColonKeyword_1());
             		
-            // InternalPdfMk.g:1086:3: ( (lv_value_2_0= ruleStyleObjects ) )
-            // InternalPdfMk.g:1087:4: (lv_value_2_0= ruleStyleObjects )
+            // InternalPdfMk.g:1088:3: ( (lv_value_2_0= ruleStyleObjects ) )
+            // InternalPdfMk.g:1089:4: (lv_value_2_0= ruleStyleObjects )
             {
-            // InternalPdfMk.g:1087:4: (lv_value_2_0= ruleStyleObjects )
-            // InternalPdfMk.g:1088:5: lv_value_2_0= ruleStyleObjects
+            // InternalPdfMk.g:1089:4: (lv_value_2_0= ruleStyleObjects )
+            // InternalPdfMk.g:1090:5: lv_value_2_0= ruleStyleObjects
             {
 
             					newCompositeNode(grammarAccess.getStylesAccess().getValueStyleObjectsParserRuleCall_2_0());
@@ -2695,7 +2701,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContent"
-    // InternalPdfMk.g:1109:1: entryRuleContent returns [EObject current=null] : iv_ruleContent= ruleContent EOF ;
+    // InternalPdfMk.g:1111:1: entryRuleContent returns [EObject current=null] : iv_ruleContent= ruleContent EOF ;
     public final EObject entryRuleContent() throws RecognitionException {
         EObject current = null;
 
@@ -2703,8 +2709,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1109:48: (iv_ruleContent= ruleContent EOF )
-            // InternalPdfMk.g:1110:2: iv_ruleContent= ruleContent EOF
+            // InternalPdfMk.g:1111:48: (iv_ruleContent= ruleContent EOF )
+            // InternalPdfMk.g:1112:2: iv_ruleContent= ruleContent EOF
             {
              newCompositeNode(grammarAccess.getContentRule()); 
             pushFollow(FOLLOW_1);
@@ -2731,7 +2737,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContent"
-    // InternalPdfMk.g:1116:1: ruleContent returns [EObject current=null] : ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) ;
+    // InternalPdfMk.g:1118:1: ruleContent returns [EObject current=null] : ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) ;
     public final EObject ruleContent() throws RecognitionException {
         EObject current = null;
 
@@ -2744,17 +2750,17 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1122:2: ( ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) )
-            // InternalPdfMk.g:1123:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
+            // InternalPdfMk.g:1124:2: ( ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) )
+            // InternalPdfMk.g:1125:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
             {
-            // InternalPdfMk.g:1123:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
-            // InternalPdfMk.g:1124:3: ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) )
+            // InternalPdfMk.g:1125:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
+            // InternalPdfMk.g:1126:3: ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) )
             {
-            // InternalPdfMk.g:1124:3: ( (lv_key_0_0= 'content' ) )
-            // InternalPdfMk.g:1125:4: (lv_key_0_0= 'content' )
+            // InternalPdfMk.g:1126:3: ( (lv_key_0_0= 'content' ) )
+            // InternalPdfMk.g:1127:4: (lv_key_0_0= 'content' )
             {
-            // InternalPdfMk.g:1125:4: (lv_key_0_0= 'content' )
-            // InternalPdfMk.g:1126:5: lv_key_0_0= 'content'
+            // InternalPdfMk.g:1127:4: (lv_key_0_0= 'content' )
+            // InternalPdfMk.g:1128:5: lv_key_0_0= 'content'
             {
             lv_key_0_0=(Token)match(input,29,FOLLOW_10); 
 
@@ -2772,15 +2778,15 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,18,FOLLOW_26); 
+            otherlv_1=(Token)match(input,18,FOLLOW_27); 
 
             			newLeafNode(otherlv_1, grammarAccess.getContentAccess().getColonKeyword_1());
             		
-            // InternalPdfMk.g:1142:3: ( (lv_value_2_0= ruleContentObjects ) )
-            // InternalPdfMk.g:1143:4: (lv_value_2_0= ruleContentObjects )
+            // InternalPdfMk.g:1144:3: ( (lv_value_2_0= ruleContentObjects ) )
+            // InternalPdfMk.g:1145:4: (lv_value_2_0= ruleContentObjects )
             {
-            // InternalPdfMk.g:1143:4: (lv_value_2_0= ruleContentObjects )
-            // InternalPdfMk.g:1144:5: lv_value_2_0= ruleContentObjects
+            // InternalPdfMk.g:1145:4: (lv_value_2_0= ruleContentObjects )
+            // InternalPdfMk.g:1146:5: lv_value_2_0= ruleContentObjects
             {
 
             					newCompositeNode(grammarAccess.getContentAccess().getValueContentObjectsParserRuleCall_2_0());
@@ -2854,10 +2860,11 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000020000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008018000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000018010L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x000000000100C010L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000001008000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000004010L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000018040L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000001004010L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000001008000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000004010L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000800000L});
 
 }

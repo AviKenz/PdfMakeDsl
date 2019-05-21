@@ -58,7 +58,8 @@ public class PdfMkParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getStyleObjectsAccess().getGroup(), "rule__StyleObjects__Group__0");
 			builder.put(grammarAccess.getStyleObjectsAccess().getGroup_2(), "rule__StyleObjects__Group_2__0");
 			builder.put(grammarAccess.getContentObjectsAccess().getGroup(), "rule__ContentObjects__Group__0");
-			builder.put(grammarAccess.getContentObjectsAccess().getGroup_2(), "rule__ContentObjects__Group_2__0");
+			builder.put(grammarAccess.getContentObjectsAccess().getGroup_1(), "rule__ContentObjects__Group_1__0");
+			builder.put(grammarAccess.getContentObjectsAccess().getGroup_1_1(), "rule__ContentObjects__Group_1_1__0");
 			builder.put(grammarAccess.getStylesAccess().getGroup(), "rule__Styles__Group__0");
 			builder.put(grammarAccess.getContentAccess().getGroup(), "rule__Content__Group__0");
 			builder.put(grammarAccess.getDocDefinitionAccess().getContentAssignment_4(), "rule__DocDefinition__ContentAssignment_4");
@@ -90,8 +91,8 @@ public class PdfMkParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getStyleObjectsAccess().getValueAssignment_1(), "rule__StyleObjects__ValueAssignment_1");
 			builder.put(grammarAccess.getStyleObjectsAccess().getValueAssignment_2_1(), "rule__StyleObjects__ValueAssignment_2_1");
 			builder.put(grammarAccess.getContentObjectAccess().getValueAssignment(), "rule__ContentObject__ValueAssignment");
-			builder.put(grammarAccess.getContentObjectsAccess().getValueAssignment_1(), "rule__ContentObjects__ValueAssignment_1");
-			builder.put(grammarAccess.getContentObjectsAccess().getValueAssignment_2_1(), "rule__ContentObjects__ValueAssignment_2_1");
+			builder.put(grammarAccess.getContentObjectsAccess().getValueAssignment_1_0(), "rule__ContentObjects__ValueAssignment_1_0");
+			builder.put(grammarAccess.getContentObjectsAccess().getValueAssignment_1_1_1(), "rule__ContentObjects__ValueAssignment_1_1_1");
 			builder.put(grammarAccess.getStylesAccess().getKeyAssignment_0(), "rule__Styles__KeyAssignment_0");
 			builder.put(grammarAccess.getStylesAccess().getValueAssignment_2(), "rule__Styles__ValueAssignment_2");
 			builder.put(grammarAccess.getContentAccess().getKeyAssignment_0(), "rule__Content__KeyAssignment_0");
