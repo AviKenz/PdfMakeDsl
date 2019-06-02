@@ -58,9 +58,28 @@ WidthDefinition:
 	
 ColumnGapDefintion:
 	key="columnGap" ":" value=INT;
-
-
-
+	
+// TODO [N] modify rule according to pdfmake-playgroud. e.g StringObject seems not to work into column
+ColumnDefinition: 
+	"{" (globalStyle?=TextStyleDefinition ",")? 
+		key="columns" ":" (value+=ColumnObject? ("," value+=ColumnObject)*)
+   "}";
+   
+InnerColumnObject:
+	value= "["
+				(text+=StringObject? ("," text+=StringObject)*)
+				(textObject+=TextObject? ("," textObject+=TextObject)*)
+				(column+=ColumnDefinition? ("," column+=ColumnDefinition)*)
+			"]";
+   
+ColumnObject:
+	value="["
+			(text+=StringObject? ("," text+=StringObject)*)
+			(textObject+=TextObject? ("," textObject+=TextObject)*)
+			(column+=ColumnDefinition? ("," column+=ColumnDefinition)*)
+			(innerColumn+=InnerColumnObject? ("," innerColumn+=InnerColumnObject)*)
+		"]";
+		
 
 /******************** Objects definition ********************/
 // TODO [M] write grammar to support text in []. see playground-style3
@@ -74,14 +93,8 @@ TextObject:
 			  ("," width?=WidthDefinition)?
 		   "}";
 		   
-// TODO [N] nested column	   
 ColumnTextObject: 
-	value="{" (style?=TextStyleDefinition ",")? 
-			  "columns" ":" "["
-			  		(text+=StringObject ("," text+=StringObject)*)?
-			  		(columnObject+=TextObject? ("," columnObject+=TextObject)*) 
-	  		  "]" 
-	  	  "}";
+	value=ColumnDefinition;
 
 StyleObject: 
 	key=ID ":" 
