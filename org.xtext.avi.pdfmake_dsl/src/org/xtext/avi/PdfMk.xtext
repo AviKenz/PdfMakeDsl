@@ -2,9 +2,7 @@ grammar org.xtext.avi.PdfMk with org.eclipse.xtext.common.Terminals
 
 generate pdfMk "http://www.xtext.org/avi/PdfMk"
 
-// TODO [?] missmatched input "header" expecting "}" in style3.pdfmk
-// TODO [?] missing EOF at "}"
-// TODO [?] enum strings
+// TODO [?] import: see INT in Terminals.xtext
 // TODO [L] autovervollstaendigung beim style
 /******************** ********************/
 
@@ -26,10 +24,14 @@ TextAlignmentType:
 	"center" | "left" | "right";
 	
 TypeFaceDefinition:
-	key="bold" ":" value=BooleanDefinition;
+	key="bold" ":" value=BooleanType;
 	
-BooleanDefinition:
+BooleanType:
 	"true"|"false";
+	
+// TODO [?] add "auto" and "*"
+ColumnTextWidthType: 
+	INT;
 	
 // TODO [L] checken ob sich der style name im root element 'styles' befindet	
 TextStyleDefinition:
@@ -43,7 +45,7 @@ TextAlignmentDefinition:
 	"alignment" ":" STRING;
 	
 ItalicsDefinition:
-	key="italics" ":" value=BooleanDefinition
+	key="italics" ":" value=BooleanType
 ;
 FontSizeDefinition:
 	key="fontSize" ":" value=INT;
@@ -51,7 +53,27 @@ FontSizeDefinition:
 StyleDefinition:
 	key=STRING ":" value=StyleObject;
 	
+WidthDefinition:
+	key="width" ":" value=ColumnTextWidthType;
+	
+ColumnGapDefintion:
+	key="columnGap" ":" value=INT;
+	
+//ColumnDefinition:
+//	value=ColumnObject;
 
+ColumnDefinition: 
+	"{" (globalStyle?=TextStyleDefinition ",")? 
+		key="columns" ":" (value+=ColumnObject ("," value+=ColumnObject*)?)
+   "}";
+   
+ColumnObject:
+	value="["
+			(text+=StringObject? ("," text+=StringObject*)?)
+			// TODO [N] find and fix the error
+//			(textObject+=TextObject? ("," textObject+=TextObject*)?)
+//			(innerColumn+=ColumnDefinition? ("," innerColumn+=ColumnDefinition*)?)
+		"]";
 
 
 /******************** Objects definition ********************/
@@ -62,8 +84,12 @@ TextObject:
 			  ("," fontSize?=FontSizeDefinition)? 
 			  ("," alignment?=TextAlignmentDefinition)? 
 			  ("," typeFace?=TypeFaceDefinition)? 
-			  ("," italics?=ItalicsDefinition)? 
+			  ("," italics?=ItalicsDefinition)?
+			  ("," width?=WidthDefinition)?
 		   "}";
+		   
+ColumnTextObject: 
+	value=ColumnDefinition;
 
 StyleObject: 
 	key=ID ":" 
@@ -76,12 +102,12 @@ StyleObject:
 
 StyleObjects: 
 	"{" 
-		(value+=StyleObject)?
-		("," value+=StyleObject)* 
+		(value+=StyleObject
+		("," value+=StyleObject)*)
 	"}";
 		
 ContentObject: 
-	value=(StringObject|TextObject);
+	value=(StringObject|TextObject|ColumnTextObject);
 	
 ContentObjects:
 	"[" 
