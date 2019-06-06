@@ -111,9 +111,39 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createStyleDefinitionAdapter();
       }
       @Override
+      public Adapter caseWidthDefinition(WidthDefinition object)
+      {
+        return createWidthDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseColumnGapDefintion(ColumnGapDefintion object)
+      {
+        return createColumnGapDefintionAdapter();
+      }
+      @Override
+      public Adapter caseColumnDefinition(ColumnDefinition object)
+      {
+        return createColumnDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseInnerColumnObject(InnerColumnObject object)
+      {
+        return createInnerColumnObjectAdapter();
+      }
+      @Override
+      public Adapter caseColumnObject(ColumnObject object)
+      {
+        return createColumnObjectAdapter();
+      }
+      @Override
       public Adapter caseTextObject(TextObject object)
       {
         return createTextObjectAdapter();
+      }
+      @Override
+      public Adapter caseColumnTextObject(ColumnTextObject object)
+      {
+        return createColumnTextObjectAdapter();
       }
       @Override
       public Adapter caseStyleObject(StyleObject object)
@@ -273,6 +303,81 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.WidthDefinition <em>Width Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.WidthDefinition
+   * @generated
+   */
+  public Adapter createWidthDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ColumnGapDefintion <em>Column Gap Defintion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ColumnGapDefintion
+   * @generated
+   */
+  public Adapter createColumnGapDefintionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ColumnDefinition <em>Column Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ColumnDefinition
+   * @generated
+   */
+  public Adapter createColumnDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.InnerColumnObject <em>Inner Column Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.InnerColumnObject
+   * @generated
+   */
+  public Adapter createInnerColumnObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ColumnObject <em>Column Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ColumnObject
+   * @generated
+   */
+  public Adapter createColumnObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -283,6 +388,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTextObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ColumnTextObject <em>Column Text Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ColumnTextObject
+   * @generated
+   */
+  public Adapter createColumnTextObjectAdapter()
   {
     return null;
   }

@@ -122,10 +122,52 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PdfMkPackage.WIDTH_DEFINITION:
+      {
+        WidthDefinition widthDefinition = (WidthDefinition)theEObject;
+        T result = caseWidthDefinition(widthDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.COLUMN_GAP_DEFINTION:
+      {
+        ColumnGapDefintion columnGapDefintion = (ColumnGapDefintion)theEObject;
+        T result = caseColumnGapDefintion(columnGapDefintion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.COLUMN_DEFINITION:
+      {
+        ColumnDefinition columnDefinition = (ColumnDefinition)theEObject;
+        T result = caseColumnDefinition(columnDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.INNER_COLUMN_OBJECT:
+      {
+        InnerColumnObject innerColumnObject = (InnerColumnObject)theEObject;
+        T result = caseInnerColumnObject(innerColumnObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.COLUMN_OBJECT:
+      {
+        ColumnObject columnObject = (ColumnObject)theEObject;
+        T result = caseColumnObject(columnObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PdfMkPackage.TEXT_OBJECT:
       {
         TextObject textObject = (TextObject)theEObject;
         T result = caseTextObject(textObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.COLUMN_TEXT_OBJECT:
+      {
+        ColumnTextObject columnTextObject = (ColumnTextObject)theEObject;
+        T result = caseColumnTextObject(columnTextObject);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -288,6 +330,86 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Width Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Width Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseWidthDefinition(WidthDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Column Gap Defintion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Column Gap Defintion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColumnGapDefintion(ColumnGapDefintion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Column Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Column Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColumnDefinition(ColumnDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Inner Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Inner Column Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInnerColumnObject(InnerColumnObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Column Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColumnObject(ColumnObject object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -299,6 +421,22 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTextObject(TextObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Column Text Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Column Text Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColumnTextObject(ColumnTextObject object)
   {
     return null;
   }

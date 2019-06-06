@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isAlignment <em>Alignment</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isTypeFace <em>Type Face</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isItalics <em>Italics</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getTextObject()
@@ -210,5 +211,31 @@ public interface TextObject extends EObject
    * @generated
    */
   void setItalics(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Width</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Width</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Width</em>' attribute.
+   * @see #setWidth(boolean)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getTextObject_Width()
+   * @model
+   * @generated
+   */
+  boolean isWidth();
+
+  /**
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Width</em>' attribute.
+   * @see #isWidth()
+   * @generated
+   */
+  void setWidth(boolean value);
 
 } // TextObject

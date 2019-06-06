@@ -87,6 +87,51 @@ public interface PdfMkFactory extends EFactory
   StyleDefinition createStyleDefinition();
 
   /**
+   * Returns a new object of class '<em>Width Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Width Definition</em>'.
+   * @generated
+   */
+  WidthDefinition createWidthDefinition();
+
+  /**
+   * Returns a new object of class '<em>Column Gap Defintion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Column Gap Defintion</em>'.
+   * @generated
+   */
+  ColumnGapDefintion createColumnGapDefintion();
+
+  /**
+   * Returns a new object of class '<em>Column Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Column Definition</em>'.
+   * @generated
+   */
+  ColumnDefinition createColumnDefinition();
+
+  /**
+   * Returns a new object of class '<em>Inner Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Inner Column Object</em>'.
+   * @generated
+   */
+  InnerColumnObject createInnerColumnObject();
+
+  /**
+   * Returns a new object of class '<em>Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Column Object</em>'.
+   * @generated
+   */
+  ColumnObject createColumnObject();
+
+  /**
    * Returns a new object of class '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -94,6 +139,15 @@ public interface PdfMkFactory extends EFactory
    * @generated
    */
   TextObject createTextObject();
+
+  /**
+   * Returns a new object of class '<em>Column Text Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Column Text Object</em>'.
+   * @generated
+   */
+  ColumnTextObject createColumnTextObject();
 
   /**
    * Returns a new object of class '<em>Style Object</em>'.

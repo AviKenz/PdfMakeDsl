@@ -10,11 +10,16 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.avi.pdfMk.ColumnDefinition;
+import org.xtext.avi.pdfMk.ColumnGapDefintion;
+import org.xtext.avi.pdfMk.ColumnObject;
+import org.xtext.avi.pdfMk.ColumnTextObject;
 import org.xtext.avi.pdfMk.Content;
 import org.xtext.avi.pdfMk.ContentObject;
 import org.xtext.avi.pdfMk.ContentObjects;
 import org.xtext.avi.pdfMk.DocDefinition;
 import org.xtext.avi.pdfMk.FontSizeDefinition;
+import org.xtext.avi.pdfMk.InnerColumnObject;
 import org.xtext.avi.pdfMk.ItalicsDefinition;
 import org.xtext.avi.pdfMk.PdfMkFactory;
 import org.xtext.avi.pdfMk.PdfMkPackage;
@@ -26,6 +31,7 @@ import org.xtext.avi.pdfMk.Styles;
 import org.xtext.avi.pdfMk.TextObject;
 import org.xtext.avi.pdfMk.TextStyleDefinition;
 import org.xtext.avi.pdfMk.TypeFaceDefinition;
+import org.xtext.avi.pdfMk.WidthDefinition;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,7 +95,49 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass widthDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass columnGapDefintionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass columnDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass innerColumnObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass columnObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass textObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass columnTextObjectEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -401,6 +449,216 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getWidthDefinition()
+  {
+    return widthDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWidthDefinition_Key()
+  {
+    return (EAttribute)widthDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWidthDefinition_Value()
+  {
+    return (EAttribute)widthDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getColumnGapDefintion()
+  {
+    return columnGapDefintionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getColumnGapDefintion_Key()
+  {
+    return (EAttribute)columnGapDefintionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getColumnGapDefintion_Value()
+  {
+    return (EAttribute)columnGapDefintionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getColumnDefinition()
+  {
+    return columnDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getColumnDefinition_GlobalStyle()
+  {
+    return (EAttribute)columnDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getColumnDefinition_Key()
+  {
+    return (EAttribute)columnDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnDefinition_Value()
+  {
+    return (EReference)columnDefinitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInnerColumnObject()
+  {
+    return innerColumnObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInnerColumnObject_Value()
+  {
+    return (EAttribute)innerColumnObjectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInnerColumnObject_Text()
+  {
+    return (EReference)innerColumnObjectEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInnerColumnObject_TextObject()
+  {
+    return (EReference)innerColumnObjectEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInnerColumnObject_Column()
+  {
+    return (EReference)innerColumnObjectEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getColumnObject()
+  {
+    return columnObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getColumnObject_Value()
+  {
+    return (EAttribute)columnObjectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnObject_Text()
+  {
+    return (EReference)columnObjectEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnObject_TextObject()
+  {
+    return (EReference)columnObjectEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnObject_Column()
+  {
+    return (EReference)columnObjectEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnObject_InnerColumn()
+  {
+    return (EReference)columnObjectEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTextObject()
   {
     return textObjectEClass;
@@ -474,6 +732,36 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
   public EAttribute getTextObject_Italics()
   {
     return (EAttribute)textObjectEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextObject_Width()
+  {
+    return (EAttribute)textObjectEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getColumnTextObject()
+  {
+    return columnTextObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnTextObject_Value()
+  {
+    return (EReference)columnTextObjectEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -723,6 +1011,32 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(styleDefinitionEClass, STYLE_DEFINITION__KEY);
     createEReference(styleDefinitionEClass, STYLE_DEFINITION__VALUE);
 
+    widthDefinitionEClass = createEClass(WIDTH_DEFINITION);
+    createEAttribute(widthDefinitionEClass, WIDTH_DEFINITION__KEY);
+    createEAttribute(widthDefinitionEClass, WIDTH_DEFINITION__VALUE);
+
+    columnGapDefintionEClass = createEClass(COLUMN_GAP_DEFINTION);
+    createEAttribute(columnGapDefintionEClass, COLUMN_GAP_DEFINTION__KEY);
+    createEAttribute(columnGapDefintionEClass, COLUMN_GAP_DEFINTION__VALUE);
+
+    columnDefinitionEClass = createEClass(COLUMN_DEFINITION);
+    createEAttribute(columnDefinitionEClass, COLUMN_DEFINITION__GLOBAL_STYLE);
+    createEAttribute(columnDefinitionEClass, COLUMN_DEFINITION__KEY);
+    createEReference(columnDefinitionEClass, COLUMN_DEFINITION__VALUE);
+
+    innerColumnObjectEClass = createEClass(INNER_COLUMN_OBJECT);
+    createEAttribute(innerColumnObjectEClass, INNER_COLUMN_OBJECT__VALUE);
+    createEReference(innerColumnObjectEClass, INNER_COLUMN_OBJECT__TEXT);
+    createEReference(innerColumnObjectEClass, INNER_COLUMN_OBJECT__TEXT_OBJECT);
+    createEReference(innerColumnObjectEClass, INNER_COLUMN_OBJECT__COLUMN);
+
+    columnObjectEClass = createEClass(COLUMN_OBJECT);
+    createEAttribute(columnObjectEClass, COLUMN_OBJECT__VALUE);
+    createEReference(columnObjectEClass, COLUMN_OBJECT__TEXT);
+    createEReference(columnObjectEClass, COLUMN_OBJECT__TEXT_OBJECT);
+    createEReference(columnObjectEClass, COLUMN_OBJECT__COLUMN);
+    createEReference(columnObjectEClass, COLUMN_OBJECT__INNER_COLUMN);
+
     textObjectEClass = createEClass(TEXT_OBJECT);
     createEAttribute(textObjectEClass, TEXT_OBJECT__VALUE);
     createEAttribute(textObjectEClass, TEXT_OBJECT__TEXT);
@@ -731,6 +1045,10 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(textObjectEClass, TEXT_OBJECT__ALIGNMENT);
     createEAttribute(textObjectEClass, TEXT_OBJECT__TYPE_FACE);
     createEAttribute(textObjectEClass, TEXT_OBJECT__ITALICS);
+    createEAttribute(textObjectEClass, TEXT_OBJECT__WIDTH);
+
+    columnTextObjectEClass = createEClass(COLUMN_TEXT_OBJECT);
+    createEReference(columnTextObjectEClass, COLUMN_TEXT_OBJECT__VALUE);
 
     styleObjectEClass = createEClass(STYLE_OBJECT);
     createEAttribute(styleObjectEClass, STYLE_OBJECT__KEY);
@@ -816,6 +1134,32 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getStyleDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, StyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getStyleDefinition_Value(), this.getStyleObject(), null, "value", null, 0, 1, StyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(widthDefinitionEClass, WidthDefinition.class, "WidthDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getWidthDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, WidthDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWidthDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, WidthDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(columnGapDefintionEClass, ColumnGapDefintion.class, "ColumnGapDefintion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColumnGapDefintion_Key(), ecorePackage.getEString(), "key", null, 0, 1, ColumnGapDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getColumnGapDefintion_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ColumnGapDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(columnDefinitionEClass, ColumnDefinition.class, "ColumnDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColumnDefinition_GlobalStyle(), ecorePackage.getEBoolean(), "globalStyle", null, 0, 1, ColumnDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getColumnDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ColumnDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColumnDefinition_Value(), this.getColumnObject(), null, "value", null, 0, -1, ColumnDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(innerColumnObjectEClass, InnerColumnObject.class, "InnerColumnObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInnerColumnObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInnerColumnObject_Text(), this.getStringObject(), null, "text", null, 0, -1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInnerColumnObject_TextObject(), this.getTextObject(), null, "textObject", null, 0, -1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInnerColumnObject_Column(), this.getColumnDefinition(), null, "column", null, 0, -1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(columnObjectEClass, ColumnObject.class, "ColumnObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColumnObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColumnObject_Text(), this.getStringObject(), null, "text", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColumnObject_TextObject(), this.getTextObject(), null, "textObject", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColumnObject_Column(), this.getColumnDefinition(), null, "column", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColumnObject_InnerColumn(), this.getInnerColumnObject(), null, "innerColumn", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(textObjectEClass, TextObject.class, "TextObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTextObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextObject_Text(), ecorePackage.getEBoolean(), "text", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -824,6 +1168,10 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getTextObject_Alignment(), ecorePackage.getEBoolean(), "alignment", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextObject_TypeFace(), ecorePackage.getEBoolean(), "typeFace", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextObject_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextObject_Width(), ecorePackage.getEBoolean(), "width", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(columnTextObjectEClass, ColumnTextObject.class, "ColumnTextObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getColumnTextObject_Value(), this.getColumnDefinition(), null, "value", null, 0, 1, ColumnTextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(styleObjectEClass, StyleObject.class, "StyleObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStyleObject_Key(), ecorePackage.getEString(), "key", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

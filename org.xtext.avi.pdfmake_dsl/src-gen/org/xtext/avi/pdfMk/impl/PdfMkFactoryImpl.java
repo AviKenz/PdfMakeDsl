@@ -72,7 +72,13 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.ITALICS_DEFINITION: return createItalicsDefinition();
       case PdfMkPackage.FONT_SIZE_DEFINITION: return createFontSizeDefinition();
       case PdfMkPackage.STYLE_DEFINITION: return createStyleDefinition();
+      case PdfMkPackage.WIDTH_DEFINITION: return createWidthDefinition();
+      case PdfMkPackage.COLUMN_GAP_DEFINTION: return createColumnGapDefintion();
+      case PdfMkPackage.COLUMN_DEFINITION: return createColumnDefinition();
+      case PdfMkPackage.INNER_COLUMN_OBJECT: return createInnerColumnObject();
+      case PdfMkPackage.COLUMN_OBJECT: return createColumnObject();
       case PdfMkPackage.TEXT_OBJECT: return createTextObject();
+      case PdfMkPackage.COLUMN_TEXT_OBJECT: return createColumnTextObject();
       case PdfMkPackage.STYLE_OBJECT: return createStyleObject();
       case PdfMkPackage.STYLE_OBJECTS: return createStyleObjects();
       case PdfMkPackage.CONTENT_OBJECT: return createContentObject();
@@ -166,10 +172,76 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public WidthDefinition createWidthDefinition()
+  {
+    WidthDefinitionImpl widthDefinition = new WidthDefinitionImpl();
+    return widthDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ColumnGapDefintion createColumnGapDefintion()
+  {
+    ColumnGapDefintionImpl columnGapDefintion = new ColumnGapDefintionImpl();
+    return columnGapDefintion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ColumnDefinition createColumnDefinition()
+  {
+    ColumnDefinitionImpl columnDefinition = new ColumnDefinitionImpl();
+    return columnDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InnerColumnObject createInnerColumnObject()
+  {
+    InnerColumnObjectImpl innerColumnObject = new InnerColumnObjectImpl();
+    return innerColumnObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ColumnObject createColumnObject()
+  {
+    ColumnObjectImpl columnObject = new ColumnObjectImpl();
+    return columnObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TextObject createTextObject()
   {
     TextObjectImpl textObject = new TextObjectImpl();
     return textObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ColumnTextObject createColumnTextObject()
+  {
+    ColumnTextObjectImpl columnTextObject = new ColumnTextObjectImpl();
+    return columnTextObject;
   }
 
   /**

@@ -308,6 +308,245 @@ public interface PdfMkPackage extends EPackage
   int STYLE_DEFINITION_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.WidthDefinitionImpl <em>Width Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.WidthDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getWidthDefinition()
+   * @generated
+   */
+  int WIDTH_DEFINITION = 7;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WIDTH_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WIDTH_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Width Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WIDTH_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnGapDefintionImpl <em>Column Gap Defintion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ColumnGapDefintionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnGapDefintion()
+   * @generated
+   */
+  int COLUMN_GAP_DEFINTION = 8;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_GAP_DEFINTION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_GAP_DEFINTION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Column Gap Defintion</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_GAP_DEFINTION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnDefinitionImpl <em>Column Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ColumnDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnDefinition()
+   * @generated
+   */
+  int COLUMN_DEFINITION = 9;
+
+  /**
+   * The feature id for the '<em><b>Global Style</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_DEFINITION__GLOBAL_STYLE = 0;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_DEFINITION__KEY = 1;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_DEFINITION__VALUE = 2;
+
+  /**
+   * The number of structural features of the '<em>Column Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_DEFINITION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl <em>Inner Column Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getInnerColumnObject()
+   * @generated
+   */
+  int INNER_COLUMN_OBJECT = 10;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__TEXT = 1;
+
+  /**
+   * The feature id for the '<em><b>Text Object</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__TEXT_OBJECT = 2;
+
+  /**
+   * The feature id for the '<em><b>Column</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__COLUMN = 3;
+
+  /**
+   * The number of structural features of the '<em>Inner Column Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnObjectImpl <em>Column Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ColumnObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnObject()
+   * @generated
+   */
+  int COLUMN_OBJECT = 11;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__TEXT = 1;
+
+  /**
+   * The feature id for the '<em><b>Text Object</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__TEXT_OBJECT = 2;
+
+  /**
+   * The feature id for the '<em><b>Column</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__COLUMN = 3;
+
+  /**
+   * The feature id for the '<em><b>Inner Column</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__INNER_COLUMN = 4;
+
+  /**
+   * The number of structural features of the '<em>Column Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT_FEATURE_COUNT = 5;
+
+  /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -315,7 +554,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
    * @generated
    */
-  int TEXT_OBJECT = 7;
+  int TEXT_OBJECT = 12;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -381,13 +620,50 @@ public interface PdfMkPackage extends EPackage
   int TEXT_OBJECT__ITALICS = 6;
 
   /**
+   * The feature id for the '<em><b>Width</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_OBJECT__WIDTH = 7;
+
+  /**
    * The number of structural features of the '<em>Text Object</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT_FEATURE_COUNT = 7;
+  int TEXT_OBJECT_FEATURE_COUNT = 8;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
+   * @generated
+   */
+  int COLUMN_TEXT_OBJECT = 13;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_TEXT_OBJECT__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>Column Text Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_TEXT_OBJECT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl <em>Style Object</em>}' class.
@@ -397,7 +673,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObject()
    * @generated
    */
-  int STYLE_OBJECT = 8;
+  int STYLE_OBJECT = 14;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -470,7 +746,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObjects()
    * @generated
    */
-  int STYLE_OBJECTS = 9;
+  int STYLE_OBJECTS = 15;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -498,7 +774,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObject()
    * @generated
    */
-  int CONTENT_OBJECT = 10;
+  int CONTENT_OBJECT = 16;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -526,7 +802,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObjects()
    * @generated
    */
-  int CONTENT_OBJECTS = 11;
+  int CONTENT_OBJECTS = 17;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -554,7 +830,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyles()
    * @generated
    */
-  int STYLES = 12;
+  int STYLES = 18;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -591,7 +867,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContent()
    * @generated
    */
-  int CONTENT = 13;
+  int CONTENT = 19;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -835,6 +1111,232 @@ public interface PdfMkPackage extends EPackage
   EReference getStyleDefinition_Value();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.WidthDefinition <em>Width Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Width Definition</em>'.
+   * @see org.xtext.avi.pdfMk.WidthDefinition
+   * @generated
+   */
+  EClass getWidthDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.WidthDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.WidthDefinition#getKey()
+   * @see #getWidthDefinition()
+   * @generated
+   */
+  EAttribute getWidthDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.WidthDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.WidthDefinition#getValue()
+   * @see #getWidthDefinition()
+   * @generated
+   */
+  EAttribute getWidthDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnGapDefintion <em>Column Gap Defintion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Column Gap Defintion</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnGapDefintion
+   * @generated
+   */
+  EClass getColumnGapDefintion();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ColumnGapDefintion#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnGapDefintion#getKey()
+   * @see #getColumnGapDefintion()
+   * @generated
+   */
+  EAttribute getColumnGapDefintion_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ColumnGapDefintion#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnGapDefintion#getValue()
+   * @see #getColumnGapDefintion()
+   * @generated
+   */
+  EAttribute getColumnGapDefintion_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnDefinition <em>Column Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Column Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnDefinition
+   * @generated
+   */
+  EClass getColumnDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ColumnDefinition#isGlobalStyle <em>Global Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Global Style</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnDefinition#isGlobalStyle()
+   * @see #getColumnDefinition()
+   * @generated
+   */
+  EAttribute getColumnDefinition_GlobalStyle();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ColumnDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnDefinition#getKey()
+   * @see #getColumnDefinition()
+   * @generated
+   */
+  EAttribute getColumnDefinition_Key();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ColumnDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnDefinition#getValue()
+   * @see #getColumnDefinition()
+   * @generated
+   */
+  EReference getColumnDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.InnerColumnObject <em>Inner Column Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Inner Column Object</em>'.
+   * @see org.xtext.avi.pdfMk.InnerColumnObject
+   * @generated
+   */
+  EClass getInnerColumnObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.InnerColumnObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.InnerColumnObject#getValue()
+   * @see #getInnerColumnObject()
+   * @generated
+   */
+  EAttribute getInnerColumnObject_Value();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.InnerColumnObject#getText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Text</em>'.
+   * @see org.xtext.avi.pdfMk.InnerColumnObject#getText()
+   * @see #getInnerColumnObject()
+   * @generated
+   */
+  EReference getInnerColumnObject_Text();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.InnerColumnObject#getTextObject <em>Text Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Text Object</em>'.
+   * @see org.xtext.avi.pdfMk.InnerColumnObject#getTextObject()
+   * @see #getInnerColumnObject()
+   * @generated
+   */
+  EReference getInnerColumnObject_TextObject();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.InnerColumnObject#getColumn <em>Column</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Column</em>'.
+   * @see org.xtext.avi.pdfMk.InnerColumnObject#getColumn()
+   * @see #getInnerColumnObject()
+   * @generated
+   */
+  EReference getInnerColumnObject_Column();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnObject <em>Column Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Column Object</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnObject
+   * @generated
+   */
+  EClass getColumnObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ColumnObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnObject#getValue()
+   * @see #getColumnObject()
+   * @generated
+   */
+  EAttribute getColumnObject_Value();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ColumnObject#getText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Text</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnObject#getText()
+   * @see #getColumnObject()
+   * @generated
+   */
+  EReference getColumnObject_Text();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ColumnObject#getTextObject <em>Text Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Text Object</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnObject#getTextObject()
+   * @see #getColumnObject()
+   * @generated
+   */
+  EReference getColumnObject_TextObject();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ColumnObject#getColumn <em>Column</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Column</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnObject#getColumn()
+   * @see #getColumnObject()
+   * @generated
+   */
+  EReference getColumnObject_Column();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ColumnObject#getInnerColumn <em>Inner Column</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Inner Column</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnObject#getInnerColumn()
+   * @see #getColumnObject()
+   * @generated
+   */
+  EReference getColumnObject_InnerColumn();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -920,6 +1422,38 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EAttribute getTextObject_Italics();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Width</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isWidth()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Width();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnTextObject <em>Column Text Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Column Text Object</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnTextObject
+   * @generated
+   */
+  EClass getColumnTextObject();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.ColumnTextObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnTextObject#getValue()
+   * @see #getColumnTextObject()
+   * @generated
+   */
+  EReference getColumnTextObject_Value();
 
   /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.StyleObject <em>Style Object</em>}'.
@@ -1322,6 +1856,184 @@ public interface PdfMkPackage extends EPackage
     EReference STYLE_DEFINITION__VALUE = eINSTANCE.getStyleDefinition_Value();
 
     /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.WidthDefinitionImpl <em>Width Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.WidthDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getWidthDefinition()
+     * @generated
+     */
+    EClass WIDTH_DEFINITION = eINSTANCE.getWidthDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WIDTH_DEFINITION__KEY = eINSTANCE.getWidthDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WIDTH_DEFINITION__VALUE = eINSTANCE.getWidthDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnGapDefintionImpl <em>Column Gap Defintion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ColumnGapDefintionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnGapDefintion()
+     * @generated
+     */
+    EClass COLUMN_GAP_DEFINTION = eINSTANCE.getColumnGapDefintion();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLUMN_GAP_DEFINTION__KEY = eINSTANCE.getColumnGapDefintion_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLUMN_GAP_DEFINTION__VALUE = eINSTANCE.getColumnGapDefintion_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnDefinitionImpl <em>Column Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ColumnDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnDefinition()
+     * @generated
+     */
+    EClass COLUMN_DEFINITION = eINSTANCE.getColumnDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Global Style</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLUMN_DEFINITION__GLOBAL_STYLE = eINSTANCE.getColumnDefinition_GlobalStyle();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLUMN_DEFINITION__KEY = eINSTANCE.getColumnDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLUMN_DEFINITION__VALUE = eINSTANCE.getColumnDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl <em>Inner Column Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getInnerColumnObject()
+     * @generated
+     */
+    EClass INNER_COLUMN_OBJECT = eINSTANCE.getInnerColumnObject();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INNER_COLUMN_OBJECT__VALUE = eINSTANCE.getInnerColumnObject_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INNER_COLUMN_OBJECT__TEXT = eINSTANCE.getInnerColumnObject_Text();
+
+    /**
+     * The meta object literal for the '<em><b>Text Object</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INNER_COLUMN_OBJECT__TEXT_OBJECT = eINSTANCE.getInnerColumnObject_TextObject();
+
+    /**
+     * The meta object literal for the '<em><b>Column</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INNER_COLUMN_OBJECT__COLUMN = eINSTANCE.getInnerColumnObject_Column();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnObjectImpl <em>Column Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ColumnObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnObject()
+     * @generated
+     */
+    EClass COLUMN_OBJECT = eINSTANCE.getColumnObject();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLUMN_OBJECT__VALUE = eINSTANCE.getColumnObject_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLUMN_OBJECT__TEXT = eINSTANCE.getColumnObject_Text();
+
+    /**
+     * The meta object literal for the '<em><b>Text Object</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLUMN_OBJECT__TEXT_OBJECT = eINSTANCE.getColumnObject_TextObject();
+
+    /**
+     * The meta object literal for the '<em><b>Column</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLUMN_OBJECT__COLUMN = eINSTANCE.getColumnObject_Column();
+
+    /**
+     * The meta object literal for the '<em><b>Inner Column</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLUMN_OBJECT__INNER_COLUMN = eINSTANCE.getColumnObject_InnerColumn();
+
+    /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1386,6 +2098,32 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EAttribute TEXT_OBJECT__ITALICS = eINSTANCE.getTextObject_Italics();
+
+    /**
+     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__WIDTH = eINSTANCE.getTextObject_Width();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
+     * @generated
+     */
+    EClass COLUMN_TEXT_OBJECT = eINSTANCE.getColumnTextObject();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLUMN_TEXT_OBJECT__VALUE = eINSTANCE.getColumnTextObject_Value();
 
     /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl <em>Style Object</em>}' class.

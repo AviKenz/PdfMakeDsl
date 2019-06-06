@@ -59,22 +59,27 @@ WidthDefinition:
 ColumnGapDefintion:
 	key="columnGap" ":" value=INT;
 	
-//ColumnDefinition:
-//	value=ColumnObject;
-
+// TODO [N] modify rule according to pdfmake-playgroud. e.g StringObject seems not to work into column
 ColumnDefinition: 
 	"{" (globalStyle?=TextStyleDefinition ",")? 
-		key="columns" ":" (value+=ColumnObject ("," value+=ColumnObject*)?)
+		key="columns" ":" (value+=ColumnObject? ("," value+=ColumnObject)*)
    "}";
+   
+InnerColumnObject:
+	value= "["
+				(text+=StringObject? ("," text+=StringObject)*)
+				(textObject+=TextObject? ("," textObject+=TextObject)*)
+				(column+=ColumnDefinition? ("," column+=ColumnDefinition)*)
+			"]";
    
 ColumnObject:
 	value="["
-			(text+=StringObject? ("," text+=StringObject*)?)
-			// TODO [N] find and fix the error
-//			(textObject+=TextObject? ("," textObject+=TextObject*)?)
-//			(innerColumn+=ColumnDefinition? ("," innerColumn+=ColumnDefinition*)?)
+			(text+=StringObject? ("," text+=StringObject)*)
+			(textObject+=TextObject? ("," textObject+=TextObject)*)
+			(column+=ColumnDefinition? ("," column+=ColumnDefinition)*)
+			(innerColumn+=InnerColumnObject? ("," innerColumn+=InnerColumnObject)*)
 		"]";
-
+		
 
 /******************** Objects definition ********************/
 // TODO [M] write grammar to support text in []. see playground-style3

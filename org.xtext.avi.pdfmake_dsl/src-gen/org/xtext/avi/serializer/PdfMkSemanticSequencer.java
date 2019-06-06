@@ -14,11 +14,16 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.avi.pdfMk.ColumnDefinition;
+import org.xtext.avi.pdfMk.ColumnGapDefintion;
+import org.xtext.avi.pdfMk.ColumnObject;
+import org.xtext.avi.pdfMk.ColumnTextObject;
 import org.xtext.avi.pdfMk.Content;
 import org.xtext.avi.pdfMk.ContentObject;
 import org.xtext.avi.pdfMk.ContentObjects;
 import org.xtext.avi.pdfMk.DocDefinition;
 import org.xtext.avi.pdfMk.FontSizeDefinition;
+import org.xtext.avi.pdfMk.InnerColumnObject;
 import org.xtext.avi.pdfMk.ItalicsDefinition;
 import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.StringObject;
@@ -29,6 +34,7 @@ import org.xtext.avi.pdfMk.Styles;
 import org.xtext.avi.pdfMk.TextObject;
 import org.xtext.avi.pdfMk.TextStyleDefinition;
 import org.xtext.avi.pdfMk.TypeFaceDefinition;
+import org.xtext.avi.pdfMk.WidthDefinition;
 import org.xtext.avi.services.PdfMkGrammarAccess;
 
 @SuppressWarnings("all")
@@ -45,6 +51,18 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == PdfMkPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case PdfMkPackage.COLUMN_DEFINITION:
+				sequence_ColumnDefinition(context, (ColumnDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.COLUMN_GAP_DEFINTION:
+				sequence_ColumnGapDefintion(context, (ColumnGapDefintion) semanticObject); 
+				return; 
+			case PdfMkPackage.COLUMN_OBJECT:
+				sequence_ColumnObject(context, (ColumnObject) semanticObject); 
+				return; 
+			case PdfMkPackage.COLUMN_TEXT_OBJECT:
+				sequence_ColumnTextObject(context, (ColumnTextObject) semanticObject); 
+				return; 
 			case PdfMkPackage.CONTENT:
 				sequence_Content(context, (Content) semanticObject); 
 				return; 
@@ -59,6 +77,9 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case PdfMkPackage.FONT_SIZE_DEFINITION:
 				sequence_FontSizeDefinition(context, (FontSizeDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.INNER_COLUMN_OBJECT:
+				sequence_InnerColumnObject(context, (InnerColumnObject) semanticObject); 
 				return; 
 			case PdfMkPackage.ITALICS_DEFINITION:
 				sequence_ItalicsDefinition(context, (ItalicsDefinition) semanticObject); 
@@ -87,6 +108,9 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PdfMkPackage.TYPE_FACE_DEFINITION:
 				sequence_TypeFaceDefinition(context, (TypeFaceDefinition) semanticObject); 
 				return; 
+			case PdfMkPackage.WIDTH_DEFINITION:
+				sequence_WidthDefinition(context, (WidthDefinition) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -94,10 +118,83 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     ColumnDefinition returns ColumnDefinition
+	 *
+	 * Constraint:
+	 *     (globalStyle?=TextStyleDefinition? key='columns' value+=ColumnObject? value+=ColumnObject*)
+	 */
+	protected void sequence_ColumnDefinition(ISerializationContext context, ColumnDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ColumnGapDefintion returns ColumnGapDefintion
+	 *
+	 * Constraint:
+	 *     (key='columnGap' value=INT)
+	 */
+	protected void sequence_ColumnGapDefintion(ISerializationContext context, ColumnGapDefintion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.COLUMN_GAP_DEFINTION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.COLUMN_GAP_DEFINTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.COLUMN_GAP_DEFINTION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.COLUMN_GAP_DEFINTION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getColumnGapDefintionAccess().getKeyColumnGapKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getColumnGapDefintionAccess().getValueINTTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ColumnObject returns ColumnObject
+	 *
+	 * Constraint:
+	 *     (
+	 *         value='[' 
+	 *         text+=StringObject? 
+	 *         text+=StringObject* 
+	 *         textObject+=TextObject? 
+	 *         textObject+=TextObject* 
+	 *         column+=ColumnDefinition? 
+	 *         column+=ColumnDefinition* 
+	 *         innerColumn+=InnerColumnObject? 
+	 *         innerColumn+=InnerColumnObject*
+	 *     )
+	 */
+	protected void sequence_ColumnObject(ISerializationContext context, ColumnObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ColumnTextObject returns ColumnTextObject
+	 *
+	 * Constraint:
+	 *     value=ColumnDefinition
+	 */
+	protected void sequence_ColumnTextObject(ISerializationContext context, ColumnTextObject semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.COLUMN_TEXT_OBJECT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.COLUMN_TEXT_OBJECT__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getColumnTextObjectAccess().getValueColumnDefinitionParserRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     ContentObject returns ContentObject
 	 *
 	 * Constraint:
-	 *     (value=StringObject | value=TextObject)
+	 *     (value=StringObject | value=TextObject | value=ColumnTextObject)
 	 */
 	protected void sequence_ContentObject(ISerializationContext context, ContentObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -172,10 +269,30 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     InnerColumnObject returns InnerColumnObject
+	 *
+	 * Constraint:
+	 *     (
+	 *         value='[' 
+	 *         text+=StringObject? 
+	 *         text+=StringObject* 
+	 *         textObject+=TextObject? 
+	 *         textObject+=TextObject* 
+	 *         column+=ColumnDefinition? 
+	 *         column+=ColumnDefinition*
+	 *     )
+	 */
+	protected void sequence_InnerColumnObject(ISerializationContext context, InnerColumnObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     ItalicsDefinition returns ItalicsDefinition
 	 *
 	 * Constraint:
-	 *     (key='italics' value=BooleanDefinition)
+	 *     (key='italics' value=BooleanType)
 	 */
 	protected void sequence_ItalicsDefinition(ISerializationContext context, ItalicsDefinition semanticObject) {
 		if (errorAcceptor != null) {
@@ -186,7 +303,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getItalicsDefinitionAccess().getKeyItalicsKeyword_0_0(), semanticObject.getKey());
-		feeder.accept(grammarAccess.getItalicsDefinitionAccess().getValueBooleanDefinitionParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getItalicsDefinitionAccess().getValueBooleanTypeParserRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -254,7 +371,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     StyleObjects returns StyleObjects
 	 *
 	 * Constraint:
-	 *     ((value+=StyleObject value+=StyleObject+) | value+=StyleObject+)?
+	 *     (value+=StyleObject value+=StyleObject*)
 	 */
 	protected void sequence_StyleObjects(ISerializationContext context, StyleObjects semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -294,7 +411,8 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         fontSize?=FontSizeDefinition? 
 	 *         alignment?=TextAlignmentDefinition? 
 	 *         typeFace?=TypeFaceDefinition? 
-	 *         italics?=ItalicsDefinition?
+	 *         italics?=ItalicsDefinition? 
+	 *         width?=WidthDefinition?
 	 *     )
 	 */
 	protected void sequence_TextObject(ISerializationContext context, TextObject semanticObject) {
@@ -328,7 +446,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     TypeFaceDefinition returns TypeFaceDefinition
 	 *
 	 * Constraint:
-	 *     (key='bold' value=BooleanDefinition)
+	 *     (key='bold' value=BooleanType)
 	 */
 	protected void sequence_TypeFaceDefinition(ISerializationContext context, TypeFaceDefinition semanticObject) {
 		if (errorAcceptor != null) {
@@ -339,7 +457,28 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getTypeFaceDefinitionAccess().getKeyBoldKeyword_0_0(), semanticObject.getKey());
-		feeder.accept(grammarAccess.getTypeFaceDefinitionAccess().getValueBooleanDefinitionParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getTypeFaceDefinitionAccess().getValueBooleanTypeParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     WidthDefinition returns WidthDefinition
+	 *
+	 * Constraint:
+	 *     (key='width' value=ColumnTextWidthType)
+	 */
+	protected void sequence_WidthDefinition(ISerializationContext context, WidthDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getWidthDefinitionAccess().getKeyWidthKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getWidthDefinitionAccess().getValueColumnTextWidthTypeParserRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
