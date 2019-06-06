@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isTypeFace <em>Type Face</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isItalics <em>Italics</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.TextObject#isMargin <em>Margin</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getTextObject()
@@ -237,5 +238,31 @@ public interface TextObject extends EObject
    * @generated
    */
   void setWidth(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Margin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Margin</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Margin</em>' attribute.
+   * @see #setMargin(boolean)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getTextObject_Margin()
+   * @model
+   * @generated
+   */
+  boolean isMargin();
+
+  /**
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.TextObject#isMargin <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Margin</em>' attribute.
+   * @see #isMargin()
+   * @generated
+   */
+  void setMargin(boolean value);
 
 } // TextObject

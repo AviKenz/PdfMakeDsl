@@ -29,6 +29,7 @@ import org.xtext.avi.pdfMk.TextObject;
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isTypeFace <em>Type Face</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isItalics <em>Italics</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isWidth <em>Width</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isMargin <em>Margin</em>}</li>
  * </ul>
  *
  * @generated
@@ -194,6 +195,26 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
    * @ordered
    */
   protected boolean width = WIDTH_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isMargin() <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isMargin()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean MARGIN_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isMargin() <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isMargin()
+   * @generated
+   * @ordered
+   */
+  protected boolean margin = MARGIN_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -405,6 +426,29 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isMargin()
+  {
+    return margin;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMargin(boolean newMargin)
+  {
+    boolean oldMargin = margin;
+    margin = newMargin;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__MARGIN, oldMargin, margin));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -426,6 +470,8 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
         return isItalics();
       case PdfMkPackage.TEXT_OBJECT__WIDTH:
         return isWidth();
+      case PdfMkPackage.TEXT_OBJECT__MARGIN:
+        return isMargin();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -463,6 +509,9 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
         return;
       case PdfMkPackage.TEXT_OBJECT__WIDTH:
         setWidth((Boolean)newValue);
+        return;
+      case PdfMkPackage.TEXT_OBJECT__MARGIN:
+        setMargin((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -502,6 +551,9 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
       case PdfMkPackage.TEXT_OBJECT__WIDTH:
         setWidth(WIDTH_EDEFAULT);
         return;
+      case PdfMkPackage.TEXT_OBJECT__MARGIN:
+        setMargin(MARGIN_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -532,6 +584,8 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
         return italics != ITALICS_EDEFAULT;
       case PdfMkPackage.TEXT_OBJECT__WIDTH:
         return width != WIDTH_EDEFAULT;
+      case PdfMkPackage.TEXT_OBJECT__MARGIN:
+        return margin != MARGIN_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -563,6 +617,8 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
     result.append(italics);
     result.append(", width: ");
     result.append(width);
+    result.append(", margin: ");
+    result.append(margin);
     result.append(')');
     return result.toString();
   }

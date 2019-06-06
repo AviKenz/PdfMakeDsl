@@ -114,22 +114,67 @@ public interface PdfMkFactory extends EFactory
   ColumnDefinition createColumnDefinition();
 
   /**
-   * Returns a new object of class '<em>Inner Column Object</em>'.
+   * Returns a new object of class '<em>Margin Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Inner Column Object</em>'.
+   * @return a new object of class '<em>Margin Definition</em>'.
    * @generated
    */
-  InnerColumnObject createInnerColumnObject();
+  MarginDefinition createMarginDefinition();
 
   /**
-   * Returns a new object of class '<em>Column Object</em>'.
+   * Returns a new object of class '<em>Image Defintion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Column Object</em>'.
+   * @return a new object of class '<em>Image Defintion</em>'.
    * @generated
    */
-  ColumnObject createColumnObject();
+  ImageDefintion createImageDefintion();
+
+  /**
+   * Returns a new object of class '<em>Image Width Defintion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Width Defintion</em>'.
+   * @generated
+   */
+  ImageWidthDefintion createImageWidthDefintion();
+
+  /**
+   * Returns a new object of class '<em>Image Height Defintion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Height Defintion</em>'.
+   * @generated
+   */
+  ImageHeightDefintion createImageHeightDefintion();
+
+  /**
+   * Returns a new object of class '<em>Image Page Break Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Page Break Definition</em>'.
+   * @generated
+   */
+  ImagePageBreakDefinition createImagePageBreakDefinition();
+
+  /**
+   * Returns a new object of class '<em>Image Fit Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Fit Definition</em>'.
+   * @generated
+   */
+  ImageFitDefinition createImageFitDefinition();
+
+  /**
+   * Returns a new object of class '<em>Image Opacity Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Opacity Definition</em>'.
+   * @generated
+   */
+  ImageOpacityDefinition createImageOpacityDefinition();
 
   /**
    * Returns a new object of class '<em>Text Object</em>'.
@@ -166,6 +211,33 @@ public interface PdfMkFactory extends EFactory
    * @generated
    */
   StyleObjects createStyleObjects();
+
+  /**
+   * Returns a new object of class '<em>Inner Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Inner Column Object</em>'.
+   * @generated
+   */
+  InnerColumnObject createInnerColumnObject();
+
+  /**
+   * Returns a new object of class '<em>Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Column Object</em>'.
+   * @generated
+   */
+  ColumnObject createColumnObject();
+
+  /**
+   * Returns a new object of class '<em>Image Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Object</em>'.
+   * @generated
+   */
+  ImageObject createImageObject();
 
   /**
    * Returns a new object of class '<em>Content Object</em>'.

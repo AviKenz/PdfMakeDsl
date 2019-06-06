@@ -143,17 +143,52 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PdfMkPackage.INNER_COLUMN_OBJECT:
+      case PdfMkPackage.MARGIN_DEFINITION:
       {
-        InnerColumnObject innerColumnObject = (InnerColumnObject)theEObject;
-        T result = caseInnerColumnObject(innerColumnObject);
+        MarginDefinition marginDefinition = (MarginDefinition)theEObject;
+        T result = caseMarginDefinition(marginDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PdfMkPackage.COLUMN_OBJECT:
+      case PdfMkPackage.IMAGE_DEFINTION:
       {
-        ColumnObject columnObject = (ColumnObject)theEObject;
-        T result = caseColumnObject(columnObject);
+        ImageDefintion imageDefintion = (ImageDefintion)theEObject;
+        T result = caseImageDefintion(imageDefintion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.IMAGE_WIDTH_DEFINTION:
+      {
+        ImageWidthDefintion imageWidthDefintion = (ImageWidthDefintion)theEObject;
+        T result = caseImageWidthDefintion(imageWidthDefintion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.IMAGE_HEIGHT_DEFINTION:
+      {
+        ImageHeightDefintion imageHeightDefintion = (ImageHeightDefintion)theEObject;
+        T result = caseImageHeightDefintion(imageHeightDefintion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.IMAGE_PAGE_BREAK_DEFINITION:
+      {
+        ImagePageBreakDefinition imagePageBreakDefinition = (ImagePageBreakDefinition)theEObject;
+        T result = caseImagePageBreakDefinition(imagePageBreakDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.IMAGE_FIT_DEFINITION:
+      {
+        ImageFitDefinition imageFitDefinition = (ImageFitDefinition)theEObject;
+        T result = caseImageFitDefinition(imageFitDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.IMAGE_OPACITY_DEFINITION:
+      {
+        ImageOpacityDefinition imageOpacityDefinition = (ImageOpacityDefinition)theEObject;
+        T result = caseImageOpacityDefinition(imageOpacityDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -182,6 +217,27 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         StyleObjects styleObjects = (StyleObjects)theEObject;
         T result = caseStyleObjects(styleObjects);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.INNER_COLUMN_OBJECT:
+      {
+        InnerColumnObject innerColumnObject = (InnerColumnObject)theEObject;
+        T result = caseInnerColumnObject(innerColumnObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.COLUMN_OBJECT:
+      {
+        ColumnObject columnObject = (ColumnObject)theEObject;
+        T result = caseColumnObject(columnObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.IMAGE_OBJECT:
+      {
+        ImageObject imageObject = (ImageObject)theEObject;
+        T result = caseImageObject(imageObject);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -378,33 +434,113 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Inner Column Object</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Margin Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Inner Column Object</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Margin Definition</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInnerColumnObject(InnerColumnObject object)
+  public T caseMarginDefinition(MarginDefinition object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Column Object</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Image Defintion</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Column Object</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Image Defintion</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseColumnObject(ColumnObject object)
+  public T caseImageDefintion(ImageDefintion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Width Defintion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Width Defintion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageWidthDefintion(ImageWidthDefintion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Height Defintion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Height Defintion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageHeightDefintion(ImageHeightDefintion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Page Break Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Page Break Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImagePageBreakDefinition(ImagePageBreakDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Fit Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Fit Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageFitDefinition(ImageFitDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Opacity Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Opacity Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageOpacityDefinition(ImageOpacityDefinition object)
   {
     return null;
   }
@@ -469,6 +605,54 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStyleObjects(StyleObjects object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Inner Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Inner Column Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInnerColumnObject(InnerColumnObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Column Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Column Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColumnObject(ColumnObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageObject(ImageObject object)
   {
     return null;
   }

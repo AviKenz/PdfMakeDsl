@@ -27,6 +27,7 @@ import org.xtext.avi.pdfMk.StyleObject;
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isTypeFace <em>Type Face</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isAlignment <em>Alignment</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isItalics <em>Italics</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isMargin <em>Margin</em>}</li>
  * </ul>
  *
  * @generated
@@ -152,6 +153,26 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
    * @ordered
    */
   protected boolean italics = ITALICS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isMargin() <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isMargin()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean MARGIN_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isMargin() <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isMargin()
+   * @generated
+   * @ordered
+   */
+  protected boolean margin = MARGIN_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -317,6 +338,29 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isMargin()
+  {
+    return margin;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMargin(boolean newMargin)
+  {
+    boolean oldMargin = margin;
+    margin = newMargin;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLE_OBJECT__MARGIN, oldMargin, margin));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -334,6 +378,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
         return isAlignment();
       case PdfMkPackage.STYLE_OBJECT__ITALICS:
         return isItalics();
+      case PdfMkPackage.STYLE_OBJECT__MARGIN:
+        return isMargin();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -365,6 +411,9 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
         return;
       case PdfMkPackage.STYLE_OBJECT__ITALICS:
         setItalics((Boolean)newValue);
+        return;
+      case PdfMkPackage.STYLE_OBJECT__MARGIN:
+        setMargin((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -398,6 +447,9 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
       case PdfMkPackage.STYLE_OBJECT__ITALICS:
         setItalics(ITALICS_EDEFAULT);
         return;
+      case PdfMkPackage.STYLE_OBJECT__MARGIN:
+        setMargin(MARGIN_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -424,6 +476,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
         return alignment != ALIGNMENT_EDEFAULT;
       case PdfMkPackage.STYLE_OBJECT__ITALICS:
         return italics != ITALICS_EDEFAULT;
+      case PdfMkPackage.STYLE_OBJECT__MARGIN:
+        return margin != MARGIN_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -451,6 +505,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
     result.append(alignment);
     result.append(", italics: ");
     result.append(italics);
+    result.append(", margin: ");
+    result.append(margin);
     result.append(')');
     return result.toString();
   }

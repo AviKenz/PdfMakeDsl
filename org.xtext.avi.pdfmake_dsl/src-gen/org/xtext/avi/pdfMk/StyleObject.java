@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isTypeFace <em>Type Face</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isAlignment <em>Alignment</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isItalics <em>Italics</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isMargin <em>Margin</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject()
@@ -183,5 +184,31 @@ public interface StyleObject extends EObject
    * @generated
    */
   void setItalics(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Margin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Margin</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Margin</em>' attribute.
+   * @see #setMargin(boolean)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_Margin()
+   * @model
+   * @generated
+   */
+  boolean isMargin();
+
+  /**
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.StyleObject#isMargin <em>Margin</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Margin</em>' attribute.
+   * @see #isMargin()
+   * @generated
+   */
+  void setMargin(boolean value);
 
 } // StyleObject

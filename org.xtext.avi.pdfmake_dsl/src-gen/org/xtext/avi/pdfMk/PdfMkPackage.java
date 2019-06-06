@@ -428,14 +428,60 @@ public interface PdfMkPackage extends EPackage
   int COLUMN_DEFINITION_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl <em>Inner Column Object</em>}' class.
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.MarginDefinitionImpl <em>Margin Definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl
-   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getInnerColumnObject()
+   * @see org.xtext.avi.pdfMk.impl.MarginDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getMarginDefinition()
    * @generated
    */
-  int INNER_COLUMN_OBJECT = 10;
+  int MARGIN_DEFINITION = 10;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARGIN_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARGIN_DEFINITION__VALUES = 1;
+
+  /**
+   * The number of structural features of the '<em>Margin Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MARGIN_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImageDefintionImpl <em>Image Defintion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ImageDefintionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageDefintion()
+   * @generated
+   */
+  int IMAGE_DEFINTION = 11;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_DEFINTION__KEY = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -444,53 +490,35 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INNER_COLUMN_OBJECT__VALUE = 0;
+  int IMAGE_DEFINTION__VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Text</b></em>' containment reference list.
+   * The number of structural features of the '<em>Image Defintion</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INNER_COLUMN_OBJECT__TEXT = 1;
+  int IMAGE_DEFINTION_FEATURE_COUNT = 2;
 
   /**
-   * The feature id for the '<em><b>Text Object</b></em>' containment reference list.
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImageWidthDefintionImpl <em>Image Width Defintion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ImageWidthDefintionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageWidthDefintion()
+   * @generated
+   */
+  int IMAGE_WIDTH_DEFINTION = 12;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INNER_COLUMN_OBJECT__TEXT_OBJECT = 2;
-
-  /**
-   * The feature id for the '<em><b>Column</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INNER_COLUMN_OBJECT__COLUMN = 3;
-
-  /**
-   * The number of structural features of the '<em>Inner Column Object</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INNER_COLUMN_OBJECT_FEATURE_COUNT = 4;
-
-  /**
-   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnObjectImpl <em>Column Object</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.avi.pdfMk.impl.ColumnObjectImpl
-   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnObject()
-   * @generated
-   */
-  int COLUMN_OBJECT = 11;
+  int IMAGE_WIDTH_DEFINTION__KEY = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -499,52 +527,173 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLUMN_OBJECT__VALUE = 0;
+  int IMAGE_WIDTH_DEFINTION__VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Text</b></em>' containment reference list.
+   * The number of structural features of the '<em>Image Width Defintion</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLUMN_OBJECT__TEXT = 1;
+  int IMAGE_WIDTH_DEFINTION_FEATURE_COUNT = 2;
 
   /**
-   * The feature id for the '<em><b>Text Object</b></em>' containment reference list.
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImageHeightDefintionImpl <em>Image Height Defintion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ImageHeightDefintionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageHeightDefintion()
+   * @generated
+   */
+  int IMAGE_HEIGHT_DEFINTION = 13;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLUMN_OBJECT__TEXT_OBJECT = 2;
+  int IMAGE_HEIGHT_DEFINTION__KEY = 0;
 
   /**
-   * The feature id for the '<em><b>Column</b></em>' containment reference list.
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLUMN_OBJECT__COLUMN = 3;
+  int IMAGE_HEIGHT_DEFINTION__VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Inner Column</b></em>' containment reference list.
+   * The number of structural features of the '<em>Image Height Defintion</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLUMN_OBJECT__INNER_COLUMN = 4;
+  int IMAGE_HEIGHT_DEFINTION_FEATURE_COUNT = 2;
 
   /**
-   * The number of structural features of the '<em>Column Object</em>' class.
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImagePageBreakDefinitionImpl <em>Image Page Break Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ImagePageBreakDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImagePageBreakDefinition()
+   * @generated
+   */
+  int IMAGE_PAGE_BREAK_DEFINITION = 14;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLUMN_OBJECT_FEATURE_COUNT = 5;
+  int IMAGE_PAGE_BREAK_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_PAGE_BREAK_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Image Page Break Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_PAGE_BREAK_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImageFitDefinitionImpl <em>Image Fit Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ImageFitDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageFitDefinition()
+   * @generated
+   */
+  int IMAGE_FIT_DEFINITION = 15;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_FIT_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_FIT_DEFINITION__VALUE = 1;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_FIT_DEFINITION__VALUES = 2;
+
+  /**
+   * The number of structural features of the '<em>Image Fit Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_FIT_DEFINITION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImageOpacityDefinitionImpl <em>Image Opacity Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ImageOpacityDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageOpacityDefinition()
+   * @generated
+   */
+  int IMAGE_OPACITY_DEFINITION = 16;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OPACITY_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OPACITY_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Image Opacity Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OPACITY_DEFINITION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
@@ -554,7 +703,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
    * @generated
    */
-  int TEXT_OBJECT = 12;
+  int TEXT_OBJECT = 17;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -629,13 +778,22 @@ public interface PdfMkPackage extends EPackage
   int TEXT_OBJECT__WIDTH = 7;
 
   /**
+   * The feature id for the '<em><b>Margin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_OBJECT__MARGIN = 8;
+
+  /**
    * The number of structural features of the '<em>Text Object</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT_FEATURE_COUNT = 8;
+  int TEXT_OBJECT_FEATURE_COUNT = 9;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
@@ -645,7 +803,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
    * @generated
    */
-  int COLUMN_TEXT_OBJECT = 13;
+  int COLUMN_TEXT_OBJECT = 18;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -673,7 +831,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObject()
    * @generated
    */
-  int STYLE_OBJECT = 14;
+  int STYLE_OBJECT = 19;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -730,13 +888,22 @@ public interface PdfMkPackage extends EPackage
   int STYLE_OBJECT__ITALICS = 5;
 
   /**
+   * The feature id for the '<em><b>Margin</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STYLE_OBJECT__MARGIN = 6;
+
+  /**
    * The number of structural features of the '<em>Style Object</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STYLE_OBJECT_FEATURE_COUNT = 6;
+  int STYLE_OBJECT_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectsImpl <em>Style Objects</em>}' class.
@@ -746,7 +913,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObjects()
    * @generated
    */
-  int STYLE_OBJECTS = 15;
+  int STYLE_OBJECTS = 20;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -767,6 +934,207 @@ public interface PdfMkPackage extends EPackage
   int STYLE_OBJECTS_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl <em>Inner Column Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getInnerColumnObject()
+   * @generated
+   */
+  int INNER_COLUMN_OBJECT = 21;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__TEXT = 1;
+
+  /**
+   * The feature id for the '<em><b>Text Object</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__TEXT_OBJECT = 2;
+
+  /**
+   * The feature id for the '<em><b>Column</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT__COLUMN = 3;
+
+  /**
+   * The number of structural features of the '<em>Inner Column Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INNER_COLUMN_OBJECT_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnObjectImpl <em>Column Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ColumnObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnObject()
+   * @generated
+   */
+  int COLUMN_OBJECT = 22;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__TEXT = 1;
+
+  /**
+   * The feature id for the '<em><b>Text Object</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__TEXT_OBJECT = 2;
+
+  /**
+   * The feature id for the '<em><b>Column</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__COLUMN = 3;
+
+  /**
+   * The feature id for the '<em><b>Inner Column</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT__INNER_COLUMN = 4;
+
+  /**
+   * The number of structural features of the '<em>Column Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_OBJECT_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl <em>Image Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ImageObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageObject()
+   * @generated
+   */
+  int IMAGE_OBJECT = 23;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Image</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT__IMAGE = 1;
+
+  /**
+   * The feature id for the '<em><b>Width</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT__WIDTH = 2;
+
+  /**
+   * The feature id for the '<em><b>Height</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT__HEIGHT = 3;
+
+  /**
+   * The feature id for the '<em><b>Opacity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT__OPACITY = 4;
+
+  /**
+   * The feature id for the '<em><b>Fit</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT__FIT = 5;
+
+  /**
+   * The feature id for the '<em><b>Page Break</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT__PAGE_BREAK = 6;
+
+  /**
+   * The number of structural features of the '<em>Image Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_OBJECT_FEATURE_COUNT = 7;
+
+  /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ContentObjectImpl <em>Content Object</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -774,7 +1142,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObject()
    * @generated
    */
-  int CONTENT_OBJECT = 16;
+  int CONTENT_OBJECT = 24;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -802,7 +1170,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObjects()
    * @generated
    */
-  int CONTENT_OBJECTS = 17;
+  int CONTENT_OBJECTS = 25;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -830,7 +1198,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyles()
    * @generated
    */
-  int STYLES = 18;
+  int STYLES = 26;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -867,7 +1235,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContent()
    * @generated
    */
-  int CONTENT = 19;
+  int CONTENT = 27;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1218,6 +1586,479 @@ public interface PdfMkPackage extends EPackage
   EReference getColumnDefinition_Value();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.MarginDefinition <em>Margin Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Margin Definition</em>'.
+   * @see org.xtext.avi.pdfMk.MarginDefinition
+   * @generated
+   */
+  EClass getMarginDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.MarginDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.MarginDefinition#getKey()
+   * @see #getMarginDefinition()
+   * @generated
+   */
+  EAttribute getMarginDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.avi.pdfMk.MarginDefinition#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.xtext.avi.pdfMk.MarginDefinition#getValues()
+   * @see #getMarginDefinition()
+   * @generated
+   */
+  EAttribute getMarginDefinition_Values();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ImageDefintion <em>Image Defintion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image Defintion</em>'.
+   * @see org.xtext.avi.pdfMk.ImageDefintion
+   * @generated
+   */
+  EClass getImageDefintion();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageDefintion#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ImageDefintion#getKey()
+   * @see #getImageDefintion()
+   * @generated
+   */
+  EAttribute getImageDefintion_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageDefintion#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ImageDefintion#getValue()
+   * @see #getImageDefintion()
+   * @generated
+   */
+  EAttribute getImageDefintion_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ImageWidthDefintion <em>Image Width Defintion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image Width Defintion</em>'.
+   * @see org.xtext.avi.pdfMk.ImageWidthDefintion
+   * @generated
+   */
+  EClass getImageWidthDefintion();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageWidthDefintion#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ImageWidthDefintion#getKey()
+   * @see #getImageWidthDefintion()
+   * @generated
+   */
+  EAttribute getImageWidthDefintion_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageWidthDefintion#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ImageWidthDefintion#getValue()
+   * @see #getImageWidthDefintion()
+   * @generated
+   */
+  EAttribute getImageWidthDefintion_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ImageHeightDefintion <em>Image Height Defintion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image Height Defintion</em>'.
+   * @see org.xtext.avi.pdfMk.ImageHeightDefintion
+   * @generated
+   */
+  EClass getImageHeightDefintion();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageHeightDefintion#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ImageHeightDefintion#getKey()
+   * @see #getImageHeightDefintion()
+   * @generated
+   */
+  EAttribute getImageHeightDefintion_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageHeightDefintion#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ImageHeightDefintion#getValue()
+   * @see #getImageHeightDefintion()
+   * @generated
+   */
+  EAttribute getImageHeightDefintion_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ImagePageBreakDefinition <em>Image Page Break Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image Page Break Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ImagePageBreakDefinition
+   * @generated
+   */
+  EClass getImagePageBreakDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImagePageBreakDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ImagePageBreakDefinition#getKey()
+   * @see #getImagePageBreakDefinition()
+   * @generated
+   */
+  EAttribute getImagePageBreakDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImagePageBreakDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ImagePageBreakDefinition#getValue()
+   * @see #getImagePageBreakDefinition()
+   * @generated
+   */
+  EAttribute getImagePageBreakDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ImageFitDefinition <em>Image Fit Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image Fit Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ImageFitDefinition
+   * @generated
+   */
+  EClass getImageFitDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageFitDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ImageFitDefinition#getKey()
+   * @see #getImageFitDefinition()
+   * @generated
+   */
+  EAttribute getImageFitDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageFitDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ImageFitDefinition#getValue()
+   * @see #getImageFitDefinition()
+   * @generated
+   */
+  EAttribute getImageFitDefinition_Value();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.avi.pdfMk.ImageFitDefinition#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.xtext.avi.pdfMk.ImageFitDefinition#getValues()
+   * @see #getImageFitDefinition()
+   * @generated
+   */
+  EAttribute getImageFitDefinition_Values();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ImageOpacityDefinition <em>Image Opacity Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image Opacity Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ImageOpacityDefinition
+   * @generated
+   */
+  EClass getImageOpacityDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageOpacityDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ImageOpacityDefinition#getKey()
+   * @see #getImageOpacityDefinition()
+   * @generated
+   */
+  EAttribute getImageOpacityDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageOpacityDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ImageOpacityDefinition#getValue()
+   * @see #getImageOpacityDefinition()
+   * @generated
+   */
+  EAttribute getImageOpacityDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text Object</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject
+   * @generated
+   */
+  EClass getTextObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#getValue()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Value();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Text</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isText()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Text();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isStyle <em>Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Style</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isStyle()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Style();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isFontSize <em>Font Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Font Size</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isFontSize()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_FontSize();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isAlignment <em>Alignment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Alignment</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isAlignment()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Alignment();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isTypeFace <em>Type Face</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type Face</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isTypeFace()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_TypeFace();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isItalics <em>Italics</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Italics</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isItalics()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Italics();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Width</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isWidth()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Width();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isMargin <em>Margin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Margin</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isMargin()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_Margin();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnTextObject <em>Column Text Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Column Text Object</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnTextObject
+   * @generated
+   */
+  EClass getColumnTextObject();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.ColumnTextObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ColumnTextObject#getValue()
+   * @see #getColumnTextObject()
+   * @generated
+   */
+  EReference getColumnTextObject_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.StyleObject <em>Style Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Style Object</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject
+   * @generated
+   */
+  EClass getStyleObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#getKey()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#getValue()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_Value();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isFontSize <em>Font Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Font Size</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#isFontSize()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_FontSize();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isTypeFace <em>Type Face</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type Face</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#isTypeFace()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_TypeFace();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isAlignment <em>Alignment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Alignment</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#isAlignment()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_Alignment();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isItalics <em>Italics</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Italics</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#isItalics()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_Italics();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isMargin <em>Margin</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Margin</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObject#isMargin()
+   * @see #getStyleObject()
+   * @generated
+   */
+  EAttribute getStyleObject_Margin();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.StyleObjects <em>Style Objects</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Style Objects</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObjects
+   * @generated
+   */
+  EClass getStyleObjects();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.StyleObjects#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.StyleObjects#getValue()
+   * @see #getStyleObjects()
+   * @generated
+   */
+  EReference getStyleObjects_Value();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.InnerColumnObject <em>Inner Column Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1337,220 +2178,91 @@ public interface PdfMkPackage extends EPackage
   EReference getColumnObject_InnerColumn();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ImageObject <em>Image Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Text Object</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject
+   * @return the meta object for class '<em>Image Object</em>'.
+   * @see org.xtext.avi.pdfMk.ImageObject
    * @generated
    */
-  EClass getTextObject();
+  EClass getImageObject();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageObject#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#getValue()
-   * @see #getTextObject()
+   * @see org.xtext.avi.pdfMk.ImageObject#getValue()
+   * @see #getImageObject()
    * @generated
    */
-  EAttribute getTextObject_Value();
+  EAttribute getImageObject_Value();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isText <em>Text</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageObject#isImage <em>Image</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Text</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isText()
-   * @see #getTextObject()
+   * @return the meta object for the attribute '<em>Image</em>'.
+   * @see org.xtext.avi.pdfMk.ImageObject#isImage()
+   * @see #getImageObject()
    * @generated
    */
-  EAttribute getTextObject_Text();
+  EAttribute getImageObject_Image();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isStyle <em>Style</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Style</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isStyle()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Style();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isFontSize <em>Font Size</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Font Size</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isFontSize()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_FontSize();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isAlignment <em>Alignment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Alignment</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isAlignment()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Alignment();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isTypeFace <em>Type Face</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type Face</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isTypeFace()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_TypeFace();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isItalics <em>Italics</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Italics</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isItalics()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Italics();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageObject#isWidth <em>Width</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Width</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isWidth()
-   * @see #getTextObject()
+   * @see org.xtext.avi.pdfMk.ImageObject#isWidth()
+   * @see #getImageObject()
    * @generated
    */
-  EAttribute getTextObject_Width();
+  EAttribute getImageObject_Width();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnTextObject <em>Column Text Object</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageObject#isHeight <em>Height</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Column Text Object</em>'.
-   * @see org.xtext.avi.pdfMk.ColumnTextObject
+   * @return the meta object for the attribute '<em>Height</em>'.
+   * @see org.xtext.avi.pdfMk.ImageObject#isHeight()
+   * @see #getImageObject()
    * @generated
    */
-  EClass getColumnTextObject();
+  EAttribute getImageObject_Height();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.ColumnTextObject#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageObject#isOpacity <em>Opacity</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value</em>'.
-   * @see org.xtext.avi.pdfMk.ColumnTextObject#getValue()
-   * @see #getColumnTextObject()
+   * @return the meta object for the attribute '<em>Opacity</em>'.
+   * @see org.xtext.avi.pdfMk.ImageObject#isOpacity()
+   * @see #getImageObject()
    * @generated
    */
-  EReference getColumnTextObject_Value();
+  EAttribute getImageObject_Opacity();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.StyleObject <em>Style Object</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageObject#isFit <em>Fit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Style Object</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObject
+   * @return the meta object for the attribute '<em>Fit</em>'.
+   * @see org.xtext.avi.pdfMk.ImageObject#isFit()
+   * @see #getImageObject()
    * @generated
    */
-  EClass getStyleObject();
+  EAttribute getImageObject_Fit();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#getKey <em>Key</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ImageObject#isPageBreak <em>Page Break</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObject#getKey()
-   * @see #getStyleObject()
+   * @return the meta object for the attribute '<em>Page Break</em>'.
+   * @see org.xtext.avi.pdfMk.ImageObject#isPageBreak()
+   * @see #getImageObject()
    * @generated
    */
-  EAttribute getStyleObject_Key();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObject#getValue()
-   * @see #getStyleObject()
-   * @generated
-   */
-  EAttribute getStyleObject_Value();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isFontSize <em>Font Size</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Font Size</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObject#isFontSize()
-   * @see #getStyleObject()
-   * @generated
-   */
-  EAttribute getStyleObject_FontSize();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isTypeFace <em>Type Face</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type Face</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObject#isTypeFace()
-   * @see #getStyleObject()
-   * @generated
-   */
-  EAttribute getStyleObject_TypeFace();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isAlignment <em>Alignment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Alignment</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObject#isAlignment()
-   * @see #getStyleObject()
-   * @generated
-   */
-  EAttribute getStyleObject_Alignment();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.StyleObject#isItalics <em>Italics</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Italics</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObject#isItalics()
-   * @see #getStyleObject()
-   * @generated
-   */
-  EAttribute getStyleObject_Italics();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.StyleObjects <em>Style Objects</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Style Objects</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObjects
-   * @generated
-   */
-  EClass getStyleObjects();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.StyleObjects#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Value</em>'.
-   * @see org.xtext.avi.pdfMk.StyleObjects#getValue()
-   * @see #getStyleObjects()
-   * @generated
-   */
-  EReference getStyleObjects_Value();
+  EAttribute getImageObject_PageBreak();
 
   /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ContentObject <em>Content Object</em>}'.
@@ -1942,6 +2654,380 @@ public interface PdfMkPackage extends EPackage
     EReference COLUMN_DEFINITION__VALUE = eINSTANCE.getColumnDefinition_Value();
 
     /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.MarginDefinitionImpl <em>Margin Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.MarginDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getMarginDefinition()
+     * @generated
+     */
+    EClass MARGIN_DEFINITION = eINSTANCE.getMarginDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MARGIN_DEFINITION__KEY = eINSTANCE.getMarginDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MARGIN_DEFINITION__VALUES = eINSTANCE.getMarginDefinition_Values();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ImageDefintionImpl <em>Image Defintion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ImageDefintionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageDefintion()
+     * @generated
+     */
+    EClass IMAGE_DEFINTION = eINSTANCE.getImageDefintion();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_DEFINTION__KEY = eINSTANCE.getImageDefintion_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_DEFINTION__VALUE = eINSTANCE.getImageDefintion_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ImageWidthDefintionImpl <em>Image Width Defintion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ImageWidthDefintionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageWidthDefintion()
+     * @generated
+     */
+    EClass IMAGE_WIDTH_DEFINTION = eINSTANCE.getImageWidthDefintion();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_WIDTH_DEFINTION__KEY = eINSTANCE.getImageWidthDefintion_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_WIDTH_DEFINTION__VALUE = eINSTANCE.getImageWidthDefintion_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ImageHeightDefintionImpl <em>Image Height Defintion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ImageHeightDefintionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageHeightDefintion()
+     * @generated
+     */
+    EClass IMAGE_HEIGHT_DEFINTION = eINSTANCE.getImageHeightDefintion();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_HEIGHT_DEFINTION__KEY = eINSTANCE.getImageHeightDefintion_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_HEIGHT_DEFINTION__VALUE = eINSTANCE.getImageHeightDefintion_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ImagePageBreakDefinitionImpl <em>Image Page Break Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ImagePageBreakDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImagePageBreakDefinition()
+     * @generated
+     */
+    EClass IMAGE_PAGE_BREAK_DEFINITION = eINSTANCE.getImagePageBreakDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_PAGE_BREAK_DEFINITION__KEY = eINSTANCE.getImagePageBreakDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_PAGE_BREAK_DEFINITION__VALUE = eINSTANCE.getImagePageBreakDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ImageFitDefinitionImpl <em>Image Fit Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ImageFitDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageFitDefinition()
+     * @generated
+     */
+    EClass IMAGE_FIT_DEFINITION = eINSTANCE.getImageFitDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_FIT_DEFINITION__KEY = eINSTANCE.getImageFitDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_FIT_DEFINITION__VALUE = eINSTANCE.getImageFitDefinition_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_FIT_DEFINITION__VALUES = eINSTANCE.getImageFitDefinition_Values();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ImageOpacityDefinitionImpl <em>Image Opacity Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ImageOpacityDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageOpacityDefinition()
+     * @generated
+     */
+    EClass IMAGE_OPACITY_DEFINITION = eINSTANCE.getImageOpacityDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_OPACITY_DEFINITION__KEY = eINSTANCE.getImageOpacityDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_OPACITY_DEFINITION__VALUE = eINSTANCE.getImageOpacityDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TextObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
+     * @generated
+     */
+    EClass TEXT_OBJECT = eINSTANCE.getTextObject();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__VALUE = eINSTANCE.getTextObject_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__TEXT = eINSTANCE.getTextObject_Text();
+
+    /**
+     * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__STYLE = eINSTANCE.getTextObject_Style();
+
+    /**
+     * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__FONT_SIZE = eINSTANCE.getTextObject_FontSize();
+
+    /**
+     * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__ALIGNMENT = eINSTANCE.getTextObject_Alignment();
+
+    /**
+     * The meta object literal for the '<em><b>Type Face</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__TYPE_FACE = eINSTANCE.getTextObject_TypeFace();
+
+    /**
+     * The meta object literal for the '<em><b>Italics</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__ITALICS = eINSTANCE.getTextObject_Italics();
+
+    /**
+     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__WIDTH = eINSTANCE.getTextObject_Width();
+
+    /**
+     * The meta object literal for the '<em><b>Margin</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__MARGIN = eINSTANCE.getTextObject_Margin();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
+     * @generated
+     */
+    EClass COLUMN_TEXT_OBJECT = eINSTANCE.getColumnTextObject();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COLUMN_TEXT_OBJECT__VALUE = eINSTANCE.getColumnTextObject_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl <em>Style Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.StyleObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObject()
+     * @generated
+     */
+    EClass STYLE_OBJECT = eINSTANCE.getStyleObject();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__KEY = eINSTANCE.getStyleObject_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__VALUE = eINSTANCE.getStyleObject_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__FONT_SIZE = eINSTANCE.getStyleObject_FontSize();
+
+    /**
+     * The meta object literal for the '<em><b>Type Face</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__TYPE_FACE = eINSTANCE.getStyleObject_TypeFace();
+
+    /**
+     * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__ALIGNMENT = eINSTANCE.getStyleObject_Alignment();
+
+    /**
+     * The meta object literal for the '<em><b>Italics</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__ITALICS = eINSTANCE.getStyleObject_Italics();
+
+    /**
+     * The meta object literal for the '<em><b>Margin</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STYLE_OBJECT__MARGIN = eINSTANCE.getStyleObject_Margin();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectsImpl <em>Style Objects</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.StyleObjectsImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObjects()
+     * @generated
+     */
+    EClass STYLE_OBJECTS = eINSTANCE.getStyleObjects();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STYLE_OBJECTS__VALUE = eINSTANCE.getStyleObjects_Value();
+
+    /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl <em>Inner Column Object</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2034,14 +3120,14 @@ public interface PdfMkPackage extends EPackage
     EReference COLUMN_OBJECT__INNER_COLUMN = eINSTANCE.getColumnObject_InnerColumn();
 
     /**
-     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl <em>Image Object</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.avi.pdfMk.impl.TextObjectImpl
-     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
+     * @see org.xtext.avi.pdfMk.impl.ImageObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageObject()
      * @generated
      */
-    EClass TEXT_OBJECT = eINSTANCE.getTextObject();
+    EClass IMAGE_OBJECT = eINSTANCE.getImageObject();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2049,55 +3135,15 @@ public interface PdfMkPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TEXT_OBJECT__VALUE = eINSTANCE.getTextObject_Value();
+    EAttribute IMAGE_OBJECT__VALUE = eINSTANCE.getImageObject_Value();
 
     /**
-     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TEXT_OBJECT__TEXT = eINSTANCE.getTextObject_Text();
-
-    /**
-     * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__STYLE = eINSTANCE.getTextObject_Style();
-
-    /**
-     * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__FONT_SIZE = eINSTANCE.getTextObject_FontSize();
-
-    /**
-     * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__ALIGNMENT = eINSTANCE.getTextObject_Alignment();
-
-    /**
-     * The meta object literal for the '<em><b>Type Face</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__TYPE_FACE = eINSTANCE.getTextObject_TypeFace();
-
-    /**
-     * The meta object literal for the '<em><b>Italics</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__ITALICS = eINSTANCE.getTextObject_Italics();
+    EAttribute IMAGE_OBJECT__IMAGE = eINSTANCE.getImageObject_Image();
 
     /**
      * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
@@ -2105,101 +3151,39 @@ public interface PdfMkPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TEXT_OBJECT__WIDTH = eINSTANCE.getTextObject_Width();
+    EAttribute IMAGE_OBJECT__WIDTH = eINSTANCE.getImageObject_Width();
 
     /**
-     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl
-     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
-     * @generated
-     */
-    EClass COLUMN_TEXT_OBJECT = eINSTANCE.getColumnTextObject();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COLUMN_TEXT_OBJECT__VALUE = eINSTANCE.getColumnTextObject_Value();
+    EAttribute IMAGE_OBJECT__HEIGHT = eINSTANCE.getImageObject_Height();
 
     /**
-     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl <em>Style Object</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.avi.pdfMk.impl.StyleObjectImpl
-     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObject()
-     * @generated
-     */
-    EClass STYLE_OBJECT = eINSTANCE.getStyleObject();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STYLE_OBJECT__KEY = eINSTANCE.getStyleObject_Key();
+    EAttribute IMAGE_OBJECT__OPACITY = eINSTANCE.getImageObject_Opacity();
 
     /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Fit</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STYLE_OBJECT__VALUE = eINSTANCE.getStyleObject_Value();
+    EAttribute IMAGE_OBJECT__FIT = eINSTANCE.getImageObject_Fit();
 
     /**
-     * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Page Break</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STYLE_OBJECT__FONT_SIZE = eINSTANCE.getStyleObject_FontSize();
-
-    /**
-     * The meta object literal for the '<em><b>Type Face</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STYLE_OBJECT__TYPE_FACE = eINSTANCE.getStyleObject_TypeFace();
-
-    /**
-     * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STYLE_OBJECT__ALIGNMENT = eINSTANCE.getStyleObject_Alignment();
-
-    /**
-     * The meta object literal for the '<em><b>Italics</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STYLE_OBJECT__ITALICS = eINSTANCE.getStyleObject_Italics();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.StyleObjectsImpl <em>Style Objects</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.avi.pdfMk.impl.StyleObjectsImpl
-     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObjects()
-     * @generated
-     */
-    EClass STYLE_OBJECTS = eINSTANCE.getStyleObjects();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference STYLE_OBJECTS__VALUE = eINSTANCE.getStyleObjects_Value();
+    EAttribute IMAGE_OBJECT__PAGE_BREAK = eINSTANCE.getImageObject_PageBreak();
 
     /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ContentObjectImpl <em>Content Object</em>}' class.

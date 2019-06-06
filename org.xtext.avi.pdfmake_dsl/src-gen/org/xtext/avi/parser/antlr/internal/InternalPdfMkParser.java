@@ -21,22 +21,28 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPdfMkParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'var'", "'dd'", "'='", "'{'", "','", "'}'", "'bold'", "':'", "'true'", "'false'", "'style'", "'text:'", "'['", "']'", "'alignment'", "'italics'", "'fontSize'", "'width'", "'columns'", "'styles'", "'content'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'var'", "'dd'", "'='", "'{'", "','", "'}'", "'bold'", "':'", "'true'", "'false'", "'style'", "'text:'", "'['", "']'", "'alignment'", "'italics'", "'fontSize'", "'width'", "'columns'", "'margin'", "'image'", "'height'", "'pageBreak'", "'fit'", "'opacity'", "'styles'", "'content'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__19=19;
     public static final int T__15=15;
+    public static final int T__37=37;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__11=11;
+    public static final int T__33=33;
     public static final int T__12=12;
+    public static final int T__34=34;
     public static final int T__13=13;
+    public static final int T__35=35;
     public static final int T__14=14;
+    public static final int T__36=36;
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_ID=6;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -1740,25 +1746,25 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleColumnDefinition"
 
 
-    // $ANTLR start "entryRuleInnerColumnObject"
-    // InternalPdfMk.g:719:1: entryRuleInnerColumnObject returns [EObject current=null] : iv_ruleInnerColumnObject= ruleInnerColumnObject EOF ;
-    public final EObject entryRuleInnerColumnObject() throws RecognitionException {
+    // $ANTLR start "entryRuleMarginDefinition"
+    // InternalPdfMk.g:719:1: entryRuleMarginDefinition returns [EObject current=null] : iv_ruleMarginDefinition= ruleMarginDefinition EOF ;
+    public final EObject entryRuleMarginDefinition() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleInnerColumnObject = null;
+        EObject iv_ruleMarginDefinition = null;
 
 
         try {
-            // InternalPdfMk.g:719:58: (iv_ruleInnerColumnObject= ruleInnerColumnObject EOF )
-            // InternalPdfMk.g:720:2: iv_ruleInnerColumnObject= ruleInnerColumnObject EOF
+            // InternalPdfMk.g:719:57: (iv_ruleMarginDefinition= ruleMarginDefinition EOF )
+            // InternalPdfMk.g:720:2: iv_ruleMarginDefinition= ruleMarginDefinition EOF
             {
-             newCompositeNode(grammarAccess.getInnerColumnObjectRule()); 
+             newCompositeNode(grammarAccess.getMarginDefinitionRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleInnerColumnObject=ruleInnerColumnObject();
+            iv_ruleMarginDefinition=ruleMarginDefinition();
 
             state._fsp--;
 
-             current =iv_ruleInnerColumnObject; 
+             current =iv_ruleMarginDefinition; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -1773,57 +1779,47 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleInnerColumnObject"
+    // $ANTLR end "entryRuleMarginDefinition"
 
 
-    // $ANTLR start "ruleInnerColumnObject"
-    // InternalPdfMk.g:726:1: ruleInnerColumnObject returns [EObject current=null] : ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' ) ;
-    public final EObject ruleInnerColumnObject() throws RecognitionException {
+    // $ANTLR start "ruleMarginDefinition"
+    // InternalPdfMk.g:726:1: ruleMarginDefinition returns [EObject current=null] : ( ( (lv_key_0_0= 'margin' ) ) otherlv_1= ':' otherlv_2= '[' ( (lv_values_3_0= RULE_INT ) )? (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) )* otherlv_6= ']' ) ;
+    public final EObject ruleMarginDefinition() throws RecognitionException {
         EObject current = null;
 
-        Token lv_value_0_0=null;
+        Token lv_key_0_0=null;
+        Token otherlv_1=null;
         Token otherlv_2=null;
-        Token otherlv_5=null;
-        Token otherlv_8=null;
-        Token otherlv_10=null;
-        EObject lv_text_1_0 = null;
-
-        EObject lv_text_3_0 = null;
-
-        EObject lv_textObject_4_0 = null;
-
-        EObject lv_textObject_6_0 = null;
-
-        EObject lv_column_7_0 = null;
-
-        EObject lv_column_9_0 = null;
-
+        Token lv_values_3_0=null;
+        Token otherlv_4=null;
+        Token lv_values_5_0=null;
+        Token otherlv_6=null;
 
 
         	enterRule();
 
         try {
-            // InternalPdfMk.g:732:2: ( ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' ) )
-            // InternalPdfMk.g:733:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' )
+            // InternalPdfMk.g:732:2: ( ( ( (lv_key_0_0= 'margin' ) ) otherlv_1= ':' otherlv_2= '[' ( (lv_values_3_0= RULE_INT ) )? (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) )* otherlv_6= ']' ) )
+            // InternalPdfMk.g:733:2: ( ( (lv_key_0_0= 'margin' ) ) otherlv_1= ':' otherlv_2= '[' ( (lv_values_3_0= RULE_INT ) )? (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) )* otherlv_6= ']' )
             {
-            // InternalPdfMk.g:733:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' )
-            // InternalPdfMk.g:734:3: ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']'
+            // InternalPdfMk.g:733:2: ( ( (lv_key_0_0= 'margin' ) ) otherlv_1= ':' otherlv_2= '[' ( (lv_values_3_0= RULE_INT ) )? (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) )* otherlv_6= ']' )
+            // InternalPdfMk.g:734:3: ( (lv_key_0_0= 'margin' ) ) otherlv_1= ':' otherlv_2= '[' ( (lv_values_3_0= RULE_INT ) )? (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) )* otherlv_6= ']'
             {
-            // InternalPdfMk.g:734:3: ( (lv_value_0_0= '[' ) )
-            // InternalPdfMk.g:735:4: (lv_value_0_0= '[' )
+            // InternalPdfMk.g:734:3: ( (lv_key_0_0= 'margin' ) )
+            // InternalPdfMk.g:735:4: (lv_key_0_0= 'margin' )
             {
-            // InternalPdfMk.g:735:4: (lv_value_0_0= '[' )
-            // InternalPdfMk.g:736:5: lv_value_0_0= '['
+            // InternalPdfMk.g:735:4: (lv_key_0_0= 'margin' )
+            // InternalPdfMk.g:736:5: lv_key_0_0= 'margin'
             {
-            lv_value_0_0=(Token)match(input,23,FOLLOW_20); 
+            lv_key_0_0=(Token)match(input,30,FOLLOW_10); 
 
-            					newLeafNode(lv_value_0_0, grammarAccess.getInnerColumnObjectAccess().getValueLeftSquareBracketKeyword_0_0());
+            					newLeafNode(lv_key_0_0, grammarAccess.getMarginDefinitionAccess().getKeyMarginKeyword_0_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getInnerColumnObjectRule());
+            						current = createModelElement(grammarAccess.getMarginDefinitionRule());
             					}
-            					setWithLastConsumed(current, "value", lv_value_0_0, "[");
+            					setWithLastConsumed(current, "key", lv_key_0_0, "margin");
             				
 
             }
@@ -1831,42 +1827,42 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:748:3: ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* )
-            // InternalPdfMk.g:749:4: ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
-            {
-            // InternalPdfMk.g:749:4: ( (lv_text_1_0= ruleStringObject ) )?
+            otherlv_1=(Token)match(input,18,FOLLOW_19); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getMarginDefinitionAccess().getColonKeyword_1());
+            		
+            otherlv_2=(Token)match(input,23,FOLLOW_20); 
+
+            			newLeafNode(otherlv_2, grammarAccess.getMarginDefinitionAccess().getLeftSquareBracketKeyword_2());
+            		
+            // InternalPdfMk.g:756:3: ( (lv_values_3_0= RULE_INT ) )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_STRING) ) {
+            if ( (LA7_0==RULE_INT) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
-                    // InternalPdfMk.g:750:5: (lv_text_1_0= ruleStringObject )
+                    // InternalPdfMk.g:757:4: (lv_values_3_0= RULE_INT )
                     {
-                    // InternalPdfMk.g:750:5: (lv_text_1_0= ruleStringObject )
-                    // InternalPdfMk.g:751:6: lv_text_1_0= ruleStringObject
+                    // InternalPdfMk.g:757:4: (lv_values_3_0= RULE_INT )
+                    // InternalPdfMk.g:758:5: lv_values_3_0= RULE_INT
                     {
+                    lv_values_3_0=(Token)match(input,RULE_INT,FOLLOW_21); 
 
-                    						newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextStringObjectParserRuleCall_1_0_0());
-                    					
-                    pushFollow(FOLLOW_21);
-                    lv_text_1_0=ruleStringObject();
+                    					newLeafNode(lv_values_3_0, grammarAccess.getMarginDefinitionAccess().getValuesINTTerminalRuleCall_3_0());
+                    				
 
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
-                    						}
-                    						add(
-                    							current,
-                    							"text",
-                    							lv_text_1_0,
-                    							"org.xtext.avi.PdfMk.StringObject");
-                    						afterParserOrEnumRuleCall();
-                    					
+                    					if (current==null) {
+                    						current = createModelElement(grammarAccess.getMarginDefinitionRule());
+                    					}
+                    					addWithLastConsumed(
+                    						current,
+                    						"values",
+                    						lv_values_3_0,
+                    						"org.eclipse.xtext.common.Terminals.INT");
+                    				
 
                     }
 
@@ -1876,56 +1872,45 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:768:4: (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
+            // InternalPdfMk.g:774:3: (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) )*
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
                 if ( (LA8_0==15) ) {
-                    int LA8_2 = input.LA(2);
-
-                    if ( (LA8_2==RULE_STRING) ) {
-                        alt8=1;
-                    }
-
-
+                    alt8=1;
                 }
 
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalPdfMk.g:769:5: otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) )
+            	    // InternalPdfMk.g:775:4: otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) )
             	    {
-            	    otherlv_2=(Token)match(input,15,FOLLOW_12); 
+            	    otherlv_4=(Token)match(input,15,FOLLOW_14); 
 
-            	    					newLeafNode(otherlv_2, grammarAccess.getInnerColumnObjectAccess().getCommaKeyword_1_1_0());
-            	    				
-            	    // InternalPdfMk.g:773:5: ( (lv_text_3_0= ruleStringObject ) )
-            	    // InternalPdfMk.g:774:6: (lv_text_3_0= ruleStringObject )
+            	    				newLeafNode(otherlv_4, grammarAccess.getMarginDefinitionAccess().getCommaKeyword_4_0());
+            	    			
+            	    // InternalPdfMk.g:779:4: ( (lv_values_5_0= RULE_INT ) )
+            	    // InternalPdfMk.g:780:5: (lv_values_5_0= RULE_INT )
             	    {
-            	    // InternalPdfMk.g:774:6: (lv_text_3_0= ruleStringObject )
-            	    // InternalPdfMk.g:775:7: lv_text_3_0= ruleStringObject
+            	    // InternalPdfMk.g:780:5: (lv_values_5_0= RULE_INT )
+            	    // InternalPdfMk.g:781:6: lv_values_5_0= RULE_INT
             	    {
+            	    lv_values_5_0=(Token)match(input,RULE_INT,FOLLOW_21); 
 
-            	    							newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextStringObjectParserRuleCall_1_1_1_0());
-            	    						
-            	    pushFollow(FOLLOW_21);
-            	    lv_text_3_0=ruleStringObject();
+            	    						newLeafNode(lv_values_5_0, grammarAccess.getMarginDefinitionAccess().getValuesINTTerminalRuleCall_4_1_0());
+            	    					
 
-            	    state._fsp--;
-
-
-            	    							if (current==null) {
-            	    								current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
-            	    							}
-            	    							add(
-            	    								current,
-            	    								"text",
-            	    								lv_text_3_0,
-            	    								"org.xtext.avi.PdfMk.StringObject");
-            	    							afterParserOrEnumRuleCall();
-            	    						
+            	    						if (current==null) {
+            	    							current = createModelElement(grammarAccess.getMarginDefinitionRule());
+            	    						}
+            	    						addWithLastConsumed(
+            	    							current,
+            	    							"values",
+            	    							lv_values_5_0,
+            	    							"org.eclipse.xtext.common.Terminals.INT");
+            	    					
 
             	    }
 
@@ -1941,242 +1926,9 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
+            otherlv_6=(Token)match(input,24,FOLLOW_2); 
 
-            }
-
-            // InternalPdfMk.g:794:3: ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* )
-            // InternalPdfMk.g:795:4: ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
-            {
-            // InternalPdfMk.g:795:4: ( (lv_textObject_4_0= ruleTextObject ) )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==14) ) {
-                int LA9_1 = input.LA(2);
-
-                if ( ((LA9_1>=22 && LA9_1<=23)) ) {
-                    alt9=1;
-                }
-            }
-            switch (alt9) {
-                case 1 :
-                    // InternalPdfMk.g:796:5: (lv_textObject_4_0= ruleTextObject )
-                    {
-                    // InternalPdfMk.g:796:5: (lv_textObject_4_0= ruleTextObject )
-                    // InternalPdfMk.g:797:6: lv_textObject_4_0= ruleTextObject
-                    {
-
-                    						newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_0_0());
-                    					
-                    pushFollow(FOLLOW_21);
-                    lv_textObject_4_0=ruleTextObject();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
-                    						}
-                    						add(
-                    							current,
-                    							"textObject",
-                    							lv_textObject_4_0,
-                    							"org.xtext.avi.PdfMk.TextObject");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // InternalPdfMk.g:814:4: (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
-            loop10:
-            do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
-
-                if ( (LA10_0==15) ) {
-                    int LA10_2 = input.LA(2);
-
-                    if ( (LA10_2==14) ) {
-                        int LA10_3 = input.LA(3);
-
-                        if ( ((LA10_3>=22 && LA10_3<=23)) ) {
-                            alt10=1;
-                        }
-
-
-                    }
-
-
-                }
-
-
-                switch (alt10) {
-            	case 1 :
-            	    // InternalPdfMk.g:815:5: otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) )
-            	    {
-            	    otherlv_5=(Token)match(input,15,FOLLOW_5); 
-
-            	    					newLeafNode(otherlv_5, grammarAccess.getInnerColumnObjectAccess().getCommaKeyword_2_1_0());
-            	    				
-            	    // InternalPdfMk.g:819:5: ( (lv_textObject_6_0= ruleTextObject ) )
-            	    // InternalPdfMk.g:820:6: (lv_textObject_6_0= ruleTextObject )
-            	    {
-            	    // InternalPdfMk.g:820:6: (lv_textObject_6_0= ruleTextObject )
-            	    // InternalPdfMk.g:821:7: lv_textObject_6_0= ruleTextObject
-            	    {
-
-            	    							newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_1_1_0());
-            	    						
-            	    pushFollow(FOLLOW_21);
-            	    lv_textObject_6_0=ruleTextObject();
-
-            	    state._fsp--;
-
-
-            	    							if (current==null) {
-            	    								current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
-            	    							}
-            	    							add(
-            	    								current,
-            	    								"textObject",
-            	    								lv_textObject_6_0,
-            	    								"org.xtext.avi.PdfMk.TextObject");
-            	    							afterParserOrEnumRuleCall();
-            	    						
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop10;
-                }
-            } while (true);
-
-
-            }
-
-            // InternalPdfMk.g:840:3: ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* )
-            // InternalPdfMk.g:841:4: ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
-            {
-            // InternalPdfMk.g:841:4: ( (lv_column_7_0= ruleColumnDefinition ) )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
-
-            if ( (LA11_0==14) ) {
-                alt11=1;
-            }
-            switch (alt11) {
-                case 1 :
-                    // InternalPdfMk.g:842:5: (lv_column_7_0= ruleColumnDefinition )
-                    {
-                    // InternalPdfMk.g:842:5: (lv_column_7_0= ruleColumnDefinition )
-                    // InternalPdfMk.g:843:6: lv_column_7_0= ruleColumnDefinition
-                    {
-
-                    						newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_0_0());
-                    					
-                    pushFollow(FOLLOW_22);
-                    lv_column_7_0=ruleColumnDefinition();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
-                    						}
-                    						add(
-                    							current,
-                    							"column",
-                    							lv_column_7_0,
-                    							"org.xtext.avi.PdfMk.ColumnDefinition");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // InternalPdfMk.g:860:4: (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
-            loop12:
-            do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
-
-                if ( (LA12_0==15) ) {
-                    alt12=1;
-                }
-
-
-                switch (alt12) {
-            	case 1 :
-            	    // InternalPdfMk.g:861:5: otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) )
-            	    {
-            	    otherlv_8=(Token)match(input,15,FOLLOW_5); 
-
-            	    					newLeafNode(otherlv_8, grammarAccess.getInnerColumnObjectAccess().getCommaKeyword_3_1_0());
-            	    				
-            	    // InternalPdfMk.g:865:5: ( (lv_column_9_0= ruleColumnDefinition ) )
-            	    // InternalPdfMk.g:866:6: (lv_column_9_0= ruleColumnDefinition )
-            	    {
-            	    // InternalPdfMk.g:866:6: (lv_column_9_0= ruleColumnDefinition )
-            	    // InternalPdfMk.g:867:7: lv_column_9_0= ruleColumnDefinition
-            	    {
-
-            	    							newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_1_1_0());
-            	    						
-            	    pushFollow(FOLLOW_22);
-            	    lv_column_9_0=ruleColumnDefinition();
-
-            	    state._fsp--;
-
-
-            	    							if (current==null) {
-            	    								current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
-            	    							}
-            	    							add(
-            	    								current,
-            	    								"column",
-            	    								lv_column_9_0,
-            	    								"org.xtext.avi.PdfMk.ColumnDefinition");
-            	    							afterParserOrEnumRuleCall();
-            	    						
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop12;
-                }
-            } while (true);
-
-
-            }
-
-            otherlv_10=(Token)match(input,24,FOLLOW_2); 
-
-            			newLeafNode(otherlv_10, grammarAccess.getInnerColumnObjectAccess().getRightSquareBracketKeyword_4());
+            			newLeafNode(otherlv_6, grammarAccess.getMarginDefinitionAccess().getRightSquareBracketKeyword_5());
             		
 
             }
@@ -2197,28 +1949,28 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleInnerColumnObject"
+    // $ANTLR end "ruleMarginDefinition"
 
 
-    // $ANTLR start "entryRuleColumnObject"
-    // InternalPdfMk.g:894:1: entryRuleColumnObject returns [EObject current=null] : iv_ruleColumnObject= ruleColumnObject EOF ;
-    public final EObject entryRuleColumnObject() throws RecognitionException {
+    // $ANTLR start "entryRuleImageDefintion"
+    // InternalPdfMk.g:806:1: entryRuleImageDefintion returns [EObject current=null] : iv_ruleImageDefintion= ruleImageDefintion EOF ;
+    public final EObject entryRuleImageDefintion() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleColumnObject = null;
+        EObject iv_ruleImageDefintion = null;
 
 
         try {
-            // InternalPdfMk.g:894:53: (iv_ruleColumnObject= ruleColumnObject EOF )
-            // InternalPdfMk.g:895:2: iv_ruleColumnObject= ruleColumnObject EOF
+            // InternalPdfMk.g:806:55: (iv_ruleImageDefintion= ruleImageDefintion EOF )
+            // InternalPdfMk.g:807:2: iv_ruleImageDefintion= ruleImageDefintion EOF
             {
-             newCompositeNode(grammarAccess.getColumnObjectRule()); 
+             newCompositeNode(grammarAccess.getImageDefintionRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleColumnObject=ruleColumnObject();
+            iv_ruleImageDefintion=ruleImageDefintion();
 
             state._fsp--;
 
-             current =iv_ruleColumnObject; 
+             current =iv_ruleImageDefintion; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2233,62 +1985,43 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleColumnObject"
+    // $ANTLR end "entryRuleImageDefintion"
 
 
-    // $ANTLR start "ruleColumnObject"
-    // InternalPdfMk.g:901:1: ruleColumnObject returns [EObject current=null] : ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' ) ;
-    public final EObject ruleColumnObject() throws RecognitionException {
+    // $ANTLR start "ruleImageDefintion"
+    // InternalPdfMk.g:813:1: ruleImageDefintion returns [EObject current=null] : ( ( (lv_key_0_0= 'image' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) ) ;
+    public final EObject ruleImageDefintion() throws RecognitionException {
         EObject current = null;
 
-        Token lv_value_0_0=null;
-        Token otherlv_2=null;
-        Token otherlv_5=null;
-        Token otherlv_8=null;
-        Token otherlv_11=null;
-        Token otherlv_13=null;
-        EObject lv_text_1_0 = null;
-
-        EObject lv_text_3_0 = null;
-
-        EObject lv_textObject_4_0 = null;
-
-        EObject lv_textObject_6_0 = null;
-
-        EObject lv_column_7_0 = null;
-
-        EObject lv_column_9_0 = null;
-
-        EObject lv_innerColumn_10_0 = null;
-
-        EObject lv_innerColumn_12_0 = null;
-
+        Token lv_key_0_0=null;
+        Token otherlv_1=null;
+        Token lv_value_2_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalPdfMk.g:907:2: ( ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' ) )
-            // InternalPdfMk.g:908:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' )
+            // InternalPdfMk.g:819:2: ( ( ( (lv_key_0_0= 'image' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) ) )
+            // InternalPdfMk.g:820:2: ( ( (lv_key_0_0= 'image' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) )
             {
-            // InternalPdfMk.g:908:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' )
-            // InternalPdfMk.g:909:3: ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']'
+            // InternalPdfMk.g:820:2: ( ( (lv_key_0_0= 'image' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) )
+            // InternalPdfMk.g:821:3: ( (lv_key_0_0= 'image' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) )
             {
-            // InternalPdfMk.g:909:3: ( (lv_value_0_0= '[' ) )
-            // InternalPdfMk.g:910:4: (lv_value_0_0= '[' )
+            // InternalPdfMk.g:821:3: ( (lv_key_0_0= 'image' ) )
+            // InternalPdfMk.g:822:4: (lv_key_0_0= 'image' )
             {
-            // InternalPdfMk.g:910:4: (lv_value_0_0= '[' )
-            // InternalPdfMk.g:911:5: lv_value_0_0= '['
+            // InternalPdfMk.g:822:4: (lv_key_0_0= 'image' )
+            // InternalPdfMk.g:823:5: lv_key_0_0= 'image'
             {
-            lv_value_0_0=(Token)match(input,23,FOLLOW_23); 
+            lv_key_0_0=(Token)match(input,31,FOLLOW_10); 
 
-            					newLeafNode(lv_value_0_0, grammarAccess.getColumnObjectAccess().getValueLeftSquareBracketKeyword_0_0());
+            					newLeafNode(lv_key_0_0, grammarAccess.getImageDefintionAccess().getKeyImageKeyword_0_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getColumnObjectRule());
+            						current = createModelElement(grammarAccess.getImageDefintionRule());
             					}
-            					setWithLastConsumed(current, "value", lv_value_0_0, "[");
+            					setWithLastConsumed(current, "key", lv_key_0_0, "image");
             				
 
             }
@@ -2296,465 +2029,617 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:923:3: ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* )
-            // InternalPdfMk.g:924:4: ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
+            otherlv_1=(Token)match(input,18,FOLLOW_12); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getImageDefintionAccess().getColonKeyword_1());
+            		
+            // InternalPdfMk.g:839:3: ( (lv_value_2_0= RULE_STRING ) )
+            // InternalPdfMk.g:840:4: (lv_value_2_0= RULE_STRING )
             {
-            // InternalPdfMk.g:924:4: ( (lv_text_1_0= ruleStringObject ) )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
-
-            if ( (LA13_0==RULE_STRING) ) {
-                alt13=1;
-            }
-            switch (alt13) {
-                case 1 :
-                    // InternalPdfMk.g:925:5: (lv_text_1_0= ruleStringObject )
-                    {
-                    // InternalPdfMk.g:925:5: (lv_text_1_0= ruleStringObject )
-                    // InternalPdfMk.g:926:6: lv_text_1_0= ruleStringObject
-                    {
-
-                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getTextStringObjectParserRuleCall_1_0_0());
-                    					
-                    pushFollow(FOLLOW_24);
-                    lv_text_1_0=ruleStringObject();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-                    						}
-                    						add(
-                    							current,
-                    							"text",
-                    							lv_text_1_0,
-                    							"org.xtext.avi.PdfMk.StringObject");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // InternalPdfMk.g:943:4: (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
-            loop14:
-            do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
-
-                if ( (LA14_0==15) ) {
-                    int LA14_2 = input.LA(2);
-
-                    if ( (LA14_2==RULE_STRING) ) {
-                        alt14=1;
-                    }
-
-
-                }
-
-
-                switch (alt14) {
-            	case 1 :
-            	    // InternalPdfMk.g:944:5: otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) )
-            	    {
-            	    otherlv_2=(Token)match(input,15,FOLLOW_12); 
-
-            	    					newLeafNode(otherlv_2, grammarAccess.getColumnObjectAccess().getCommaKeyword_1_1_0());
-            	    				
-            	    // InternalPdfMk.g:948:5: ( (lv_text_3_0= ruleStringObject ) )
-            	    // InternalPdfMk.g:949:6: (lv_text_3_0= ruleStringObject )
-            	    {
-            	    // InternalPdfMk.g:949:6: (lv_text_3_0= ruleStringObject )
-            	    // InternalPdfMk.g:950:7: lv_text_3_0= ruleStringObject
-            	    {
-
-            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getTextStringObjectParserRuleCall_1_1_1_0());
-            	    						
-            	    pushFollow(FOLLOW_24);
-            	    lv_text_3_0=ruleStringObject();
-
-            	    state._fsp--;
-
-
-            	    							if (current==null) {
-            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-            	    							}
-            	    							add(
-            	    								current,
-            	    								"text",
-            	    								lv_text_3_0,
-            	    								"org.xtext.avi.PdfMk.StringObject");
-            	    							afterParserOrEnumRuleCall();
-            	    						
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop14;
-                }
-            } while (true);
-
-
-            }
-
-            // InternalPdfMk.g:969:3: ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* )
-            // InternalPdfMk.g:970:4: ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
+            // InternalPdfMk.g:840:4: (lv_value_2_0= RULE_STRING )
+            // InternalPdfMk.g:841:5: lv_value_2_0= RULE_STRING
             {
-            // InternalPdfMk.g:970:4: ( (lv_textObject_4_0= ruleTextObject ) )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            lv_value_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-            if ( (LA15_0==14) ) {
-                int LA15_1 = input.LA(2);
+            					newLeafNode(lv_value_2_0, grammarAccess.getImageDefintionAccess().getValueSTRINGTerminalRuleCall_2_0());
+            				
 
-                if ( ((LA15_1>=22 && LA15_1<=23)) ) {
-                    alt15=1;
-                }
-            }
-            switch (alt15) {
-                case 1 :
-                    // InternalPdfMk.g:971:5: (lv_textObject_4_0= ruleTextObject )
-                    {
-                    // InternalPdfMk.g:971:5: (lv_textObject_4_0= ruleTextObject )
-                    // InternalPdfMk.g:972:6: lv_textObject_4_0= ruleTextObject
-                    {
-
-                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_0_0());
-                    					
-                    pushFollow(FOLLOW_24);
-                    lv_textObject_4_0=ruleTextObject();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-                    						}
-                    						add(
-                    							current,
-                    							"textObject",
-                    							lv_textObject_4_0,
-                    							"org.xtext.avi.PdfMk.TextObject");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-                    break;
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageDefintionRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"value",
+            						lv_value_2_0,
+            						"org.eclipse.xtext.common.Terminals.STRING");
+            				
 
             }
-
-            // InternalPdfMk.g:989:4: (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
-            loop16:
-            do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
-
-                if ( (LA16_0==15) ) {
-                    int LA16_2 = input.LA(2);
-
-                    if ( (LA16_2==14) ) {
-                        int LA16_3 = input.LA(3);
-
-                        if ( ((LA16_3>=22 && LA16_3<=23)) ) {
-                            alt16=1;
-                        }
-
-
-                    }
-
-
-                }
-
-
-                switch (alt16) {
-            	case 1 :
-            	    // InternalPdfMk.g:990:5: otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) )
-            	    {
-            	    otherlv_5=(Token)match(input,15,FOLLOW_5); 
-
-            	    					newLeafNode(otherlv_5, grammarAccess.getColumnObjectAccess().getCommaKeyword_2_1_0());
-            	    				
-            	    // InternalPdfMk.g:994:5: ( (lv_textObject_6_0= ruleTextObject ) )
-            	    // InternalPdfMk.g:995:6: (lv_textObject_6_0= ruleTextObject )
-            	    {
-            	    // InternalPdfMk.g:995:6: (lv_textObject_6_0= ruleTextObject )
-            	    // InternalPdfMk.g:996:7: lv_textObject_6_0= ruleTextObject
-            	    {
-
-            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_1_1_0());
-            	    						
-            	    pushFollow(FOLLOW_24);
-            	    lv_textObject_6_0=ruleTextObject();
-
-            	    state._fsp--;
-
-
-            	    							if (current==null) {
-            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-            	    							}
-            	    							add(
-            	    								current,
-            	    								"textObject",
-            	    								lv_textObject_6_0,
-            	    								"org.xtext.avi.PdfMk.TextObject");
-            	    							afterParserOrEnumRuleCall();
-            	    						
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop16;
-                }
-            } while (true);
 
 
             }
 
-            // InternalPdfMk.g:1015:3: ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* )
-            // InternalPdfMk.g:1016:4: ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImageDefintion"
+
+
+    // $ANTLR start "entryRuleImageWidthDefintion"
+    // InternalPdfMk.g:861:1: entryRuleImageWidthDefintion returns [EObject current=null] : iv_ruleImageWidthDefintion= ruleImageWidthDefintion EOF ;
+    public final EObject entryRuleImageWidthDefintion() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleImageWidthDefintion = null;
+
+
+        try {
+            // InternalPdfMk.g:861:60: (iv_ruleImageWidthDefintion= ruleImageWidthDefintion EOF )
+            // InternalPdfMk.g:862:2: iv_ruleImageWidthDefintion= ruleImageWidthDefintion EOF
             {
-            // InternalPdfMk.g:1016:4: ( (lv_column_7_0= ruleColumnDefinition ) )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+             newCompositeNode(grammarAccess.getImageWidthDefintionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleImageWidthDefintion=ruleImageWidthDefintion();
 
-            if ( (LA17_0==14) ) {
-                alt17=1;
-            }
-            switch (alt17) {
-                case 1 :
-                    // InternalPdfMk.g:1017:5: (lv_column_7_0= ruleColumnDefinition )
-                    {
-                    // InternalPdfMk.g:1017:5: (lv_column_7_0= ruleColumnDefinition )
-                    // InternalPdfMk.g:1018:6: lv_column_7_0= ruleColumnDefinition
-                    {
+            state._fsp--;
 
-                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_0_0());
-                    					
-                    pushFollow(FOLLOW_25);
-                    lv_column_7_0=ruleColumnDefinition();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-                    						}
-                    						add(
-                    							current,
-                    							"column",
-                    							lv_column_7_0,
-                    							"org.xtext.avi.PdfMk.ColumnDefinition");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-                    break;
+             current =iv_ruleImageWidthDefintion; 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
-            // InternalPdfMk.g:1035:4: (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
-            loop18:
-            do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+        }
 
-                if ( (LA18_0==15) ) {
-                    int LA18_2 = input.LA(2);
-
-                    if ( (LA18_2==14) ) {
-                        alt18=1;
-                    }
-
-
-                }
-
-
-                switch (alt18) {
-            	case 1 :
-            	    // InternalPdfMk.g:1036:5: otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) )
-            	    {
-            	    otherlv_8=(Token)match(input,15,FOLLOW_5); 
-
-            	    					newLeafNode(otherlv_8, grammarAccess.getColumnObjectAccess().getCommaKeyword_3_1_0());
-            	    				
-            	    // InternalPdfMk.g:1040:5: ( (lv_column_9_0= ruleColumnDefinition ) )
-            	    // InternalPdfMk.g:1041:6: (lv_column_9_0= ruleColumnDefinition )
-            	    {
-            	    // InternalPdfMk.g:1041:6: (lv_column_9_0= ruleColumnDefinition )
-            	    // InternalPdfMk.g:1042:7: lv_column_9_0= ruleColumnDefinition
-            	    {
-
-            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_1_1_0());
-            	    						
-            	    pushFollow(FOLLOW_25);
-            	    lv_column_9_0=ruleColumnDefinition();
-
-            	    state._fsp--;
-
-
-            	    							if (current==null) {
-            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-            	    							}
-            	    							add(
-            	    								current,
-            	    								"column",
-            	    								lv_column_9_0,
-            	    								"org.xtext.avi.PdfMk.ColumnDefinition");
-            	    							afterParserOrEnumRuleCall();
-            	    						
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop18;
-                }
-            } while (true);
-
-
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
             }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleImageWidthDefintion"
 
-            // InternalPdfMk.g:1061:3: ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* )
-            // InternalPdfMk.g:1062:4: ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )*
+
+    // $ANTLR start "ruleImageWidthDefintion"
+    // InternalPdfMk.g:868:1: ruleImageWidthDefintion returns [EObject current=null] : ( ( (lv_key_0_0= 'width' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) ) ;
+    public final EObject ruleImageWidthDefintion() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_key_0_0=null;
+        Token otherlv_1=null;
+        Token lv_value_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:874:2: ( ( ( (lv_key_0_0= 'width' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) ) )
+            // InternalPdfMk.g:875:2: ( ( (lv_key_0_0= 'width' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) )
             {
-            // InternalPdfMk.g:1062:4: ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // InternalPdfMk.g:875:2: ( ( (lv_key_0_0= 'width' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) )
+            // InternalPdfMk.g:876:3: ( (lv_key_0_0= 'width' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) )
+            {
+            // InternalPdfMk.g:876:3: ( (lv_key_0_0= 'width' ) )
+            // InternalPdfMk.g:877:4: (lv_key_0_0= 'width' )
+            {
+            // InternalPdfMk.g:877:4: (lv_key_0_0= 'width' )
+            // InternalPdfMk.g:878:5: lv_key_0_0= 'width'
+            {
+            lv_key_0_0=(Token)match(input,28,FOLLOW_10); 
 
-            if ( (LA19_0==23) ) {
-                alt19=1;
-            }
-            switch (alt19) {
-                case 1 :
-                    // InternalPdfMk.g:1063:5: (lv_innerColumn_10_0= ruleInnerColumnObject )
-                    {
-                    // InternalPdfMk.g:1063:5: (lv_innerColumn_10_0= ruleInnerColumnObject )
-                    // InternalPdfMk.g:1064:6: lv_innerColumn_10_0= ruleInnerColumnObject
-                    {
+            					newLeafNode(lv_key_0_0, grammarAccess.getImageWidthDefintionAccess().getKeyWidthKeyword_0_0());
+            				
 
-                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getInnerColumnInnerColumnObjectParserRuleCall_4_0_0());
-                    					
-                    pushFollow(FOLLOW_22);
-                    lv_innerColumn_10_0=ruleInnerColumnObject();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-                    						}
-                    						add(
-                    							current,
-                    							"innerColumn",
-                    							lv_innerColumn_10_0,
-                    							"org.xtext.avi.PdfMk.InnerColumnObject");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-                    break;
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageWidthDefintionRule());
+            					}
+            					setWithLastConsumed(current, "key", lv_key_0_0, "width");
+            				
 
             }
-
-            // InternalPdfMk.g:1081:4: (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )*
-            loop20:
-            do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
-
-                if ( (LA20_0==15) ) {
-                    alt20=1;
-                }
-
-
-                switch (alt20) {
-            	case 1 :
-            	    // InternalPdfMk.g:1082:5: otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) )
-            	    {
-            	    otherlv_11=(Token)match(input,15,FOLLOW_19); 
-
-            	    					newLeafNode(otherlv_11, grammarAccess.getColumnObjectAccess().getCommaKeyword_4_1_0());
-            	    				
-            	    // InternalPdfMk.g:1086:5: ( (lv_innerColumn_12_0= ruleInnerColumnObject ) )
-            	    // InternalPdfMk.g:1087:6: (lv_innerColumn_12_0= ruleInnerColumnObject )
-            	    {
-            	    // InternalPdfMk.g:1087:6: (lv_innerColumn_12_0= ruleInnerColumnObject )
-            	    // InternalPdfMk.g:1088:7: lv_innerColumn_12_0= ruleInnerColumnObject
-            	    {
-
-            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getInnerColumnInnerColumnObjectParserRuleCall_4_1_1_0());
-            	    						
-            	    pushFollow(FOLLOW_22);
-            	    lv_innerColumn_12_0=ruleInnerColumnObject();
-
-            	    state._fsp--;
-
-
-            	    							if (current==null) {
-            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
-            	    							}
-            	    							add(
-            	    								current,
-            	    								"innerColumn",
-            	    								lv_innerColumn_12_0,
-            	    								"org.xtext.avi.PdfMk.InnerColumnObject");
-            	    							afterParserOrEnumRuleCall();
-            	    						
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop20;
-                }
-            } while (true);
 
 
             }
 
-            otherlv_13=(Token)match(input,24,FOLLOW_2); 
+            otherlv_1=(Token)match(input,18,FOLLOW_14); 
 
-            			newLeafNode(otherlv_13, grammarAccess.getColumnObjectAccess().getRightSquareBracketKeyword_5());
+            			newLeafNode(otherlv_1, grammarAccess.getImageWidthDefintionAccess().getColonKeyword_1());
+            		
+            // InternalPdfMk.g:894:3: ( (lv_value_2_0= RULE_INT ) )
+            // InternalPdfMk.g:895:4: (lv_value_2_0= RULE_INT )
+            {
+            // InternalPdfMk.g:895:4: (lv_value_2_0= RULE_INT )
+            // InternalPdfMk.g:896:5: lv_value_2_0= RULE_INT
+            {
+            lv_value_2_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+            					newLeafNode(lv_value_2_0, grammarAccess.getImageWidthDefintionAccess().getValueINTTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageWidthDefintionRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"value",
+            						lv_value_2_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImageWidthDefintion"
+
+
+    // $ANTLR start "entryRuleImageHeightDefintion"
+    // InternalPdfMk.g:916:1: entryRuleImageHeightDefintion returns [EObject current=null] : iv_ruleImageHeightDefintion= ruleImageHeightDefintion EOF ;
+    public final EObject entryRuleImageHeightDefintion() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleImageHeightDefintion = null;
+
+
+        try {
+            // InternalPdfMk.g:916:61: (iv_ruleImageHeightDefintion= ruleImageHeightDefintion EOF )
+            // InternalPdfMk.g:917:2: iv_ruleImageHeightDefintion= ruleImageHeightDefintion EOF
+            {
+             newCompositeNode(grammarAccess.getImageHeightDefintionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleImageHeightDefintion=ruleImageHeightDefintion();
+
+            state._fsp--;
+
+             current =iv_ruleImageHeightDefintion; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleImageHeightDefintion"
+
+
+    // $ANTLR start "ruleImageHeightDefintion"
+    // InternalPdfMk.g:923:1: ruleImageHeightDefintion returns [EObject current=null] : ( ( (lv_key_0_0= 'height' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) ) ;
+    public final EObject ruleImageHeightDefintion() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_key_0_0=null;
+        Token otherlv_1=null;
+        Token lv_value_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:929:2: ( ( ( (lv_key_0_0= 'height' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) ) )
+            // InternalPdfMk.g:930:2: ( ( (lv_key_0_0= 'height' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) )
+            {
+            // InternalPdfMk.g:930:2: ( ( (lv_key_0_0= 'height' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) )
+            // InternalPdfMk.g:931:3: ( (lv_key_0_0= 'height' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) )
+            {
+            // InternalPdfMk.g:931:3: ( (lv_key_0_0= 'height' ) )
+            // InternalPdfMk.g:932:4: (lv_key_0_0= 'height' )
+            {
+            // InternalPdfMk.g:932:4: (lv_key_0_0= 'height' )
+            // InternalPdfMk.g:933:5: lv_key_0_0= 'height'
+            {
+            lv_key_0_0=(Token)match(input,32,FOLLOW_10); 
+
+            					newLeafNode(lv_key_0_0, grammarAccess.getImageHeightDefintionAccess().getKeyHeightKeyword_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageHeightDefintionRule());
+            					}
+            					setWithLastConsumed(current, "key", lv_key_0_0, "height");
+            				
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,18,FOLLOW_14); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getImageHeightDefintionAccess().getColonKeyword_1());
+            		
+            // InternalPdfMk.g:949:3: ( (lv_value_2_0= RULE_INT ) )
+            // InternalPdfMk.g:950:4: (lv_value_2_0= RULE_INT )
+            {
+            // InternalPdfMk.g:950:4: (lv_value_2_0= RULE_INT )
+            // InternalPdfMk.g:951:5: lv_value_2_0= RULE_INT
+            {
+            lv_value_2_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+            					newLeafNode(lv_value_2_0, grammarAccess.getImageHeightDefintionAccess().getValueINTTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageHeightDefintionRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"value",
+            						lv_value_2_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImageHeightDefintion"
+
+
+    // $ANTLR start "entryRuleImagePageBreakDefinition"
+    // InternalPdfMk.g:971:1: entryRuleImagePageBreakDefinition returns [EObject current=null] : iv_ruleImagePageBreakDefinition= ruleImagePageBreakDefinition EOF ;
+    public final EObject entryRuleImagePageBreakDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleImagePageBreakDefinition = null;
+
+
+        try {
+            // InternalPdfMk.g:971:65: (iv_ruleImagePageBreakDefinition= ruleImagePageBreakDefinition EOF )
+            // InternalPdfMk.g:972:2: iv_ruleImagePageBreakDefinition= ruleImagePageBreakDefinition EOF
+            {
+             newCompositeNode(grammarAccess.getImagePageBreakDefinitionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleImagePageBreakDefinition=ruleImagePageBreakDefinition();
+
+            state._fsp--;
+
+             current =iv_ruleImagePageBreakDefinition; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleImagePageBreakDefinition"
+
+
+    // $ANTLR start "ruleImagePageBreakDefinition"
+    // InternalPdfMk.g:978:1: ruleImagePageBreakDefinition returns [EObject current=null] : ( ( (lv_key_0_0= 'pageBreak' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) ) ;
+    public final EObject ruleImagePageBreakDefinition() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_key_0_0=null;
+        Token otherlv_1=null;
+        Token lv_value_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:984:2: ( ( ( (lv_key_0_0= 'pageBreak' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) ) )
+            // InternalPdfMk.g:985:2: ( ( (lv_key_0_0= 'pageBreak' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) )
+            {
+            // InternalPdfMk.g:985:2: ( ( (lv_key_0_0= 'pageBreak' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) ) )
+            // InternalPdfMk.g:986:3: ( (lv_key_0_0= 'pageBreak' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_STRING ) )
+            {
+            // InternalPdfMk.g:986:3: ( (lv_key_0_0= 'pageBreak' ) )
+            // InternalPdfMk.g:987:4: (lv_key_0_0= 'pageBreak' )
+            {
+            // InternalPdfMk.g:987:4: (lv_key_0_0= 'pageBreak' )
+            // InternalPdfMk.g:988:5: lv_key_0_0= 'pageBreak'
+            {
+            lv_key_0_0=(Token)match(input,33,FOLLOW_10); 
+
+            					newLeafNode(lv_key_0_0, grammarAccess.getImagePageBreakDefinitionAccess().getKeyPageBreakKeyword_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImagePageBreakDefinitionRule());
+            					}
+            					setWithLastConsumed(current, "key", lv_key_0_0, "pageBreak");
+            				
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,18,FOLLOW_12); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getImagePageBreakDefinitionAccess().getColonKeyword_1());
+            		
+            // InternalPdfMk.g:1004:3: ( (lv_value_2_0= RULE_STRING ) )
+            // InternalPdfMk.g:1005:4: (lv_value_2_0= RULE_STRING )
+            {
+            // InternalPdfMk.g:1005:4: (lv_value_2_0= RULE_STRING )
+            // InternalPdfMk.g:1006:5: lv_value_2_0= RULE_STRING
+            {
+            lv_value_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            					newLeafNode(lv_value_2_0, grammarAccess.getImagePageBreakDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImagePageBreakDefinitionRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"value",
+            						lv_value_2_0,
+            						"org.eclipse.xtext.common.Terminals.STRING");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImagePageBreakDefinition"
+
+
+    // $ANTLR start "entryRuleImageFitDefinition"
+    // InternalPdfMk.g:1026:1: entryRuleImageFitDefinition returns [EObject current=null] : iv_ruleImageFitDefinition= ruleImageFitDefinition EOF ;
+    public final EObject entryRuleImageFitDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleImageFitDefinition = null;
+
+
+        try {
+            // InternalPdfMk.g:1026:59: (iv_ruleImageFitDefinition= ruleImageFitDefinition EOF )
+            // InternalPdfMk.g:1027:2: iv_ruleImageFitDefinition= ruleImageFitDefinition EOF
+            {
+             newCompositeNode(grammarAccess.getImageFitDefinitionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleImageFitDefinition=ruleImageFitDefinition();
+
+            state._fsp--;
+
+             current =iv_ruleImageFitDefinition; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleImageFitDefinition"
+
+
+    // $ANTLR start "ruleImageFitDefinition"
+    // InternalPdfMk.g:1033:1: ruleImageFitDefinition returns [EObject current=null] : ( ( (lv_key_0_0= 'fit' ) ) otherlv_1= ':' ( (lv_value_2_0= '[' ) ) ( (lv_values_3_0= RULE_INT ) ) (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) ) otherlv_6= ']' ) ;
+    public final EObject ruleImageFitDefinition() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_key_0_0=null;
+        Token otherlv_1=null;
+        Token lv_value_2_0=null;
+        Token lv_values_3_0=null;
+        Token otherlv_4=null;
+        Token lv_values_5_0=null;
+        Token otherlv_6=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:1039:2: ( ( ( (lv_key_0_0= 'fit' ) ) otherlv_1= ':' ( (lv_value_2_0= '[' ) ) ( (lv_values_3_0= RULE_INT ) ) (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) ) otherlv_6= ']' ) )
+            // InternalPdfMk.g:1040:2: ( ( (lv_key_0_0= 'fit' ) ) otherlv_1= ':' ( (lv_value_2_0= '[' ) ) ( (lv_values_3_0= RULE_INT ) ) (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) ) otherlv_6= ']' )
+            {
+            // InternalPdfMk.g:1040:2: ( ( (lv_key_0_0= 'fit' ) ) otherlv_1= ':' ( (lv_value_2_0= '[' ) ) ( (lv_values_3_0= RULE_INT ) ) (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) ) otherlv_6= ']' )
+            // InternalPdfMk.g:1041:3: ( (lv_key_0_0= 'fit' ) ) otherlv_1= ':' ( (lv_value_2_0= '[' ) ) ( (lv_values_3_0= RULE_INT ) ) (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) ) otherlv_6= ']'
+            {
+            // InternalPdfMk.g:1041:3: ( (lv_key_0_0= 'fit' ) )
+            // InternalPdfMk.g:1042:4: (lv_key_0_0= 'fit' )
+            {
+            // InternalPdfMk.g:1042:4: (lv_key_0_0= 'fit' )
+            // InternalPdfMk.g:1043:5: lv_key_0_0= 'fit'
+            {
+            lv_key_0_0=(Token)match(input,34,FOLLOW_10); 
+
+            					newLeafNode(lv_key_0_0, grammarAccess.getImageFitDefinitionAccess().getKeyFitKeyword_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageFitDefinitionRule());
+            					}
+            					setWithLastConsumed(current, "key", lv_key_0_0, "fit");
+            				
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,18,FOLLOW_19); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getImageFitDefinitionAccess().getColonKeyword_1());
+            		
+            // InternalPdfMk.g:1059:3: ( (lv_value_2_0= '[' ) )
+            // InternalPdfMk.g:1060:4: (lv_value_2_0= '[' )
+            {
+            // InternalPdfMk.g:1060:4: (lv_value_2_0= '[' )
+            // InternalPdfMk.g:1061:5: lv_value_2_0= '['
+            {
+            lv_value_2_0=(Token)match(input,23,FOLLOW_14); 
+
+            					newLeafNode(lv_value_2_0, grammarAccess.getImageFitDefinitionAccess().getValueLeftSquareBracketKeyword_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageFitDefinitionRule());
+            					}
+            					setWithLastConsumed(current, "value", lv_value_2_0, "[");
+            				
+
+            }
+
+
+            }
+
+            // InternalPdfMk.g:1073:3: ( (lv_values_3_0= RULE_INT ) )
+            // InternalPdfMk.g:1074:4: (lv_values_3_0= RULE_INT )
+            {
+            // InternalPdfMk.g:1074:4: (lv_values_3_0= RULE_INT )
+            // InternalPdfMk.g:1075:5: lv_values_3_0= RULE_INT
+            {
+            lv_values_3_0=(Token)match(input,RULE_INT,FOLLOW_16); 
+
+            					newLeafNode(lv_values_3_0, grammarAccess.getImageFitDefinitionAccess().getValuesINTTerminalRuleCall_3_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageFitDefinitionRule());
+            					}
+            					addWithLastConsumed(
+            						current,
+            						"values",
+            						lv_values_3_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
+            				
+
+            }
+
+
+            }
+
+            // InternalPdfMk.g:1091:3: (otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) ) )
+            // InternalPdfMk.g:1092:4: otherlv_4= ',' ( (lv_values_5_0= RULE_INT ) )
+            {
+            otherlv_4=(Token)match(input,15,FOLLOW_14); 
+
+            				newLeafNode(otherlv_4, grammarAccess.getImageFitDefinitionAccess().getCommaKeyword_4_0());
+            			
+            // InternalPdfMk.g:1096:4: ( (lv_values_5_0= RULE_INT ) )
+            // InternalPdfMk.g:1097:5: (lv_values_5_0= RULE_INT )
+            {
+            // InternalPdfMk.g:1097:5: (lv_values_5_0= RULE_INT )
+            // InternalPdfMk.g:1098:6: lv_values_5_0= RULE_INT
+            {
+            lv_values_5_0=(Token)match(input,RULE_INT,FOLLOW_13); 
+
+            						newLeafNode(lv_values_5_0, grammarAccess.getImageFitDefinitionAccess().getValuesINTTerminalRuleCall_4_1_0());
+            					
+
+            						if (current==null) {
+            							current = createModelElement(grammarAccess.getImageFitDefinitionRule());
+            						}
+            						addWithLastConsumed(
+            							current,
+            							"values",
+            							lv_values_5_0,
+            							"org.eclipse.xtext.common.Terminals.INT");
+            					
+
+            }
+
+
+            }
+
+
+            }
+
+            otherlv_6=(Token)match(input,24,FOLLOW_2); 
+
+            			newLeafNode(otherlv_6, grammarAccess.getImageFitDefinitionAccess().getRightSquareBracketKeyword_5());
             		
 
             }
@@ -2775,11 +2660,140 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleColumnObject"
+    // $ANTLR end "ruleImageFitDefinition"
+
+
+    // $ANTLR start "entryRuleImageOpacityDefinition"
+    // InternalPdfMk.g:1123:1: entryRuleImageOpacityDefinition returns [EObject current=null] : iv_ruleImageOpacityDefinition= ruleImageOpacityDefinition EOF ;
+    public final EObject entryRuleImageOpacityDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleImageOpacityDefinition = null;
+
+
+        try {
+            // InternalPdfMk.g:1123:63: (iv_ruleImageOpacityDefinition= ruleImageOpacityDefinition EOF )
+            // InternalPdfMk.g:1124:2: iv_ruleImageOpacityDefinition= ruleImageOpacityDefinition EOF
+            {
+             newCompositeNode(grammarAccess.getImageOpacityDefinitionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleImageOpacityDefinition=ruleImageOpacityDefinition();
+
+            state._fsp--;
+
+             current =iv_ruleImageOpacityDefinition; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleImageOpacityDefinition"
+
+
+    // $ANTLR start "ruleImageOpacityDefinition"
+    // InternalPdfMk.g:1130:1: ruleImageOpacityDefinition returns [EObject current=null] : ( ( (lv_key_0_0= 'opacity' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) ) ;
+    public final EObject ruleImageOpacityDefinition() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_key_0_0=null;
+        Token otherlv_1=null;
+        Token lv_value_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:1136:2: ( ( ( (lv_key_0_0= 'opacity' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) ) )
+            // InternalPdfMk.g:1137:2: ( ( (lv_key_0_0= 'opacity' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) )
+            {
+            // InternalPdfMk.g:1137:2: ( ( (lv_key_0_0= 'opacity' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) ) )
+            // InternalPdfMk.g:1138:3: ( (lv_key_0_0= 'opacity' ) ) otherlv_1= ':' ( (lv_value_2_0= RULE_INT ) )
+            {
+            // InternalPdfMk.g:1138:3: ( (lv_key_0_0= 'opacity' ) )
+            // InternalPdfMk.g:1139:4: (lv_key_0_0= 'opacity' )
+            {
+            // InternalPdfMk.g:1139:4: (lv_key_0_0= 'opacity' )
+            // InternalPdfMk.g:1140:5: lv_key_0_0= 'opacity'
+            {
+            lv_key_0_0=(Token)match(input,35,FOLLOW_10); 
+
+            					newLeafNode(lv_key_0_0, grammarAccess.getImageOpacityDefinitionAccess().getKeyOpacityKeyword_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageOpacityDefinitionRule());
+            					}
+            					setWithLastConsumed(current, "key", lv_key_0_0, "opacity");
+            				
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,18,FOLLOW_14); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getImageOpacityDefinitionAccess().getColonKeyword_1());
+            		
+            // InternalPdfMk.g:1156:3: ( (lv_value_2_0= RULE_INT ) )
+            // InternalPdfMk.g:1157:4: (lv_value_2_0= RULE_INT )
+            {
+            // InternalPdfMk.g:1157:4: (lv_value_2_0= RULE_INT )
+            // InternalPdfMk.g:1158:5: lv_value_2_0= RULE_INT
+            {
+            lv_value_2_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+            					newLeafNode(lv_value_2_0, grammarAccess.getImageOpacityDefinitionAccess().getValueINTTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageOpacityDefinitionRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"value",
+            						lv_value_2_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImageOpacityDefinition"
 
 
     // $ANTLR start "entryRuleTextObject"
-    // InternalPdfMk.g:1115:1: entryRuleTextObject returns [EObject current=null] : iv_ruleTextObject= ruleTextObject EOF ;
+    // InternalPdfMk.g:1178:1: entryRuleTextObject returns [EObject current=null] : iv_ruleTextObject= ruleTextObject EOF ;
     public final EObject entryRuleTextObject() throws RecognitionException {
         EObject current = null;
 
@@ -2787,8 +2801,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1115:51: (iv_ruleTextObject= ruleTextObject EOF )
-            // InternalPdfMk.g:1116:2: iv_ruleTextObject= ruleTextObject EOF
+            // InternalPdfMk.g:1178:51: (iv_ruleTextObject= ruleTextObject EOF )
+            // InternalPdfMk.g:1179:2: iv_ruleTextObject= ruleTextObject EOF
             {
              newCompositeNode(grammarAccess.getTextObjectRule()); 
             pushFollow(FOLLOW_1);
@@ -2815,7 +2829,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextObject"
-    // InternalPdfMk.g:1122:1: ruleTextObject returns [EObject current=null] : ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? otherlv_14= '}' ) ;
+    // InternalPdfMk.g:1185:1: ruleTextObject returns [EObject current=null] : ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? (otherlv_14= ',' ( (lv_margin_15_0= ruleMarginDefinition ) ) )? otherlv_16= '}' ) ;
     public final EObject ruleTextObject() throws RecognitionException {
         EObject current = null;
 
@@ -2827,6 +2841,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         Token otherlv_10=null;
         Token otherlv_12=null;
         Token otherlv_14=null;
+        Token otherlv_16=null;
         AntlrDatatypeRuleToken lv_text_1_0 = null;
 
         EObject lv_style_3_0 = null;
@@ -2841,24 +2856,26 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
         EObject lv_width_13_0 = null;
 
+        EObject lv_margin_15_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1128:2: ( ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? otherlv_14= '}' ) )
-            // InternalPdfMk.g:1129:2: ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? otherlv_14= '}' )
+            // InternalPdfMk.g:1191:2: ( ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? (otherlv_14= ',' ( (lv_margin_15_0= ruleMarginDefinition ) ) )? otherlv_16= '}' ) )
+            // InternalPdfMk.g:1192:2: ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? (otherlv_14= ',' ( (lv_margin_15_0= ruleMarginDefinition ) ) )? otherlv_16= '}' )
             {
-            // InternalPdfMk.g:1129:2: ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? otherlv_14= '}' )
-            // InternalPdfMk.g:1130:3: ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? otherlv_14= '}'
+            // InternalPdfMk.g:1192:2: ( ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? (otherlv_14= ',' ( (lv_margin_15_0= ruleMarginDefinition ) ) )? otherlv_16= '}' )
+            // InternalPdfMk.g:1193:3: ( (lv_value_0_0= '{' ) ) ( (lv_text_1_0= ruleTextDefinition ) ) (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )? (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )? (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )? (otherlv_14= ',' ( (lv_margin_15_0= ruleMarginDefinition ) ) )? otherlv_16= '}'
             {
-            // InternalPdfMk.g:1130:3: ( (lv_value_0_0= '{' ) )
-            // InternalPdfMk.g:1131:4: (lv_value_0_0= '{' )
+            // InternalPdfMk.g:1193:3: ( (lv_value_0_0= '{' ) )
+            // InternalPdfMk.g:1194:4: (lv_value_0_0= '{' )
             {
-            // InternalPdfMk.g:1131:4: (lv_value_0_0= '{' )
-            // InternalPdfMk.g:1132:5: lv_value_0_0= '{'
+            // InternalPdfMk.g:1194:4: (lv_value_0_0= '{' )
+            // InternalPdfMk.g:1195:5: lv_value_0_0= '{'
             {
-            lv_value_0_0=(Token)match(input,14,FOLLOW_26); 
+            lv_value_0_0=(Token)match(input,14,FOLLOW_22); 
 
             					newLeafNode(lv_value_0_0, grammarAccess.getTextObjectAccess().getValueLeftCurlyBracketKeyword_0_0());
             				
@@ -2874,11 +2891,11 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1144:3: ( (lv_text_1_0= ruleTextDefinition ) )
-            // InternalPdfMk.g:1145:4: (lv_text_1_0= ruleTextDefinition )
+            // InternalPdfMk.g:1207:3: ( (lv_text_1_0= ruleTextDefinition ) )
+            // InternalPdfMk.g:1208:4: (lv_text_1_0= ruleTextDefinition )
             {
-            // InternalPdfMk.g:1145:4: (lv_text_1_0= ruleTextDefinition )
-            // InternalPdfMk.g:1146:5: lv_text_1_0= ruleTextDefinition
+            // InternalPdfMk.g:1208:4: (lv_text_1_0= ruleTextDefinition )
+            // InternalPdfMk.g:1209:5: lv_text_1_0= ruleTextDefinition
             {
 
             					newCompositeNode(grammarAccess.getTextObjectAccess().getTextTextDefinitionParserRuleCall_1_0());
@@ -2905,30 +2922,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1163:3: (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalPdfMk.g:1226:3: (otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) ) )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA21_0==15) ) {
-                int LA21_1 = input.LA(2);
+            if ( (LA9_0==15) ) {
+                int LA9_1 = input.LA(2);
 
-                if ( (LA21_1==21) ) {
-                    alt21=1;
+                if ( (LA9_1==21) ) {
+                    alt9=1;
                 }
             }
-            switch (alt21) {
+            switch (alt9) {
                 case 1 :
-                    // InternalPdfMk.g:1164:4: otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) )
+                    // InternalPdfMk.g:1227:4: otherlv_2= ',' ( (lv_style_3_0= ruleTextStyleDefinition ) )
                     {
-                    otherlv_2=(Token)match(input,15,FOLLOW_27); 
+                    otherlv_2=(Token)match(input,15,FOLLOW_23); 
 
                     				newLeafNode(otherlv_2, grammarAccess.getTextObjectAccess().getCommaKeyword_2_0());
                     			
-                    // InternalPdfMk.g:1168:4: ( (lv_style_3_0= ruleTextStyleDefinition ) )
-                    // InternalPdfMk.g:1169:5: (lv_style_3_0= ruleTextStyleDefinition )
+                    // InternalPdfMk.g:1231:4: ( (lv_style_3_0= ruleTextStyleDefinition ) )
+                    // InternalPdfMk.g:1232:5: (lv_style_3_0= ruleTextStyleDefinition )
                     {
-                    // InternalPdfMk.g:1169:5: (lv_style_3_0= ruleTextStyleDefinition )
-                    // InternalPdfMk.g:1170:6: lv_style_3_0= ruleTextStyleDefinition
+                    // InternalPdfMk.g:1232:5: (lv_style_3_0= ruleTextStyleDefinition )
+                    // InternalPdfMk.g:1233:6: lv_style_3_0= ruleTextStyleDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getTextObjectAccess().getStyleTextStyleDefinitionParserRuleCall_2_1_0());
@@ -2961,30 +2978,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1188:3: (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // InternalPdfMk.g:1251:3: (otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) ) )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA22_0==15) ) {
-                int LA22_1 = input.LA(2);
+            if ( (LA10_0==15) ) {
+                int LA10_1 = input.LA(2);
 
-                if ( (LA22_1==27) ) {
-                    alt22=1;
+                if ( (LA10_1==27) ) {
+                    alt10=1;
                 }
             }
-            switch (alt22) {
+            switch (alt10) {
                 case 1 :
-                    // InternalPdfMk.g:1189:4: otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) )
+                    // InternalPdfMk.g:1252:4: otherlv_4= ',' ( (lv_fontSize_5_0= ruleFontSizeDefinition ) )
                     {
-                    otherlv_4=(Token)match(input,15,FOLLOW_28); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_24); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getTextObjectAccess().getCommaKeyword_3_0());
                     			
-                    // InternalPdfMk.g:1193:4: ( (lv_fontSize_5_0= ruleFontSizeDefinition ) )
-                    // InternalPdfMk.g:1194:5: (lv_fontSize_5_0= ruleFontSizeDefinition )
+                    // InternalPdfMk.g:1256:4: ( (lv_fontSize_5_0= ruleFontSizeDefinition ) )
+                    // InternalPdfMk.g:1257:5: (lv_fontSize_5_0= ruleFontSizeDefinition )
                     {
-                    // InternalPdfMk.g:1194:5: (lv_fontSize_5_0= ruleFontSizeDefinition )
-                    // InternalPdfMk.g:1195:6: lv_fontSize_5_0= ruleFontSizeDefinition
+                    // InternalPdfMk.g:1257:5: (lv_fontSize_5_0= ruleFontSizeDefinition )
+                    // InternalPdfMk.g:1258:6: lv_fontSize_5_0= ruleFontSizeDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getTextObjectAccess().getFontSizeFontSizeDefinitionParserRuleCall_3_1_0());
@@ -3017,30 +3034,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1213:3: (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // InternalPdfMk.g:1276:3: (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA23_0==15) ) {
-                int LA23_1 = input.LA(2);
+            if ( (LA11_0==15) ) {
+                int LA11_1 = input.LA(2);
 
-                if ( (LA23_1==25) ) {
-                    alt23=1;
+                if ( (LA11_1==25) ) {
+                    alt11=1;
                 }
             }
-            switch (alt23) {
+            switch (alt11) {
                 case 1 :
-                    // InternalPdfMk.g:1214:4: otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
+                    // InternalPdfMk.g:1277:4: otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
                     {
-                    otherlv_6=(Token)match(input,15,FOLLOW_29); 
+                    otherlv_6=(Token)match(input,15,FOLLOW_25); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getTextObjectAccess().getCommaKeyword_4_0());
                     			
-                    // InternalPdfMk.g:1218:4: ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
-                    // InternalPdfMk.g:1219:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
+                    // InternalPdfMk.g:1281:4: ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
+                    // InternalPdfMk.g:1282:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
                     {
-                    // InternalPdfMk.g:1219:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
-                    // InternalPdfMk.g:1220:6: lv_alignment_7_0= ruleTextAlignmentDefinition
+                    // InternalPdfMk.g:1282:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
+                    // InternalPdfMk.g:1283:6: lv_alignment_7_0= ruleTextAlignmentDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getTextObjectAccess().getAlignmentTextAlignmentDefinitionParserRuleCall_4_1_0());
@@ -3073,30 +3090,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1238:3: (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // InternalPdfMk.g:1301:3: (otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) ) )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA24_0==15) ) {
-                int LA24_1 = input.LA(2);
+            if ( (LA12_0==15) ) {
+                int LA12_1 = input.LA(2);
 
-                if ( (LA24_1==17) ) {
-                    alt24=1;
+                if ( (LA12_1==17) ) {
+                    alt12=1;
                 }
             }
-            switch (alt24) {
+            switch (alt12) {
                 case 1 :
-                    // InternalPdfMk.g:1239:4: otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) )
+                    // InternalPdfMk.g:1302:4: otherlv_8= ',' ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) )
                     {
-                    otherlv_8=(Token)match(input,15,FOLLOW_30); 
+                    otherlv_8=(Token)match(input,15,FOLLOW_26); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getTextObjectAccess().getCommaKeyword_5_0());
                     			
-                    // InternalPdfMk.g:1243:4: ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) )
-                    // InternalPdfMk.g:1244:5: (lv_typeFace_9_0= ruleTypeFaceDefinition )
+                    // InternalPdfMk.g:1306:4: ( (lv_typeFace_9_0= ruleTypeFaceDefinition ) )
+                    // InternalPdfMk.g:1307:5: (lv_typeFace_9_0= ruleTypeFaceDefinition )
                     {
-                    // InternalPdfMk.g:1244:5: (lv_typeFace_9_0= ruleTypeFaceDefinition )
-                    // InternalPdfMk.g:1245:6: lv_typeFace_9_0= ruleTypeFaceDefinition
+                    // InternalPdfMk.g:1307:5: (lv_typeFace_9_0= ruleTypeFaceDefinition )
+                    // InternalPdfMk.g:1308:6: lv_typeFace_9_0= ruleTypeFaceDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getTextObjectAccess().getTypeFaceTypeFaceDefinitionParserRuleCall_5_1_0());
@@ -3129,30 +3146,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1263:3: (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // InternalPdfMk.g:1326:3: (otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) ) )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA25_0==15) ) {
-                int LA25_1 = input.LA(2);
+            if ( (LA13_0==15) ) {
+                int LA13_1 = input.LA(2);
 
-                if ( (LA25_1==26) ) {
-                    alt25=1;
+                if ( (LA13_1==26) ) {
+                    alt13=1;
                 }
             }
-            switch (alt25) {
+            switch (alt13) {
                 case 1 :
-                    // InternalPdfMk.g:1264:4: otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) )
+                    // InternalPdfMk.g:1327:4: otherlv_10= ',' ( (lv_italics_11_0= ruleItalicsDefinition ) )
                     {
-                    otherlv_10=(Token)match(input,15,FOLLOW_31); 
+                    otherlv_10=(Token)match(input,15,FOLLOW_27); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getTextObjectAccess().getCommaKeyword_6_0());
                     			
-                    // InternalPdfMk.g:1268:4: ( (lv_italics_11_0= ruleItalicsDefinition ) )
-                    // InternalPdfMk.g:1269:5: (lv_italics_11_0= ruleItalicsDefinition )
+                    // InternalPdfMk.g:1331:4: ( (lv_italics_11_0= ruleItalicsDefinition ) )
+                    // InternalPdfMk.g:1332:5: (lv_italics_11_0= ruleItalicsDefinition )
                     {
-                    // InternalPdfMk.g:1269:5: (lv_italics_11_0= ruleItalicsDefinition )
-                    // InternalPdfMk.g:1270:6: lv_italics_11_0= ruleItalicsDefinition
+                    // InternalPdfMk.g:1332:5: (lv_italics_11_0= ruleItalicsDefinition )
+                    // InternalPdfMk.g:1333:6: lv_italics_11_0= ruleItalicsDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getTextObjectAccess().getItalicsItalicsDefinitionParserRuleCall_6_1_0());
@@ -3185,31 +3202,35 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1288:3: (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // InternalPdfMk.g:1351:3: (otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) ) )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA26_0==15) ) {
-                alt26=1;
+            if ( (LA14_0==15) ) {
+                int LA14_1 = input.LA(2);
+
+                if ( (LA14_1==28) ) {
+                    alt14=1;
+                }
             }
-            switch (alt26) {
+            switch (alt14) {
                 case 1 :
-                    // InternalPdfMk.g:1289:4: otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) )
+                    // InternalPdfMk.g:1352:4: otherlv_12= ',' ( (lv_width_13_0= ruleWidthDefinition ) )
                     {
-                    otherlv_12=(Token)match(input,15,FOLLOW_32); 
+                    otherlv_12=(Token)match(input,15,FOLLOW_28); 
 
                     				newLeafNode(otherlv_12, grammarAccess.getTextObjectAccess().getCommaKeyword_7_0());
                     			
-                    // InternalPdfMk.g:1293:4: ( (lv_width_13_0= ruleWidthDefinition ) )
-                    // InternalPdfMk.g:1294:5: (lv_width_13_0= ruleWidthDefinition )
+                    // InternalPdfMk.g:1356:4: ( (lv_width_13_0= ruleWidthDefinition ) )
+                    // InternalPdfMk.g:1357:5: (lv_width_13_0= ruleWidthDefinition )
                     {
-                    // InternalPdfMk.g:1294:5: (lv_width_13_0= ruleWidthDefinition )
-                    // InternalPdfMk.g:1295:6: lv_width_13_0= ruleWidthDefinition
+                    // InternalPdfMk.g:1357:5: (lv_width_13_0= ruleWidthDefinition )
+                    // InternalPdfMk.g:1358:6: lv_width_13_0= ruleWidthDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getTextObjectAccess().getWidthWidthDefinitionParserRuleCall_7_1_0());
                     					
-                    pushFollow(FOLLOW_9);
+                    pushFollow(FOLLOW_7);
                     lv_width_13_0=ruleWidthDefinition();
 
                     state._fsp--;
@@ -3237,9 +3258,61 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_14=(Token)match(input,16,FOLLOW_2); 
+            // InternalPdfMk.g:1376:3: (otherlv_14= ',' ( (lv_margin_15_0= ruleMarginDefinition ) ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            			newLeafNode(otherlv_14, grammarAccess.getTextObjectAccess().getRightCurlyBracketKeyword_8());
+            if ( (LA15_0==15) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // InternalPdfMk.g:1377:4: otherlv_14= ',' ( (lv_margin_15_0= ruleMarginDefinition ) )
+                    {
+                    otherlv_14=(Token)match(input,15,FOLLOW_29); 
+
+                    				newLeafNode(otherlv_14, grammarAccess.getTextObjectAccess().getCommaKeyword_8_0());
+                    			
+                    // InternalPdfMk.g:1381:4: ( (lv_margin_15_0= ruleMarginDefinition ) )
+                    // InternalPdfMk.g:1382:5: (lv_margin_15_0= ruleMarginDefinition )
+                    {
+                    // InternalPdfMk.g:1382:5: (lv_margin_15_0= ruleMarginDefinition )
+                    // InternalPdfMk.g:1383:6: lv_margin_15_0= ruleMarginDefinition
+                    {
+
+                    						newCompositeNode(grammarAccess.getTextObjectAccess().getMarginMarginDefinitionParserRuleCall_8_1_0());
+                    					
+                    pushFollow(FOLLOW_9);
+                    lv_margin_15_0=ruleMarginDefinition();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getTextObjectRule());
+                    						}
+                    						set(
+                    							current,
+                    							"margin",
+                    							true,
+                    							"org.xtext.avi.PdfMk.MarginDefinition");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            otherlv_16=(Token)match(input,16,FOLLOW_2); 
+
+            			newLeafNode(otherlv_16, grammarAccess.getTextObjectAccess().getRightCurlyBracketKeyword_9());
             		
 
             }
@@ -3264,7 +3337,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColumnTextObject"
-    // InternalPdfMk.g:1321:1: entryRuleColumnTextObject returns [EObject current=null] : iv_ruleColumnTextObject= ruleColumnTextObject EOF ;
+    // InternalPdfMk.g:1409:1: entryRuleColumnTextObject returns [EObject current=null] : iv_ruleColumnTextObject= ruleColumnTextObject EOF ;
     public final EObject entryRuleColumnTextObject() throws RecognitionException {
         EObject current = null;
 
@@ -3272,8 +3345,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1321:57: (iv_ruleColumnTextObject= ruleColumnTextObject EOF )
-            // InternalPdfMk.g:1322:2: iv_ruleColumnTextObject= ruleColumnTextObject EOF
+            // InternalPdfMk.g:1409:57: (iv_ruleColumnTextObject= ruleColumnTextObject EOF )
+            // InternalPdfMk.g:1410:2: iv_ruleColumnTextObject= ruleColumnTextObject EOF
             {
              newCompositeNode(grammarAccess.getColumnTextObjectRule()); 
             pushFollow(FOLLOW_1);
@@ -3300,7 +3373,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColumnTextObject"
-    // InternalPdfMk.g:1328:1: ruleColumnTextObject returns [EObject current=null] : ( (lv_value_0_0= ruleColumnDefinition ) ) ;
+    // InternalPdfMk.g:1416:1: ruleColumnTextObject returns [EObject current=null] : ( (lv_value_0_0= ruleColumnDefinition ) ) ;
     public final EObject ruleColumnTextObject() throws RecognitionException {
         EObject current = null;
 
@@ -3311,14 +3384,14 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1334:2: ( ( (lv_value_0_0= ruleColumnDefinition ) ) )
-            // InternalPdfMk.g:1335:2: ( (lv_value_0_0= ruleColumnDefinition ) )
+            // InternalPdfMk.g:1422:2: ( ( (lv_value_0_0= ruleColumnDefinition ) ) )
+            // InternalPdfMk.g:1423:2: ( (lv_value_0_0= ruleColumnDefinition ) )
             {
-            // InternalPdfMk.g:1335:2: ( (lv_value_0_0= ruleColumnDefinition ) )
-            // InternalPdfMk.g:1336:3: (lv_value_0_0= ruleColumnDefinition )
+            // InternalPdfMk.g:1423:2: ( (lv_value_0_0= ruleColumnDefinition ) )
+            // InternalPdfMk.g:1424:3: (lv_value_0_0= ruleColumnDefinition )
             {
-            // InternalPdfMk.g:1336:3: (lv_value_0_0= ruleColumnDefinition )
-            // InternalPdfMk.g:1337:4: lv_value_0_0= ruleColumnDefinition
+            // InternalPdfMk.g:1424:3: (lv_value_0_0= ruleColumnDefinition )
+            // InternalPdfMk.g:1425:4: lv_value_0_0= ruleColumnDefinition
             {
 
             				newCompositeNode(grammarAccess.getColumnTextObjectAccess().getValueColumnDefinitionParserRuleCall_0());
@@ -3365,7 +3438,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStyleObject"
-    // InternalPdfMk.g:1357:1: entryRuleStyleObject returns [EObject current=null] : iv_ruleStyleObject= ruleStyleObject EOF ;
+    // InternalPdfMk.g:1445:1: entryRuleStyleObject returns [EObject current=null] : iv_ruleStyleObject= ruleStyleObject EOF ;
     public final EObject entryRuleStyleObject() throws RecognitionException {
         EObject current = null;
 
@@ -3373,8 +3446,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1357:52: (iv_ruleStyleObject= ruleStyleObject EOF )
-            // InternalPdfMk.g:1358:2: iv_ruleStyleObject= ruleStyleObject EOF
+            // InternalPdfMk.g:1445:52: (iv_ruleStyleObject= ruleStyleObject EOF )
+            // InternalPdfMk.g:1446:2: iv_ruleStyleObject= ruleStyleObject EOF
             {
              newCompositeNode(grammarAccess.getStyleObjectRule()); 
             pushFollow(FOLLOW_1);
@@ -3401,7 +3474,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyleObject"
-    // InternalPdfMk.g:1364:1: ruleStyleObject returns [EObject current=null] : ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' ) ;
+    // InternalPdfMk.g:1452:1: ruleStyleObject returns [EObject current=null] : ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? (otherlv_10= ',' ( (lv_margin_11_0= ruleMarginDefinition ) ) )? otherlv_12= '}' ) ;
     public final EObject ruleStyleObject() throws RecognitionException {
         EObject current = null;
 
@@ -3412,6 +3485,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         Token otherlv_6=null;
         Token otherlv_8=null;
         Token otherlv_10=null;
+        Token otherlv_12=null;
         EObject lv_fontSize_3_0 = null;
 
         EObject lv_typeFace_5_0 = null;
@@ -3420,22 +3494,24 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
         EObject lv_italics_9_0 = null;
 
+        EObject lv_margin_11_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1370:2: ( ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' ) )
-            // InternalPdfMk.g:1371:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' )
+            // InternalPdfMk.g:1458:2: ( ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? (otherlv_10= ',' ( (lv_margin_11_0= ruleMarginDefinition ) ) )? otherlv_12= '}' ) )
+            // InternalPdfMk.g:1459:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? (otherlv_10= ',' ( (lv_margin_11_0= ruleMarginDefinition ) ) )? otherlv_12= '}' )
             {
-            // InternalPdfMk.g:1371:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}' )
-            // InternalPdfMk.g:1372:3: ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? otherlv_10= '}'
+            // InternalPdfMk.g:1459:2: ( ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? (otherlv_10= ',' ( (lv_margin_11_0= ruleMarginDefinition ) ) )? otherlv_12= '}' )
+            // InternalPdfMk.g:1460:3: ( (lv_key_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_value_2_0= '{' ) ) ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )? (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )? (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )? (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )? (otherlv_10= ',' ( (lv_margin_11_0= ruleMarginDefinition ) ) )? otherlv_12= '}'
             {
-            // InternalPdfMk.g:1372:3: ( (lv_key_0_0= RULE_ID ) )
-            // InternalPdfMk.g:1373:4: (lv_key_0_0= RULE_ID )
+            // InternalPdfMk.g:1460:3: ( (lv_key_0_0= RULE_ID ) )
+            // InternalPdfMk.g:1461:4: (lv_key_0_0= RULE_ID )
             {
-            // InternalPdfMk.g:1373:4: (lv_key_0_0= RULE_ID )
-            // InternalPdfMk.g:1374:5: lv_key_0_0= RULE_ID
+            // InternalPdfMk.g:1461:4: (lv_key_0_0= RULE_ID )
+            // InternalPdfMk.g:1462:5: lv_key_0_0= RULE_ID
             {
             lv_key_0_0=(Token)match(input,RULE_ID,FOLLOW_10); 
 
@@ -3461,13 +3537,13 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getStyleObjectAccess().getColonKeyword_1());
             		
-            // InternalPdfMk.g:1394:3: ( (lv_value_2_0= '{' ) )
-            // InternalPdfMk.g:1395:4: (lv_value_2_0= '{' )
+            // InternalPdfMk.g:1482:3: ( (lv_value_2_0= '{' ) )
+            // InternalPdfMk.g:1483:4: (lv_value_2_0= '{' )
             {
-            // InternalPdfMk.g:1395:4: (lv_value_2_0= '{' )
-            // InternalPdfMk.g:1396:5: lv_value_2_0= '{'
+            // InternalPdfMk.g:1483:4: (lv_value_2_0= '{' )
+            // InternalPdfMk.g:1484:5: lv_value_2_0= '{'
             {
-            lv_value_2_0=(Token)match(input,14,FOLLOW_33); 
+            lv_value_2_0=(Token)match(input,14,FOLLOW_30); 
 
             					newLeafNode(lv_value_2_0, grammarAccess.getStyleObjectAccess().getValueLeftCurlyBracketKeyword_2_0());
             				
@@ -3483,19 +3559,19 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1408:3: ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // InternalPdfMk.g:1496:3: ( (lv_fontSize_3_0= ruleFontSizeDefinition ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA27_0==27) ) {
-                alt27=1;
+            if ( (LA16_0==27) ) {
+                alt16=1;
             }
-            switch (alt27) {
+            switch (alt16) {
                 case 1 :
-                    // InternalPdfMk.g:1409:4: (lv_fontSize_3_0= ruleFontSizeDefinition )
+                    // InternalPdfMk.g:1497:4: (lv_fontSize_3_0= ruleFontSizeDefinition )
                     {
-                    // InternalPdfMk.g:1409:4: (lv_fontSize_3_0= ruleFontSizeDefinition )
-                    // InternalPdfMk.g:1410:5: lv_fontSize_3_0= ruleFontSizeDefinition
+                    // InternalPdfMk.g:1497:4: (lv_fontSize_3_0= ruleFontSizeDefinition )
+                    // InternalPdfMk.g:1498:5: lv_fontSize_3_0= ruleFontSizeDefinition
                     {
 
                     					newCompositeNode(grammarAccess.getStyleObjectAccess().getFontSizeFontSizeDefinitionParserRuleCall_3_0());
@@ -3525,30 +3601,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1427:3: (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // InternalPdfMk.g:1515:3: (otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) ) )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA28_0==15) ) {
-                int LA28_1 = input.LA(2);
+            if ( (LA17_0==15) ) {
+                int LA17_1 = input.LA(2);
 
-                if ( (LA28_1==17) ) {
-                    alt28=1;
+                if ( (LA17_1==17) ) {
+                    alt17=1;
                 }
             }
-            switch (alt28) {
+            switch (alt17) {
                 case 1 :
-                    // InternalPdfMk.g:1428:4: otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) )
+                    // InternalPdfMk.g:1516:4: otherlv_4= ',' ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) )
                     {
-                    otherlv_4=(Token)match(input,15,FOLLOW_30); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_26); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getStyleObjectAccess().getCommaKeyword_4_0());
                     			
-                    // InternalPdfMk.g:1432:4: ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) )
-                    // InternalPdfMk.g:1433:5: (lv_typeFace_5_0= ruleTypeFaceDefinition )
+                    // InternalPdfMk.g:1520:4: ( (lv_typeFace_5_0= ruleTypeFaceDefinition ) )
+                    // InternalPdfMk.g:1521:5: (lv_typeFace_5_0= ruleTypeFaceDefinition )
                     {
-                    // InternalPdfMk.g:1433:5: (lv_typeFace_5_0= ruleTypeFaceDefinition )
-                    // InternalPdfMk.g:1434:6: lv_typeFace_5_0= ruleTypeFaceDefinition
+                    // InternalPdfMk.g:1521:5: (lv_typeFace_5_0= ruleTypeFaceDefinition )
+                    // InternalPdfMk.g:1522:6: lv_typeFace_5_0= ruleTypeFaceDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getStyleObjectAccess().getTypeFaceTypeFaceDefinitionParserRuleCall_4_1_0());
@@ -3581,30 +3657,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1452:3: (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // InternalPdfMk.g:1540:3: (otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA29_0==15) ) {
-                int LA29_1 = input.LA(2);
+            if ( (LA18_0==15) ) {
+                int LA18_1 = input.LA(2);
 
-                if ( (LA29_1==25) ) {
-                    alt29=1;
+                if ( (LA18_1==25) ) {
+                    alt18=1;
                 }
             }
-            switch (alt29) {
+            switch (alt18) {
                 case 1 :
-                    // InternalPdfMk.g:1453:4: otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
+                    // InternalPdfMk.g:1541:4: otherlv_6= ',' ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
                     {
-                    otherlv_6=(Token)match(input,15,FOLLOW_29); 
+                    otherlv_6=(Token)match(input,15,FOLLOW_25); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getStyleObjectAccess().getCommaKeyword_5_0());
                     			
-                    // InternalPdfMk.g:1457:4: ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
-                    // InternalPdfMk.g:1458:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
+                    // InternalPdfMk.g:1545:4: ( (lv_alignment_7_0= ruleTextAlignmentDefinition ) )
+                    // InternalPdfMk.g:1546:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
                     {
-                    // InternalPdfMk.g:1458:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
-                    // InternalPdfMk.g:1459:6: lv_alignment_7_0= ruleTextAlignmentDefinition
+                    // InternalPdfMk.g:1546:5: (lv_alignment_7_0= ruleTextAlignmentDefinition )
+                    // InternalPdfMk.g:1547:6: lv_alignment_7_0= ruleTextAlignmentDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getStyleObjectAccess().getAlignmentTextAlignmentDefinitionParserRuleCall_5_1_0());
@@ -3637,31 +3713,35 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1477:3: (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // InternalPdfMk.g:1565:3: (otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) ) )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA30_0==15) ) {
-                alt30=1;
+            if ( (LA19_0==15) ) {
+                int LA19_1 = input.LA(2);
+
+                if ( (LA19_1==26) ) {
+                    alt19=1;
+                }
             }
-            switch (alt30) {
+            switch (alt19) {
                 case 1 :
-                    // InternalPdfMk.g:1478:4: otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) )
+                    // InternalPdfMk.g:1566:4: otherlv_8= ',' ( (lv_italics_9_0= ruleItalicsDefinition ) )
                     {
-                    otherlv_8=(Token)match(input,15,FOLLOW_31); 
+                    otherlv_8=(Token)match(input,15,FOLLOW_27); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getStyleObjectAccess().getCommaKeyword_6_0());
                     			
-                    // InternalPdfMk.g:1482:4: ( (lv_italics_9_0= ruleItalicsDefinition ) )
-                    // InternalPdfMk.g:1483:5: (lv_italics_9_0= ruleItalicsDefinition )
+                    // InternalPdfMk.g:1570:4: ( (lv_italics_9_0= ruleItalicsDefinition ) )
+                    // InternalPdfMk.g:1571:5: (lv_italics_9_0= ruleItalicsDefinition )
                     {
-                    // InternalPdfMk.g:1483:5: (lv_italics_9_0= ruleItalicsDefinition )
-                    // InternalPdfMk.g:1484:6: lv_italics_9_0= ruleItalicsDefinition
+                    // InternalPdfMk.g:1571:5: (lv_italics_9_0= ruleItalicsDefinition )
+                    // InternalPdfMk.g:1572:6: lv_italics_9_0= ruleItalicsDefinition
                     {
 
                     						newCompositeNode(grammarAccess.getStyleObjectAccess().getItalicsItalicsDefinitionParserRuleCall_6_1_0());
                     					
-                    pushFollow(FOLLOW_9);
+                    pushFollow(FOLLOW_7);
                     lv_italics_9_0=ruleItalicsDefinition();
 
                     state._fsp--;
@@ -3689,9 +3769,61 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,16,FOLLOW_2); 
+            // InternalPdfMk.g:1590:3: (otherlv_10= ',' ( (lv_margin_11_0= ruleMarginDefinition ) ) )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            			newLeafNode(otherlv_10, grammarAccess.getStyleObjectAccess().getRightCurlyBracketKeyword_7());
+            if ( (LA20_0==15) ) {
+                alt20=1;
+            }
+            switch (alt20) {
+                case 1 :
+                    // InternalPdfMk.g:1591:4: otherlv_10= ',' ( (lv_margin_11_0= ruleMarginDefinition ) )
+                    {
+                    otherlv_10=(Token)match(input,15,FOLLOW_29); 
+
+                    				newLeafNode(otherlv_10, grammarAccess.getStyleObjectAccess().getCommaKeyword_7_0());
+                    			
+                    // InternalPdfMk.g:1595:4: ( (lv_margin_11_0= ruleMarginDefinition ) )
+                    // InternalPdfMk.g:1596:5: (lv_margin_11_0= ruleMarginDefinition )
+                    {
+                    // InternalPdfMk.g:1596:5: (lv_margin_11_0= ruleMarginDefinition )
+                    // InternalPdfMk.g:1597:6: lv_margin_11_0= ruleMarginDefinition
+                    {
+
+                    						newCompositeNode(grammarAccess.getStyleObjectAccess().getMarginMarginDefinitionParserRuleCall_7_1_0());
+                    					
+                    pushFollow(FOLLOW_9);
+                    lv_margin_11_0=ruleMarginDefinition();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getStyleObjectRule());
+                    						}
+                    						set(
+                    							current,
+                    							"margin",
+                    							true,
+                    							"org.xtext.avi.PdfMk.MarginDefinition");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            otherlv_12=(Token)match(input,16,FOLLOW_2); 
+
+            			newLeafNode(otherlv_12, grammarAccess.getStyleObjectAccess().getRightCurlyBracketKeyword_8());
             		
 
             }
@@ -3716,7 +3848,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStyleObjects"
-    // InternalPdfMk.g:1510:1: entryRuleStyleObjects returns [EObject current=null] : iv_ruleStyleObjects= ruleStyleObjects EOF ;
+    // InternalPdfMk.g:1623:1: entryRuleStyleObjects returns [EObject current=null] : iv_ruleStyleObjects= ruleStyleObjects EOF ;
     public final EObject entryRuleStyleObjects() throws RecognitionException {
         EObject current = null;
 
@@ -3724,8 +3856,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1510:53: (iv_ruleStyleObjects= ruleStyleObjects EOF )
-            // InternalPdfMk.g:1511:2: iv_ruleStyleObjects= ruleStyleObjects EOF
+            // InternalPdfMk.g:1623:53: (iv_ruleStyleObjects= ruleStyleObjects EOF )
+            // InternalPdfMk.g:1624:2: iv_ruleStyleObjects= ruleStyleObjects EOF
             {
              newCompositeNode(grammarAccess.getStyleObjectsRule()); 
             pushFollow(FOLLOW_1);
@@ -3752,7 +3884,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyleObjects"
-    // InternalPdfMk.g:1517:1: ruleStyleObjects returns [EObject current=null] : (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' ) ;
+    // InternalPdfMk.g:1630:1: ruleStyleObjects returns [EObject current=null] : (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' ) ;
     public final EObject ruleStyleObjects() throws RecognitionException {
         EObject current = null;
 
@@ -3768,24 +3900,24 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1523:2: ( (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' ) )
-            // InternalPdfMk.g:1524:2: (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' )
+            // InternalPdfMk.g:1636:2: ( (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' ) )
+            // InternalPdfMk.g:1637:2: (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' )
             {
-            // InternalPdfMk.g:1524:2: (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' )
-            // InternalPdfMk.g:1525:3: otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}'
+            // InternalPdfMk.g:1637:2: (otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}' )
+            // InternalPdfMk.g:1638:3: otherlv_0= '{' ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* ) otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,14,FOLLOW_34); 
+            otherlv_0=(Token)match(input,14,FOLLOW_31); 
 
             			newLeafNode(otherlv_0, grammarAccess.getStyleObjectsAccess().getLeftCurlyBracketKeyword_0());
             		
-            // InternalPdfMk.g:1529:3: ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* )
-            // InternalPdfMk.g:1530:4: ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )*
+            // InternalPdfMk.g:1642:3: ( ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )* )
+            // InternalPdfMk.g:1643:4: ( (lv_value_1_0= ruleStyleObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )*
             {
-            // InternalPdfMk.g:1530:4: ( (lv_value_1_0= ruleStyleObject ) )
-            // InternalPdfMk.g:1531:5: (lv_value_1_0= ruleStyleObject )
+            // InternalPdfMk.g:1643:4: ( (lv_value_1_0= ruleStyleObject ) )
+            // InternalPdfMk.g:1644:5: (lv_value_1_0= ruleStyleObject )
             {
-            // InternalPdfMk.g:1531:5: (lv_value_1_0= ruleStyleObject )
-            // InternalPdfMk.g:1532:6: lv_value_1_0= ruleStyleObject
+            // InternalPdfMk.g:1644:5: (lv_value_1_0= ruleStyleObject )
+            // InternalPdfMk.g:1645:6: lv_value_1_0= ruleStyleObject
             {
 
             						newCompositeNode(grammarAccess.getStyleObjectsAccess().getValueStyleObjectParserRuleCall_1_0_0());
@@ -3812,30 +3944,30 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalPdfMk.g:1549:4: (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )*
-            loop31:
+            // InternalPdfMk.g:1662:4: (otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) ) )*
+            loop21:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA31_0==15) ) {
-                    alt31=1;
+                if ( (LA21_0==15) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt21) {
             	case 1 :
-            	    // InternalPdfMk.g:1550:5: otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) )
+            	    // InternalPdfMk.g:1663:5: otherlv_2= ',' ( (lv_value_3_0= ruleStyleObject ) )
             	    {
-            	    otherlv_2=(Token)match(input,15,FOLLOW_34); 
+            	    otherlv_2=(Token)match(input,15,FOLLOW_31); 
 
             	    					newLeafNode(otherlv_2, grammarAccess.getStyleObjectsAccess().getCommaKeyword_1_1_0());
             	    				
-            	    // InternalPdfMk.g:1554:5: ( (lv_value_3_0= ruleStyleObject ) )
-            	    // InternalPdfMk.g:1555:6: (lv_value_3_0= ruleStyleObject )
+            	    // InternalPdfMk.g:1667:5: ( (lv_value_3_0= ruleStyleObject ) )
+            	    // InternalPdfMk.g:1668:6: (lv_value_3_0= ruleStyleObject )
             	    {
-            	    // InternalPdfMk.g:1555:6: (lv_value_3_0= ruleStyleObject )
-            	    // InternalPdfMk.g:1556:7: lv_value_3_0= ruleStyleObject
+            	    // InternalPdfMk.g:1668:6: (lv_value_3_0= ruleStyleObject )
+            	    // InternalPdfMk.g:1669:7: lv_value_3_0= ruleStyleObject
             	    {
 
             	    							newCompositeNode(grammarAccess.getStyleObjectsAccess().getValueStyleObjectParserRuleCall_1_1_1_0());
@@ -3867,7 +3999,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop21;
                 }
             } while (true);
 
@@ -3900,8 +4032,1483 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleStyleObjects"
 
 
+    // $ANTLR start "entryRuleInnerColumnObject"
+    // InternalPdfMk.g:1696:1: entryRuleInnerColumnObject returns [EObject current=null] : iv_ruleInnerColumnObject= ruleInnerColumnObject EOF ;
+    public final EObject entryRuleInnerColumnObject() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleInnerColumnObject = null;
+
+
+        try {
+            // InternalPdfMk.g:1696:58: (iv_ruleInnerColumnObject= ruleInnerColumnObject EOF )
+            // InternalPdfMk.g:1697:2: iv_ruleInnerColumnObject= ruleInnerColumnObject EOF
+            {
+             newCompositeNode(grammarAccess.getInnerColumnObjectRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleInnerColumnObject=ruleInnerColumnObject();
+
+            state._fsp--;
+
+             current =iv_ruleInnerColumnObject; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleInnerColumnObject"
+
+
+    // $ANTLR start "ruleInnerColumnObject"
+    // InternalPdfMk.g:1703:1: ruleInnerColumnObject returns [EObject current=null] : ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' ) ;
+    public final EObject ruleInnerColumnObject() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_value_0_0=null;
+        Token otherlv_2=null;
+        Token otherlv_5=null;
+        Token otherlv_8=null;
+        Token otherlv_10=null;
+        EObject lv_text_1_0 = null;
+
+        EObject lv_text_3_0 = null;
+
+        EObject lv_textObject_4_0 = null;
+
+        EObject lv_textObject_6_0 = null;
+
+        EObject lv_column_7_0 = null;
+
+        EObject lv_column_9_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:1709:2: ( ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' ) )
+            // InternalPdfMk.g:1710:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' )
+            {
+            // InternalPdfMk.g:1710:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']' )
+            // InternalPdfMk.g:1711:3: ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) otherlv_10= ']'
+            {
+            // InternalPdfMk.g:1711:3: ( (lv_value_0_0= '[' ) )
+            // InternalPdfMk.g:1712:4: (lv_value_0_0= '[' )
+            {
+            // InternalPdfMk.g:1712:4: (lv_value_0_0= '[' )
+            // InternalPdfMk.g:1713:5: lv_value_0_0= '['
+            {
+            lv_value_0_0=(Token)match(input,23,FOLLOW_32); 
+
+            					newLeafNode(lv_value_0_0, grammarAccess.getInnerColumnObjectAccess().getValueLeftSquareBracketKeyword_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getInnerColumnObjectRule());
+            					}
+            					setWithLastConsumed(current, "value", lv_value_0_0, "[");
+            				
+
+            }
+
+
+            }
+
+            // InternalPdfMk.g:1725:3: ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* )
+            // InternalPdfMk.g:1726:4: ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
+            {
+            // InternalPdfMk.g:1726:4: ( (lv_text_1_0= ruleStringObject ) )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
+
+            if ( (LA22_0==RULE_STRING) ) {
+                alt22=1;
+            }
+            switch (alt22) {
+                case 1 :
+                    // InternalPdfMk.g:1727:5: (lv_text_1_0= ruleStringObject )
+                    {
+                    // InternalPdfMk.g:1727:5: (lv_text_1_0= ruleStringObject )
+                    // InternalPdfMk.g:1728:6: lv_text_1_0= ruleStringObject
+                    {
+
+                    						newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextStringObjectParserRuleCall_1_0_0());
+                    					
+                    pushFollow(FOLLOW_33);
+                    lv_text_1_0=ruleStringObject();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
+                    						}
+                    						add(
+                    							current,
+                    							"text",
+                    							lv_text_1_0,
+                    							"org.xtext.avi.PdfMk.StringObject");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:1745:4: (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
+            loop23:
+            do {
+                int alt23=2;
+                int LA23_0 = input.LA(1);
+
+                if ( (LA23_0==15) ) {
+                    int LA23_2 = input.LA(2);
+
+                    if ( (LA23_2==RULE_STRING) ) {
+                        alt23=1;
+                    }
+
+
+                }
+
+
+                switch (alt23) {
+            	case 1 :
+            	    // InternalPdfMk.g:1746:5: otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) )
+            	    {
+            	    otherlv_2=(Token)match(input,15,FOLLOW_12); 
+
+            	    					newLeafNode(otherlv_2, grammarAccess.getInnerColumnObjectAccess().getCommaKeyword_1_1_0());
+            	    				
+            	    // InternalPdfMk.g:1750:5: ( (lv_text_3_0= ruleStringObject ) )
+            	    // InternalPdfMk.g:1751:6: (lv_text_3_0= ruleStringObject )
+            	    {
+            	    // InternalPdfMk.g:1751:6: (lv_text_3_0= ruleStringObject )
+            	    // InternalPdfMk.g:1752:7: lv_text_3_0= ruleStringObject
+            	    {
+
+            	    							newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextStringObjectParserRuleCall_1_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_33);
+            	    lv_text_3_0=ruleStringObject();
+
+            	    state._fsp--;
+
+
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"text",
+            	    								lv_text_3_0,
+            	    								"org.xtext.avi.PdfMk.StringObject");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop23;
+                }
+            } while (true);
+
+
+            }
+
+            // InternalPdfMk.g:1771:3: ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* )
+            // InternalPdfMk.g:1772:4: ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
+            {
+            // InternalPdfMk.g:1772:4: ( (lv_textObject_4_0= ruleTextObject ) )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
+
+            if ( (LA24_0==14) ) {
+                int LA24_1 = input.LA(2);
+
+                if ( ((LA24_1>=22 && LA24_1<=23)) ) {
+                    alt24=1;
+                }
+            }
+            switch (alt24) {
+                case 1 :
+                    // InternalPdfMk.g:1773:5: (lv_textObject_4_0= ruleTextObject )
+                    {
+                    // InternalPdfMk.g:1773:5: (lv_textObject_4_0= ruleTextObject )
+                    // InternalPdfMk.g:1774:6: lv_textObject_4_0= ruleTextObject
+                    {
+
+                    						newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_0_0());
+                    					
+                    pushFollow(FOLLOW_33);
+                    lv_textObject_4_0=ruleTextObject();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
+                    						}
+                    						add(
+                    							current,
+                    							"textObject",
+                    							lv_textObject_4_0,
+                    							"org.xtext.avi.PdfMk.TextObject");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:1791:4: (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
+            loop25:
+            do {
+                int alt25=2;
+                int LA25_0 = input.LA(1);
+
+                if ( (LA25_0==15) ) {
+                    int LA25_2 = input.LA(2);
+
+                    if ( (LA25_2==14) ) {
+                        int LA25_3 = input.LA(3);
+
+                        if ( ((LA25_3>=22 && LA25_3<=23)) ) {
+                            alt25=1;
+                        }
+
+
+                    }
+
+
+                }
+
+
+                switch (alt25) {
+            	case 1 :
+            	    // InternalPdfMk.g:1792:5: otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) )
+            	    {
+            	    otherlv_5=(Token)match(input,15,FOLLOW_5); 
+
+            	    					newLeafNode(otherlv_5, grammarAccess.getInnerColumnObjectAccess().getCommaKeyword_2_1_0());
+            	    				
+            	    // InternalPdfMk.g:1796:5: ( (lv_textObject_6_0= ruleTextObject ) )
+            	    // InternalPdfMk.g:1797:6: (lv_textObject_6_0= ruleTextObject )
+            	    {
+            	    // InternalPdfMk.g:1797:6: (lv_textObject_6_0= ruleTextObject )
+            	    // InternalPdfMk.g:1798:7: lv_textObject_6_0= ruleTextObject
+            	    {
+
+            	    							newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_33);
+            	    lv_textObject_6_0=ruleTextObject();
+
+            	    state._fsp--;
+
+
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"textObject",
+            	    								lv_textObject_6_0,
+            	    								"org.xtext.avi.PdfMk.TextObject");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop25;
+                }
+            } while (true);
+
+
+            }
+
+            // InternalPdfMk.g:1817:3: ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* )
+            // InternalPdfMk.g:1818:4: ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
+            {
+            // InternalPdfMk.g:1818:4: ( (lv_column_7_0= ruleColumnDefinition ) )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
+
+            if ( (LA26_0==14) ) {
+                alt26=1;
+            }
+            switch (alt26) {
+                case 1 :
+                    // InternalPdfMk.g:1819:5: (lv_column_7_0= ruleColumnDefinition )
+                    {
+                    // InternalPdfMk.g:1819:5: (lv_column_7_0= ruleColumnDefinition )
+                    // InternalPdfMk.g:1820:6: lv_column_7_0= ruleColumnDefinition
+                    {
+
+                    						newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_0_0());
+                    					
+                    pushFollow(FOLLOW_21);
+                    lv_column_7_0=ruleColumnDefinition();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
+                    						}
+                    						add(
+                    							current,
+                    							"column",
+                    							lv_column_7_0,
+                    							"org.xtext.avi.PdfMk.ColumnDefinition");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:1837:4: (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
+            loop27:
+            do {
+                int alt27=2;
+                int LA27_0 = input.LA(1);
+
+                if ( (LA27_0==15) ) {
+                    alt27=1;
+                }
+
+
+                switch (alt27) {
+            	case 1 :
+            	    // InternalPdfMk.g:1838:5: otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) )
+            	    {
+            	    otherlv_8=(Token)match(input,15,FOLLOW_5); 
+
+            	    					newLeafNode(otherlv_8, grammarAccess.getInnerColumnObjectAccess().getCommaKeyword_3_1_0());
+            	    				
+            	    // InternalPdfMk.g:1842:5: ( (lv_column_9_0= ruleColumnDefinition ) )
+            	    // InternalPdfMk.g:1843:6: (lv_column_9_0= ruleColumnDefinition )
+            	    {
+            	    // InternalPdfMk.g:1843:6: (lv_column_9_0= ruleColumnDefinition )
+            	    // InternalPdfMk.g:1844:7: lv_column_9_0= ruleColumnDefinition
+            	    {
+
+            	    							newCompositeNode(grammarAccess.getInnerColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_21);
+            	    lv_column_9_0=ruleColumnDefinition();
+
+            	    state._fsp--;
+
+
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getInnerColumnObjectRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"column",
+            	    								lv_column_9_0,
+            	    								"org.xtext.avi.PdfMk.ColumnDefinition");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop27;
+                }
+            } while (true);
+
+
+            }
+
+            otherlv_10=(Token)match(input,24,FOLLOW_2); 
+
+            			newLeafNode(otherlv_10, grammarAccess.getInnerColumnObjectAccess().getRightSquareBracketKeyword_4());
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleInnerColumnObject"
+
+
+    // $ANTLR start "entryRuleColumnObject"
+    // InternalPdfMk.g:1871:1: entryRuleColumnObject returns [EObject current=null] : iv_ruleColumnObject= ruleColumnObject EOF ;
+    public final EObject entryRuleColumnObject() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleColumnObject = null;
+
+
+        try {
+            // InternalPdfMk.g:1871:53: (iv_ruleColumnObject= ruleColumnObject EOF )
+            // InternalPdfMk.g:1872:2: iv_ruleColumnObject= ruleColumnObject EOF
+            {
+             newCompositeNode(grammarAccess.getColumnObjectRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleColumnObject=ruleColumnObject();
+
+            state._fsp--;
+
+             current =iv_ruleColumnObject; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleColumnObject"
+
+
+    // $ANTLR start "ruleColumnObject"
+    // InternalPdfMk.g:1878:1: ruleColumnObject returns [EObject current=null] : ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' ) ;
+    public final EObject ruleColumnObject() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_value_0_0=null;
+        Token otherlv_2=null;
+        Token otherlv_5=null;
+        Token otherlv_8=null;
+        Token otherlv_11=null;
+        Token otherlv_13=null;
+        EObject lv_text_1_0 = null;
+
+        EObject lv_text_3_0 = null;
+
+        EObject lv_textObject_4_0 = null;
+
+        EObject lv_textObject_6_0 = null;
+
+        EObject lv_column_7_0 = null;
+
+        EObject lv_column_9_0 = null;
+
+        EObject lv_innerColumn_10_0 = null;
+
+        EObject lv_innerColumn_12_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:1884:2: ( ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' ) )
+            // InternalPdfMk.g:1885:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' )
+            {
+            // InternalPdfMk.g:1885:2: ( ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']' )
+            // InternalPdfMk.g:1886:3: ( (lv_value_0_0= '[' ) ) ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* ) ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* ) ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* ) ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* ) otherlv_13= ']'
+            {
+            // InternalPdfMk.g:1886:3: ( (lv_value_0_0= '[' ) )
+            // InternalPdfMk.g:1887:4: (lv_value_0_0= '[' )
+            {
+            // InternalPdfMk.g:1887:4: (lv_value_0_0= '[' )
+            // InternalPdfMk.g:1888:5: lv_value_0_0= '['
+            {
+            lv_value_0_0=(Token)match(input,23,FOLLOW_34); 
+
+            					newLeafNode(lv_value_0_0, grammarAccess.getColumnObjectAccess().getValueLeftSquareBracketKeyword_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getColumnObjectRule());
+            					}
+            					setWithLastConsumed(current, "value", lv_value_0_0, "[");
+            				
+
+            }
+
+
+            }
+
+            // InternalPdfMk.g:1900:3: ( ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )* )
+            // InternalPdfMk.g:1901:4: ( (lv_text_1_0= ruleStringObject ) )? (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
+            {
+            // InternalPdfMk.g:1901:4: ( (lv_text_1_0= ruleStringObject ) )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
+
+            if ( (LA28_0==RULE_STRING) ) {
+                alt28=1;
+            }
+            switch (alt28) {
+                case 1 :
+                    // InternalPdfMk.g:1902:5: (lv_text_1_0= ruleStringObject )
+                    {
+                    // InternalPdfMk.g:1902:5: (lv_text_1_0= ruleStringObject )
+                    // InternalPdfMk.g:1903:6: lv_text_1_0= ruleStringObject
+                    {
+
+                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getTextStringObjectParserRuleCall_1_0_0());
+                    					
+                    pushFollow(FOLLOW_35);
+                    lv_text_1_0=ruleStringObject();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+                    						}
+                    						add(
+                    							current,
+                    							"text",
+                    							lv_text_1_0,
+                    							"org.xtext.avi.PdfMk.StringObject");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:1920:4: (otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) ) )*
+            loop29:
+            do {
+                int alt29=2;
+                int LA29_0 = input.LA(1);
+
+                if ( (LA29_0==15) ) {
+                    int LA29_2 = input.LA(2);
+
+                    if ( (LA29_2==RULE_STRING) ) {
+                        alt29=1;
+                    }
+
+
+                }
+
+
+                switch (alt29) {
+            	case 1 :
+            	    // InternalPdfMk.g:1921:5: otherlv_2= ',' ( (lv_text_3_0= ruleStringObject ) )
+            	    {
+            	    otherlv_2=(Token)match(input,15,FOLLOW_12); 
+
+            	    					newLeafNode(otherlv_2, grammarAccess.getColumnObjectAccess().getCommaKeyword_1_1_0());
+            	    				
+            	    // InternalPdfMk.g:1925:5: ( (lv_text_3_0= ruleStringObject ) )
+            	    // InternalPdfMk.g:1926:6: (lv_text_3_0= ruleStringObject )
+            	    {
+            	    // InternalPdfMk.g:1926:6: (lv_text_3_0= ruleStringObject )
+            	    // InternalPdfMk.g:1927:7: lv_text_3_0= ruleStringObject
+            	    {
+
+            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getTextStringObjectParserRuleCall_1_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_35);
+            	    lv_text_3_0=ruleStringObject();
+
+            	    state._fsp--;
+
+
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"text",
+            	    								lv_text_3_0,
+            	    								"org.xtext.avi.PdfMk.StringObject");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop29;
+                }
+            } while (true);
+
+
+            }
+
+            // InternalPdfMk.g:1946:3: ( ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )* )
+            // InternalPdfMk.g:1947:4: ( (lv_textObject_4_0= ruleTextObject ) )? (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
+            {
+            // InternalPdfMk.g:1947:4: ( (lv_textObject_4_0= ruleTextObject ) )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
+
+            if ( (LA30_0==14) ) {
+                int LA30_1 = input.LA(2);
+
+                if ( ((LA30_1>=22 && LA30_1<=23)) ) {
+                    alt30=1;
+                }
+            }
+            switch (alt30) {
+                case 1 :
+                    // InternalPdfMk.g:1948:5: (lv_textObject_4_0= ruleTextObject )
+                    {
+                    // InternalPdfMk.g:1948:5: (lv_textObject_4_0= ruleTextObject )
+                    // InternalPdfMk.g:1949:6: lv_textObject_4_0= ruleTextObject
+                    {
+
+                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_0_0());
+                    					
+                    pushFollow(FOLLOW_35);
+                    lv_textObject_4_0=ruleTextObject();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+                    						}
+                    						add(
+                    							current,
+                    							"textObject",
+                    							lv_textObject_4_0,
+                    							"org.xtext.avi.PdfMk.TextObject");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:1966:4: (otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) ) )*
+            loop31:
+            do {
+                int alt31=2;
+                int LA31_0 = input.LA(1);
+
+                if ( (LA31_0==15) ) {
+                    int LA31_2 = input.LA(2);
+
+                    if ( (LA31_2==14) ) {
+                        int LA31_3 = input.LA(3);
+
+                        if ( ((LA31_3>=22 && LA31_3<=23)) ) {
+                            alt31=1;
+                        }
+
+
+                    }
+
+
+                }
+
+
+                switch (alt31) {
+            	case 1 :
+            	    // InternalPdfMk.g:1967:5: otherlv_5= ',' ( (lv_textObject_6_0= ruleTextObject ) )
+            	    {
+            	    otherlv_5=(Token)match(input,15,FOLLOW_5); 
+
+            	    					newLeafNode(otherlv_5, grammarAccess.getColumnObjectAccess().getCommaKeyword_2_1_0());
+            	    				
+            	    // InternalPdfMk.g:1971:5: ( (lv_textObject_6_0= ruleTextObject ) )
+            	    // InternalPdfMk.g:1972:6: (lv_textObject_6_0= ruleTextObject )
+            	    {
+            	    // InternalPdfMk.g:1972:6: (lv_textObject_6_0= ruleTextObject )
+            	    // InternalPdfMk.g:1973:7: lv_textObject_6_0= ruleTextObject
+            	    {
+
+            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getTextObjectTextObjectParserRuleCall_2_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_35);
+            	    lv_textObject_6_0=ruleTextObject();
+
+            	    state._fsp--;
+
+
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"textObject",
+            	    								lv_textObject_6_0,
+            	    								"org.xtext.avi.PdfMk.TextObject");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop31;
+                }
+            } while (true);
+
+
+            }
+
+            // InternalPdfMk.g:1992:3: ( ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )* )
+            // InternalPdfMk.g:1993:4: ( (lv_column_7_0= ruleColumnDefinition ) )? (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
+            {
+            // InternalPdfMk.g:1993:4: ( (lv_column_7_0= ruleColumnDefinition ) )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
+
+            if ( (LA32_0==14) ) {
+                alt32=1;
+            }
+            switch (alt32) {
+                case 1 :
+                    // InternalPdfMk.g:1994:5: (lv_column_7_0= ruleColumnDefinition )
+                    {
+                    // InternalPdfMk.g:1994:5: (lv_column_7_0= ruleColumnDefinition )
+                    // InternalPdfMk.g:1995:6: lv_column_7_0= ruleColumnDefinition
+                    {
+
+                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_0_0());
+                    					
+                    pushFollow(FOLLOW_36);
+                    lv_column_7_0=ruleColumnDefinition();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+                    						}
+                    						add(
+                    							current,
+                    							"column",
+                    							lv_column_7_0,
+                    							"org.xtext.avi.PdfMk.ColumnDefinition");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:2012:4: (otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) ) )*
+            loop33:
+            do {
+                int alt33=2;
+                int LA33_0 = input.LA(1);
+
+                if ( (LA33_0==15) ) {
+                    int LA33_2 = input.LA(2);
+
+                    if ( (LA33_2==14) ) {
+                        alt33=1;
+                    }
+
+
+                }
+
+
+                switch (alt33) {
+            	case 1 :
+            	    // InternalPdfMk.g:2013:5: otherlv_8= ',' ( (lv_column_9_0= ruleColumnDefinition ) )
+            	    {
+            	    otherlv_8=(Token)match(input,15,FOLLOW_5); 
+
+            	    					newLeafNode(otherlv_8, grammarAccess.getColumnObjectAccess().getCommaKeyword_3_1_0());
+            	    				
+            	    // InternalPdfMk.g:2017:5: ( (lv_column_9_0= ruleColumnDefinition ) )
+            	    // InternalPdfMk.g:2018:6: (lv_column_9_0= ruleColumnDefinition )
+            	    {
+            	    // InternalPdfMk.g:2018:6: (lv_column_9_0= ruleColumnDefinition )
+            	    // InternalPdfMk.g:2019:7: lv_column_9_0= ruleColumnDefinition
+            	    {
+
+            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getColumnColumnDefinitionParserRuleCall_3_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_36);
+            	    lv_column_9_0=ruleColumnDefinition();
+
+            	    state._fsp--;
+
+
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"column",
+            	    								lv_column_9_0,
+            	    								"org.xtext.avi.PdfMk.ColumnDefinition");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop33;
+                }
+            } while (true);
+
+
+            }
+
+            // InternalPdfMk.g:2038:3: ( ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )* )
+            // InternalPdfMk.g:2039:4: ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )? (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )*
+            {
+            // InternalPdfMk.g:2039:4: ( (lv_innerColumn_10_0= ruleInnerColumnObject ) )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
+
+            if ( (LA34_0==23) ) {
+                alt34=1;
+            }
+            switch (alt34) {
+                case 1 :
+                    // InternalPdfMk.g:2040:5: (lv_innerColumn_10_0= ruleInnerColumnObject )
+                    {
+                    // InternalPdfMk.g:2040:5: (lv_innerColumn_10_0= ruleInnerColumnObject )
+                    // InternalPdfMk.g:2041:6: lv_innerColumn_10_0= ruleInnerColumnObject
+                    {
+
+                    						newCompositeNode(grammarAccess.getColumnObjectAccess().getInnerColumnInnerColumnObjectParserRuleCall_4_0_0());
+                    					
+                    pushFollow(FOLLOW_21);
+                    lv_innerColumn_10_0=ruleInnerColumnObject();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+                    						}
+                    						add(
+                    							current,
+                    							"innerColumn",
+                    							lv_innerColumn_10_0,
+                    							"org.xtext.avi.PdfMk.InnerColumnObject");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:2058:4: (otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) ) )*
+            loop35:
+            do {
+                int alt35=2;
+                int LA35_0 = input.LA(1);
+
+                if ( (LA35_0==15) ) {
+                    alt35=1;
+                }
+
+
+                switch (alt35) {
+            	case 1 :
+            	    // InternalPdfMk.g:2059:5: otherlv_11= ',' ( (lv_innerColumn_12_0= ruleInnerColumnObject ) )
+            	    {
+            	    otherlv_11=(Token)match(input,15,FOLLOW_19); 
+
+            	    					newLeafNode(otherlv_11, grammarAccess.getColumnObjectAccess().getCommaKeyword_4_1_0());
+            	    				
+            	    // InternalPdfMk.g:2063:5: ( (lv_innerColumn_12_0= ruleInnerColumnObject ) )
+            	    // InternalPdfMk.g:2064:6: (lv_innerColumn_12_0= ruleInnerColumnObject )
+            	    {
+            	    // InternalPdfMk.g:2064:6: (lv_innerColumn_12_0= ruleInnerColumnObject )
+            	    // InternalPdfMk.g:2065:7: lv_innerColumn_12_0= ruleInnerColumnObject
+            	    {
+
+            	    							newCompositeNode(grammarAccess.getColumnObjectAccess().getInnerColumnInnerColumnObjectParserRuleCall_4_1_1_0());
+            	    						
+            	    pushFollow(FOLLOW_21);
+            	    lv_innerColumn_12_0=ruleInnerColumnObject();
+
+            	    state._fsp--;
+
+
+            	    							if (current==null) {
+            	    								current = createModelElementForParent(grammarAccess.getColumnObjectRule());
+            	    							}
+            	    							add(
+            	    								current,
+            	    								"innerColumn",
+            	    								lv_innerColumn_12_0,
+            	    								"org.xtext.avi.PdfMk.InnerColumnObject");
+            	    							afterParserOrEnumRuleCall();
+            	    						
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop35;
+                }
+            } while (true);
+
+
+            }
+
+            otherlv_13=(Token)match(input,24,FOLLOW_2); 
+
+            			newLeafNode(otherlv_13, grammarAccess.getColumnObjectAccess().getRightSquareBracketKeyword_5());
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleColumnObject"
+
+
+    // $ANTLR start "entryRuleImageObject"
+    // InternalPdfMk.g:2092:1: entryRuleImageObject returns [EObject current=null] : iv_ruleImageObject= ruleImageObject EOF ;
+    public final EObject entryRuleImageObject() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleImageObject = null;
+
+
+        try {
+            // InternalPdfMk.g:2092:52: (iv_ruleImageObject= ruleImageObject EOF )
+            // InternalPdfMk.g:2093:2: iv_ruleImageObject= ruleImageObject EOF
+            {
+             newCompositeNode(grammarAccess.getImageObjectRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleImageObject=ruleImageObject();
+
+            state._fsp--;
+
+             current =iv_ruleImageObject; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleImageObject"
+
+
+    // $ANTLR start "ruleImageObject"
+    // InternalPdfMk.g:2099:1: ruleImageObject returns [EObject current=null] : ( ( (lv_value_0_0= '{' ) ) ( (lv_image_1_0= ruleImageDefintion ) )? (otherlv_2= ',' ( (lv_width_3_0= ruleImageWidthDefintion ) ) )? (otherlv_4= ',' ( (lv_height_5_0= ruleImageHeightDefintion ) ) )? (otherlv_6= ',' ( (lv_opacity_7_0= ruleImageOpacityDefinition ) ) )? (otherlv_8= ',' ( (lv_fit_9_0= ruleImageFitDefinition ) ) )? (otherlv_10= ',' ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) ) )? otherlv_12= '}' ) ;
+    public final EObject ruleImageObject() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_value_0_0=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        Token otherlv_8=null;
+        Token otherlv_10=null;
+        Token otherlv_12=null;
+        EObject lv_image_1_0 = null;
+
+        EObject lv_width_3_0 = null;
+
+        EObject lv_height_5_0 = null;
+
+        EObject lv_opacity_7_0 = null;
+
+        EObject lv_fit_9_0 = null;
+
+        EObject lv_pageBreak_11_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalPdfMk.g:2105:2: ( ( ( (lv_value_0_0= '{' ) ) ( (lv_image_1_0= ruleImageDefintion ) )? (otherlv_2= ',' ( (lv_width_3_0= ruleImageWidthDefintion ) ) )? (otherlv_4= ',' ( (lv_height_5_0= ruleImageHeightDefintion ) ) )? (otherlv_6= ',' ( (lv_opacity_7_0= ruleImageOpacityDefinition ) ) )? (otherlv_8= ',' ( (lv_fit_9_0= ruleImageFitDefinition ) ) )? (otherlv_10= ',' ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) ) )? otherlv_12= '}' ) )
+            // InternalPdfMk.g:2106:2: ( ( (lv_value_0_0= '{' ) ) ( (lv_image_1_0= ruleImageDefintion ) )? (otherlv_2= ',' ( (lv_width_3_0= ruleImageWidthDefintion ) ) )? (otherlv_4= ',' ( (lv_height_5_0= ruleImageHeightDefintion ) ) )? (otherlv_6= ',' ( (lv_opacity_7_0= ruleImageOpacityDefinition ) ) )? (otherlv_8= ',' ( (lv_fit_9_0= ruleImageFitDefinition ) ) )? (otherlv_10= ',' ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) ) )? otherlv_12= '}' )
+            {
+            // InternalPdfMk.g:2106:2: ( ( (lv_value_0_0= '{' ) ) ( (lv_image_1_0= ruleImageDefintion ) )? (otherlv_2= ',' ( (lv_width_3_0= ruleImageWidthDefintion ) ) )? (otherlv_4= ',' ( (lv_height_5_0= ruleImageHeightDefintion ) ) )? (otherlv_6= ',' ( (lv_opacity_7_0= ruleImageOpacityDefinition ) ) )? (otherlv_8= ',' ( (lv_fit_9_0= ruleImageFitDefinition ) ) )? (otherlv_10= ',' ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) ) )? otherlv_12= '}' )
+            // InternalPdfMk.g:2107:3: ( (lv_value_0_0= '{' ) ) ( (lv_image_1_0= ruleImageDefintion ) )? (otherlv_2= ',' ( (lv_width_3_0= ruleImageWidthDefintion ) ) )? (otherlv_4= ',' ( (lv_height_5_0= ruleImageHeightDefintion ) ) )? (otherlv_6= ',' ( (lv_opacity_7_0= ruleImageOpacityDefinition ) ) )? (otherlv_8= ',' ( (lv_fit_9_0= ruleImageFitDefinition ) ) )? (otherlv_10= ',' ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) ) )? otherlv_12= '}'
+            {
+            // InternalPdfMk.g:2107:3: ( (lv_value_0_0= '{' ) )
+            // InternalPdfMk.g:2108:4: (lv_value_0_0= '{' )
+            {
+            // InternalPdfMk.g:2108:4: (lv_value_0_0= '{' )
+            // InternalPdfMk.g:2109:5: lv_value_0_0= '{'
+            {
+            lv_value_0_0=(Token)match(input,14,FOLLOW_37); 
+
+            					newLeafNode(lv_value_0_0, grammarAccess.getImageObjectAccess().getValueLeftCurlyBracketKeyword_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getImageObjectRule());
+            					}
+            					setWithLastConsumed(current, "value", lv_value_0_0, "{");
+            				
+
+            }
+
+
+            }
+
+            // InternalPdfMk.g:2121:3: ( (lv_image_1_0= ruleImageDefintion ) )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
+
+            if ( (LA36_0==31) ) {
+                alt36=1;
+            }
+            switch (alt36) {
+                case 1 :
+                    // InternalPdfMk.g:2122:4: (lv_image_1_0= ruleImageDefintion )
+                    {
+                    // InternalPdfMk.g:2122:4: (lv_image_1_0= ruleImageDefintion )
+                    // InternalPdfMk.g:2123:5: lv_image_1_0= ruleImageDefintion
+                    {
+
+                    					newCompositeNode(grammarAccess.getImageObjectAccess().getImageImageDefintionParserRuleCall_1_0());
+                    				
+                    pushFollow(FOLLOW_7);
+                    lv_image_1_0=ruleImageDefintion();
+
+                    state._fsp--;
+
+
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getImageObjectRule());
+                    					}
+                    					set(
+                    						current,
+                    						"image",
+                    						true,
+                    						"org.xtext.avi.PdfMk.ImageDefintion");
+                    					afterParserOrEnumRuleCall();
+                    				
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:2140:3: (otherlv_2= ',' ( (lv_width_3_0= ruleImageWidthDefintion ) ) )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
+
+            if ( (LA37_0==15) ) {
+                int LA37_1 = input.LA(2);
+
+                if ( (LA37_1==28) ) {
+                    alt37=1;
+                }
+            }
+            switch (alt37) {
+                case 1 :
+                    // InternalPdfMk.g:2141:4: otherlv_2= ',' ( (lv_width_3_0= ruleImageWidthDefintion ) )
+                    {
+                    otherlv_2=(Token)match(input,15,FOLLOW_28); 
+
+                    				newLeafNode(otherlv_2, grammarAccess.getImageObjectAccess().getCommaKeyword_2_0());
+                    			
+                    // InternalPdfMk.g:2145:4: ( (lv_width_3_0= ruleImageWidthDefintion ) )
+                    // InternalPdfMk.g:2146:5: (lv_width_3_0= ruleImageWidthDefintion )
+                    {
+                    // InternalPdfMk.g:2146:5: (lv_width_3_0= ruleImageWidthDefintion )
+                    // InternalPdfMk.g:2147:6: lv_width_3_0= ruleImageWidthDefintion
+                    {
+
+                    						newCompositeNode(grammarAccess.getImageObjectAccess().getWidthImageWidthDefintionParserRuleCall_2_1_0());
+                    					
+                    pushFollow(FOLLOW_7);
+                    lv_width_3_0=ruleImageWidthDefintion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getImageObjectRule());
+                    						}
+                    						set(
+                    							current,
+                    							"width",
+                    							true,
+                    							"org.xtext.avi.PdfMk.ImageWidthDefintion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:2165:3: (otherlv_4= ',' ( (lv_height_5_0= ruleImageHeightDefintion ) ) )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
+
+            if ( (LA38_0==15) ) {
+                int LA38_1 = input.LA(2);
+
+                if ( (LA38_1==32) ) {
+                    alt38=1;
+                }
+            }
+            switch (alt38) {
+                case 1 :
+                    // InternalPdfMk.g:2166:4: otherlv_4= ',' ( (lv_height_5_0= ruleImageHeightDefintion ) )
+                    {
+                    otherlv_4=(Token)match(input,15,FOLLOW_38); 
+
+                    				newLeafNode(otherlv_4, grammarAccess.getImageObjectAccess().getCommaKeyword_3_0());
+                    			
+                    // InternalPdfMk.g:2170:4: ( (lv_height_5_0= ruleImageHeightDefintion ) )
+                    // InternalPdfMk.g:2171:5: (lv_height_5_0= ruleImageHeightDefintion )
+                    {
+                    // InternalPdfMk.g:2171:5: (lv_height_5_0= ruleImageHeightDefintion )
+                    // InternalPdfMk.g:2172:6: lv_height_5_0= ruleImageHeightDefintion
+                    {
+
+                    						newCompositeNode(grammarAccess.getImageObjectAccess().getHeightImageHeightDefintionParserRuleCall_3_1_0());
+                    					
+                    pushFollow(FOLLOW_7);
+                    lv_height_5_0=ruleImageHeightDefintion();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getImageObjectRule());
+                    						}
+                    						set(
+                    							current,
+                    							"height",
+                    							true,
+                    							"org.xtext.avi.PdfMk.ImageHeightDefintion");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:2190:3: (otherlv_6= ',' ( (lv_opacity_7_0= ruleImageOpacityDefinition ) ) )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
+
+            if ( (LA39_0==15) ) {
+                int LA39_1 = input.LA(2);
+
+                if ( (LA39_1==35) ) {
+                    alt39=1;
+                }
+            }
+            switch (alt39) {
+                case 1 :
+                    // InternalPdfMk.g:2191:4: otherlv_6= ',' ( (lv_opacity_7_0= ruleImageOpacityDefinition ) )
+                    {
+                    otherlv_6=(Token)match(input,15,FOLLOW_39); 
+
+                    				newLeafNode(otherlv_6, grammarAccess.getImageObjectAccess().getCommaKeyword_4_0());
+                    			
+                    // InternalPdfMk.g:2195:4: ( (lv_opacity_7_0= ruleImageOpacityDefinition ) )
+                    // InternalPdfMk.g:2196:5: (lv_opacity_7_0= ruleImageOpacityDefinition )
+                    {
+                    // InternalPdfMk.g:2196:5: (lv_opacity_7_0= ruleImageOpacityDefinition )
+                    // InternalPdfMk.g:2197:6: lv_opacity_7_0= ruleImageOpacityDefinition
+                    {
+
+                    						newCompositeNode(grammarAccess.getImageObjectAccess().getOpacityImageOpacityDefinitionParserRuleCall_4_1_0());
+                    					
+                    pushFollow(FOLLOW_7);
+                    lv_opacity_7_0=ruleImageOpacityDefinition();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getImageObjectRule());
+                    						}
+                    						set(
+                    							current,
+                    							"opacity",
+                    							true,
+                    							"org.xtext.avi.PdfMk.ImageOpacityDefinition");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:2215:3: (otherlv_8= ',' ( (lv_fit_9_0= ruleImageFitDefinition ) ) )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
+
+            if ( (LA40_0==15) ) {
+                int LA40_1 = input.LA(2);
+
+                if ( (LA40_1==34) ) {
+                    alt40=1;
+                }
+            }
+            switch (alt40) {
+                case 1 :
+                    // InternalPdfMk.g:2216:4: otherlv_8= ',' ( (lv_fit_9_0= ruleImageFitDefinition ) )
+                    {
+                    otherlv_8=(Token)match(input,15,FOLLOW_40); 
+
+                    				newLeafNode(otherlv_8, grammarAccess.getImageObjectAccess().getCommaKeyword_5_0());
+                    			
+                    // InternalPdfMk.g:2220:4: ( (lv_fit_9_0= ruleImageFitDefinition ) )
+                    // InternalPdfMk.g:2221:5: (lv_fit_9_0= ruleImageFitDefinition )
+                    {
+                    // InternalPdfMk.g:2221:5: (lv_fit_9_0= ruleImageFitDefinition )
+                    // InternalPdfMk.g:2222:6: lv_fit_9_0= ruleImageFitDefinition
+                    {
+
+                    						newCompositeNode(grammarAccess.getImageObjectAccess().getFitImageFitDefinitionParserRuleCall_5_1_0());
+                    					
+                    pushFollow(FOLLOW_7);
+                    lv_fit_9_0=ruleImageFitDefinition();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getImageObjectRule());
+                    						}
+                    						set(
+                    							current,
+                    							"fit",
+                    							true,
+                    							"org.xtext.avi.PdfMk.ImageFitDefinition");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalPdfMk.g:2240:3: (otherlv_10= ',' ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
+
+            if ( (LA41_0==15) ) {
+                alt41=1;
+            }
+            switch (alt41) {
+                case 1 :
+                    // InternalPdfMk.g:2241:4: otherlv_10= ',' ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) )
+                    {
+                    otherlv_10=(Token)match(input,15,FOLLOW_41); 
+
+                    				newLeafNode(otherlv_10, grammarAccess.getImageObjectAccess().getCommaKeyword_6_0());
+                    			
+                    // InternalPdfMk.g:2245:4: ( (lv_pageBreak_11_0= ruleImagePageBreakDefinition ) )
+                    // InternalPdfMk.g:2246:5: (lv_pageBreak_11_0= ruleImagePageBreakDefinition )
+                    {
+                    // InternalPdfMk.g:2246:5: (lv_pageBreak_11_0= ruleImagePageBreakDefinition )
+                    // InternalPdfMk.g:2247:6: lv_pageBreak_11_0= ruleImagePageBreakDefinition
+                    {
+
+                    						newCompositeNode(grammarAccess.getImageObjectAccess().getPageBreakImagePageBreakDefinitionParserRuleCall_6_1_0());
+                    					
+                    pushFollow(FOLLOW_9);
+                    lv_pageBreak_11_0=ruleImagePageBreakDefinition();
+
+                    state._fsp--;
+
+
+                    						if (current==null) {
+                    							current = createModelElementForParent(grammarAccess.getImageObjectRule());
+                    						}
+                    						set(
+                    							current,
+                    							"pageBreak",
+                    							true,
+                    							"org.xtext.avi.PdfMk.ImagePageBreakDefinition");
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            otherlv_12=(Token)match(input,16,FOLLOW_2); 
+
+            			newLeafNode(otherlv_12, grammarAccess.getImageObjectAccess().getRightCurlyBracketKeyword_7());
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImageObject"
+
+
     // $ANTLR start "entryRuleContentObject"
-    // InternalPdfMk.g:1583:1: entryRuleContentObject returns [EObject current=null] : iv_ruleContentObject= ruleContentObject EOF ;
+    // InternalPdfMk.g:2273:1: entryRuleContentObject returns [EObject current=null] : iv_ruleContentObject= ruleContentObject EOF ;
     public final EObject entryRuleContentObject() throws RecognitionException {
         EObject current = null;
 
@@ -3909,8 +5516,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1583:54: (iv_ruleContentObject= ruleContentObject EOF )
-            // InternalPdfMk.g:1584:2: iv_ruleContentObject= ruleContentObject EOF
+            // InternalPdfMk.g:2273:54: (iv_ruleContentObject= ruleContentObject EOF )
+            // InternalPdfMk.g:2274:2: iv_ruleContentObject= ruleContentObject EOF
             {
              newCompositeNode(grammarAccess.getContentObjectRule()); 
             pushFollow(FOLLOW_1);
@@ -3937,7 +5544,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContentObject"
-    // InternalPdfMk.g:1590:1: ruleContentObject returns [EObject current=null] : ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject ) ) ) ;
+    // InternalPdfMk.g:2280:1: ruleContentObject returns [EObject current=null] : ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject ) ) ) ;
     public final EObject ruleContentObject() throws RecognitionException {
         EObject current = null;
 
@@ -3947,52 +5554,67 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
         EObject lv_value_0_3 = null;
 
+        EObject lv_value_0_4 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1596:2: ( ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject ) ) ) )
-            // InternalPdfMk.g:1597:2: ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject ) ) )
+            // InternalPdfMk.g:2286:2: ( ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject ) ) ) )
+            // InternalPdfMk.g:2287:2: ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject ) ) )
             {
-            // InternalPdfMk.g:1597:2: ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject ) ) )
-            // InternalPdfMk.g:1598:3: ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject ) )
+            // InternalPdfMk.g:2287:2: ( ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject ) ) )
+            // InternalPdfMk.g:2288:3: ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject ) )
             {
-            // InternalPdfMk.g:1598:3: ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject ) )
-            // InternalPdfMk.g:1599:4: (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject )
+            // InternalPdfMk.g:2288:3: ( (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject ) )
+            // InternalPdfMk.g:2289:4: (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject )
             {
-            // InternalPdfMk.g:1599:4: (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject )
-            int alt32=3;
-            int LA32_0 = input.LA(1);
+            // InternalPdfMk.g:2289:4: (lv_value_0_1= ruleStringObject | lv_value_0_2= ruleTextObject | lv_value_0_3= ruleColumnTextObject | lv_value_0_4= ruleImageObject )
+            int alt42=4;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA32_0==RULE_STRING) ) {
-                alt32=1;
+            if ( (LA42_0==RULE_STRING) ) {
+                alt42=1;
             }
-            else if ( (LA32_0==14) ) {
-                int LA32_2 = input.LA(2);
-
-                if ( (LA32_2==21||LA32_2==29) ) {
-                    alt32=3;
-                }
-                else if ( ((LA32_2>=22 && LA32_2<=23)) ) {
-                    alt32=2;
-                }
-                else {
+            else if ( (LA42_0==14) ) {
+                switch ( input.LA(2) ) {
+                case 21:
+                case 29:
+                    {
+                    alt42=3;
+                    }
+                    break;
+                case 15:
+                case 16:
+                case 31:
+                    {
+                    alt42=4;
+                    }
+                    break;
+                case 22:
+                case 23:
+                    {
+                    alt42=2;
+                    }
+                    break;
+                default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 32, 2, input);
+                        new NoViableAltException("", 42, 2, input);
 
                     throw nvae;
                 }
+
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 32, 0, input);
+                    new NoViableAltException("", 42, 0, input);
 
                 throw nvae;
             }
-            switch (alt32) {
+            switch (alt42) {
                 case 1 :
-                    // InternalPdfMk.g:1600:5: lv_value_0_1= ruleStringObject
+                    // InternalPdfMk.g:2290:5: lv_value_0_1= ruleStringObject
                     {
 
                     					newCompositeNode(grammarAccess.getContentObjectAccess().getValueStringObjectParserRuleCall_0_0());
@@ -4017,7 +5639,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalPdfMk.g:1616:5: lv_value_0_2= ruleTextObject
+                    // InternalPdfMk.g:2306:5: lv_value_0_2= ruleTextObject
                     {
 
                     					newCompositeNode(grammarAccess.getContentObjectAccess().getValueTextObjectParserRuleCall_0_1());
@@ -4042,7 +5664,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalPdfMk.g:1632:5: lv_value_0_3= ruleColumnTextObject
+                    // InternalPdfMk.g:2322:5: lv_value_0_3= ruleColumnTextObject
                     {
 
                     					newCompositeNode(grammarAccess.getContentObjectAccess().getValueColumnTextObjectParserRuleCall_0_2());
@@ -4061,6 +5683,31 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
                     						"value",
                     						lv_value_0_3,
                     						"org.xtext.avi.PdfMk.ColumnTextObject");
+                    					afterParserOrEnumRuleCall();
+                    				
+
+                    }
+                    break;
+                case 4 :
+                    // InternalPdfMk.g:2338:5: lv_value_0_4= ruleImageObject
+                    {
+
+                    					newCompositeNode(grammarAccess.getContentObjectAccess().getValueImageObjectParserRuleCall_0_3());
+                    				
+                    pushFollow(FOLLOW_2);
+                    lv_value_0_4=ruleImageObject();
+
+                    state._fsp--;
+
+
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getContentObjectRule());
+                    					}
+                    					set(
+                    						current,
+                    						"value",
+                    						lv_value_0_4,
+                    						"org.xtext.avi.PdfMk.ImageObject");
                     					afterParserOrEnumRuleCall();
                     				
 
@@ -4095,7 +5742,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContentObjects"
-    // InternalPdfMk.g:1653:1: entryRuleContentObjects returns [EObject current=null] : iv_ruleContentObjects= ruleContentObjects EOF ;
+    // InternalPdfMk.g:2359:1: entryRuleContentObjects returns [EObject current=null] : iv_ruleContentObjects= ruleContentObjects EOF ;
     public final EObject entryRuleContentObjects() throws RecognitionException {
         EObject current = null;
 
@@ -4103,8 +5750,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1653:55: (iv_ruleContentObjects= ruleContentObjects EOF )
-            // InternalPdfMk.g:1654:2: iv_ruleContentObjects= ruleContentObjects EOF
+            // InternalPdfMk.g:2359:55: (iv_ruleContentObjects= ruleContentObjects EOF )
+            // InternalPdfMk.g:2360:2: iv_ruleContentObjects= ruleContentObjects EOF
             {
              newCompositeNode(grammarAccess.getContentObjectsRule()); 
             pushFollow(FOLLOW_1);
@@ -4131,7 +5778,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContentObjects"
-    // InternalPdfMk.g:1660:1: ruleContentObjects returns [EObject current=null] : (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' ) ;
+    // InternalPdfMk.g:2366:1: ruleContentObjects returns [EObject current=null] : (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' ) ;
     public final EObject ruleContentObjects() throws RecognitionException {
         EObject current = null;
 
@@ -4147,37 +5794,37 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1666:2: ( (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' ) )
-            // InternalPdfMk.g:1667:2: (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' )
+            // InternalPdfMk.g:2372:2: ( (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' ) )
+            // InternalPdfMk.g:2373:2: (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' )
             {
-            // InternalPdfMk.g:1667:2: (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' )
-            // InternalPdfMk.g:1668:3: otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']'
+            // InternalPdfMk.g:2373:2: (otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']' )
+            // InternalPdfMk.g:2374:3: otherlv_0= '[' ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )? otherlv_4= ']'
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_35); 
+            otherlv_0=(Token)match(input,23,FOLLOW_42); 
 
             			newLeafNode(otherlv_0, grammarAccess.getContentObjectsAccess().getLeftSquareBracketKeyword_0());
             		
-            // InternalPdfMk.g:1672:3: ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalPdfMk.g:2378:3: ( ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )* )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA34_0==RULE_STRING||LA34_0==14) ) {
-                alt34=1;
+            if ( (LA44_0==RULE_STRING||LA44_0==14) ) {
+                alt44=1;
             }
-            switch (alt34) {
+            switch (alt44) {
                 case 1 :
-                    // InternalPdfMk.g:1673:4: ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )*
+                    // InternalPdfMk.g:2379:4: ( (lv_value_1_0= ruleContentObject ) ) (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )*
                     {
-                    // InternalPdfMk.g:1673:4: ( (lv_value_1_0= ruleContentObject ) )
-                    // InternalPdfMk.g:1674:5: (lv_value_1_0= ruleContentObject )
+                    // InternalPdfMk.g:2379:4: ( (lv_value_1_0= ruleContentObject ) )
+                    // InternalPdfMk.g:2380:5: (lv_value_1_0= ruleContentObject )
                     {
-                    // InternalPdfMk.g:1674:5: (lv_value_1_0= ruleContentObject )
-                    // InternalPdfMk.g:1675:6: lv_value_1_0= ruleContentObject
+                    // InternalPdfMk.g:2380:5: (lv_value_1_0= ruleContentObject )
+                    // InternalPdfMk.g:2381:6: lv_value_1_0= ruleContentObject
                     {
 
                     						newCompositeNode(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_0_0());
                     					
-                    pushFollow(FOLLOW_22);
+                    pushFollow(FOLLOW_21);
                     lv_value_1_0=ruleContentObject();
 
                     state._fsp--;
@@ -4199,35 +5846,35 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalPdfMk.g:1692:4: (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )*
-                    loop33:
+                    // InternalPdfMk.g:2398:4: (otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) ) )*
+                    loop43:
                     do {
-                        int alt33=2;
-                        int LA33_0 = input.LA(1);
+                        int alt43=2;
+                        int LA43_0 = input.LA(1);
 
-                        if ( (LA33_0==15) ) {
-                            alt33=1;
+                        if ( (LA43_0==15) ) {
+                            alt43=1;
                         }
 
 
-                        switch (alt33) {
+                        switch (alt43) {
                     	case 1 :
-                    	    // InternalPdfMk.g:1693:5: otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) )
+                    	    // InternalPdfMk.g:2399:5: otherlv_2= ',' ( (lv_value_3_0= ruleContentObject ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,15,FOLLOW_36); 
+                    	    otherlv_2=(Token)match(input,15,FOLLOW_43); 
 
                     	    					newLeafNode(otherlv_2, grammarAccess.getContentObjectsAccess().getCommaKeyword_1_1_0());
                     	    				
-                    	    // InternalPdfMk.g:1697:5: ( (lv_value_3_0= ruleContentObject ) )
-                    	    // InternalPdfMk.g:1698:6: (lv_value_3_0= ruleContentObject )
+                    	    // InternalPdfMk.g:2403:5: ( (lv_value_3_0= ruleContentObject ) )
+                    	    // InternalPdfMk.g:2404:6: (lv_value_3_0= ruleContentObject )
                     	    {
-                    	    // InternalPdfMk.g:1698:6: (lv_value_3_0= ruleContentObject )
-                    	    // InternalPdfMk.g:1699:7: lv_value_3_0= ruleContentObject
+                    	    // InternalPdfMk.g:2404:6: (lv_value_3_0= ruleContentObject )
+                    	    // InternalPdfMk.g:2405:7: lv_value_3_0= ruleContentObject
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getContentObjectsAccess().getValueContentObjectParserRuleCall_1_1_1_0());
                     	    						
-                    	    pushFollow(FOLLOW_22);
+                    	    pushFollow(FOLLOW_21);
                     	    lv_value_3_0=ruleContentObject();
 
                     	    state._fsp--;
@@ -4254,7 +5901,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop33;
+                    	    break loop43;
                         }
                     } while (true);
 
@@ -4291,7 +5938,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStyles"
-    // InternalPdfMk.g:1726:1: entryRuleStyles returns [EObject current=null] : iv_ruleStyles= ruleStyles EOF ;
+    // InternalPdfMk.g:2432:1: entryRuleStyles returns [EObject current=null] : iv_ruleStyles= ruleStyles EOF ;
     public final EObject entryRuleStyles() throws RecognitionException {
         EObject current = null;
 
@@ -4299,8 +5946,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1726:47: (iv_ruleStyles= ruleStyles EOF )
-            // InternalPdfMk.g:1727:2: iv_ruleStyles= ruleStyles EOF
+            // InternalPdfMk.g:2432:47: (iv_ruleStyles= ruleStyles EOF )
+            // InternalPdfMk.g:2433:2: iv_ruleStyles= ruleStyles EOF
             {
              newCompositeNode(grammarAccess.getStylesRule()); 
             pushFollow(FOLLOW_1);
@@ -4327,7 +5974,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStyles"
-    // InternalPdfMk.g:1733:1: ruleStyles returns [EObject current=null] : ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) ;
+    // InternalPdfMk.g:2439:1: ruleStyles returns [EObject current=null] : ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) ;
     public final EObject ruleStyles() throws RecognitionException {
         EObject current = null;
 
@@ -4340,19 +5987,19 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1739:2: ( ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) )
-            // InternalPdfMk.g:1740:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
+            // InternalPdfMk.g:2445:2: ( ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) ) )
+            // InternalPdfMk.g:2446:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
             {
-            // InternalPdfMk.g:1740:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
-            // InternalPdfMk.g:1741:3: ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) )
+            // InternalPdfMk.g:2446:2: ( ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) ) )
+            // InternalPdfMk.g:2447:3: ( (lv_key_0_0= 'styles' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleStyleObjects ) )
             {
-            // InternalPdfMk.g:1741:3: ( (lv_key_0_0= 'styles' ) )
-            // InternalPdfMk.g:1742:4: (lv_key_0_0= 'styles' )
+            // InternalPdfMk.g:2447:3: ( (lv_key_0_0= 'styles' ) )
+            // InternalPdfMk.g:2448:4: (lv_key_0_0= 'styles' )
             {
-            // InternalPdfMk.g:1742:4: (lv_key_0_0= 'styles' )
-            // InternalPdfMk.g:1743:5: lv_key_0_0= 'styles'
+            // InternalPdfMk.g:2448:4: (lv_key_0_0= 'styles' )
+            // InternalPdfMk.g:2449:5: lv_key_0_0= 'styles'
             {
-            lv_key_0_0=(Token)match(input,30,FOLLOW_10); 
+            lv_key_0_0=(Token)match(input,36,FOLLOW_10); 
 
             					newLeafNode(lv_key_0_0, grammarAccess.getStylesAccess().getKeyStylesKeyword_0_0());
             				
@@ -4372,11 +6019,11 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getStylesAccess().getColonKeyword_1());
             		
-            // InternalPdfMk.g:1759:3: ( (lv_value_2_0= ruleStyleObjects ) )
-            // InternalPdfMk.g:1760:4: (lv_value_2_0= ruleStyleObjects )
+            // InternalPdfMk.g:2465:3: ( (lv_value_2_0= ruleStyleObjects ) )
+            // InternalPdfMk.g:2466:4: (lv_value_2_0= ruleStyleObjects )
             {
-            // InternalPdfMk.g:1760:4: (lv_value_2_0= ruleStyleObjects )
-            // InternalPdfMk.g:1761:5: lv_value_2_0= ruleStyleObjects
+            // InternalPdfMk.g:2466:4: (lv_value_2_0= ruleStyleObjects )
+            // InternalPdfMk.g:2467:5: lv_value_2_0= ruleStyleObjects
             {
 
             					newCompositeNode(grammarAccess.getStylesAccess().getValueStyleObjectsParserRuleCall_2_0());
@@ -4426,7 +6073,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContent"
-    // InternalPdfMk.g:1782:1: entryRuleContent returns [EObject current=null] : iv_ruleContent= ruleContent EOF ;
+    // InternalPdfMk.g:2488:1: entryRuleContent returns [EObject current=null] : iv_ruleContent= ruleContent EOF ;
     public final EObject entryRuleContent() throws RecognitionException {
         EObject current = null;
 
@@ -4434,8 +6081,8 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalPdfMk.g:1782:48: (iv_ruleContent= ruleContent EOF )
-            // InternalPdfMk.g:1783:2: iv_ruleContent= ruleContent EOF
+            // InternalPdfMk.g:2488:48: (iv_ruleContent= ruleContent EOF )
+            // InternalPdfMk.g:2489:2: iv_ruleContent= ruleContent EOF
             {
              newCompositeNode(grammarAccess.getContentRule()); 
             pushFollow(FOLLOW_1);
@@ -4462,7 +6109,7 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContent"
-    // InternalPdfMk.g:1789:1: ruleContent returns [EObject current=null] : ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) ;
+    // InternalPdfMk.g:2495:1: ruleContent returns [EObject current=null] : ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) ;
     public final EObject ruleContent() throws RecognitionException {
         EObject current = null;
 
@@ -4475,19 +6122,19 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPdfMk.g:1795:2: ( ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) )
-            // InternalPdfMk.g:1796:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
+            // InternalPdfMk.g:2501:2: ( ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) ) )
+            // InternalPdfMk.g:2502:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
             {
-            // InternalPdfMk.g:1796:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
-            // InternalPdfMk.g:1797:3: ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) )
+            // InternalPdfMk.g:2502:2: ( ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) ) )
+            // InternalPdfMk.g:2503:3: ( (lv_key_0_0= 'content' ) ) otherlv_1= ':' ( (lv_value_2_0= ruleContentObjects ) )
             {
-            // InternalPdfMk.g:1797:3: ( (lv_key_0_0= 'content' ) )
-            // InternalPdfMk.g:1798:4: (lv_key_0_0= 'content' )
+            // InternalPdfMk.g:2503:3: ( (lv_key_0_0= 'content' ) )
+            // InternalPdfMk.g:2504:4: (lv_key_0_0= 'content' )
             {
-            // InternalPdfMk.g:1798:4: (lv_key_0_0= 'content' )
-            // InternalPdfMk.g:1799:5: lv_key_0_0= 'content'
+            // InternalPdfMk.g:2504:4: (lv_key_0_0= 'content' )
+            // InternalPdfMk.g:2505:5: lv_key_0_0= 'content'
             {
-            lv_key_0_0=(Token)match(input,31,FOLLOW_10); 
+            lv_key_0_0=(Token)match(input,37,FOLLOW_10); 
 
             					newLeafNode(lv_key_0_0, grammarAccess.getContentAccess().getKeyContentKeyword_0_0());
             				
@@ -4507,11 +6154,11 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getContentAccess().getColonKeyword_1());
             		
-            // InternalPdfMk.g:1815:3: ( (lv_value_2_0= ruleContentObjects ) )
-            // InternalPdfMk.g:1816:4: (lv_value_2_0= ruleContentObjects )
+            // InternalPdfMk.g:2521:3: ( (lv_value_2_0= ruleContentObjects ) )
+            // InternalPdfMk.g:2522:4: (lv_value_2_0= ruleContentObjects )
             {
-            // InternalPdfMk.g:1816:4: (lv_value_2_0= ruleContentObjects )
-            // InternalPdfMk.g:1817:5: lv_value_2_0= ruleContentObjects
+            // InternalPdfMk.g:2522:4: (lv_value_2_0= ruleContentObjects )
+            // InternalPdfMk.g:2523:5: lv_value_2_0= ruleContentObjects
             {
 
             					newCompositeNode(grammarAccess.getContentAccess().getValueContentObjectsParserRuleCall_2_0());
@@ -4569,9 +6216,9 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000002000000000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000001000000000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000180000L});
@@ -4583,22 +6230,29 @@ public class InternalPdfMkParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000818000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x000000000100C010L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x000000000100C000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000001008000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x000000000180C010L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x000000000180C000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000001808000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000008018000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000001004010L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000004010L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001008020L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000001008000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000C00000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000008018000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x000000000100C010L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x000000000100C000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x000000000180C010L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x000000000180C000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000001808000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000000080018000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000001004010L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000004010L});
 
 }

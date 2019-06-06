@@ -126,14 +126,39 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createColumnDefinitionAdapter();
       }
       @Override
-      public Adapter caseInnerColumnObject(InnerColumnObject object)
+      public Adapter caseMarginDefinition(MarginDefinition object)
       {
-        return createInnerColumnObjectAdapter();
+        return createMarginDefinitionAdapter();
       }
       @Override
-      public Adapter caseColumnObject(ColumnObject object)
+      public Adapter caseImageDefintion(ImageDefintion object)
       {
-        return createColumnObjectAdapter();
+        return createImageDefintionAdapter();
+      }
+      @Override
+      public Adapter caseImageWidthDefintion(ImageWidthDefintion object)
+      {
+        return createImageWidthDefintionAdapter();
+      }
+      @Override
+      public Adapter caseImageHeightDefintion(ImageHeightDefintion object)
+      {
+        return createImageHeightDefintionAdapter();
+      }
+      @Override
+      public Adapter caseImagePageBreakDefinition(ImagePageBreakDefinition object)
+      {
+        return createImagePageBreakDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseImageFitDefinition(ImageFitDefinition object)
+      {
+        return createImageFitDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseImageOpacityDefinition(ImageOpacityDefinition object)
+      {
+        return createImageOpacityDefinitionAdapter();
       }
       @Override
       public Adapter caseTextObject(TextObject object)
@@ -154,6 +179,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
       public Adapter caseStyleObjects(StyleObjects object)
       {
         return createStyleObjectsAdapter();
+      }
+      @Override
+      public Adapter caseInnerColumnObject(InnerColumnObject object)
+      {
+        return createInnerColumnObjectAdapter();
+      }
+      @Override
+      public Adapter caseColumnObject(ColumnObject object)
+      {
+        return createColumnObjectAdapter();
+      }
+      @Override
+      public Adapter caseImageObject(ImageObject object)
+      {
+        return createImageObjectAdapter();
       }
       @Override
       public Adapter caseContentObject(ContentObject object)
@@ -348,31 +388,106 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.InnerColumnObject <em>Inner Column Object</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.MarginDefinition <em>Margin Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.InnerColumnObject
+   * @see org.xtext.avi.pdfMk.MarginDefinition
    * @generated
    */
-  public Adapter createInnerColumnObjectAdapter()
+  public Adapter createMarginDefinitionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ColumnObject <em>Column Object</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageDefintion <em>Image Defintion</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.ColumnObject
+   * @see org.xtext.avi.pdfMk.ImageDefintion
    * @generated
    */
-  public Adapter createColumnObjectAdapter()
+  public Adapter createImageDefintionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageWidthDefintion <em>Image Width Defintion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImageWidthDefintion
+   * @generated
+   */
+  public Adapter createImageWidthDefintionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageHeightDefintion <em>Image Height Defintion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImageHeightDefintion
+   * @generated
+   */
+  public Adapter createImageHeightDefintionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImagePageBreakDefinition <em>Image Page Break Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImagePageBreakDefinition
+   * @generated
+   */
+  public Adapter createImagePageBreakDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageFitDefinition <em>Image Fit Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImageFitDefinition
+   * @generated
+   */
+  public Adapter createImageFitDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageOpacityDefinition <em>Image Opacity Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImageOpacityDefinition
+   * @generated
+   */
+  public Adapter createImageOpacityDefinitionAdapter()
   {
     return null;
   }
@@ -433,6 +548,51 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStyleObjectsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.InnerColumnObject <em>Inner Column Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.InnerColumnObject
+   * @generated
+   */
+  public Adapter createInnerColumnObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ColumnObject <em>Column Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ColumnObject
+   * @generated
+   */
+  public Adapter createColumnObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageObject <em>Image Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImageObject
+   * @generated
+   */
+  public Adapter createImageObjectAdapter()
   {
     return null;
   }

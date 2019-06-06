@@ -23,8 +23,16 @@ import org.xtext.avi.pdfMk.ContentObject;
 import org.xtext.avi.pdfMk.ContentObjects;
 import org.xtext.avi.pdfMk.DocDefinition;
 import org.xtext.avi.pdfMk.FontSizeDefinition;
+import org.xtext.avi.pdfMk.ImageDefintion;
+import org.xtext.avi.pdfMk.ImageFitDefinition;
+import org.xtext.avi.pdfMk.ImageHeightDefintion;
+import org.xtext.avi.pdfMk.ImageObject;
+import org.xtext.avi.pdfMk.ImageOpacityDefinition;
+import org.xtext.avi.pdfMk.ImagePageBreakDefinition;
+import org.xtext.avi.pdfMk.ImageWidthDefintion;
 import org.xtext.avi.pdfMk.InnerColumnObject;
 import org.xtext.avi.pdfMk.ItalicsDefinition;
+import org.xtext.avi.pdfMk.MarginDefinition;
 import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.StringObject;
 import org.xtext.avi.pdfMk.StyleDefinition;
@@ -78,11 +86,35 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PdfMkPackage.FONT_SIZE_DEFINITION:
 				sequence_FontSizeDefinition(context, (FontSizeDefinition) semanticObject); 
 				return; 
+			case PdfMkPackage.IMAGE_DEFINTION:
+				sequence_ImageDefintion(context, (ImageDefintion) semanticObject); 
+				return; 
+			case PdfMkPackage.IMAGE_FIT_DEFINITION:
+				sequence_ImageFitDefinition(context, (ImageFitDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.IMAGE_HEIGHT_DEFINTION:
+				sequence_ImageHeightDefintion(context, (ImageHeightDefintion) semanticObject); 
+				return; 
+			case PdfMkPackage.IMAGE_OBJECT:
+				sequence_ImageObject(context, (ImageObject) semanticObject); 
+				return; 
+			case PdfMkPackage.IMAGE_OPACITY_DEFINITION:
+				sequence_ImageOpacityDefinition(context, (ImageOpacityDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.IMAGE_PAGE_BREAK_DEFINITION:
+				sequence_ImagePageBreakDefinition(context, (ImagePageBreakDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.IMAGE_WIDTH_DEFINTION:
+				sequence_ImageWidthDefintion(context, (ImageWidthDefintion) semanticObject); 
+				return; 
 			case PdfMkPackage.INNER_COLUMN_OBJECT:
 				sequence_InnerColumnObject(context, (InnerColumnObject) semanticObject); 
 				return; 
 			case PdfMkPackage.ITALICS_DEFINITION:
 				sequence_ItalicsDefinition(context, (ItalicsDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.MARGIN_DEFINITION:
+				sequence_MarginDefinition(context, (MarginDefinition) semanticObject); 
 				return; 
 			case PdfMkPackage.STRING_OBJECT:
 				sequence_StringObject(context, (StringObject) semanticObject); 
@@ -194,7 +226,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ContentObject returns ContentObject
 	 *
 	 * Constraint:
-	 *     (value=StringObject | value=TextObject | value=ColumnTextObject)
+	 *     (value=StringObject | value=TextObject | value=ColumnTextObject | value=ImageObject)
 	 */
 	protected void sequence_ContentObject(ISerializationContext context, ContentObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -269,6 +301,143 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     ImageDefintion returns ImageDefintion
+	 *
+	 * Constraint:
+	 *     (key='image' value=STRING)
+	 */
+	protected void sequence_ImageDefintion(ISerializationContext context, ImageDefintion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImageDefintionAccess().getKeyImageKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getImageDefintionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ImageFitDefinition returns ImageFitDefinition
+	 *
+	 * Constraint:
+	 *     (key='fit' value='[' values+=INT values+=INT)
+	 */
+	protected void sequence_ImageFitDefinition(ISerializationContext context, ImageFitDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ImageHeightDefintion returns ImageHeightDefintion
+	 *
+	 * Constraint:
+	 *     (key='height' value=INT)
+	 */
+	protected void sequence_ImageHeightDefintion(ISerializationContext context, ImageHeightDefintion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImageHeightDefintionAccess().getKeyHeightKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getImageHeightDefintionAccess().getValueINTTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ImageObject returns ImageObject
+	 *
+	 * Constraint:
+	 *     (
+	 *         value='{' 
+	 *         image?=ImageDefintion? 
+	 *         width?=ImageWidthDefintion? 
+	 *         height?=ImageHeightDefintion? 
+	 *         opacity?=ImageOpacityDefinition? 
+	 *         fit?=ImageFitDefinition? 
+	 *         pageBreak?=ImagePageBreakDefinition?
+	 *     )
+	 */
+	protected void sequence_ImageObject(ISerializationContext context, ImageObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ImageOpacityDefinition returns ImageOpacityDefinition
+	 *
+	 * Constraint:
+	 *     (key='opacity' value=INT)
+	 */
+	protected void sequence_ImageOpacityDefinition(ISerializationContext context, ImageOpacityDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImageOpacityDefinitionAccess().getKeyOpacityKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getImageOpacityDefinitionAccess().getValueINTTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ImagePageBreakDefinition returns ImagePageBreakDefinition
+	 *
+	 * Constraint:
+	 *     (key='pageBreak' value=STRING)
+	 */
+	protected void sequence_ImagePageBreakDefinition(ISerializationContext context, ImagePageBreakDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImagePageBreakDefinitionAccess().getKeyPageBreakKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getImagePageBreakDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ImageWidthDefintion returns ImageWidthDefintion
+	 *
+	 * Constraint:
+	 *     (key='width' value=INT)
+	 */
+	protected void sequence_ImageWidthDefintion(ISerializationContext context, ImageWidthDefintion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImageWidthDefintionAccess().getKeyWidthKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getImageWidthDefintionAccess().getValueINTTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     InnerColumnObject returns InnerColumnObject
 	 *
 	 * Constraint:
@@ -305,6 +474,18 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		feeder.accept(grammarAccess.getItalicsDefinitionAccess().getKeyItalicsKeyword_0_0(), semanticObject.getKey());
 		feeder.accept(grammarAccess.getItalicsDefinitionAccess().getValueBooleanTypeParserRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MarginDefinition returns MarginDefinition
+	 *
+	 * Constraint:
+	 *     (key='margin' values+=INT? values+=INT*)
+	 */
+	protected void sequence_MarginDefinition(ISerializationContext context, MarginDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -358,7 +539,8 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         fontSize?=FontSizeDefinition? 
 	 *         typeFace?=TypeFaceDefinition? 
 	 *         alignment?=TextAlignmentDefinition? 
-	 *         italics?=ItalicsDefinition?
+	 *         italics?=ItalicsDefinition? 
+	 *         margin?=MarginDefinition?
 	 *     )
 	 */
 	protected void sequence_StyleObject(ISerializationContext context, StyleObject semanticObject) {
@@ -412,7 +594,8 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         alignment?=TextAlignmentDefinition? 
 	 *         typeFace?=TypeFaceDefinition? 
 	 *         italics?=ItalicsDefinition? 
-	 *         width?=WidthDefinition?
+	 *         width?=WidthDefinition? 
+	 *         margin?=MarginDefinition?
 	 *     )
 	 */
 	protected void sequence_TextObject(ISerializationContext context, TextObject semanticObject) {

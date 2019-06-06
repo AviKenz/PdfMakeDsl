@@ -4,6 +4,8 @@ generate pdfMk "http://www.xtext.org/avi/PdfMk"
 
 // TODO [?] import: see INT in Terminals.xtext
 // TODO [L] autovervollstaendigung beim style
+// TODO [L] stack for style see playground-margin
+// TODO [M] fix semi-column problem see like by ContentObjects
 /******************** ********************/
 
 
@@ -59,12 +61,68 @@ WidthDefinition:
 ColumnGapDefintion:
 	key="columnGap" ":" value=INT;
 	
-// TODO [N] modify rule according to pdfmake-playgroud. e.g StringObject seems not to work into column
 ColumnDefinition: 
 	"{" (globalStyle?=TextStyleDefinition ",")? 
 		key="columns" ":" (value+=ColumnObject? ("," value+=ColumnObject)*)
    "}";
-   
+
+// TODO [?] limit values element to 4
+MarginDefinition:
+	key="margin" ":" "[" (values+=INT)? ("," values+=INT)* "]";
+	
+	
+ImageDefintion:
+	key="image" ":" value=STRING;
+	
+ImageWidthDefintion:
+	key="width" ":" value=INT;
+	
+ImageHeightDefintion:
+	key="height" ":" value=INT;
+
+// TODO [L] check with validator if value is either before or after	
+ImagePageBreakDefinition:
+	key="pageBreak" ":" value= STRING;
+	
+ImageFitDefinition:
+	key="fit" ":" value="[" (values+=INT) ("," values+=INT) "]";
+	
+ImageOpacityDefinition:
+	key="opacity" ":" value=INT;
+		
+
+/******************** Objects definition ********************/
+// TODO [M] write grammar to support text in []. see playground-style3
+TextObject: 
+	value="{" text?=TextDefinition 
+			  ("," style?=TextStyleDefinition)? 
+			  ("," fontSize?=FontSizeDefinition)? 
+			  ("," alignment?=TextAlignmentDefinition)? 
+			  ("," typeFace?=TypeFaceDefinition)? 
+			  ("," italics?=ItalicsDefinition)?
+			  ("," width?=WidthDefinition)?
+			  ("," margin?=MarginDefinition)?
+		   "}";
+		   
+ColumnTextObject: 
+	value=ColumnDefinition;
+
+StyleObject: 
+	key=ID ":" 
+	value="{" 
+	  		  (fontSize?=FontSizeDefinition)? 
+			  ("," typeFace?=TypeFaceDefinition)? 
+			  ("," alignment?=TextAlignmentDefinition)? 
+			  ("," italics?=ItalicsDefinition)? 
+			  ("," margin?=MarginDefinition)?
+		  "}";
+
+StyleObjects: 
+	"{" 
+		(value+=StyleObject
+		("," value+=StyleObject)*)
+	"}";
+	
 InnerColumnObject:
 	value= "["
 				(text+=StringObject? ("," text+=StringObject)*)
@@ -80,39 +138,18 @@ ColumnObject:
 			(innerColumn+=InnerColumnObject? ("," innerColumn+=InnerColumnObject)*)
 		"]";
 		
-
-/******************** Objects definition ********************/
-// TODO [M] write grammar to support text in []. see playground-style3
-TextObject: 
-	value="{" text?=TextDefinition 
-			  ("," style?=TextStyleDefinition)? 
-			  ("," fontSize?=FontSizeDefinition)? 
-			  ("," alignment?=TextAlignmentDefinition)? 
-			  ("," typeFace?=TypeFaceDefinition)? 
-			  ("," italics?=ItalicsDefinition)?
-			  ("," width?=WidthDefinition)?
-		   "}";
-		   
-ColumnTextObject: 
-	value=ColumnDefinition;
-
-StyleObject: 
-	key=ID ":" 
-	value="{" 
-	  		  (fontSize?=FontSizeDefinition)? 
-			  ("," typeFace?=TypeFaceDefinition)? 
-			  ("," alignment?=TextAlignmentDefinition)? 
-			  ("," italics?=ItalicsDefinition)? 
-		  "}";
-
-StyleObjects: 
-	"{" 
-		(value+=StyleObject
-		("," value+=StyleObject)*)
-	"}";
+ImageObject:
+	value= "{"
+				(image?=ImageDefintion)?
+				("," width?=ImageWidthDefintion)?
+				("," height?=ImageHeightDefintion)?
+				("," opacity?=ImageOpacityDefinition)?
+				("," fit?=ImageFitDefinition)?
+				("," pageBreak?=ImagePageBreakDefinition)?
+			"}";
 		
 ContentObject: 
-	value=(StringObject|TextObject|ColumnTextObject);
+	value=(StringObject|TextObject|ColumnTextObject|ImageObject);
 	
 ContentObjects:
 	"[" 
@@ -121,9 +158,6 @@ ContentObjects:
 		
 		)?
 	"]";
-
-
-
 
 /******************** Root Objects definition ********************/
 Styles:

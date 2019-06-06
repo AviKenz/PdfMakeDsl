@@ -75,12 +75,20 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.WIDTH_DEFINITION: return createWidthDefinition();
       case PdfMkPackage.COLUMN_GAP_DEFINTION: return createColumnGapDefintion();
       case PdfMkPackage.COLUMN_DEFINITION: return createColumnDefinition();
-      case PdfMkPackage.INNER_COLUMN_OBJECT: return createInnerColumnObject();
-      case PdfMkPackage.COLUMN_OBJECT: return createColumnObject();
+      case PdfMkPackage.MARGIN_DEFINITION: return createMarginDefinition();
+      case PdfMkPackage.IMAGE_DEFINTION: return createImageDefintion();
+      case PdfMkPackage.IMAGE_WIDTH_DEFINTION: return createImageWidthDefintion();
+      case PdfMkPackage.IMAGE_HEIGHT_DEFINTION: return createImageHeightDefintion();
+      case PdfMkPackage.IMAGE_PAGE_BREAK_DEFINITION: return createImagePageBreakDefinition();
+      case PdfMkPackage.IMAGE_FIT_DEFINITION: return createImageFitDefinition();
+      case PdfMkPackage.IMAGE_OPACITY_DEFINITION: return createImageOpacityDefinition();
       case PdfMkPackage.TEXT_OBJECT: return createTextObject();
       case PdfMkPackage.COLUMN_TEXT_OBJECT: return createColumnTextObject();
       case PdfMkPackage.STYLE_OBJECT: return createStyleObject();
       case PdfMkPackage.STYLE_OBJECTS: return createStyleObjects();
+      case PdfMkPackage.INNER_COLUMN_OBJECT: return createInnerColumnObject();
+      case PdfMkPackage.COLUMN_OBJECT: return createColumnObject();
+      case PdfMkPackage.IMAGE_OBJECT: return createImageObject();
       case PdfMkPackage.CONTENT_OBJECT: return createContentObject();
       case PdfMkPackage.CONTENT_OBJECTS: return createContentObjects();
       case PdfMkPackage.STYLES: return createStyles();
@@ -205,10 +213,10 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public InnerColumnObject createInnerColumnObject()
+  public MarginDefinition createMarginDefinition()
   {
-    InnerColumnObjectImpl innerColumnObject = new InnerColumnObjectImpl();
-    return innerColumnObject;
+    MarginDefinitionImpl marginDefinition = new MarginDefinitionImpl();
+    return marginDefinition;
   }
 
   /**
@@ -216,10 +224,65 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ColumnObject createColumnObject()
+  public ImageDefintion createImageDefintion()
   {
-    ColumnObjectImpl columnObject = new ColumnObjectImpl();
-    return columnObject;
+    ImageDefintionImpl imageDefintion = new ImageDefintionImpl();
+    return imageDefintion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageWidthDefintion createImageWidthDefintion()
+  {
+    ImageWidthDefintionImpl imageWidthDefintion = new ImageWidthDefintionImpl();
+    return imageWidthDefintion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageHeightDefintion createImageHeightDefintion()
+  {
+    ImageHeightDefintionImpl imageHeightDefintion = new ImageHeightDefintionImpl();
+    return imageHeightDefintion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImagePageBreakDefinition createImagePageBreakDefinition()
+  {
+    ImagePageBreakDefinitionImpl imagePageBreakDefinition = new ImagePageBreakDefinitionImpl();
+    return imagePageBreakDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageFitDefinition createImageFitDefinition()
+  {
+    ImageFitDefinitionImpl imageFitDefinition = new ImageFitDefinitionImpl();
+    return imageFitDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageOpacityDefinition createImageOpacityDefinition()
+  {
+    ImageOpacityDefinitionImpl imageOpacityDefinition = new ImageOpacityDefinitionImpl();
+    return imageOpacityDefinition;
   }
 
   /**
@@ -264,6 +327,39 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
   {
     StyleObjectsImpl styleObjects = new StyleObjectsImpl();
     return styleObjects;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InnerColumnObject createInnerColumnObject()
+  {
+    InnerColumnObjectImpl innerColumnObject = new InnerColumnObjectImpl();
+    return innerColumnObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ColumnObject createColumnObject()
+  {
+    ColumnObjectImpl columnObject = new ColumnObjectImpl();
+    return columnObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageObject createImageObject()
+  {
+    ImageObjectImpl imageObject = new ImageObjectImpl();
+    return imageObject;
   }
 
   /**
