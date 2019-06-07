@@ -140,6 +140,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ColumnDefinition columnDefinition = (ColumnDefinition)theEObject;
         T result = caseColumnDefinition(columnDefinition);
+        if (result == null) result = caseListElements(columnDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -192,10 +193,53 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PdfMkPackage.LIST_REVERSED_DEFINITION:
+      {
+        ListReversedDefinition listReversedDefinition = (ListReversedDefinition)theEObject;
+        T result = caseListReversedDefinition(listReversedDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_START_DEFINITION:
+      {
+        ListStartDefinition listStartDefinition = (ListStartDefinition)theEObject;
+        T result = caseListStartDefinition(listStartDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_COUNTER_DEFINITION:
+      {
+        ListCounterDefinition listCounterDefinition = (ListCounterDefinition)theEObject;
+        T result = caseListCounterDefinition(listCounterDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_TYPE_DEFINITION:
+      {
+        ListTypeDefinition listTypeDefinition = (ListTypeDefinition)theEObject;
+        T result = caseListTypeDefinition(listTypeDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_COLOR_DEFINITION:
+      {
+        ListColorDefinition listColorDefinition = (ListColorDefinition)theEObject;
+        T result = caseListColorDefinition(listColorDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_MARKER_COLOR_DEFINITION:
+      {
+        ListMarkerColorDefinition listMarkerColorDefinition = (ListMarkerColorDefinition)theEObject;
+        T result = caseListMarkerColorDefinition(listMarkerColorDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PdfMkPackage.TEXT_OBJECT:
       {
         TextObject textObject = (TextObject)theEObject;
         T result = caseTextObject(textObject);
+        if (result == null) result = caseListElements(textObject);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -238,6 +282,27 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ImageObject imageObject = (ImageObject)theEObject;
         T result = caseImageObject(imageObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER:
+      {
+        ListObjectPropertiesWrapper listObjectPropertiesWrapper = (ListObjectPropertiesWrapper)theEObject;
+        T result = caseListObjectPropertiesWrapper(listObjectPropertiesWrapper);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_ELEMENTS:
+      {
+        ListElements listElements = (ListElements)theEObject;
+        T result = caseListElements(listElements);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_OBJECT:
+      {
+        ListObject listObject = (ListObject)theEObject;
+        T result = caseListObject(listObject);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -546,6 +611,102 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>List Reversed Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Reversed Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListReversedDefinition(ListReversedDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Start Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Start Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListStartDefinition(ListStartDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Counter Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Counter Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListCounterDefinition(ListCounterDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Type Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Type Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListTypeDefinition(ListTypeDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Color Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListColorDefinition(ListColorDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Marker Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Marker Color Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListMarkerColorDefinition(ListMarkerColorDefinition object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -653,6 +814,54 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseImageObject(ImageObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Object Properties Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Object Properties Wrapper</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListObjectPropertiesWrapper(ListObjectPropertiesWrapper object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Elements</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Elements</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListElements(ListElements object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListObject(ListObject object)
   {
     return null;
   }

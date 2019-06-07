@@ -5,8 +5,6 @@ package org.xtext.avi.pdfMk;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Column Definition</b></em>'.
@@ -25,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ColumnDefinition extends EObject
+public interface ColumnDefinition extends ListElements
 {
   /**
    * Returns the value of the '<em><b>Global Style</b></em>' attribute.

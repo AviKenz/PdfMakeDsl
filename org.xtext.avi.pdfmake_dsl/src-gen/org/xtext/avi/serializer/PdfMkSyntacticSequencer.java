@@ -10,6 +10,9 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
+import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.xtext.avi.services.PdfMkGrammarAccess;
@@ -18,10 +21,12 @@ import org.xtext.avi.services.PdfMkGrammarAccess;
 public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected PdfMkGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_ListObject_OlKeyword_2_1_or_UlKeyword_2_0;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (PdfMkGrammarAccess) access;
+		match_ListObject_OlKeyword_2_1_or_UlKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getListObjectAccess().getOlKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getListObjectAccess().getUlKeyword_2_0()));
 	}
 	
 	@Override
@@ -59,8 +64,29 @@ public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			acceptNodes(getLastNavigableState(), syntaxNodes);
+			if (match_ListObject_OlKeyword_2_1_or_UlKeyword_2_0.equals(syntax))
+				emit_ListObject_OlKeyword_2_1_or_UlKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     'ul' | 'ol'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     properties+=ListObjectPropertiesWrapper ',' (ambiguity) ':' '[' ',' elemtens+=ListElements
+	 *     properties+=ListObjectPropertiesWrapper ',' (ambiguity) ':' '[' ']' '}' (rule end)
+	 *     properties+=ListObjectPropertiesWrapper ',' (ambiguity) ':' '[' elements+=ListElements
+	 *     properties+=ListObjectPropertiesWrapper (ambiguity) ':' '[' ',' elemtens+=ListElements
+	 *     properties+=ListObjectPropertiesWrapper (ambiguity) ':' '[' ']' '}' (rule end)
+	 *     properties+=ListObjectPropertiesWrapper (ambiguity) ':' '[' elements+=ListElements
+	 *     value='{' (ambiguity) ':' '[' ',' elemtens+=ListElements
+	 *     value='{' (ambiguity) ':' '[' ']' '}' (rule end)
+	 *     value='{' (ambiguity) ':' '[' elements+=ListElements
+	 */
+	protected void emit_ListObject_OlKeyword_2_1_or_UlKeyword_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 }

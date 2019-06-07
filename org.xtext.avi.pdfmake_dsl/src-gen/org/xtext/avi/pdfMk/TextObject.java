@@ -3,7 +3,6 @@
  */
 package org.xtext.avi.pdfMk;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,13 +22,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isItalics <em>Italics</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isMargin <em>Margin</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.TextObject#isListCounter <em>List Counter</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getTextObject()
  * @model
  * @generated
  */
-public interface TextObject extends EObject
+public interface TextObject extends ListElements
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.
@@ -264,5 +264,31 @@ public interface TextObject extends EObject
    * @generated
    */
   void setMargin(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>List Counter</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>List Counter</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>List Counter</em>' attribute.
+   * @see #setListCounter(boolean)
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getTextObject_ListCounter()
+   * @model
+   * @generated
+   */
+  boolean isListCounter();
+
+  /**
+   * Sets the value of the '{@link org.xtext.avi.pdfMk.TextObject#isListCounter <em>List Counter</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>List Counter</em>' attribute.
+   * @see #isListCounter()
+   * @generated
+   */
+  void setListCounter(boolean value);
 
 } // TextObject

@@ -32,6 +32,15 @@ import org.xtext.avi.pdfMk.ImagePageBreakDefinition;
 import org.xtext.avi.pdfMk.ImageWidthDefintion;
 import org.xtext.avi.pdfMk.InnerColumnObject;
 import org.xtext.avi.pdfMk.ItalicsDefinition;
+import org.xtext.avi.pdfMk.ListColorDefinition;
+import org.xtext.avi.pdfMk.ListCounterDefinition;
+import org.xtext.avi.pdfMk.ListElements;
+import org.xtext.avi.pdfMk.ListMarkerColorDefinition;
+import org.xtext.avi.pdfMk.ListObject;
+import org.xtext.avi.pdfMk.ListObjectPropertiesWrapper;
+import org.xtext.avi.pdfMk.ListReversedDefinition;
+import org.xtext.avi.pdfMk.ListStartDefinition;
+import org.xtext.avi.pdfMk.ListTypeDefinition;
 import org.xtext.avi.pdfMk.MarginDefinition;
 import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.StringObject;
@@ -113,6 +122,33 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PdfMkPackage.ITALICS_DEFINITION:
 				sequence_ItalicsDefinition(context, (ItalicsDefinition) semanticObject); 
 				return; 
+			case PdfMkPackage.LIST_COLOR_DEFINITION:
+				sequence_ListColorDefinition(context, (ListColorDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_COUNTER_DEFINITION:
+				sequence_ListCounterDefinition(context, (ListCounterDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_ELEMENTS:
+				sequence_ListElements(context, (ListElements) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_MARKER_COLOR_DEFINITION:
+				sequence_ListMarkerColorDefinition(context, (ListMarkerColorDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_OBJECT:
+				sequence_ListObject(context, (ListObject) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER:
+				sequence_ListObjectPropertiesWrapper(context, (ListObjectPropertiesWrapper) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_REVERSED_DEFINITION:
+				sequence_ListReversedDefinition(context, (ListReversedDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_START_DEFINITION:
+				sequence_ListStartDefinition(context, (ListStartDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.LIST_TYPE_DEFINITION:
+				sequence_ListTypeDefinition(context, (ListTypeDefinition) semanticObject); 
+				return; 
 			case PdfMkPackage.MARGIN_DEFINITION:
 				sequence_MarginDefinition(context, (MarginDefinition) semanticObject); 
 				return; 
@@ -151,6 +187,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ColumnDefinition returns ColumnDefinition
+	 *     ListElements returns ColumnDefinition
 	 *
 	 * Constraint:
 	 *     (globalStyle?=TextStyleDefinition? key='columns' value+=ColumnObject? value+=ColumnObject*)
@@ -226,7 +263,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ContentObject returns ContentObject
 	 *
 	 * Constraint:
-	 *     (value=StringObject | value=TextObject | value=ColumnTextObject | value=ImageObject)
+	 *     (value=StringObject | value=TextObject | value=ColumnTextObject | value=ImageObject | value=ListObject)
 	 */
 	protected void sequence_ContentObject(ISerializationContext context, ContentObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -479,6 +516,174 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     ListColorDefinition returns ListColorDefinition
+	 *
+	 * Constraint:
+	 *     (key='color' value=STRING)
+	 */
+	protected void sequence_ListColorDefinition(ISerializationContext context, ListColorDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_COLOR_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_COLOR_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_COLOR_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_COLOR_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListColorDefinitionAccess().getKeyColorKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getListColorDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListCounterDefinition returns ListCounterDefinition
+	 *
+	 * Constraint:
+	 *     (key='counter' value=INT)
+	 */
+	protected void sequence_ListCounterDefinition(ISerializationContext context, ListCounterDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListCounterDefinitionAccess().getKeyCounterKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getListCounterDefinitionAccess().getValueINTTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListElements returns ListElements
+	 *
+	 * Constraint:
+	 *     elValues=STRING
+	 */
+	protected void sequence_ListElements(ISerializationContext context, ListElements semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_ELEMENTS__EL_VALUES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_ELEMENTS__EL_VALUES));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListElementsAccess().getElValuesSTRINGTerminalRuleCall_0_0(), semanticObject.getElValues());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListMarkerColorDefinition returns ListMarkerColorDefinition
+	 *
+	 * Constraint:
+	 *     (key='markerColor' value=STRING)
+	 */
+	protected void sequence_ListMarkerColorDefinition(ISerializationContext context, ListMarkerColorDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_MARKER_COLOR_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_MARKER_COLOR_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_MARKER_COLOR_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_MARKER_COLOR_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListMarkerColorDefinitionAccess().getKeyMarkerColorKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getListMarkerColorDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListObjectPropertiesWrapper returns ListObjectPropertiesWrapper
+	 *
+	 * Constraint:
+	 *     (value=ListReversedDefinition | value=ListCounterDefinition | value=ListTypeDefinition | value=ListColorDefinition | value=ListMarkerColorDefinition)
+	 */
+	protected void sequence_ListObjectPropertiesWrapper(ISerializationContext context, ListObjectPropertiesWrapper semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListObject returns ListObject
+	 *
+	 * Constraint:
+	 *     (value='{' (properties+=ListObjectPropertiesWrapper properties+=ListObjectPropertiesWrapper?)* elements+=ListElements? elemtens+=ListElements*)
+	 */
+	protected void sequence_ListObject(ISerializationContext context, ListObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListReversedDefinition returns ListReversedDefinition
+	 *
+	 * Constraint:
+	 *     (key='reversed' value=BooleanType)
+	 */
+	protected void sequence_ListReversedDefinition(ISerializationContext context, ListReversedDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListReversedDefinitionAccess().getKeyReversedKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getListReversedDefinitionAccess().getValueBooleanTypeParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListStartDefinition returns ListStartDefinition
+	 *
+	 * Constraint:
+	 *     (key='start' value=INT)
+	 */
+	protected void sequence_ListStartDefinition(ISerializationContext context, ListStartDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_START_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_START_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_START_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_START_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListStartDefinitionAccess().getKeyStartKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getListStartDefinitionAccess().getValueINTTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ListTypeDefinition returns ListTypeDefinition
+	 *
+	 * Constraint:
+	 *     (key='type' value=STRING)
+	 */
+	protected void sequence_ListTypeDefinition(ISerializationContext context, ListTypeDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_TYPE_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_TYPE_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_TYPE_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_TYPE_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getListTypeDefinitionAccess().getKeyTypeKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getListTypeDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     MarginDefinition returns MarginDefinition
 	 *
 	 * Constraint:
@@ -584,6 +789,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     TextObject returns TextObject
+	 *     ListElements returns TextObject
 	 *
 	 * Constraint:
 	 *     (
@@ -595,7 +801,8 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         typeFace?=TypeFaceDefinition? 
 	 *         italics?=ItalicsDefinition? 
 	 *         width?=WidthDefinition? 
-	 *         margin?=MarginDefinition?
+	 *         margin?=MarginDefinition? 
+	 *         listCounter?=ListCounterDefinition?
 	 *     )
 	 */
 	protected void sequence_TextObject(ISerializationContext context, TextObject semanticObject) {

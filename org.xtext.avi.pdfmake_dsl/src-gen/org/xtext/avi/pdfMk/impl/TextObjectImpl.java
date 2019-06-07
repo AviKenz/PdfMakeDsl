@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.TextObject;
@@ -30,11 +29,12 @@ import org.xtext.avi.pdfMk.TextObject;
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isItalics <em>Italics</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isWidth <em>Width</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isMargin <em>Margin</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isListCounter <em>List Counter</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TextObjectImpl extends MinimalEObjectImpl.Container implements TextObject
+public class TextObjectImpl extends ListElementsImpl implements TextObject
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -215,6 +215,26 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
    * @ordered
    */
   protected boolean margin = MARGIN_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isListCounter() <em>List Counter</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isListCounter()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean LIST_COUNTER_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isListCounter() <em>List Counter</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isListCounter()
+   * @generated
+   * @ordered
+   */
+  protected boolean listCounter = LIST_COUNTER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -449,6 +469,29 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isListCounter()
+  {
+    return listCounter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setListCounter(boolean newListCounter)
+  {
+    boolean oldListCounter = listCounter;
+    listCounter = newListCounter;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__LIST_COUNTER, oldListCounter, listCounter));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -472,6 +515,8 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
         return isWidth();
       case PdfMkPackage.TEXT_OBJECT__MARGIN:
         return isMargin();
+      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
+        return isListCounter();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -512,6 +557,9 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
         return;
       case PdfMkPackage.TEXT_OBJECT__MARGIN:
         setMargin((Boolean)newValue);
+        return;
+      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
+        setListCounter((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -554,6 +602,9 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
       case PdfMkPackage.TEXT_OBJECT__MARGIN:
         setMargin(MARGIN_EDEFAULT);
         return;
+      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
+        setListCounter(LIST_COUNTER_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -586,6 +637,8 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
         return width != WIDTH_EDEFAULT;
       case PdfMkPackage.TEXT_OBJECT__MARGIN:
         return margin != MARGIN_EDEFAULT;
+      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
+        return listCounter != LIST_COUNTER_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -619,6 +672,8 @@ public class TextObjectImpl extends MinimalEObjectImpl.Container implements Text
     result.append(width);
     result.append(", margin: ");
     result.append(margin);
+    result.append(", listCounter: ");
+    result.append(listCounter);
     result.append(')');
     return result.toString();
   }

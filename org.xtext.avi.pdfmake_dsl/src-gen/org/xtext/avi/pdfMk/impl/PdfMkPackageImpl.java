@@ -28,6 +28,15 @@ import org.xtext.avi.pdfMk.ImagePageBreakDefinition;
 import org.xtext.avi.pdfMk.ImageWidthDefintion;
 import org.xtext.avi.pdfMk.InnerColumnObject;
 import org.xtext.avi.pdfMk.ItalicsDefinition;
+import org.xtext.avi.pdfMk.ListColorDefinition;
+import org.xtext.avi.pdfMk.ListCounterDefinition;
+import org.xtext.avi.pdfMk.ListElements;
+import org.xtext.avi.pdfMk.ListMarkerColorDefinition;
+import org.xtext.avi.pdfMk.ListObject;
+import org.xtext.avi.pdfMk.ListObjectPropertiesWrapper;
+import org.xtext.avi.pdfMk.ListReversedDefinition;
+import org.xtext.avi.pdfMk.ListStartDefinition;
+import org.xtext.avi.pdfMk.ListTypeDefinition;
 import org.xtext.avi.pdfMk.MarginDefinition;
 import org.xtext.avi.pdfMk.PdfMkFactory;
 import org.xtext.avi.pdfMk.PdfMkPackage;
@@ -173,6 +182,48 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass listReversedDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listStartDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listCounterDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listTypeDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listColorDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listMarkerColorDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass textObjectEClass = null;
 
   /**
@@ -216,6 +267,27 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * @generated
    */
   private EClass imageObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listObjectPropertiesWrapperEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listElementsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listObjectEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -833,6 +905,186 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getListReversedDefinition()
+  {
+    return listReversedDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListReversedDefinition_Key()
+  {
+    return (EAttribute)listReversedDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListReversedDefinition_Value()
+  {
+    return (EAttribute)listReversedDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListStartDefinition()
+  {
+    return listStartDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListStartDefinition_Key()
+  {
+    return (EAttribute)listStartDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListStartDefinition_Value()
+  {
+    return (EAttribute)listStartDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListCounterDefinition()
+  {
+    return listCounterDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListCounterDefinition_Key()
+  {
+    return (EAttribute)listCounterDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListCounterDefinition_Value()
+  {
+    return (EAttribute)listCounterDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListTypeDefinition()
+  {
+    return listTypeDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListTypeDefinition_Key()
+  {
+    return (EAttribute)listTypeDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListTypeDefinition_Value()
+  {
+    return (EAttribute)listTypeDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListColorDefinition()
+  {
+    return listColorDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListColorDefinition_Key()
+  {
+    return (EAttribute)listColorDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListColorDefinition_Value()
+  {
+    return (EAttribute)listColorDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListMarkerColorDefinition()
+  {
+    return listMarkerColorDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListMarkerColorDefinition_Key()
+  {
+    return (EAttribute)listMarkerColorDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListMarkerColorDefinition_Value()
+  {
+    return (EAttribute)listMarkerColorDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTextObject()
   {
     return textObjectEClass;
@@ -926,6 +1178,16 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
   public EAttribute getTextObject_Margin()
   {
     return (EAttribute)textObjectEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextObject_ListCounter()
+  {
+    return (EAttribute)textObjectEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -1243,6 +1505,96 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getListObjectPropertiesWrapper()
+  {
+    return listObjectPropertiesWrapperEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getListObjectPropertiesWrapper_Value()
+  {
+    return (EReference)listObjectPropertiesWrapperEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListElements()
+  {
+    return listElementsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListElements_ElValues()
+  {
+    return (EAttribute)listElementsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListObject()
+  {
+    return listObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getListObject_Value()
+  {
+    return (EAttribute)listObjectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getListObject_Properties()
+  {
+    return (EReference)listObjectEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getListObject_Elements()
+  {
+    return (EReference)listObjectEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getListObject_Elemtens()
+  {
+    return (EReference)listObjectEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getContentObject()
   {
     return contentObjectEClass;
@@ -1437,6 +1789,30 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(imageOpacityDefinitionEClass, IMAGE_OPACITY_DEFINITION__KEY);
     createEAttribute(imageOpacityDefinitionEClass, IMAGE_OPACITY_DEFINITION__VALUE);
 
+    listReversedDefinitionEClass = createEClass(LIST_REVERSED_DEFINITION);
+    createEAttribute(listReversedDefinitionEClass, LIST_REVERSED_DEFINITION__KEY);
+    createEAttribute(listReversedDefinitionEClass, LIST_REVERSED_DEFINITION__VALUE);
+
+    listStartDefinitionEClass = createEClass(LIST_START_DEFINITION);
+    createEAttribute(listStartDefinitionEClass, LIST_START_DEFINITION__KEY);
+    createEAttribute(listStartDefinitionEClass, LIST_START_DEFINITION__VALUE);
+
+    listCounterDefinitionEClass = createEClass(LIST_COUNTER_DEFINITION);
+    createEAttribute(listCounterDefinitionEClass, LIST_COUNTER_DEFINITION__KEY);
+    createEAttribute(listCounterDefinitionEClass, LIST_COUNTER_DEFINITION__VALUE);
+
+    listTypeDefinitionEClass = createEClass(LIST_TYPE_DEFINITION);
+    createEAttribute(listTypeDefinitionEClass, LIST_TYPE_DEFINITION__KEY);
+    createEAttribute(listTypeDefinitionEClass, LIST_TYPE_DEFINITION__VALUE);
+
+    listColorDefinitionEClass = createEClass(LIST_COLOR_DEFINITION);
+    createEAttribute(listColorDefinitionEClass, LIST_COLOR_DEFINITION__KEY);
+    createEAttribute(listColorDefinitionEClass, LIST_COLOR_DEFINITION__VALUE);
+
+    listMarkerColorDefinitionEClass = createEClass(LIST_MARKER_COLOR_DEFINITION);
+    createEAttribute(listMarkerColorDefinitionEClass, LIST_MARKER_COLOR_DEFINITION__KEY);
+    createEAttribute(listMarkerColorDefinitionEClass, LIST_MARKER_COLOR_DEFINITION__VALUE);
+
     textObjectEClass = createEClass(TEXT_OBJECT);
     createEAttribute(textObjectEClass, TEXT_OBJECT__VALUE);
     createEAttribute(textObjectEClass, TEXT_OBJECT__TEXT);
@@ -1447,6 +1823,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(textObjectEClass, TEXT_OBJECT__ITALICS);
     createEAttribute(textObjectEClass, TEXT_OBJECT__WIDTH);
     createEAttribute(textObjectEClass, TEXT_OBJECT__MARGIN);
+    createEAttribute(textObjectEClass, TEXT_OBJECT__LIST_COUNTER);
 
     columnTextObjectEClass = createEClass(COLUMN_TEXT_OBJECT);
     createEReference(columnTextObjectEClass, COLUMN_TEXT_OBJECT__VALUE);
@@ -1484,6 +1861,18 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(imageObjectEClass, IMAGE_OBJECT__OPACITY);
     createEAttribute(imageObjectEClass, IMAGE_OBJECT__FIT);
     createEAttribute(imageObjectEClass, IMAGE_OBJECT__PAGE_BREAK);
+
+    listObjectPropertiesWrapperEClass = createEClass(LIST_OBJECT_PROPERTIES_WRAPPER);
+    createEReference(listObjectPropertiesWrapperEClass, LIST_OBJECT_PROPERTIES_WRAPPER__VALUE);
+
+    listElementsEClass = createEClass(LIST_ELEMENTS);
+    createEAttribute(listElementsEClass, LIST_ELEMENTS__EL_VALUES);
+
+    listObjectEClass = createEClass(LIST_OBJECT);
+    createEAttribute(listObjectEClass, LIST_OBJECT__VALUE);
+    createEReference(listObjectEClass, LIST_OBJECT__PROPERTIES);
+    createEReference(listObjectEClass, LIST_OBJECT__ELEMENTS);
+    createEReference(listObjectEClass, LIST_OBJECT__ELEMTENS);
 
     contentObjectEClass = createEClass(CONTENT_OBJECT);
     createEReference(contentObjectEClass, CONTENT_OBJECT__VALUE);
@@ -1529,6 +1918,8 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    columnDefinitionEClass.getESuperTypes().add(this.getListElements());
+    textObjectEClass.getESuperTypes().add(this.getListElements());
 
     // Initialize classes and features; add operations and parameters
     initEClass(docDefinitionEClass, DocDefinition.class, "DocDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1600,6 +1991,30 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getImageOpacityDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImageOpacityDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageOpacityDefinition_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ImageOpacityDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(listReversedDefinitionEClass, ListReversedDefinition.class, "ListReversedDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListReversedDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ListReversedDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getListReversedDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ListReversedDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listStartDefinitionEClass, ListStartDefinition.class, "ListStartDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListStartDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ListStartDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getListStartDefinition_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ListStartDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listCounterDefinitionEClass, ListCounterDefinition.class, "ListCounterDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListCounterDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ListCounterDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getListCounterDefinition_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ListCounterDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listTypeDefinitionEClass, ListTypeDefinition.class, "ListTypeDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListTypeDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ListTypeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getListTypeDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ListTypeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listColorDefinitionEClass, ListColorDefinition.class, "ListColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListColorDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ListColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getListColorDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ListColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listMarkerColorDefinitionEClass, ListMarkerColorDefinition.class, "ListMarkerColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListMarkerColorDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ListMarkerColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getListMarkerColorDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ListMarkerColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(textObjectEClass, TextObject.class, "TextObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTextObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextObject_Text(), ecorePackage.getEBoolean(), "text", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1610,6 +2025,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getTextObject_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextObject_Width(), ecorePackage.getEBoolean(), "width", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextObject_Margin(), ecorePackage.getEBoolean(), "margin", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTextObject_ListCounter(), ecorePackage.getEBoolean(), "listCounter", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(columnTextObjectEClass, ColumnTextObject.class, "ColumnTextObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getColumnTextObject_Value(), this.getColumnDefinition(), null, "value", null, 0, 1, ColumnTextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1647,6 +2063,18 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getImageObject_Opacity(), ecorePackage.getEBoolean(), "opacity", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageObject_Fit(), ecorePackage.getEBoolean(), "fit", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageObject_PageBreak(), ecorePackage.getEBoolean(), "pageBreak", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listObjectPropertiesWrapperEClass, ListObjectPropertiesWrapper.class, "ListObjectPropertiesWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getListObjectPropertiesWrapper_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, ListObjectPropertiesWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listElementsEClass, ListElements.class, "ListElements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListElements_ElValues(), ecorePackage.getEString(), "elValues", null, 0, 1, ListElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listObjectEClass, ListObject.class, "ListObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getListObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, ListObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getListObject_Properties(), this.getListObjectPropertiesWrapper(), null, "properties", null, 0, -1, ListObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getListObject_Elements(), this.getListElements(), null, "elements", null, 0, -1, ListObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getListObject_Elemtens(), this.getListElements(), null, "elemtens", null, 0, -1, ListObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contentObjectEClass, ContentObject.class, "ContentObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getContentObject_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, ContentObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

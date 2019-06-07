@@ -82,6 +82,12 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.IMAGE_PAGE_BREAK_DEFINITION: return createImagePageBreakDefinition();
       case PdfMkPackage.IMAGE_FIT_DEFINITION: return createImageFitDefinition();
       case PdfMkPackage.IMAGE_OPACITY_DEFINITION: return createImageOpacityDefinition();
+      case PdfMkPackage.LIST_REVERSED_DEFINITION: return createListReversedDefinition();
+      case PdfMkPackage.LIST_START_DEFINITION: return createListStartDefinition();
+      case PdfMkPackage.LIST_COUNTER_DEFINITION: return createListCounterDefinition();
+      case PdfMkPackage.LIST_TYPE_DEFINITION: return createListTypeDefinition();
+      case PdfMkPackage.LIST_COLOR_DEFINITION: return createListColorDefinition();
+      case PdfMkPackage.LIST_MARKER_COLOR_DEFINITION: return createListMarkerColorDefinition();
       case PdfMkPackage.TEXT_OBJECT: return createTextObject();
       case PdfMkPackage.COLUMN_TEXT_OBJECT: return createColumnTextObject();
       case PdfMkPackage.STYLE_OBJECT: return createStyleObject();
@@ -89,6 +95,9 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.INNER_COLUMN_OBJECT: return createInnerColumnObject();
       case PdfMkPackage.COLUMN_OBJECT: return createColumnObject();
       case PdfMkPackage.IMAGE_OBJECT: return createImageObject();
+      case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER: return createListObjectPropertiesWrapper();
+      case PdfMkPackage.LIST_ELEMENTS: return createListElements();
+      case PdfMkPackage.LIST_OBJECT: return createListObject();
       case PdfMkPackage.CONTENT_OBJECT: return createContentObject();
       case PdfMkPackage.CONTENT_OBJECTS: return createContentObjects();
       case PdfMkPackage.STYLES: return createStyles();
@@ -290,6 +299,72 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ListReversedDefinition createListReversedDefinition()
+  {
+    ListReversedDefinitionImpl listReversedDefinition = new ListReversedDefinitionImpl();
+    return listReversedDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListStartDefinition createListStartDefinition()
+  {
+    ListStartDefinitionImpl listStartDefinition = new ListStartDefinitionImpl();
+    return listStartDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListCounterDefinition createListCounterDefinition()
+  {
+    ListCounterDefinitionImpl listCounterDefinition = new ListCounterDefinitionImpl();
+    return listCounterDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListTypeDefinition createListTypeDefinition()
+  {
+    ListTypeDefinitionImpl listTypeDefinition = new ListTypeDefinitionImpl();
+    return listTypeDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListColorDefinition createListColorDefinition()
+  {
+    ListColorDefinitionImpl listColorDefinition = new ListColorDefinitionImpl();
+    return listColorDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListMarkerColorDefinition createListMarkerColorDefinition()
+  {
+    ListMarkerColorDefinitionImpl listMarkerColorDefinition = new ListMarkerColorDefinitionImpl();
+    return listMarkerColorDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TextObject createTextObject()
   {
     TextObjectImpl textObject = new TextObjectImpl();
@@ -360,6 +435,39 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
   {
     ImageObjectImpl imageObject = new ImageObjectImpl();
     return imageObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListObjectPropertiesWrapper createListObjectPropertiesWrapper()
+  {
+    ListObjectPropertiesWrapperImpl listObjectPropertiesWrapper = new ListObjectPropertiesWrapperImpl();
+    return listObjectPropertiesWrapper;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListElements createListElements()
+  {
+    ListElementsImpl listElements = new ListElementsImpl();
+    return listElements;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListObject createListObject()
+  {
+    ListObjectImpl listObject = new ListObjectImpl();
+    return listObject;
   }
 
   /**

@@ -89,6 +89,24 @@ ImageFitDefinition:
 	
 ImageOpacityDefinition:
 	key="opacity" ":" value=INT;
+
+ListReversedDefinition:
+	key="reversed" ":"  value=BooleanType;
+	
+ListStartDefinition:
+	key="start" ":" value=INT;
+	
+ListCounterDefinition:
+	key="counter" ":" value=INT;
+	
+ListTypeDefinition:
+	key="type" ":" value=STRING;
+	
+ListColorDefinition:
+	key="color" ":" value=STRING;
+	
+ListMarkerColorDefinition:
+	key="markerColor" ":" value=STRING;
 		
 
 /******************** Objects definition ********************/
@@ -102,6 +120,7 @@ TextObject:
 			  ("," italics?=ItalicsDefinition)?
 			  ("," width?=WidthDefinition)?
 			  ("," margin?=MarginDefinition)?
+			  ("," listCounter?=ListCounterDefinition)?
 		   "}";
 		   
 ColumnTextObject: 
@@ -147,9 +166,23 @@ ImageObject:
 				("," fit?=ImageFitDefinition)?
 				("," pageBreak?=ImagePageBreakDefinition)?
 			"}";
+
+ListObjectPropertiesWrapper:
+	value=(ListReversedDefinition|ListCounterDefinition|ListTypeDefinition|ListColorDefinition|ListMarkerColorDefinition);
+
+ListElements:
+	elValues=STRING|TextObject|ColumnDefinition;
+		
+ListObject:
+	value="{"	// TODO [?] single property not working
+				(properties+=ListObjectPropertiesWrapper ("," properties+=ListObjectPropertiesWrapper ",")?)*
+				("ul"|"ol") ":" "["
+					(elements+=ListElements? ("," elemtens+=ListElements)*)
+				"]"
+		  "}";
 		
 ContentObject: 
-	value=(StringObject|TextObject|ColumnTextObject|ImageObject);
+	value=(StringObject|TextObject|ColumnTextObject|ImageObject|ListObject);
 	
 ContentObjects:
 	"[" 

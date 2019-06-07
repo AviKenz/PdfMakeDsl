@@ -161,6 +161,36 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createImageOpacityDefinitionAdapter();
       }
       @Override
+      public Adapter caseListReversedDefinition(ListReversedDefinition object)
+      {
+        return createListReversedDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseListStartDefinition(ListStartDefinition object)
+      {
+        return createListStartDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseListCounterDefinition(ListCounterDefinition object)
+      {
+        return createListCounterDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseListTypeDefinition(ListTypeDefinition object)
+      {
+        return createListTypeDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseListColorDefinition(ListColorDefinition object)
+      {
+        return createListColorDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseListMarkerColorDefinition(ListMarkerColorDefinition object)
+      {
+        return createListMarkerColorDefinitionAdapter();
+      }
+      @Override
       public Adapter caseTextObject(TextObject object)
       {
         return createTextObjectAdapter();
@@ -194,6 +224,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
       public Adapter caseImageObject(ImageObject object)
       {
         return createImageObjectAdapter();
+      }
+      @Override
+      public Adapter caseListObjectPropertiesWrapper(ListObjectPropertiesWrapper object)
+      {
+        return createListObjectPropertiesWrapperAdapter();
+      }
+      @Override
+      public Adapter caseListElements(ListElements object)
+      {
+        return createListElementsAdapter();
+      }
+      @Override
+      public Adapter caseListObject(ListObject object)
+      {
+        return createListObjectAdapter();
       }
       @Override
       public Adapter caseContentObject(ContentObject object)
@@ -493,6 +538,96 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListReversedDefinition <em>List Reversed Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListReversedDefinition
+   * @generated
+   */
+  public Adapter createListReversedDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListStartDefinition <em>List Start Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListStartDefinition
+   * @generated
+   */
+  public Adapter createListStartDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListCounterDefinition <em>List Counter Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListCounterDefinition
+   * @generated
+   */
+  public Adapter createListCounterDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListTypeDefinition <em>List Type Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListTypeDefinition
+   * @generated
+   */
+  public Adapter createListTypeDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListColorDefinition <em>List Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListColorDefinition
+   * @generated
+   */
+  public Adapter createListColorDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListMarkerColorDefinition <em>List Marker Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListMarkerColorDefinition
+   * @generated
+   */
+  public Adapter createListMarkerColorDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -593,6 +728,51 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createImageObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListObjectPropertiesWrapper <em>List Object Properties Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListObjectPropertiesWrapper
+   * @generated
+   */
+  public Adapter createListObjectPropertiesWrapperAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListElements <em>List Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListElements
+   * @generated
+   */
+  public Adapter createListElementsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListObject <em>List Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListObject
+   * @generated
+   */
+  public Adapter createListObjectAdapter()
   {
     return null;
   }

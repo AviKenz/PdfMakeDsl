@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -38,7 +37,7 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
  *
  * @generated
  */
-public class ColumnDefinitionImpl extends MinimalEObjectImpl.Container implements ColumnDefinition
+public class ColumnDefinitionImpl extends ListElementsImpl implements ColumnDefinition
 {
   /**
    * The default value of the '{@link #isGlobalStyle() <em>Global Style</em>}' attribute.

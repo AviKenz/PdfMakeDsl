@@ -779,6 +779,192 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getValueINTTerminalRuleCall_2_0() { return cValueINTTerminalRuleCall_2_0; }
 	}
+	public class ListReversedDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListReversedDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyReversedKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueBooleanTypeParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//ListReversedDefinition:
+		//	key="reversed" ":" value=BooleanType;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="reversed" ":" value=BooleanType
+		public Group getGroup() { return cGroup; }
+		
+		//key="reversed"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"reversed"
+		public Keyword getKeyReversedKeyword_0_0() { return cKeyReversedKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value=BooleanType
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//BooleanType
+		public RuleCall getValueBooleanTypeParserRuleCall_2_0() { return cValueBooleanTypeParserRuleCall_2_0; }
+	}
+	public class ListStartDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListStartDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyStartKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueINTTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//ListStartDefinition:
+		//	key="start" ":" value=INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="start" ":" value=INT
+		public Group getGroup() { return cGroup; }
+		
+		//key="start"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"start"
+		public Keyword getKeyStartKeyword_0_0() { return cKeyStartKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value=INT
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_2_0() { return cValueINTTerminalRuleCall_2_0; }
+	}
+	public class ListCounterDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListCounterDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyCounterKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueINTTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//ListCounterDefinition:
+		//	key="counter" ":" value=INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="counter" ":" value=INT
+		public Group getGroup() { return cGroup; }
+		
+		//key="counter"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"counter"
+		public Keyword getKeyCounterKeyword_0_0() { return cKeyCounterKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value=INT
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_2_0() { return cValueINTTerminalRuleCall_2_0; }
+	}
+	public class ListTypeDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListTypeDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyTypeKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//ListTypeDefinition:
+		//	key="type" ":" value=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="type" ":" value=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//key="type"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"type"
+		public Keyword getKeyTypeKeyword_0_0() { return cKeyTypeKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value=STRING
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
+	}
+	public class ListColorDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListColorDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyColorKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//ListColorDefinition:
+		//	key="color" ":" value=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="color" ":" value=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//key="color"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"color"
+		public Keyword getKeyColorKeyword_0_0() { return cKeyColorKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value=STRING
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
+	}
+	public class ListMarkerColorDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListMarkerColorDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cKeyMarkerColorKeyword_0_0 = (Keyword)cKeyAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//ListMarkerColorDefinition:
+		//	key="markerColor" ":" value=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//key="markerColor" ":" value=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//key="markerColor"
+		public Assignment getKeyAssignment_0() { return cKeyAssignment_0; }
+		
+		//"markerColor"
+		public Keyword getKeyMarkerColorKeyword_0_0() { return cKeyMarkerColorKeyword_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//value=STRING
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
+	}
 	public class TextObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextObject");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -814,19 +1000,23 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cMarginAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
 		private final RuleCall cMarginMarginDefinitionParserRuleCall_8_1_0 = (RuleCall)cMarginAssignment_8_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cCommaKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cListCounterAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cListCounterListCounterDefinitionParserRuleCall_9_1_0 = (RuleCall)cListCounterAssignment_9_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		///******************** Objects definition ********************/ // TODO [M] write grammar to support text in []. see playground-style3
 		//TextObject:
 		//	value="{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
 		//	alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)? (","
-		//	width?=WidthDefinition)? ("," margin?=MarginDefinition)?
+		//	width?=WidthDefinition)? ("," margin?=MarginDefinition)? ("," listCounter?=ListCounterDefinition)?
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
 		//value="{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
 		//alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)? (","
-		//width?=WidthDefinition)? ("," margin?=MarginDefinition)? "}"
+		//width?=WidthDefinition)? ("," margin?=MarginDefinition)? ("," listCounter?=ListCounterDefinition)? "}"
 		public Group getGroup() { return cGroup; }
 		
 		//value="{"
@@ -925,8 +1115,20 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		//MarginDefinition
 		public RuleCall getMarginMarginDefinitionParserRuleCall_8_1_0() { return cMarginMarginDefinitionParserRuleCall_8_1_0; }
 		
+		//("," listCounter?=ListCounterDefinition)?
+		public Group getGroup_9() { return cGroup_9; }
+		
+		//","
+		public Keyword getCommaKeyword_9_0() { return cCommaKeyword_9_0; }
+		
+		//listCounter?=ListCounterDefinition
+		public Assignment getListCounterAssignment_9_1() { return cListCounterAssignment_9_1; }
+		
+		//ListCounterDefinition
+		public RuleCall getListCounterListCounterDefinitionParserRuleCall_9_1_0() { return cListCounterListCounterDefinitionParserRuleCall_9_1_0; }
+		
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 	public class ColumnTextObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ColumnTextObject");
@@ -1468,6 +1670,181 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
+	public class ListObjectPropertiesWrapperElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListObjectPropertiesWrapper");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cValueAlternatives_0 = (Alternatives)cValueAssignment.eContents().get(0);
+		private final RuleCall cValueListReversedDefinitionParserRuleCall_0_0 = (RuleCall)cValueAlternatives_0.eContents().get(0);
+		private final RuleCall cValueListCounterDefinitionParserRuleCall_0_1 = (RuleCall)cValueAlternatives_0.eContents().get(1);
+		private final RuleCall cValueListTypeDefinitionParserRuleCall_0_2 = (RuleCall)cValueAlternatives_0.eContents().get(2);
+		private final RuleCall cValueListColorDefinitionParserRuleCall_0_3 = (RuleCall)cValueAlternatives_0.eContents().get(3);
+		private final RuleCall cValueListMarkerColorDefinitionParserRuleCall_0_4 = (RuleCall)cValueAlternatives_0.eContents().get(4);
+		
+		//ListObjectPropertiesWrapper:
+		//	value=(ListReversedDefinition | ListCounterDefinition | ListTypeDefinition | ListColorDefinition |
+		//	ListMarkerColorDefinition);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value=(ListReversedDefinition | ListCounterDefinition | ListTypeDefinition | ListColorDefinition |
+		//ListMarkerColorDefinition)
+		public Assignment getValueAssignment() { return cValueAssignment; }
+		
+		//(ListReversedDefinition | ListCounterDefinition | ListTypeDefinition | ListColorDefinition | ListMarkerColorDefinition)
+		public Alternatives getValueAlternatives_0() { return cValueAlternatives_0; }
+		
+		//ListReversedDefinition
+		public RuleCall getValueListReversedDefinitionParserRuleCall_0_0() { return cValueListReversedDefinitionParserRuleCall_0_0; }
+		
+		//ListCounterDefinition
+		public RuleCall getValueListCounterDefinitionParserRuleCall_0_1() { return cValueListCounterDefinitionParserRuleCall_0_1; }
+		
+		//ListTypeDefinition
+		public RuleCall getValueListTypeDefinitionParserRuleCall_0_2() { return cValueListTypeDefinitionParserRuleCall_0_2; }
+		
+		//ListColorDefinition
+		public RuleCall getValueListColorDefinitionParserRuleCall_0_3() { return cValueListColorDefinitionParserRuleCall_0_3; }
+		
+		//ListMarkerColorDefinition
+		public RuleCall getValueListMarkerColorDefinitionParserRuleCall_0_4() { return cValueListMarkerColorDefinitionParserRuleCall_0_4; }
+	}
+	public class ListElementsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListElements");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cElValuesAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cElValuesSTRINGTerminalRuleCall_0_0 = (RuleCall)cElValuesAssignment_0.eContents().get(0);
+		private final RuleCall cTextObjectParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cColumnDefinitionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//ListElements:
+		//	elValues=STRING | TextObject | ColumnDefinition;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//elValues=STRING | TextObject | ColumnDefinition
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//elValues=STRING
+		public Assignment getElValuesAssignment_0() { return cElValuesAssignment_0; }
+		
+		//STRING
+		public RuleCall getElValuesSTRINGTerminalRuleCall_0_0() { return cElValuesSTRINGTerminalRuleCall_0_0; }
+		
+		//TextObject
+		public RuleCall getTextObjectParserRuleCall_1() { return cTextObjectParserRuleCall_1; }
+		
+		//ColumnDefinition
+		public RuleCall getColumnDefinitionParserRuleCall_2() { return cColumnDefinitionParserRuleCall_2; }
+	}
+	public class ListObjectElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ListObject");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cValueLeftCurlyBracketKeyword_0_0 = (Keyword)cValueAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cPropertiesAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cPropertiesListObjectPropertiesWrapperParserRuleCall_1_0_0 = (RuleCall)cPropertiesAssignment_1_0.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
+		private final Keyword cCommaKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cPropertiesAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cPropertiesListObjectPropertiesWrapperParserRuleCall_1_1_1_0 = (RuleCall)cPropertiesAssignment_1_1_1.eContents().get(0);
+		private final Keyword cCommaKeyword_1_1_2 = (Keyword)cGroup_1_1.eContents().get(2);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Keyword cUlKeyword_2_0 = (Keyword)cAlternatives_2.eContents().get(0);
+		private final Keyword cOlKeyword_2_1 = (Keyword)cAlternatives_2.eContents().get(1);
+		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftSquareBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cElementsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cElementsListElementsParserRuleCall_5_0_0 = (RuleCall)cElementsAssignment_5_0.eContents().get(0);
+		private final Group cGroup_5_1 = (Group)cGroup_5.eContents().get(1);
+		private final Keyword cCommaKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
+		private final Assignment cElemtensAssignment_5_1_1 = (Assignment)cGroup_5_1.eContents().get(1);
+		private final RuleCall cElemtensListElementsParserRuleCall_5_1_1_0 = (RuleCall)cElemtensAssignment_5_1_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//ListObject:
+		//	value="{" (properties+=ListObjectPropertiesWrapper ("," properties+=ListObjectPropertiesWrapper ",")?)* ("ul" | "ol")
+		//	":" "[" (elements+=ListElements? ("," elemtens+=ListElements)*)
+		//	"]"
+		//	"}";
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value="{" (properties+=ListObjectPropertiesWrapper ("," properties+=ListObjectPropertiesWrapper ",")?)* ("ul" | "ol")
+		//":" "[" (elements+=ListElements? ("," elemtens+=ListElements)*) "]" "}"
+		public Group getGroup() { return cGroup; }
+		
+		//value="{"
+		public Assignment getValueAssignment_0() { return cValueAssignment_0; }
+		
+		//"{"
+		public Keyword getValueLeftCurlyBracketKeyword_0_0() { return cValueLeftCurlyBracketKeyword_0_0; }
+		
+		//(properties+=ListObjectPropertiesWrapper ("," properties+=ListObjectPropertiesWrapper ",")?)*
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//properties+=ListObjectPropertiesWrapper
+		public Assignment getPropertiesAssignment_1_0() { return cPropertiesAssignment_1_0; }
+		
+		//ListObjectPropertiesWrapper
+		public RuleCall getPropertiesListObjectPropertiesWrapperParserRuleCall_1_0_0() { return cPropertiesListObjectPropertiesWrapperParserRuleCall_1_0_0; }
+		
+		//("," properties+=ListObjectPropertiesWrapper ",")?
+		public Group getGroup_1_1() { return cGroup_1_1; }
+		
+		//","
+		public Keyword getCommaKeyword_1_1_0() { return cCommaKeyword_1_1_0; }
+		
+		//properties+=ListObjectPropertiesWrapper
+		public Assignment getPropertiesAssignment_1_1_1() { return cPropertiesAssignment_1_1_1; }
+		
+		//ListObjectPropertiesWrapper
+		public RuleCall getPropertiesListObjectPropertiesWrapperParserRuleCall_1_1_1_0() { return cPropertiesListObjectPropertiesWrapperParserRuleCall_1_1_1_0; }
+		
+		//","
+		public Keyword getCommaKeyword_1_1_2() { return cCommaKeyword_1_1_2; }
+		
+		//"ul" | "ol"
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		
+		//"ul"
+		public Keyword getUlKeyword_2_0() { return cUlKeyword_2_0; }
+		
+		//"ol"
+		public Keyword getOlKeyword_2_1() { return cOlKeyword_2_1; }
+		
+		//":"
+		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
+		
+		//"["
+		public Keyword getLeftSquareBracketKeyword_4() { return cLeftSquareBracketKeyword_4; }
+		
+		//elements+=ListElements? ("," elemtens+=ListElements)*
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//elements+=ListElements?
+		public Assignment getElementsAssignment_5_0() { return cElementsAssignment_5_0; }
+		
+		//ListElements
+		public RuleCall getElementsListElementsParserRuleCall_5_0_0() { return cElementsListElementsParserRuleCall_5_0_0; }
+		
+		//("," elemtens+=ListElements)*
+		public Group getGroup_5_1() { return cGroup_5_1; }
+		
+		//","
+		public Keyword getCommaKeyword_5_1_0() { return cCommaKeyword_5_1_0; }
+		
+		//elemtens+=ListElements
+		public Assignment getElemtensAssignment_5_1_1() { return cElemtensAssignment_5_1_1; }
+		
+		//ListElements
+		public RuleCall getElemtensListElementsParserRuleCall_5_1_1_0() { return cElemtensListElementsParserRuleCall_5_1_1_0; }
+		
+		//"]"
+		public Keyword getRightSquareBracketKeyword_6() { return cRightSquareBracketKeyword_6; }
+		
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
 	public class ContentObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ContentObject");
 		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
@@ -1476,15 +1853,16 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueTextObjectParserRuleCall_0_1 = (RuleCall)cValueAlternatives_0.eContents().get(1);
 		private final RuleCall cValueColumnTextObjectParserRuleCall_0_2 = (RuleCall)cValueAlternatives_0.eContents().get(2);
 		private final RuleCall cValueImageObjectParserRuleCall_0_3 = (RuleCall)cValueAlternatives_0.eContents().get(3);
+		private final RuleCall cValueListObjectParserRuleCall_0_4 = (RuleCall)cValueAlternatives_0.eContents().get(4);
 		
 		//ContentObject:
-		//	value=(StringObject | TextObject | ColumnTextObject | ImageObject);
+		//	value=(StringObject | TextObject | ColumnTextObject | ImageObject | ListObject);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//value=(StringObject | TextObject | ColumnTextObject | ImageObject)
+		//value=(StringObject | TextObject | ColumnTextObject | ImageObject | ListObject)
 		public Assignment getValueAssignment() { return cValueAssignment; }
 		
-		//(StringObject | TextObject | ColumnTextObject | ImageObject)
+		//(StringObject | TextObject | ColumnTextObject | ImageObject | ListObject)
 		public Alternatives getValueAlternatives_0() { return cValueAlternatives_0; }
 		
 		//StringObject
@@ -1498,6 +1876,9 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ImageObject
 		public RuleCall getValueImageObjectParserRuleCall_0_3() { return cValueImageObjectParserRuleCall_0_3; }
+		
+		//ListObject
+		public RuleCall getValueListObjectParserRuleCall_0_4() { return cValueListObjectParserRuleCall_0_4; }
 	}
 	public class ContentObjectsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ContentObjects");
@@ -1633,6 +2014,12 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	private final ImagePageBreakDefinitionElements pImagePageBreakDefinition;
 	private final ImageFitDefinitionElements pImageFitDefinition;
 	private final ImageOpacityDefinitionElements pImageOpacityDefinition;
+	private final ListReversedDefinitionElements pListReversedDefinition;
+	private final ListStartDefinitionElements pListStartDefinition;
+	private final ListCounterDefinitionElements pListCounterDefinition;
+	private final ListTypeDefinitionElements pListTypeDefinition;
+	private final ListColorDefinitionElements pListColorDefinition;
+	private final ListMarkerColorDefinitionElements pListMarkerColorDefinition;
 	private final TextObjectElements pTextObject;
 	private final ColumnTextObjectElements pColumnTextObject;
 	private final StyleObjectElements pStyleObject;
@@ -1640,6 +2027,9 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	private final InnerColumnObjectElements pInnerColumnObject;
 	private final ColumnObjectElements pColumnObject;
 	private final ImageObjectElements pImageObject;
+	private final ListObjectPropertiesWrapperElements pListObjectPropertiesWrapper;
+	private final ListElementsElements pListElements;
+	private final ListObjectElements pListObject;
 	private final ContentObjectElements pContentObject;
 	private final ContentObjectsElements pContentObjects;
 	private final StylesElements pStyles;
@@ -1676,6 +2066,12 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		this.pImagePageBreakDefinition = new ImagePageBreakDefinitionElements();
 		this.pImageFitDefinition = new ImageFitDefinitionElements();
 		this.pImageOpacityDefinition = new ImageOpacityDefinitionElements();
+		this.pListReversedDefinition = new ListReversedDefinitionElements();
+		this.pListStartDefinition = new ListStartDefinitionElements();
+		this.pListCounterDefinition = new ListCounterDefinitionElements();
+		this.pListTypeDefinition = new ListTypeDefinitionElements();
+		this.pListColorDefinition = new ListColorDefinitionElements();
+		this.pListMarkerColorDefinition = new ListMarkerColorDefinitionElements();
 		this.pTextObject = new TextObjectElements();
 		this.pColumnTextObject = new ColumnTextObjectElements();
 		this.pStyleObject = new StyleObjectElements();
@@ -1683,6 +2079,9 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		this.pInnerColumnObject = new InnerColumnObjectElements();
 		this.pColumnObject = new ColumnObjectElements();
 		this.pImageObject = new ImageObjectElements();
+		this.pListObjectPropertiesWrapper = new ListObjectPropertiesWrapperElements();
+		this.pListElements = new ListElementsElements();
+		this.pListObject = new ListObjectElements();
 		this.pContentObject = new ContentObjectElements();
 		this.pContentObjects = new ContentObjectsElements();
 		this.pStyles = new StylesElements();
@@ -1947,11 +2346,71 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getImageOpacityDefinitionAccess().getRule();
 	}
 	
+	//ListReversedDefinition:
+	//	key="reversed" ":" value=BooleanType;
+	public ListReversedDefinitionElements getListReversedDefinitionAccess() {
+		return pListReversedDefinition;
+	}
+	
+	public ParserRule getListReversedDefinitionRule() {
+		return getListReversedDefinitionAccess().getRule();
+	}
+	
+	//ListStartDefinition:
+	//	key="start" ":" value=INT;
+	public ListStartDefinitionElements getListStartDefinitionAccess() {
+		return pListStartDefinition;
+	}
+	
+	public ParserRule getListStartDefinitionRule() {
+		return getListStartDefinitionAccess().getRule();
+	}
+	
+	//ListCounterDefinition:
+	//	key="counter" ":" value=INT;
+	public ListCounterDefinitionElements getListCounterDefinitionAccess() {
+		return pListCounterDefinition;
+	}
+	
+	public ParserRule getListCounterDefinitionRule() {
+		return getListCounterDefinitionAccess().getRule();
+	}
+	
+	//ListTypeDefinition:
+	//	key="type" ":" value=STRING;
+	public ListTypeDefinitionElements getListTypeDefinitionAccess() {
+		return pListTypeDefinition;
+	}
+	
+	public ParserRule getListTypeDefinitionRule() {
+		return getListTypeDefinitionAccess().getRule();
+	}
+	
+	//ListColorDefinition:
+	//	key="color" ":" value=STRING;
+	public ListColorDefinitionElements getListColorDefinitionAccess() {
+		return pListColorDefinition;
+	}
+	
+	public ParserRule getListColorDefinitionRule() {
+		return getListColorDefinitionAccess().getRule();
+	}
+	
+	//ListMarkerColorDefinition:
+	//	key="markerColor" ":" value=STRING;
+	public ListMarkerColorDefinitionElements getListMarkerColorDefinitionAccess() {
+		return pListMarkerColorDefinition;
+	}
+	
+	public ParserRule getListMarkerColorDefinitionRule() {
+		return getListMarkerColorDefinitionAccess().getRule();
+	}
+	
 	///******************** Objects definition ********************/ // TODO [M] write grammar to support text in []. see playground-style3
 	//TextObject:
 	//	value="{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
 	//	alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)? (","
-	//	width?=WidthDefinition)? ("," margin?=MarginDefinition)?
+	//	width?=WidthDefinition)? ("," margin?=MarginDefinition)? ("," listCounter?=ListCounterDefinition)?
 	//	"}";
 	public TextObjectElements getTextObjectAccess() {
 		return pTextObject;
@@ -2034,8 +2493,42 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getImageObjectAccess().getRule();
 	}
 	
+	//ListObjectPropertiesWrapper:
+	//	value=(ListReversedDefinition | ListCounterDefinition | ListTypeDefinition | ListColorDefinition |
+	//	ListMarkerColorDefinition);
+	public ListObjectPropertiesWrapperElements getListObjectPropertiesWrapperAccess() {
+		return pListObjectPropertiesWrapper;
+	}
+	
+	public ParserRule getListObjectPropertiesWrapperRule() {
+		return getListObjectPropertiesWrapperAccess().getRule();
+	}
+	
+	//ListElements:
+	//	elValues=STRING | TextObject | ColumnDefinition;
+	public ListElementsElements getListElementsAccess() {
+		return pListElements;
+	}
+	
+	public ParserRule getListElementsRule() {
+		return getListElementsAccess().getRule();
+	}
+	
+	//ListObject:
+	//	value="{" (properties+=ListObjectPropertiesWrapper ("," properties+=ListObjectPropertiesWrapper ",")?)* ("ul" | "ol")
+	//	":" "[" (elements+=ListElements? ("," elemtens+=ListElements)*)
+	//	"]"
+	//	"}";
+	public ListObjectElements getListObjectAccess() {
+		return pListObject;
+	}
+	
+	public ParserRule getListObjectRule() {
+		return getListObjectAccess().getRule();
+	}
+	
 	//ContentObject:
-	//	value=(StringObject | TextObject | ColumnTextObject | ImageObject);
+	//	value=(StringObject | TextObject | ColumnTextObject | ImageObject | ListObject);
 	public ContentObjectElements getContentObjectAccess() {
 		return pContentObject;
 	}

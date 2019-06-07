@@ -1174,6 +1174,282 @@ ruleImageOpacityDefinition returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleListReversedDefinition
+entryRuleListReversedDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListReversedDefinitionRule()); }
+	iv_ruleListReversedDefinition=ruleListReversedDefinition
+	{ $current=$iv_ruleListReversedDefinition.current; }
+	EOF;
+
+// Rule ListReversedDefinition
+ruleListReversedDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_key_0_0='reversed'
+				{
+					newLeafNode(lv_key_0_0, grammarAccess.getListReversedDefinitionAccess().getKeyReversedKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListReversedDefinitionRule());
+					}
+					setWithLastConsumed($current, "key", lv_key_0_0, "reversed");
+				}
+			)
+		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getListReversedDefinitionAccess().getColonKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getListReversedDefinitionAccess().getValueBooleanTypeParserRuleCall_2_0());
+				}
+				lv_value_2_0=ruleBooleanType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getListReversedDefinitionRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_2_0,
+						"org.xtext.avi.PdfMk.BooleanType");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleListCounterDefinition
+entryRuleListCounterDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListCounterDefinitionRule()); }
+	iv_ruleListCounterDefinition=ruleListCounterDefinition
+	{ $current=$iv_ruleListCounterDefinition.current; }
+	EOF;
+
+// Rule ListCounterDefinition
+ruleListCounterDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_key_0_0='counter'
+				{
+					newLeafNode(lv_key_0_0, grammarAccess.getListCounterDefinitionAccess().getKeyCounterKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListCounterDefinitionRule());
+					}
+					setWithLastConsumed($current, "key", lv_key_0_0, "counter");
+				}
+			)
+		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getListCounterDefinitionAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_value_2_0=RULE_INT
+				{
+					newLeafNode(lv_value_2_0, grammarAccess.getListCounterDefinitionAccess().getValueINTTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListCounterDefinitionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_2_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleListTypeDefinition
+entryRuleListTypeDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListTypeDefinitionRule()); }
+	iv_ruleListTypeDefinition=ruleListTypeDefinition
+	{ $current=$iv_ruleListTypeDefinition.current; }
+	EOF;
+
+// Rule ListTypeDefinition
+ruleListTypeDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_key_0_0='type'
+				{
+					newLeafNode(lv_key_0_0, grammarAccess.getListTypeDefinitionAccess().getKeyTypeKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListTypeDefinitionRule());
+					}
+					setWithLastConsumed($current, "key", lv_key_0_0, "type");
+				}
+			)
+		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getListTypeDefinitionAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_value_2_0=RULE_STRING
+				{
+					newLeafNode(lv_value_2_0, grammarAccess.getListTypeDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListTypeDefinitionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleListColorDefinition
+entryRuleListColorDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListColorDefinitionRule()); }
+	iv_ruleListColorDefinition=ruleListColorDefinition
+	{ $current=$iv_ruleListColorDefinition.current; }
+	EOF;
+
+// Rule ListColorDefinition
+ruleListColorDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_key_0_0='color'
+				{
+					newLeafNode(lv_key_0_0, grammarAccess.getListColorDefinitionAccess().getKeyColorKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListColorDefinitionRule());
+					}
+					setWithLastConsumed($current, "key", lv_key_0_0, "color");
+				}
+			)
+		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getListColorDefinitionAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_value_2_0=RULE_STRING
+				{
+					newLeafNode(lv_value_2_0, grammarAccess.getListColorDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListColorDefinitionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleListMarkerColorDefinition
+entryRuleListMarkerColorDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListMarkerColorDefinitionRule()); }
+	iv_ruleListMarkerColorDefinition=ruleListMarkerColorDefinition
+	{ $current=$iv_ruleListMarkerColorDefinition.current; }
+	EOF;
+
+// Rule ListMarkerColorDefinition
+ruleListMarkerColorDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_key_0_0='markerColor'
+				{
+					newLeafNode(lv_key_0_0, grammarAccess.getListMarkerColorDefinitionAccess().getKeyMarkerColorKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListMarkerColorDefinitionRule());
+					}
+					setWithLastConsumed($current, "key", lv_key_0_0, "markerColor");
+				}
+			)
+		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getListMarkerColorDefinitionAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_value_2_0=RULE_STRING
+				{
+					newLeafNode(lv_value_2_0, grammarAccess.getListMarkerColorDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListMarkerColorDefinitionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+	)
+;
+
 // Entry rule entryRuleTextObject
 entryRuleTextObject returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTextObjectRule()); }
@@ -1398,9 +1674,34 @@ ruleTextObject returns [EObject current=null]
 				)
 			)
 		)?
-		otherlv_16='}'
+		(
+			otherlv_16=','
+			{
+				newLeafNode(otherlv_16, grammarAccess.getTextObjectAccess().getCommaKeyword_9_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getTextObjectAccess().getListCounterListCounterDefinitionParserRuleCall_9_1_0());
+					}
+					lv_listCounter_17_0=ruleListCounterDefinition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
+						}
+						set(
+							$current,
+							"listCounter",
+							true,
+							"org.xtext.avi.PdfMk.ListCounterDefinition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_18='}'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getTextObjectAccess().getRightCurlyBracketKeyword_9());
+			newLeafNode(otherlv_18, grammarAccess.getTextObjectAccess().getRightCurlyBracketKeyword_10());
 		}
 	)
 ;
@@ -2269,6 +2570,319 @@ ruleImageObject returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleListObjectPropertiesWrapper
+entryRuleListObjectPropertiesWrapper returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListObjectPropertiesWrapperRule()); }
+	iv_ruleListObjectPropertiesWrapper=ruleListObjectPropertiesWrapper
+	{ $current=$iv_ruleListObjectPropertiesWrapper.current; }
+	EOF;
+
+// Rule ListObjectPropertiesWrapper
+ruleListObjectPropertiesWrapper returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getListObjectPropertiesWrapperAccess().getValueListReversedDefinitionParserRuleCall_0_0());
+				}
+				lv_value_0_1=ruleListReversedDefinition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getListObjectPropertiesWrapperRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_0_1,
+						"org.xtext.avi.PdfMk.ListReversedDefinition");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getListObjectPropertiesWrapperAccess().getValueListCounterDefinitionParserRuleCall_0_1());
+				}
+				lv_value_0_2=ruleListCounterDefinition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getListObjectPropertiesWrapperRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_0_2,
+						"org.xtext.avi.PdfMk.ListCounterDefinition");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getListObjectPropertiesWrapperAccess().getValueListTypeDefinitionParserRuleCall_0_2());
+				}
+				lv_value_0_3=ruleListTypeDefinition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getListObjectPropertiesWrapperRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_0_3,
+						"org.xtext.avi.PdfMk.ListTypeDefinition");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getListObjectPropertiesWrapperAccess().getValueListColorDefinitionParserRuleCall_0_3());
+				}
+				lv_value_0_4=ruleListColorDefinition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getListObjectPropertiesWrapperRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_0_4,
+						"org.xtext.avi.PdfMk.ListColorDefinition");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getListObjectPropertiesWrapperAccess().getValueListMarkerColorDefinitionParserRuleCall_0_4());
+				}
+				lv_value_0_5=ruleListMarkerColorDefinition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getListObjectPropertiesWrapperRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_0_5,
+						"org.xtext.avi.PdfMk.ListMarkerColorDefinition");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleListElements
+entryRuleListElements returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListElementsRule()); }
+	iv_ruleListElements=ruleListElements
+	{ $current=$iv_ruleListElements.current; }
+	EOF;
+
+// Rule ListElements
+ruleListElements returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_elValues_0_0=RULE_STRING
+				{
+					newLeafNode(lv_elValues_0_0, grammarAccess.getListElementsAccess().getElValuesSTRINGTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListElementsRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"elValues",
+						lv_elValues_0_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		    |
+		{
+			newCompositeNode(grammarAccess.getListElementsAccess().getTextObjectParserRuleCall_1());
+		}
+		this_TextObject_1=ruleTextObject
+		{
+			$current = $this_TextObject_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getListElementsAccess().getColumnDefinitionParserRuleCall_2());
+		}
+		this_ColumnDefinition_2=ruleColumnDefinition
+		{
+			$current = $this_ColumnDefinition_2.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleListObject
+entryRuleListObject returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getListObjectRule()); }
+	iv_ruleListObject=ruleListObject
+	{ $current=$iv_ruleListObject.current; }
+	EOF;
+
+// Rule ListObject
+ruleListObject returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_value_0_0='{'
+				{
+					newLeafNode(lv_value_0_0, grammarAccess.getListObjectAccess().getValueLeftCurlyBracketKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getListObjectRule());
+					}
+					setWithLastConsumed($current, "value", lv_value_0_0, "{");
+				}
+			)
+		)
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getListObjectAccess().getPropertiesListObjectPropertiesWrapperParserRuleCall_1_0_0());
+					}
+					lv_properties_1_0=ruleListObjectPropertiesWrapper
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getListObjectRule());
+						}
+						add(
+							$current,
+							"properties",
+							lv_properties_1_0,
+							"org.xtext.avi.PdfMk.ListObjectPropertiesWrapper");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				otherlv_2=','
+				{
+					newLeafNode(otherlv_2, grammarAccess.getListObjectAccess().getCommaKeyword_1_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getListObjectAccess().getPropertiesListObjectPropertiesWrapperParserRuleCall_1_1_1_0());
+						}
+						lv_properties_3_0=ruleListObjectPropertiesWrapper
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getListObjectRule());
+							}
+							add(
+								$current,
+								"properties",
+								lv_properties_3_0,
+								"org.xtext.avi.PdfMk.ListObjectPropertiesWrapper");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				otherlv_4=','
+				{
+					newLeafNode(otherlv_4, grammarAccess.getListObjectAccess().getCommaKeyword_1_1_2());
+				}
+			)?
+		)*
+		(
+			otherlv_5='ul'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getListObjectAccess().getUlKeyword_2_0());
+			}
+			    |
+			otherlv_6='ol'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getListObjectAccess().getOlKeyword_2_1());
+			}
+		)
+		otherlv_7=':'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getListObjectAccess().getColonKeyword_3());
+		}
+		otherlv_8='['
+		{
+			newLeafNode(otherlv_8, grammarAccess.getListObjectAccess().getLeftSquareBracketKeyword_4());
+		}
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getListObjectAccess().getElementsListElementsParserRuleCall_5_0_0());
+					}
+					lv_elements_9_0=ruleListElements
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getListObjectRule());
+						}
+						add(
+							$current,
+							"elements",
+							lv_elements_9_0,
+							"org.xtext.avi.PdfMk.ListElements");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)?
+			(
+				otherlv_10=','
+				{
+					newLeafNode(otherlv_10, grammarAccess.getListObjectAccess().getCommaKeyword_5_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getListObjectAccess().getElemtensListElementsParserRuleCall_5_1_1_0());
+						}
+						lv_elemtens_11_0=ruleListElements
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getListObjectRule());
+							}
+							add(
+								$current,
+								"elemtens",
+								lv_elemtens_11_0,
+								"org.xtext.avi.PdfMk.ListElements");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+		)
+		otherlv_12=']'
+		{
+			newLeafNode(otherlv_12, grammarAccess.getListObjectAccess().getRightSquareBracketKeyword_6());
+		}
+		otherlv_13='}'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getListObjectAccess().getRightCurlyBracketKeyword_7());
+		}
+	)
+;
+
 // Entry rule entryRuleContentObject
 entryRuleContentObject returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getContentObjectRule()); }
@@ -2348,6 +2962,22 @@ ruleContentObject returns [EObject current=null]
 						"value",
 						lv_value_0_4,
 						"org.xtext.avi.PdfMk.ImageObject");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getContentObjectAccess().getValueListObjectParserRuleCall_0_4());
+				}
+				lv_value_0_5=ruleListObject
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getContentObjectRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_0_5,
+						"org.xtext.avi.PdfMk.ListObject");
 					afterParserOrEnumRuleCall();
 				}
 			)

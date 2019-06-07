@@ -75,6 +75,30 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ImageOpacityDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ImageOpacityDefinition/value"/>
     </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListReversedDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListReversedDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListReversedDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListStartDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListStartDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListStartDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListCounterDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListCounterDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListCounterDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListTypeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListTypeDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListTypeDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListColorDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListColorDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListColorDefinition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListMarkerColorDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListMarkerColorDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListMarkerColorDefinition/value"/>
+    </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//TextObject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/text"/>
@@ -85,6 +109,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/italics"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/width"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/margin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/listCounter"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ColumnTextObject">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ColumnTextObject/value"/>
@@ -122,6 +147,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ImageObject/opacity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ImageObject/fit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ImageObject/pageBreak"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListObjectPropertiesWrapper">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ListObjectPropertiesWrapper/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListElements">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListElements/elValues"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//ListObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListObject/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ListObject/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ListObject/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ListObject/elemtens"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ContentObject">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ContentObject/value"/>

@@ -382,6 +382,34 @@ public interface PdfMkPackage extends EPackage
   int COLUMN_GAP_DEFINTION_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListElementsImpl <em>List Elements</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListElementsImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListElements()
+   * @generated
+   */
+  int LIST_ELEMENTS = 31;
+
+  /**
+   * The feature id for the '<em><b>El Values</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_ELEMENTS__EL_VALUES = 0;
+
+  /**
+   * The number of structural features of the '<em>List Elements</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_ELEMENTS_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnDefinitionImpl <em>Column Definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -392,13 +420,22 @@ public interface PdfMkPackage extends EPackage
   int COLUMN_DEFINITION = 9;
 
   /**
+   * The feature id for the '<em><b>El Values</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLUMN_DEFINITION__EL_VALUES = LIST_ELEMENTS__EL_VALUES;
+
+  /**
    * The feature id for the '<em><b>Global Style</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COLUMN_DEFINITION__GLOBAL_STYLE = 0;
+  int COLUMN_DEFINITION__GLOBAL_STYLE = LIST_ELEMENTS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -407,7 +444,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLUMN_DEFINITION__KEY = 1;
+  int COLUMN_DEFINITION__KEY = LIST_ELEMENTS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -416,7 +453,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLUMN_DEFINITION__VALUE = 2;
+  int COLUMN_DEFINITION__VALUE = LIST_ELEMENTS_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Column Definition</em>' class.
@@ -425,7 +462,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLUMN_DEFINITION_FEATURE_COUNT = 3;
+  int COLUMN_DEFINITION_FEATURE_COUNT = LIST_ELEMENTS_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.MarginDefinitionImpl <em>Margin Definition</em>}' class.
@@ -696,14 +733,23 @@ public interface PdfMkPackage extends EPackage
   int IMAGE_OPACITY_DEFINITION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListReversedDefinitionImpl <em>List Reversed Definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.avi.pdfMk.impl.TextObjectImpl
-   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
+   * @see org.xtext.avi.pdfMk.impl.ListReversedDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListReversedDefinition()
    * @generated
    */
-  int TEXT_OBJECT = 17;
+  int LIST_REVERSED_DEFINITION = 17;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_REVERSED_DEFINITION__KEY = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -712,7 +758,229 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__VALUE = 0;
+  int LIST_REVERSED_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>List Reversed Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_REVERSED_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListStartDefinitionImpl <em>List Start Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListStartDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListStartDefinition()
+   * @generated
+   */
+  int LIST_START_DEFINITION = 18;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_START_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_START_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>List Start Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_START_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListCounterDefinitionImpl <em>List Counter Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListCounterDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListCounterDefinition()
+   * @generated
+   */
+  int LIST_COUNTER_DEFINITION = 19;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_COUNTER_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_COUNTER_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>List Counter Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_COUNTER_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListTypeDefinitionImpl <em>List Type Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListTypeDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListTypeDefinition()
+   * @generated
+   */
+  int LIST_TYPE_DEFINITION = 20;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_TYPE_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_TYPE_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>List Type Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_TYPE_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListColorDefinitionImpl <em>List Color Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListColorDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListColorDefinition()
+   * @generated
+   */
+  int LIST_COLOR_DEFINITION = 21;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_COLOR_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_COLOR_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>List Color Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_COLOR_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListMarkerColorDefinitionImpl <em>List Marker Color Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListMarkerColorDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListMarkerColorDefinition()
+   * @generated
+   */
+  int LIST_MARKER_COLOR_DEFINITION = 22;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_MARKER_COLOR_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_MARKER_COLOR_DEFINITION__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>List Marker Color Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_MARKER_COLOR_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TextObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
+   * @generated
+   */
+  int TEXT_OBJECT = 23;
+
+  /**
+   * The feature id for the '<em><b>El Values</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_OBJECT__EL_VALUES = LIST_ELEMENTS__EL_VALUES;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_OBJECT__VALUE = LIST_ELEMENTS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -721,7 +989,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__TEXT = 1;
+  int TEXT_OBJECT__TEXT = LIST_ELEMENTS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -730,7 +998,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__STYLE = 2;
+  int TEXT_OBJECT__STYLE = LIST_ELEMENTS_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Font Size</b></em>' attribute.
@@ -739,7 +1007,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__FONT_SIZE = 3;
+  int TEXT_OBJECT__FONT_SIZE = LIST_ELEMENTS_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Alignment</b></em>' attribute.
@@ -748,7 +1016,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__ALIGNMENT = 4;
+  int TEXT_OBJECT__ALIGNMENT = LIST_ELEMENTS_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Type Face</b></em>' attribute.
@@ -757,7 +1025,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__TYPE_FACE = 5;
+  int TEXT_OBJECT__TYPE_FACE = LIST_ELEMENTS_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Italics</b></em>' attribute.
@@ -766,7 +1034,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__ITALICS = 6;
+  int TEXT_OBJECT__ITALICS = LIST_ELEMENTS_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -775,7 +1043,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__WIDTH = 7;
+  int TEXT_OBJECT__WIDTH = LIST_ELEMENTS_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Margin</b></em>' attribute.
@@ -784,7 +1052,16 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__MARGIN = 8;
+  int TEXT_OBJECT__MARGIN = LIST_ELEMENTS_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>List Counter</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_OBJECT__LIST_COUNTER = LIST_ELEMENTS_FEATURE_COUNT + 9;
 
   /**
    * The number of structural features of the '<em>Text Object</em>' class.
@@ -793,7 +1070,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT_FEATURE_COUNT = 9;
+  int TEXT_OBJECT_FEATURE_COUNT = LIST_ELEMENTS_FEATURE_COUNT + 10;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
@@ -803,7 +1080,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
    * @generated
    */
-  int COLUMN_TEXT_OBJECT = 18;
+  int COLUMN_TEXT_OBJECT = 24;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -831,7 +1108,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObject()
    * @generated
    */
-  int STYLE_OBJECT = 19;
+  int STYLE_OBJECT = 25;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -913,7 +1190,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObjects()
    * @generated
    */
-  int STYLE_OBJECTS = 20;
+  int STYLE_OBJECTS = 26;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -941,7 +1218,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getInnerColumnObject()
    * @generated
    */
-  int INNER_COLUMN_OBJECT = 21;
+  int INNER_COLUMN_OBJECT = 27;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -996,7 +1273,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnObject()
    * @generated
    */
-  int COLUMN_OBJECT = 22;
+  int COLUMN_OBJECT = 28;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1060,7 +1337,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageObject()
    * @generated
    */
-  int IMAGE_OBJECT = 23;
+  int IMAGE_OBJECT = 29;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1135,6 +1412,89 @@ public interface PdfMkPackage extends EPackage
   int IMAGE_OBJECT_FEATURE_COUNT = 7;
 
   /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListObjectPropertiesWrapperImpl <em>List Object Properties Wrapper</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListObjectPropertiesWrapperImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObjectPropertiesWrapper()
+   * @generated
+   */
+  int LIST_OBJECT_PROPERTIES_WRAPPER = 30;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_OBJECT_PROPERTIES_WRAPPER__VALUE = 0;
+
+  /**
+   * The number of structural features of the '<em>List Object Properties Wrapper</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_OBJECT_PROPERTIES_WRAPPER_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListObjectImpl <em>List Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.ListObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObject()
+   * @generated
+   */
+  int LIST_OBJECT = 32;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_OBJECT__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_OBJECT__PROPERTIES = 1;
+
+  /**
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_OBJECT__ELEMENTS = 2;
+
+  /**
+   * The feature id for the '<em><b>Elemtens</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_OBJECT__ELEMTENS = 3;
+
+  /**
+   * The number of structural features of the '<em>List Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_OBJECT_FEATURE_COUNT = 4;
+
+  /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ContentObjectImpl <em>Content Object</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1142,7 +1502,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObject()
    * @generated
    */
-  int CONTENT_OBJECT = 24;
+  int CONTENT_OBJECT = 33;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1170,7 +1530,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObjects()
    * @generated
    */
-  int CONTENT_OBJECTS = 25;
+  int CONTENT_OBJECTS = 34;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -1198,7 +1558,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyles()
    * @generated
    */
-  int STYLES = 26;
+  int STYLES = 35;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1235,7 +1595,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContent()
    * @generated
    */
-  int CONTENT = 27;
+  int CONTENT = 36;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1821,6 +2181,198 @@ public interface PdfMkPackage extends EPackage
   EAttribute getImageOpacityDefinition_Value();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListReversedDefinition <em>List Reversed Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Reversed Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ListReversedDefinition
+   * @generated
+   */
+  EClass getListReversedDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListReversedDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ListReversedDefinition#getKey()
+   * @see #getListReversedDefinition()
+   * @generated
+   */
+  EAttribute getListReversedDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListReversedDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListReversedDefinition#getValue()
+   * @see #getListReversedDefinition()
+   * @generated
+   */
+  EAttribute getListReversedDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListStartDefinition <em>List Start Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Start Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ListStartDefinition
+   * @generated
+   */
+  EClass getListStartDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListStartDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ListStartDefinition#getKey()
+   * @see #getListStartDefinition()
+   * @generated
+   */
+  EAttribute getListStartDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListStartDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListStartDefinition#getValue()
+   * @see #getListStartDefinition()
+   * @generated
+   */
+  EAttribute getListStartDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListCounterDefinition <em>List Counter Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Counter Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ListCounterDefinition
+   * @generated
+   */
+  EClass getListCounterDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListCounterDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ListCounterDefinition#getKey()
+   * @see #getListCounterDefinition()
+   * @generated
+   */
+  EAttribute getListCounterDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListCounterDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListCounterDefinition#getValue()
+   * @see #getListCounterDefinition()
+   * @generated
+   */
+  EAttribute getListCounterDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListTypeDefinition <em>List Type Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Type Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ListTypeDefinition
+   * @generated
+   */
+  EClass getListTypeDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListTypeDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ListTypeDefinition#getKey()
+   * @see #getListTypeDefinition()
+   * @generated
+   */
+  EAttribute getListTypeDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListTypeDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListTypeDefinition#getValue()
+   * @see #getListTypeDefinition()
+   * @generated
+   */
+  EAttribute getListTypeDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListColorDefinition <em>List Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Color Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ListColorDefinition
+   * @generated
+   */
+  EClass getListColorDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListColorDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ListColorDefinition#getKey()
+   * @see #getListColorDefinition()
+   * @generated
+   */
+  EAttribute getListColorDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListColorDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListColorDefinition#getValue()
+   * @see #getListColorDefinition()
+   * @generated
+   */
+  EAttribute getListColorDefinition_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListMarkerColorDefinition <em>List Marker Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Marker Color Definition</em>'.
+   * @see org.xtext.avi.pdfMk.ListMarkerColorDefinition
+   * @generated
+   */
+  EClass getListMarkerColorDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListMarkerColorDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.ListMarkerColorDefinition#getKey()
+   * @see #getListMarkerColorDefinition()
+   * @generated
+   */
+  EAttribute getListMarkerColorDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListMarkerColorDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListMarkerColorDefinition#getValue()
+   * @see #getListMarkerColorDefinition()
+   * @generated
+   */
+  EAttribute getListMarkerColorDefinition_Value();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1928,6 +2480,17 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EAttribute getTextObject_Margin();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isListCounter <em>List Counter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>List Counter</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#isListCounter()
+   * @see #getTextObject()
+   * @generated
+   */
+  EAttribute getTextObject_ListCounter();
 
   /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnTextObject <em>Column Text Object</em>}'.
@@ -2263,6 +2826,102 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EAttribute getImageObject_PageBreak();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListObjectPropertiesWrapper <em>List Object Properties Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Object Properties Wrapper</em>'.
+   * @see org.xtext.avi.pdfMk.ListObjectPropertiesWrapper
+   * @generated
+   */
+  EClass getListObjectPropertiesWrapper();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.ListObjectPropertiesWrapper#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListObjectPropertiesWrapper#getValue()
+   * @see #getListObjectPropertiesWrapper()
+   * @generated
+   */
+  EReference getListObjectPropertiesWrapper_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListElements <em>List Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Elements</em>'.
+   * @see org.xtext.avi.pdfMk.ListElements
+   * @generated
+   */
+  EClass getListElements();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListElements#getElValues <em>El Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>El Values</em>'.
+   * @see org.xtext.avi.pdfMk.ListElements#getElValues()
+   * @see #getListElements()
+   * @generated
+   */
+  EAttribute getListElements_ElValues();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ListObject <em>List Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>List Object</em>'.
+   * @see org.xtext.avi.pdfMk.ListObject
+   * @generated
+   */
+  EClass getListObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.ListObject#getValue()
+   * @see #getListObject()
+   * @generated
+   */
+  EAttribute getListObject_Value();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ListObject#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Properties</em>'.
+   * @see org.xtext.avi.pdfMk.ListObject#getProperties()
+   * @see #getListObject()
+   * @generated
+   */
+  EReference getListObject_Properties();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ListObject#getElements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see org.xtext.avi.pdfMk.ListObject#getElements()
+   * @see #getListObject()
+   * @generated
+   */
+  EReference getListObject_Elements();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.ListObject#getElemtens <em>Elemtens</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Elemtens</em>'.
+   * @see org.xtext.avi.pdfMk.ListObject#getElemtens()
+   * @see #getListObject()
+   * @generated
+   */
+  EReference getListObject_Elemtens();
 
   /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ContentObject <em>Content Object</em>}'.
@@ -2844,6 +3503,162 @@ public interface PdfMkPackage extends EPackage
     EAttribute IMAGE_OPACITY_DEFINITION__VALUE = eINSTANCE.getImageOpacityDefinition_Value();
 
     /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListReversedDefinitionImpl <em>List Reversed Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListReversedDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListReversedDefinition()
+     * @generated
+     */
+    EClass LIST_REVERSED_DEFINITION = eINSTANCE.getListReversedDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_REVERSED_DEFINITION__KEY = eINSTANCE.getListReversedDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_REVERSED_DEFINITION__VALUE = eINSTANCE.getListReversedDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListStartDefinitionImpl <em>List Start Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListStartDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListStartDefinition()
+     * @generated
+     */
+    EClass LIST_START_DEFINITION = eINSTANCE.getListStartDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_START_DEFINITION__KEY = eINSTANCE.getListStartDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_START_DEFINITION__VALUE = eINSTANCE.getListStartDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListCounterDefinitionImpl <em>List Counter Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListCounterDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListCounterDefinition()
+     * @generated
+     */
+    EClass LIST_COUNTER_DEFINITION = eINSTANCE.getListCounterDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_COUNTER_DEFINITION__KEY = eINSTANCE.getListCounterDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_COUNTER_DEFINITION__VALUE = eINSTANCE.getListCounterDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListTypeDefinitionImpl <em>List Type Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListTypeDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListTypeDefinition()
+     * @generated
+     */
+    EClass LIST_TYPE_DEFINITION = eINSTANCE.getListTypeDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_TYPE_DEFINITION__KEY = eINSTANCE.getListTypeDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_TYPE_DEFINITION__VALUE = eINSTANCE.getListTypeDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListColorDefinitionImpl <em>List Color Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListColorDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListColorDefinition()
+     * @generated
+     */
+    EClass LIST_COLOR_DEFINITION = eINSTANCE.getListColorDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_COLOR_DEFINITION__KEY = eINSTANCE.getListColorDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_COLOR_DEFINITION__VALUE = eINSTANCE.getListColorDefinition_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListMarkerColorDefinitionImpl <em>List Marker Color Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListMarkerColorDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListMarkerColorDefinition()
+     * @generated
+     */
+    EClass LIST_MARKER_COLOR_DEFINITION = eINSTANCE.getListMarkerColorDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_MARKER_COLOR_DEFINITION__KEY = eINSTANCE.getListMarkerColorDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_MARKER_COLOR_DEFINITION__VALUE = eINSTANCE.getListMarkerColorDefinition_Value();
+
+    /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2924,6 +3739,14 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EAttribute TEXT_OBJECT__MARGIN = eINSTANCE.getTextObject_Margin();
+
+    /**
+     * The meta object literal for the '<em><b>List Counter</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT__LIST_COUNTER = eINSTANCE.getTextObject_ListCounter();
 
     /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
@@ -3184,6 +4007,84 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EAttribute IMAGE_OBJECT__PAGE_BREAK = eINSTANCE.getImageObject_PageBreak();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListObjectPropertiesWrapperImpl <em>List Object Properties Wrapper</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListObjectPropertiesWrapperImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObjectPropertiesWrapper()
+     * @generated
+     */
+    EClass LIST_OBJECT_PROPERTIES_WRAPPER = eINSTANCE.getListObjectPropertiesWrapper();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIST_OBJECT_PROPERTIES_WRAPPER__VALUE = eINSTANCE.getListObjectPropertiesWrapper_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListElementsImpl <em>List Elements</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListElementsImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListElements()
+     * @generated
+     */
+    EClass LIST_ELEMENTS = eINSTANCE.getListElements();
+
+    /**
+     * The meta object literal for the '<em><b>El Values</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_ELEMENTS__EL_VALUES = eINSTANCE.getListElements_ElValues();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ListObjectImpl <em>List Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.ListObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObject()
+     * @generated
+     */
+    EClass LIST_OBJECT = eINSTANCE.getListObject();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIST_OBJECT__VALUE = eINSTANCE.getListObject_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIST_OBJECT__PROPERTIES = eINSTANCE.getListObject_Properties();
+
+    /**
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIST_OBJECT__ELEMENTS = eINSTANCE.getListObject_Elements();
+
+    /**
+     * The meta object literal for the '<em><b>Elemtens</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIST_OBJECT__ELEMTENS = eINSTANCE.getListObject_Elemtens();
 
     /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ContentObjectImpl <em>Content Object</em>}' class.

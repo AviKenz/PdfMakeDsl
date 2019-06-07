@@ -177,6 +177,60 @@ public interface PdfMkFactory extends EFactory
   ImageOpacityDefinition createImageOpacityDefinition();
 
   /**
+   * Returns a new object of class '<em>List Reversed Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Reversed Definition</em>'.
+   * @generated
+   */
+  ListReversedDefinition createListReversedDefinition();
+
+  /**
+   * Returns a new object of class '<em>List Start Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Start Definition</em>'.
+   * @generated
+   */
+  ListStartDefinition createListStartDefinition();
+
+  /**
+   * Returns a new object of class '<em>List Counter Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Counter Definition</em>'.
+   * @generated
+   */
+  ListCounterDefinition createListCounterDefinition();
+
+  /**
+   * Returns a new object of class '<em>List Type Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Type Definition</em>'.
+   * @generated
+   */
+  ListTypeDefinition createListTypeDefinition();
+
+  /**
+   * Returns a new object of class '<em>List Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Color Definition</em>'.
+   * @generated
+   */
+  ListColorDefinition createListColorDefinition();
+
+  /**
+   * Returns a new object of class '<em>List Marker Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Marker Color Definition</em>'.
+   * @generated
+   */
+  ListMarkerColorDefinition createListMarkerColorDefinition();
+
+  /**
    * Returns a new object of class '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -238,6 +292,33 @@ public interface PdfMkFactory extends EFactory
    * @generated
    */
   ImageObject createImageObject();
+
+  /**
+   * Returns a new object of class '<em>List Object Properties Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Object Properties Wrapper</em>'.
+   * @generated
+   */
+  ListObjectPropertiesWrapper createListObjectPropertiesWrapper();
+
+  /**
+   * Returns a new object of class '<em>List Elements</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Elements</em>'.
+   * @generated
+   */
+  ListElements createListElements();
+
+  /**
+   * Returns a new object of class '<em>List Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Object</em>'.
+   * @generated
+   */
+  ListObject createListObject();
 
   /**
    * Returns a new object of class '<em>Content Object</em>'.
