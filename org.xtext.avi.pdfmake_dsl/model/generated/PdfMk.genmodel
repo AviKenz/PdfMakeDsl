@@ -99,6 +99,22 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListMarkerColorDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListMarkerColorDefinition/value"/>
     </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TableCellItemElements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TableCellItemElements/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TableRowDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TableRowDefinition/item"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TableBodyDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TableBodyDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TableBodyDefinition/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TableBodyDefinition/rows"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TableDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TableDefinition/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TableDefinition/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TableDefinition/body"/>
+    </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//TextObject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/text"/>
@@ -159,6 +175,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ListObject/properties"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ListObject/elements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ListObject/elemtens"/>
+    </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TableObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TableObject/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TableObject/style"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TableObject/table"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ContentObject">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ContentObject/value"/>

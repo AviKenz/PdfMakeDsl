@@ -107,6 +107,21 @@ ListColorDefinition:
 	
 ListMarkerColorDefinition:
 	key="markerColor" ":" value=STRING;
+
+TableCellItemElements:
+	elements=(StringObject|TextObject|ImageObject|ListObject);
+	
+TableRowDefinition:
+	"[" item+=TableCellItemElements ("," item+=TableCellItemElements) "]";
+
+TableBodyDefinition: 
+	key="body" ":" value="["
+							(rows+=TableRowDefinition ("," rows+=TableRowDefinition)*)
+	  					 "]";
+TableDefinition:
+	key="table" ":" value="{"
+						  	body=TableBodyDefinition
+						  "}";
 		
 
 /******************** Objects definition ********************/
@@ -174,15 +189,22 @@ ListElements:
 	elValues=STRING|TextObject|ColumnDefinition;
 		
 ListObject:
-	value="{"	// TODO [?] single property not working
-				(properties+=ListObjectPropertiesWrapper ("," properties+=ListObjectPropertiesWrapper ",")?)*
+	value="{"	
+				(properties+=ListObjectPropertiesWrapper "," (properties+=ListObjectPropertiesWrapper ",")*)?
 				("ul"|"ol") ":" "["
 					(elements+=ListElements? ("," elemtens+=ListElements)*)
 				"]"
 		  "}";
+		  
+TableObject:
+	value= "{"
+		   		(style=TextStyleDefinition ",")?
+		   		table=TableDefinition
+		   "}";
+
 		
 ContentObject: 
-	value=(StringObject|TextObject|ColumnTextObject|ImageObject|ListObject);
+	value=(StringObject|TextObject|ColumnTextObject|ImageObject|ListObject|TableObject);
 	
 ContentObjects:
 	"[" 

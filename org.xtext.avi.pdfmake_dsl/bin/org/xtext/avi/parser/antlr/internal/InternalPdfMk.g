@@ -1450,6 +1450,338 @@ ruleListMarkerColorDefinition returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleTableCellItemElements
+entryRuleTableCellItemElements returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTableCellItemElementsRule()); }
+	iv_ruleTableCellItemElements=ruleTableCellItemElements
+	{ $current=$iv_ruleTableCellItemElements.current; }
+	EOF;
+
+// Rule TableCellItemElements
+ruleTableCellItemElements returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTableCellItemElementsAccess().getElementsStringObjectParserRuleCall_0_0());
+				}
+				lv_elements_0_1=ruleStringObject
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTableCellItemElementsRule());
+					}
+					set(
+						$current,
+						"elements",
+						lv_elements_0_1,
+						"org.xtext.avi.PdfMk.StringObject");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getTableCellItemElementsAccess().getElementsTextObjectParserRuleCall_0_1());
+				}
+				lv_elements_0_2=ruleTextObject
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTableCellItemElementsRule());
+					}
+					set(
+						$current,
+						"elements",
+						lv_elements_0_2,
+						"org.xtext.avi.PdfMk.TextObject");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getTableCellItemElementsAccess().getElementsImageObjectParserRuleCall_0_2());
+				}
+				lv_elements_0_3=ruleImageObject
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTableCellItemElementsRule());
+					}
+					set(
+						$current,
+						"elements",
+						lv_elements_0_3,
+						"org.xtext.avi.PdfMk.ImageObject");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getTableCellItemElementsAccess().getElementsListObjectParserRuleCall_0_3());
+				}
+				lv_elements_0_4=ruleListObject
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTableCellItemElementsRule());
+					}
+					set(
+						$current,
+						"elements",
+						lv_elements_0_4,
+						"org.xtext.avi.PdfMk.ListObject");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleTableRowDefinition
+entryRuleTableRowDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTableRowDefinitionRule()); }
+	iv_ruleTableRowDefinition=ruleTableRowDefinition
+	{ $current=$iv_ruleTableRowDefinition.current; }
+	EOF;
+
+// Rule TableRowDefinition
+ruleTableRowDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='['
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTableRowDefinitionAccess().getLeftSquareBracketKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTableRowDefinitionAccess().getItemTableCellItemElementsParserRuleCall_1_0());
+				}
+				lv_item_1_0=ruleTableCellItemElements
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTableRowDefinitionRule());
+					}
+					add(
+						$current,
+						"item",
+						lv_item_1_0,
+						"org.xtext.avi.PdfMk.TableCellItemElements");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_2=','
+			{
+				newLeafNode(otherlv_2, grammarAccess.getTableRowDefinitionAccess().getCommaKeyword_2_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getTableRowDefinitionAccess().getItemTableCellItemElementsParserRuleCall_2_1_0());
+					}
+					lv_item_3_0=ruleTableCellItemElements
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getTableRowDefinitionRule());
+						}
+						add(
+							$current,
+							"item",
+							lv_item_3_0,
+							"org.xtext.avi.PdfMk.TableCellItemElements");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		otherlv_4=']'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getTableRowDefinitionAccess().getRightSquareBracketKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleTableBodyDefinition
+entryRuleTableBodyDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTableBodyDefinitionRule()); }
+	iv_ruleTableBodyDefinition=ruleTableBodyDefinition
+	{ $current=$iv_ruleTableBodyDefinition.current; }
+	EOF;
+
+// Rule TableBodyDefinition
+ruleTableBodyDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_key_0_0='body'
+				{
+					newLeafNode(lv_key_0_0, grammarAccess.getTableBodyDefinitionAccess().getKeyBodyKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTableBodyDefinitionRule());
+					}
+					setWithLastConsumed($current, "key", lv_key_0_0, "body");
+				}
+			)
+		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getTableBodyDefinitionAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_value_2_0='['
+				{
+					newLeafNode(lv_value_2_0, grammarAccess.getTableBodyDefinitionAccess().getValueLeftSquareBracketKeyword_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTableBodyDefinitionRule());
+					}
+					setWithLastConsumed($current, "value", lv_value_2_0, "[");
+				}
+			)
+		)
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getTableBodyDefinitionAccess().getRowsTableRowDefinitionParserRuleCall_3_0_0());
+					}
+					lv_rows_3_0=ruleTableRowDefinition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getTableBodyDefinitionRule());
+						}
+						add(
+							$current,
+							"rows",
+							lv_rows_3_0,
+							"org.xtext.avi.PdfMk.TableRowDefinition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				otherlv_4=','
+				{
+					newLeafNode(otherlv_4, grammarAccess.getTableBodyDefinitionAccess().getCommaKeyword_3_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getTableBodyDefinitionAccess().getRowsTableRowDefinitionParserRuleCall_3_1_1_0());
+						}
+						lv_rows_5_0=ruleTableRowDefinition
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getTableBodyDefinitionRule());
+							}
+							add(
+								$current,
+								"rows",
+								lv_rows_5_0,
+								"org.xtext.avi.PdfMk.TableRowDefinition");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
+		)
+		otherlv_6=']'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getTableBodyDefinitionAccess().getRightSquareBracketKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleTableDefinition
+entryRuleTableDefinition returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTableDefinitionRule()); }
+	iv_ruleTableDefinition=ruleTableDefinition
+	{ $current=$iv_ruleTableDefinition.current; }
+	EOF;
+
+// Rule TableDefinition
+ruleTableDefinition returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_key_0_0='table'
+				{
+					newLeafNode(lv_key_0_0, grammarAccess.getTableDefinitionAccess().getKeyTableKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTableDefinitionRule());
+					}
+					setWithLastConsumed($current, "key", lv_key_0_0, "table");
+				}
+			)
+		)
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getTableDefinitionAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_value_2_0='{'
+				{
+					newLeafNode(lv_value_2_0, grammarAccess.getTableDefinitionAccess().getValueLeftCurlyBracketKeyword_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTableDefinitionRule());
+					}
+					setWithLastConsumed($current, "value", lv_value_2_0, "{");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTableDefinitionAccess().getBodyTableBodyDefinitionParserRuleCall_3_0());
+				}
+				lv_body_3_0=ruleTableBodyDefinition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTableDefinitionRule());
+					}
+					set(
+						$current,
+						"body",
+						lv_body_3_0,
+						"org.xtext.avi.PdfMk.TableBodyDefinition");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4='}'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getTableDefinitionAccess().getRightCurlyBracketKeyword_4());
+		}
+	)
+;
+
 // Entry rule entryRuleTextObject
 entryRuleTextObject returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTextObjectRule()); }
@@ -2777,15 +3109,15 @@ ruleListObject returns [EObject current=null]
 					}
 				)
 			)
+			otherlv_2=','
+			{
+				newLeafNode(otherlv_2, grammarAccess.getListObjectAccess().getCommaKeyword_1_1());
+			}
 			(
-				otherlv_2=','
-				{
-					newLeafNode(otherlv_2, grammarAccess.getListObjectAccess().getCommaKeyword_1_1_0());
-				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getListObjectAccess().getPropertiesListObjectPropertiesWrapperParserRuleCall_1_1_1_0());
+							newCompositeNode(grammarAccess.getListObjectAccess().getPropertiesListObjectPropertiesWrapperParserRuleCall_1_2_0_0());
 						}
 						lv_properties_3_0=ruleListObjectPropertiesWrapper
 						{
@@ -2803,10 +3135,10 @@ ruleListObject returns [EObject current=null]
 				)
 				otherlv_4=','
 				{
-					newLeafNode(otherlv_4, grammarAccess.getListObjectAccess().getCommaKeyword_1_1_2());
+					newLeafNode(otherlv_4, grammarAccess.getListObjectAccess().getCommaKeyword_1_2_1());
 				}
-			)?
-		)*
+			)*
+		)?
 		(
 			otherlv_5='ul'
 			{
@@ -2879,6 +3211,87 @@ ruleListObject returns [EObject current=null]
 		otherlv_13='}'
 		{
 			newLeafNode(otherlv_13, grammarAccess.getListObjectAccess().getRightCurlyBracketKeyword_7());
+		}
+	)
+;
+
+// Entry rule entryRuleTableObject
+entryRuleTableObject returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTableObjectRule()); }
+	iv_ruleTableObject=ruleTableObject
+	{ $current=$iv_ruleTableObject.current; }
+	EOF;
+
+// Rule TableObject
+ruleTableObject returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_value_0_0='{'
+				{
+					newLeafNode(lv_value_0_0, grammarAccess.getTableObjectAccess().getValueLeftCurlyBracketKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTableObjectRule());
+					}
+					setWithLastConsumed($current, "value", lv_value_0_0, "{");
+				}
+			)
+		)
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getTableObjectAccess().getStyleTextStyleDefinitionParserRuleCall_1_0_0());
+					}
+					lv_style_1_0=ruleTextStyleDefinition
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getTableObjectRule());
+						}
+						set(
+							$current,
+							"style",
+							lv_style_1_0,
+							"org.xtext.avi.PdfMk.TextStyleDefinition");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_2=','
+			{
+				newLeafNode(otherlv_2, grammarAccess.getTableObjectAccess().getCommaKeyword_1_1());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTableObjectAccess().getTableTableDefinitionParserRuleCall_2_0());
+				}
+				lv_table_3_0=ruleTableDefinition
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTableObjectRule());
+					}
+					set(
+						$current,
+						"table",
+						lv_table_3_0,
+						"org.xtext.avi.PdfMk.TableDefinition");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4='}'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getTableObjectAccess().getRightCurlyBracketKeyword_3());
 		}
 	)
 ;
@@ -2978,6 +3391,22 @@ ruleContentObject returns [EObject current=null]
 						"value",
 						lv_value_0_5,
 						"org.xtext.avi.PdfMk.ListObject");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getContentObjectAccess().getValueTableObjectParserRuleCall_0_5());
+				}
+				lv_value_0_6=ruleTableObject
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getContentObjectRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_0_6,
+						"org.xtext.avi.PdfMk.TableObject");
 					afterParserOrEnumRuleCall();
 				}
 			)

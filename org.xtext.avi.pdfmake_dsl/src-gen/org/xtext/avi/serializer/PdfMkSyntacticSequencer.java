@@ -78,9 +78,6 @@ public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     properties+=ListObjectPropertiesWrapper ',' (ambiguity) ':' '[' ',' elemtens+=ListElements
 	 *     properties+=ListObjectPropertiesWrapper ',' (ambiguity) ':' '[' ']' '}' (rule end)
 	 *     properties+=ListObjectPropertiesWrapper ',' (ambiguity) ':' '[' elements+=ListElements
-	 *     properties+=ListObjectPropertiesWrapper (ambiguity) ':' '[' ',' elemtens+=ListElements
-	 *     properties+=ListObjectPropertiesWrapper (ambiguity) ':' '[' ']' '}' (rule end)
-	 *     properties+=ListObjectPropertiesWrapper (ambiguity) ':' '[' elements+=ListElements
 	 *     value='{' (ambiguity) ':' '[' ',' elemtens+=ListElements
 	 *     value='{' (ambiguity) ':' '[' ']' '}' (rule end)
 	 *     value='{' (ambiguity) ':' '[' elements+=ListElements

@@ -389,7 +389,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListElements()
    * @generated
    */
-  int LIST_ELEMENTS = 31;
+  int LIST_ELEMENTS = 35;
 
   /**
    * The feature id for the '<em><b>El Values</b></em>' attribute.
@@ -955,6 +955,154 @@ public interface PdfMkPackage extends EPackage
   int LIST_MARKER_COLOR_DEFINITION_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TableCellItemElementsImpl <em>Table Cell Item Elements</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TableCellItemElementsImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableCellItemElements()
+   * @generated
+   */
+  int TABLE_CELL_ITEM_ELEMENTS = 23;
+
+  /**
+   * The feature id for the '<em><b>Elements</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_CELL_ITEM_ELEMENTS__ELEMENTS = 0;
+
+  /**
+   * The number of structural features of the '<em>Table Cell Item Elements</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_CELL_ITEM_ELEMENTS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TableRowDefinitionImpl <em>Table Row Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TableRowDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableRowDefinition()
+   * @generated
+   */
+  int TABLE_ROW_DEFINITION = 24;
+
+  /**
+   * The feature id for the '<em><b>Item</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_ROW_DEFINITION__ITEM = 0;
+
+  /**
+   * The number of structural features of the '<em>Table Row Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_ROW_DEFINITION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TableBodyDefinitionImpl <em>Table Body Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TableBodyDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableBodyDefinition()
+   * @generated
+   */
+  int TABLE_BODY_DEFINITION = 25;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_BODY_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_BODY_DEFINITION__VALUE = 1;
+
+  /**
+   * The feature id for the '<em><b>Rows</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_BODY_DEFINITION__ROWS = 2;
+
+  /**
+   * The number of structural features of the '<em>Table Body Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_BODY_DEFINITION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TableDefinitionImpl <em>Table Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TableDefinitionImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableDefinition()
+   * @generated
+   */
+  int TABLE_DEFINITION = 26;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_DEFINITION__KEY = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_DEFINITION__VALUE = 1;
+
+  /**
+   * The feature id for the '<em><b>Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_DEFINITION__BODY = 2;
+
+  /**
+   * The number of structural features of the '<em>Table Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_DEFINITION_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -962,7 +1110,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
    * @generated
    */
-  int TEXT_OBJECT = 23;
+  int TEXT_OBJECT = 27;
 
   /**
    * The feature id for the '<em><b>El Values</b></em>' attribute.
@@ -1080,7 +1228,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
    * @generated
    */
-  int COLUMN_TEXT_OBJECT = 24;
+  int COLUMN_TEXT_OBJECT = 28;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1108,7 +1256,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObject()
    * @generated
    */
-  int STYLE_OBJECT = 25;
+  int STYLE_OBJECT = 29;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1190,7 +1338,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObjects()
    * @generated
    */
-  int STYLE_OBJECTS = 26;
+  int STYLE_OBJECTS = 30;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -1218,7 +1366,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getInnerColumnObject()
    * @generated
    */
-  int INNER_COLUMN_OBJECT = 27;
+  int INNER_COLUMN_OBJECT = 31;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1273,7 +1421,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnObject()
    * @generated
    */
-  int COLUMN_OBJECT = 28;
+  int COLUMN_OBJECT = 32;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1337,7 +1485,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageObject()
    * @generated
    */
-  int IMAGE_OBJECT = 29;
+  int IMAGE_OBJECT = 33;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1419,7 +1567,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObjectPropertiesWrapper()
    * @generated
    */
-  int LIST_OBJECT_PROPERTIES_WRAPPER = 30;
+  int LIST_OBJECT_PROPERTIES_WRAPPER = 34;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1447,7 +1595,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObject()
    * @generated
    */
-  int LIST_OBJECT = 32;
+  int LIST_OBJECT = 36;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1495,6 +1643,52 @@ public interface PdfMkPackage extends EPackage
   int LIST_OBJECT_FEATURE_COUNT = 4;
 
   /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TableObjectImpl <em>Table Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TableObjectImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableObject()
+   * @generated
+   */
+  int TABLE_OBJECT = 37;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_OBJECT__VALUE = 0;
+
+  /**
+   * The feature id for the '<em><b>Style</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_OBJECT__STYLE = 1;
+
+  /**
+   * The feature id for the '<em><b>Table</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_OBJECT__TABLE = 2;
+
+  /**
+   * The number of structural features of the '<em>Table Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_OBJECT_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ContentObjectImpl <em>Content Object</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1502,7 +1696,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObject()
    * @generated
    */
-  int CONTENT_OBJECT = 33;
+  int CONTENT_OBJECT = 38;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1530,7 +1724,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObjects()
    * @generated
    */
-  int CONTENT_OBJECTS = 34;
+  int CONTENT_OBJECTS = 39;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -1558,7 +1752,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyles()
    * @generated
    */
-  int STYLES = 35;
+  int STYLES = 40;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1595,7 +1789,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContent()
    * @generated
    */
-  int CONTENT = 36;
+  int CONTENT = 41;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -2373,6 +2567,134 @@ public interface PdfMkPackage extends EPackage
   EAttribute getListMarkerColorDefinition_Value();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TableCellItemElements <em>Table Cell Item Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Table Cell Item Elements</em>'.
+   * @see org.xtext.avi.pdfMk.TableCellItemElements
+   * @generated
+   */
+  EClass getTableCellItemElements();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.TableCellItemElements#getElements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Elements</em>'.
+   * @see org.xtext.avi.pdfMk.TableCellItemElements#getElements()
+   * @see #getTableCellItemElements()
+   * @generated
+   */
+  EReference getTableCellItemElements_Elements();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TableRowDefinition <em>Table Row Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Table Row Definition</em>'.
+   * @see org.xtext.avi.pdfMk.TableRowDefinition
+   * @generated
+   */
+  EClass getTableRowDefinition();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.TableRowDefinition#getItem <em>Item</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Item</em>'.
+   * @see org.xtext.avi.pdfMk.TableRowDefinition#getItem()
+   * @see #getTableRowDefinition()
+   * @generated
+   */
+  EReference getTableRowDefinition_Item();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TableBodyDefinition <em>Table Body Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Table Body Definition</em>'.
+   * @see org.xtext.avi.pdfMk.TableBodyDefinition
+   * @generated
+   */
+  EClass getTableBodyDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TableBodyDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.TableBodyDefinition#getKey()
+   * @see #getTableBodyDefinition()
+   * @generated
+   */
+  EAttribute getTableBodyDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TableBodyDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.TableBodyDefinition#getValue()
+   * @see #getTableBodyDefinition()
+   * @generated
+   */
+  EAttribute getTableBodyDefinition_Value();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.TableBodyDefinition#getRows <em>Rows</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Rows</em>'.
+   * @see org.xtext.avi.pdfMk.TableBodyDefinition#getRows()
+   * @see #getTableBodyDefinition()
+   * @generated
+   */
+  EReference getTableBodyDefinition_Rows();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TableDefinition <em>Table Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Table Definition</em>'.
+   * @see org.xtext.avi.pdfMk.TableDefinition
+   * @generated
+   */
+  EClass getTableDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TableDefinition#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.TableDefinition#getKey()
+   * @see #getTableDefinition()
+   * @generated
+   */
+  EAttribute getTableDefinition_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TableDefinition#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.TableDefinition#getValue()
+   * @see #getTableDefinition()
+   * @generated
+   */
+  EAttribute getTableDefinition_Value();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.TableDefinition#getBody <em>Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Body</em>'.
+   * @see org.xtext.avi.pdfMk.TableDefinition#getBody()
+   * @see #getTableDefinition()
+   * @generated
+   */
+  EReference getTableDefinition_Body();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2922,6 +3244,49 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EReference getListObject_Elemtens();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TableObject <em>Table Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Table Object</em>'.
+   * @see org.xtext.avi.pdfMk.TableObject
+   * @generated
+   */
+  EClass getTableObject();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TableObject#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.avi.pdfMk.TableObject#getValue()
+   * @see #getTableObject()
+   * @generated
+   */
+  EAttribute getTableObject_Value();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.TableObject#getStyle <em>Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Style</em>'.
+   * @see org.xtext.avi.pdfMk.TableObject#getStyle()
+   * @see #getTableObject()
+   * @generated
+   */
+  EReference getTableObject_Style();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.avi.pdfMk.TableObject#getTable <em>Table</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Table</em>'.
+   * @see org.xtext.avi.pdfMk.TableObject#getTable()
+   * @see #getTableObject()
+   * @generated
+   */
+  EReference getTableObject_Table();
 
   /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ContentObject <em>Content Object</em>}'.
@@ -3659,6 +4024,110 @@ public interface PdfMkPackage extends EPackage
     EAttribute LIST_MARKER_COLOR_DEFINITION__VALUE = eINSTANCE.getListMarkerColorDefinition_Value();
 
     /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TableCellItemElementsImpl <em>Table Cell Item Elements</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TableCellItemElementsImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableCellItemElements()
+     * @generated
+     */
+    EClass TABLE_CELL_ITEM_ELEMENTS = eINSTANCE.getTableCellItemElements();
+
+    /**
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TABLE_CELL_ITEM_ELEMENTS__ELEMENTS = eINSTANCE.getTableCellItemElements_Elements();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TableRowDefinitionImpl <em>Table Row Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TableRowDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableRowDefinition()
+     * @generated
+     */
+    EClass TABLE_ROW_DEFINITION = eINSTANCE.getTableRowDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Item</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TABLE_ROW_DEFINITION__ITEM = eINSTANCE.getTableRowDefinition_Item();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TableBodyDefinitionImpl <em>Table Body Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TableBodyDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableBodyDefinition()
+     * @generated
+     */
+    EClass TABLE_BODY_DEFINITION = eINSTANCE.getTableBodyDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_BODY_DEFINITION__KEY = eINSTANCE.getTableBodyDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_BODY_DEFINITION__VALUE = eINSTANCE.getTableBodyDefinition_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Rows</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TABLE_BODY_DEFINITION__ROWS = eINSTANCE.getTableBodyDefinition_Rows();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TableDefinitionImpl <em>Table Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TableDefinitionImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableDefinition()
+     * @generated
+     */
+    EClass TABLE_DEFINITION = eINSTANCE.getTableDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_DEFINITION__KEY = eINSTANCE.getTableDefinition_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_DEFINITION__VALUE = eINSTANCE.getTableDefinition_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TABLE_DEFINITION__BODY = eINSTANCE.getTableDefinition_Body();
+
+    /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4085,6 +4554,40 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EReference LIST_OBJECT__ELEMTENS = eINSTANCE.getListObject_Elemtens();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TableObjectImpl <em>Table Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TableObjectImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableObject()
+     * @generated
+     */
+    EClass TABLE_OBJECT = eINSTANCE.getTableObject();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_OBJECT__VALUE = eINSTANCE.getTableObject_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Style</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TABLE_OBJECT__STYLE = eINSTANCE.getTableObject_Style();
+
+    /**
+     * The meta object literal for the '<em><b>Table</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TABLE_OBJECT__TABLE = eINSTANCE.getTableObject_Table();
 
     /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ContentObjectImpl <em>Content Object</em>}' class.

@@ -231,6 +231,42 @@ public interface PdfMkFactory extends EFactory
   ListMarkerColorDefinition createListMarkerColorDefinition();
 
   /**
+   * Returns a new object of class '<em>Table Cell Item Elements</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Table Cell Item Elements</em>'.
+   * @generated
+   */
+  TableCellItemElements createTableCellItemElements();
+
+  /**
+   * Returns a new object of class '<em>Table Row Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Table Row Definition</em>'.
+   * @generated
+   */
+  TableRowDefinition createTableRowDefinition();
+
+  /**
+   * Returns a new object of class '<em>Table Body Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Table Body Definition</em>'.
+   * @generated
+   */
+  TableBodyDefinition createTableBodyDefinition();
+
+  /**
+   * Returns a new object of class '<em>Table Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Table Definition</em>'.
+   * @generated
+   */
+  TableDefinition createTableDefinition();
+
+  /**
    * Returns a new object of class '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -319,6 +355,15 @@ public interface PdfMkFactory extends EFactory
    * @generated
    */
   ListObject createListObject();
+
+  /**
+   * Returns a new object of class '<em>Table Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Table Object</em>'.
+   * @generated
+   */
+  TableObject createTableObject();
 
   /**
    * Returns a new object of class '<em>Content Object</em>'.

@@ -235,6 +235,34 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PdfMkPackage.TABLE_CELL_ITEM_ELEMENTS:
+      {
+        TableCellItemElements tableCellItemElements = (TableCellItemElements)theEObject;
+        T result = caseTableCellItemElements(tableCellItemElements);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.TABLE_ROW_DEFINITION:
+      {
+        TableRowDefinition tableRowDefinition = (TableRowDefinition)theEObject;
+        T result = caseTableRowDefinition(tableRowDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.TABLE_BODY_DEFINITION:
+      {
+        TableBodyDefinition tableBodyDefinition = (TableBodyDefinition)theEObject;
+        T result = caseTableBodyDefinition(tableBodyDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.TABLE_DEFINITION:
+      {
+        TableDefinition tableDefinition = (TableDefinition)theEObject;
+        T result = caseTableDefinition(tableDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PdfMkPackage.TEXT_OBJECT:
       {
         TextObject textObject = (TextObject)theEObject;
@@ -303,6 +331,13 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ListObject listObject = (ListObject)theEObject;
         T result = caseListObject(listObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.TABLE_OBJECT:
+      {
+        TableObject tableObject = (TableObject)theEObject;
+        T result = caseTableObject(tableObject);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -707,6 +742,70 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Table Cell Item Elements</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Table Cell Item Elements</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTableCellItemElements(TableCellItemElements object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Table Row Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Table Row Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTableRowDefinition(TableRowDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Table Body Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Table Body Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTableBodyDefinition(TableBodyDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Table Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Table Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTableDefinition(TableDefinition object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -862,6 +961,22 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseListObject(ListObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Table Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Table Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTableObject(TableObject object)
   {
     return null;
   }

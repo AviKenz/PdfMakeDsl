@@ -48,6 +48,11 @@ import org.xtext.avi.pdfMk.StyleDefinition;
 import org.xtext.avi.pdfMk.StyleObject;
 import org.xtext.avi.pdfMk.StyleObjects;
 import org.xtext.avi.pdfMk.Styles;
+import org.xtext.avi.pdfMk.TableBodyDefinition;
+import org.xtext.avi.pdfMk.TableCellItemElements;
+import org.xtext.avi.pdfMk.TableDefinition;
+import org.xtext.avi.pdfMk.TableObject;
+import org.xtext.avi.pdfMk.TableRowDefinition;
 import org.xtext.avi.pdfMk.TextObject;
 import org.xtext.avi.pdfMk.TextStyleDefinition;
 import org.xtext.avi.pdfMk.TypeFaceDefinition;
@@ -167,6 +172,21 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PdfMkPackage.STYLES:
 				sequence_Styles(context, (Styles) semanticObject); 
 				return; 
+			case PdfMkPackage.TABLE_BODY_DEFINITION:
+				sequence_TableBodyDefinition(context, (TableBodyDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.TABLE_CELL_ITEM_ELEMENTS:
+				sequence_TableCellItemElements(context, (TableCellItemElements) semanticObject); 
+				return; 
+			case PdfMkPackage.TABLE_DEFINITION:
+				sequence_TableDefinition(context, (TableDefinition) semanticObject); 
+				return; 
+			case PdfMkPackage.TABLE_OBJECT:
+				sequence_TableObject(context, (TableObject) semanticObject); 
+				return; 
+			case PdfMkPackage.TABLE_ROW_DEFINITION:
+				sequence_TableRowDefinition(context, (TableRowDefinition) semanticObject); 
+				return; 
 			case PdfMkPackage.TEXT_OBJECT:
 				sequence_TextObject(context, (TextObject) semanticObject); 
 				return; 
@@ -263,7 +283,14 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ContentObject returns ContentObject
 	 *
 	 * Constraint:
-	 *     (value=StringObject | value=TextObject | value=ColumnTextObject | value=ImageObject | value=ListObject)
+	 *     (
+	 *         value=StringObject | 
+	 *         value=TextObject | 
+	 *         value=ColumnTextObject | 
+	 *         value=ImageObject | 
+	 *         value=ListObject | 
+	 *         value=TableObject
+	 *     )
 	 */
 	protected void sequence_ContentObject(ISerializationContext context, ContentObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -612,7 +639,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ListObject returns ListObject
 	 *
 	 * Constraint:
-	 *     (value='{' (properties+=ListObjectPropertiesWrapper properties+=ListObjectPropertiesWrapper?)* elements+=ListElements? elemtens+=ListElements*)
+	 *     (value='{' (properties+=ListObjectPropertiesWrapper properties+=ListObjectPropertiesWrapper*)? elements+=ListElements? elemtens+=ListElements*)
 	 */
 	protected void sequence_ListObject(ISerializationContext context, ListObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -783,6 +810,78 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		feeder.accept(grammarAccess.getStylesAccess().getKeyStylesKeyword_0_0(), semanticObject.getKey());
 		feeder.accept(grammarAccess.getStylesAccess().getValueStyleObjectsParserRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TableBodyDefinition returns TableBodyDefinition
+	 *
+	 * Constraint:
+	 *     (key='body' value='[' rows+=TableRowDefinition rows+=TableRowDefinition*)
+	 */
+	protected void sequence_TableBodyDefinition(ISerializationContext context, TableBodyDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TableCellItemElements returns TableCellItemElements
+	 *
+	 * Constraint:
+	 *     (elements=StringObject | elements=TextObject | elements=ImageObject | elements=ListObject)
+	 */
+	protected void sequence_TableCellItemElements(ISerializationContext context, TableCellItemElements semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TableDefinition returns TableDefinition
+	 *
+	 * Constraint:
+	 *     (key='table' value='{' body=TableBodyDefinition)
+	 */
+	protected void sequence_TableDefinition(ISerializationContext context, TableDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TABLE_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TABLE_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TABLE_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TABLE_DEFINITION__VALUE));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TABLE_DEFINITION__BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TABLE_DEFINITION__BODY));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTableDefinitionAccess().getKeyTableKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getTableDefinitionAccess().getValueLeftCurlyBracketKeyword_2_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getTableDefinitionAccess().getBodyTableBodyDefinitionParserRuleCall_3_0(), semanticObject.getBody());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TableObject returns TableObject
+	 *
+	 * Constraint:
+	 *     (value='{' style=TextStyleDefinition? table=TableDefinition)
+	 */
+	protected void sequence_TableObject(ISerializationContext context, TableObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TableRowDefinition returns TableRowDefinition
+	 *
+	 * Constraint:
+	 *     (item+=TableCellItemElements item+=TableCellItemElements)
+	 */
+	protected void sequence_TableRowDefinition(ISerializationContext context, TableRowDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

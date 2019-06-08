@@ -45,6 +45,11 @@ import org.xtext.avi.pdfMk.StyleDefinition;
 import org.xtext.avi.pdfMk.StyleObject;
 import org.xtext.avi.pdfMk.StyleObjects;
 import org.xtext.avi.pdfMk.Styles;
+import org.xtext.avi.pdfMk.TableBodyDefinition;
+import org.xtext.avi.pdfMk.TableCellItemElements;
+import org.xtext.avi.pdfMk.TableDefinition;
+import org.xtext.avi.pdfMk.TableObject;
+import org.xtext.avi.pdfMk.TableRowDefinition;
 import org.xtext.avi.pdfMk.TextObject;
 import org.xtext.avi.pdfMk.TextStyleDefinition;
 import org.xtext.avi.pdfMk.TypeFaceDefinition;
@@ -224,6 +229,34 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass tableCellItemElementsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tableRowDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tableBodyDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tableDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass textObjectEClass = null;
 
   /**
@@ -288,6 +321,13 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * @generated
    */
   private EClass listObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tableObjectEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1085,6 +1125,126 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTableCellItemElements()
+  {
+    return tableCellItemElementsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableCellItemElements_Elements()
+  {
+    return (EReference)tableCellItemElementsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTableRowDefinition()
+  {
+    return tableRowDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableRowDefinition_Item()
+  {
+    return (EReference)tableRowDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTableBodyDefinition()
+  {
+    return tableBodyDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTableBodyDefinition_Key()
+  {
+    return (EAttribute)tableBodyDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTableBodyDefinition_Value()
+  {
+    return (EAttribute)tableBodyDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableBodyDefinition_Rows()
+  {
+    return (EReference)tableBodyDefinitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTableDefinition()
+  {
+    return tableDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTableDefinition_Key()
+  {
+    return (EAttribute)tableDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTableDefinition_Value()
+  {
+    return (EAttribute)tableDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableDefinition_Body()
+  {
+    return (EReference)tableDefinitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTextObject()
   {
     return textObjectEClass;
@@ -1595,6 +1755,46 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTableObject()
+  {
+    return tableObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTableObject_Value()
+  {
+    return (EAttribute)tableObjectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableObject_Style()
+  {
+    return (EReference)tableObjectEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableObject_Table()
+  {
+    return (EReference)tableObjectEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getContentObject()
   {
     return contentObjectEClass;
@@ -1813,6 +2013,22 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(listMarkerColorDefinitionEClass, LIST_MARKER_COLOR_DEFINITION__KEY);
     createEAttribute(listMarkerColorDefinitionEClass, LIST_MARKER_COLOR_DEFINITION__VALUE);
 
+    tableCellItemElementsEClass = createEClass(TABLE_CELL_ITEM_ELEMENTS);
+    createEReference(tableCellItemElementsEClass, TABLE_CELL_ITEM_ELEMENTS__ELEMENTS);
+
+    tableRowDefinitionEClass = createEClass(TABLE_ROW_DEFINITION);
+    createEReference(tableRowDefinitionEClass, TABLE_ROW_DEFINITION__ITEM);
+
+    tableBodyDefinitionEClass = createEClass(TABLE_BODY_DEFINITION);
+    createEAttribute(tableBodyDefinitionEClass, TABLE_BODY_DEFINITION__KEY);
+    createEAttribute(tableBodyDefinitionEClass, TABLE_BODY_DEFINITION__VALUE);
+    createEReference(tableBodyDefinitionEClass, TABLE_BODY_DEFINITION__ROWS);
+
+    tableDefinitionEClass = createEClass(TABLE_DEFINITION);
+    createEAttribute(tableDefinitionEClass, TABLE_DEFINITION__KEY);
+    createEAttribute(tableDefinitionEClass, TABLE_DEFINITION__VALUE);
+    createEReference(tableDefinitionEClass, TABLE_DEFINITION__BODY);
+
     textObjectEClass = createEClass(TEXT_OBJECT);
     createEAttribute(textObjectEClass, TEXT_OBJECT__VALUE);
     createEAttribute(textObjectEClass, TEXT_OBJECT__TEXT);
@@ -1873,6 +2089,11 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEReference(listObjectEClass, LIST_OBJECT__PROPERTIES);
     createEReference(listObjectEClass, LIST_OBJECT__ELEMENTS);
     createEReference(listObjectEClass, LIST_OBJECT__ELEMTENS);
+
+    tableObjectEClass = createEClass(TABLE_OBJECT);
+    createEAttribute(tableObjectEClass, TABLE_OBJECT__VALUE);
+    createEReference(tableObjectEClass, TABLE_OBJECT__STYLE);
+    createEReference(tableObjectEClass, TABLE_OBJECT__TABLE);
 
     contentObjectEClass = createEClass(CONTENT_OBJECT);
     createEReference(contentObjectEClass, CONTENT_OBJECT__VALUE);
@@ -2015,6 +2236,22 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getListMarkerColorDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ListMarkerColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getListMarkerColorDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ListMarkerColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(tableCellItemElementsEClass, TableCellItemElements.class, "TableCellItemElements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTableCellItemElements_Elements(), ecorePackage.getEObject(), null, "elements", null, 0, 1, TableCellItemElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tableRowDefinitionEClass, TableRowDefinition.class, "TableRowDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTableRowDefinition_Item(), this.getTableCellItemElements(), null, "item", null, 0, -1, TableRowDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tableBodyDefinitionEClass, TableBodyDefinition.class, "TableBodyDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTableBodyDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, TableBodyDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTableBodyDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, TableBodyDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableBodyDefinition_Rows(), this.getTableRowDefinition(), null, "rows", null, 0, -1, TableBodyDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tableDefinitionEClass, TableDefinition.class, "TableDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTableDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, TableDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTableDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, TableDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableDefinition_Body(), this.getTableBodyDefinition(), null, "body", null, 0, 1, TableDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(textObjectEClass, TextObject.class, "TextObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTextObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTextObject_Text(), ecorePackage.getEBoolean(), "text", null, 0, 1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2075,6 +2312,11 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEReference(getListObject_Properties(), this.getListObjectPropertiesWrapper(), null, "properties", null, 0, -1, ListObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getListObject_Elements(), this.getListElements(), null, "elements", null, 0, -1, ListObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getListObject_Elemtens(), this.getListElements(), null, "elemtens", null, 0, -1, ListObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tableObjectEClass, TableObject.class, "TableObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTableObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, TableObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableObject_Style(), this.getTextStyleDefinition(), null, "style", null, 0, 1, TableObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableObject_Table(), this.getTableDefinition(), null, "table", null, 0, 1, TableObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contentObjectEClass, ContentObject.class, "ContentObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getContentObject_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, ContentObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

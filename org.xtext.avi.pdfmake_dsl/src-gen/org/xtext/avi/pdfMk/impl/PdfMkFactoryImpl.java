@@ -88,6 +88,10 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.LIST_TYPE_DEFINITION: return createListTypeDefinition();
       case PdfMkPackage.LIST_COLOR_DEFINITION: return createListColorDefinition();
       case PdfMkPackage.LIST_MARKER_COLOR_DEFINITION: return createListMarkerColorDefinition();
+      case PdfMkPackage.TABLE_CELL_ITEM_ELEMENTS: return createTableCellItemElements();
+      case PdfMkPackage.TABLE_ROW_DEFINITION: return createTableRowDefinition();
+      case PdfMkPackage.TABLE_BODY_DEFINITION: return createTableBodyDefinition();
+      case PdfMkPackage.TABLE_DEFINITION: return createTableDefinition();
       case PdfMkPackage.TEXT_OBJECT: return createTextObject();
       case PdfMkPackage.COLUMN_TEXT_OBJECT: return createColumnTextObject();
       case PdfMkPackage.STYLE_OBJECT: return createStyleObject();
@@ -98,6 +102,7 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER: return createListObjectPropertiesWrapper();
       case PdfMkPackage.LIST_ELEMENTS: return createListElements();
       case PdfMkPackage.LIST_OBJECT: return createListObject();
+      case PdfMkPackage.TABLE_OBJECT: return createTableObject();
       case PdfMkPackage.CONTENT_OBJECT: return createContentObject();
       case PdfMkPackage.CONTENT_OBJECTS: return createContentObjects();
       case PdfMkPackage.STYLES: return createStyles();
@@ -365,6 +370,50 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public TableCellItemElements createTableCellItemElements()
+  {
+    TableCellItemElementsImpl tableCellItemElements = new TableCellItemElementsImpl();
+    return tableCellItemElements;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableRowDefinition createTableRowDefinition()
+  {
+    TableRowDefinitionImpl tableRowDefinition = new TableRowDefinitionImpl();
+    return tableRowDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableBodyDefinition createTableBodyDefinition()
+  {
+    TableBodyDefinitionImpl tableBodyDefinition = new TableBodyDefinitionImpl();
+    return tableBodyDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableDefinition createTableDefinition()
+  {
+    TableDefinitionImpl tableDefinition = new TableDefinitionImpl();
+    return tableDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TextObject createTextObject()
   {
     TextObjectImpl textObject = new TextObjectImpl();
@@ -468,6 +517,17 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
   {
     ListObjectImpl listObject = new ListObjectImpl();
     return listObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableObject createTableObject()
+  {
+    TableObjectImpl tableObject = new TableObjectImpl();
+    return tableObject;
   }
 
   /**

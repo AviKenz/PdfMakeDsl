@@ -191,6 +191,26 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createListMarkerColorDefinitionAdapter();
       }
       @Override
+      public Adapter caseTableCellItemElements(TableCellItemElements object)
+      {
+        return createTableCellItemElementsAdapter();
+      }
+      @Override
+      public Adapter caseTableRowDefinition(TableRowDefinition object)
+      {
+        return createTableRowDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseTableBodyDefinition(TableBodyDefinition object)
+      {
+        return createTableBodyDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseTableDefinition(TableDefinition object)
+      {
+        return createTableDefinitionAdapter();
+      }
+      @Override
       public Adapter caseTextObject(TextObject object)
       {
         return createTextObjectAdapter();
@@ -239,6 +259,11 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
       public Adapter caseListObject(ListObject object)
       {
         return createListObjectAdapter();
+      }
+      @Override
+      public Adapter caseTableObject(TableObject object)
+      {
+        return createTableObjectAdapter();
       }
       @Override
       public Adapter caseContentObject(ContentObject object)
@@ -628,6 +653,66 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TableCellItemElements <em>Table Cell Item Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TableCellItemElements
+   * @generated
+   */
+  public Adapter createTableCellItemElementsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TableRowDefinition <em>Table Row Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TableRowDefinition
+   * @generated
+   */
+  public Adapter createTableRowDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TableBodyDefinition <em>Table Body Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TableBodyDefinition
+   * @generated
+   */
+  public Adapter createTableBodyDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TableDefinition <em>Table Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TableDefinition
+   * @generated
+   */
+  public Adapter createTableDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -773,6 +858,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createListObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TableObject <em>Table Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TableObject
+   * @generated
+   */
+  public Adapter createTableObjectAdapter()
   {
     return null;
   }
