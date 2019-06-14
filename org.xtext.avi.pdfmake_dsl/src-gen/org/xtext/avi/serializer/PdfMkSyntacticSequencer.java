@@ -31,20 +31,9 @@ public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getTextAlignmentDefinitionRule())
-			return getTextAlignmentDefinitionToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * TextAlignmentDefinition:
-	 * 	"alignment" ":" STRING;
-	 */
-	protected String getTextAlignmentDefinitionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "alignment:\"\"";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

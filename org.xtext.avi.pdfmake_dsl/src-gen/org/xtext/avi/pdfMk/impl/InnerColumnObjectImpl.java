@@ -19,11 +19,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.avi.pdfMk.ColumnDefinition;
 import org.xtext.avi.pdfMk.InnerColumnObject;
+import org.xtext.avi.pdfMk.InnerColumnObjectMembersWrapper;
 import org.xtext.avi.pdfMk.PdfMkPackage;
-import org.xtext.avi.pdfMk.StringObject;
-import org.xtext.avi.pdfMk.TextObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,9 +32,7 @@ import org.xtext.avi.pdfMk.TextObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl#getText <em>Text</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl#getTextObject <em>Text Object</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl#getColumn <em>Column</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.InnerColumnObjectImpl#getMembers <em>Members</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,34 +60,14 @@ public class InnerColumnObjectImpl extends MinimalEObjectImpl.Container implemen
   protected String value = VALUE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getText() <em>Text</em>}' containment reference list.
+   * The cached value of the '{@link #getMembers() <em>Members</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getText()
+   * @see #getMembers()
    * @generated
    * @ordered
    */
-  protected EList<StringObject> text;
-
-  /**
-   * The cached value of the '{@link #getTextObject() <em>Text Object</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTextObject()
-   * @generated
-   * @ordered
-   */
-  protected EList<TextObject> textObject;
-
-  /**
-   * The cached value of the '{@link #getColumn() <em>Column</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getColumn()
-   * @generated
-   * @ordered
-   */
-  protected EList<ColumnDefinition> column;
+  protected EList<InnerColumnObjectMembersWrapper> members;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,41 +118,13 @@ public class InnerColumnObjectImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<StringObject> getText()
+  public EList<InnerColumnObjectMembersWrapper> getMembers()
   {
-    if (text == null)
+    if (members == null)
     {
-      text = new EObjectContainmentEList<StringObject>(StringObject.class, this, PdfMkPackage.INNER_COLUMN_OBJECT__TEXT);
+      members = new EObjectContainmentEList<InnerColumnObjectMembersWrapper>(InnerColumnObjectMembersWrapper.class, this, PdfMkPackage.INNER_COLUMN_OBJECT__MEMBERS);
     }
-    return text;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<TextObject> getTextObject()
-  {
-    if (textObject == null)
-    {
-      textObject = new EObjectContainmentEList<TextObject>(TextObject.class, this, PdfMkPackage.INNER_COLUMN_OBJECT__TEXT_OBJECT);
-    }
-    return textObject;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<ColumnDefinition> getColumn()
-  {
-    if (column == null)
-    {
-      column = new EObjectContainmentEList<ColumnDefinition>(ColumnDefinition.class, this, PdfMkPackage.INNER_COLUMN_OBJECT__COLUMN);
-    }
-    return column;
+    return members;
   }
 
   /**
@@ -189,12 +137,8 @@ public class InnerColumnObjectImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT:
-        return ((InternalEList<?>)getText()).basicRemove(otherEnd, msgs);
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT_OBJECT:
-        return ((InternalEList<?>)getTextObject()).basicRemove(otherEnd, msgs);
-      case PdfMkPackage.INNER_COLUMN_OBJECT__COLUMN:
-        return ((InternalEList<?>)getColumn()).basicRemove(otherEnd, msgs);
+      case PdfMkPackage.INNER_COLUMN_OBJECT__MEMBERS:
+        return ((InternalEList<?>)getMembers()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -211,12 +155,8 @@ public class InnerColumnObjectImpl extends MinimalEObjectImpl.Container implemen
     {
       case PdfMkPackage.INNER_COLUMN_OBJECT__VALUE:
         return getValue();
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT:
-        return getText();
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT_OBJECT:
-        return getTextObject();
-      case PdfMkPackage.INNER_COLUMN_OBJECT__COLUMN:
-        return getColumn();
+      case PdfMkPackage.INNER_COLUMN_OBJECT__MEMBERS:
+        return getMembers();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -235,17 +175,9 @@ public class InnerColumnObjectImpl extends MinimalEObjectImpl.Container implemen
       case PdfMkPackage.INNER_COLUMN_OBJECT__VALUE:
         setValue((String)newValue);
         return;
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT:
-        getText().clear();
-        getText().addAll((Collection<? extends StringObject>)newValue);
-        return;
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT_OBJECT:
-        getTextObject().clear();
-        getTextObject().addAll((Collection<? extends TextObject>)newValue);
-        return;
-      case PdfMkPackage.INNER_COLUMN_OBJECT__COLUMN:
-        getColumn().clear();
-        getColumn().addAll((Collection<? extends ColumnDefinition>)newValue);
+      case PdfMkPackage.INNER_COLUMN_OBJECT__MEMBERS:
+        getMembers().clear();
+        getMembers().addAll((Collection<? extends InnerColumnObjectMembersWrapper>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -264,14 +196,8 @@ public class InnerColumnObjectImpl extends MinimalEObjectImpl.Container implemen
       case PdfMkPackage.INNER_COLUMN_OBJECT__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT:
-        getText().clear();
-        return;
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT_OBJECT:
-        getTextObject().clear();
-        return;
-      case PdfMkPackage.INNER_COLUMN_OBJECT__COLUMN:
-        getColumn().clear();
+      case PdfMkPackage.INNER_COLUMN_OBJECT__MEMBERS:
+        getMembers().clear();
         return;
     }
     super.eUnset(featureID);
@@ -289,12 +215,8 @@ public class InnerColumnObjectImpl extends MinimalEObjectImpl.Container implemen
     {
       case PdfMkPackage.INNER_COLUMN_OBJECT__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT:
-        return text != null && !text.isEmpty();
-      case PdfMkPackage.INNER_COLUMN_OBJECT__TEXT_OBJECT:
-        return textObject != null && !textObject.isEmpty();
-      case PdfMkPackage.INNER_COLUMN_OBJECT__COLUMN:
-        return column != null && !column.isEmpty();
+      case PdfMkPackage.INNER_COLUMN_OBJECT__MEMBERS:
+        return members != null && !members.isEmpty();
     }
     return super.eIsSet(featureID);
   }

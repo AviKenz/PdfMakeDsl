@@ -3,6 +3,8 @@
  */
 package org.xtext.avi.pdfMk;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,11 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#getKey <em>Key</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.StyleObject#getValue <em>Value</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isFontSize <em>Font Size</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isTypeFace <em>Type Face</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isAlignment <em>Alignment</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isItalics <em>Italics</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.StyleObject#isMargin <em>Margin</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.StyleObject#getMembers <em>Members</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject()
@@ -82,133 +80,19 @@ public interface StyleObject extends EObject
   void setValue(String value);
 
   /**
-   * Returns the value of the '<em><b>Font Size</b></em>' attribute.
+   * Returns the value of the '<em><b>Members</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.avi.pdfMk.StyleObjectMembersWrapper}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Font Size</em>' attribute isn't clear,
+   * If the meaning of the '<em>Members</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Font Size</em>' attribute.
-   * @see #setFontSize(boolean)
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_FontSize()
-   * @model
+   * @return the value of the '<em>Members</em>' containment reference list.
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_Members()
+   * @model containment="true"
    * @generated
    */
-  boolean isFontSize();
-
-  /**
-   * Sets the value of the '{@link org.xtext.avi.pdfMk.StyleObject#isFontSize <em>Font Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Font Size</em>' attribute.
-   * @see #isFontSize()
-   * @generated
-   */
-  void setFontSize(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Type Face</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Type Face</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Type Face</em>' attribute.
-   * @see #setTypeFace(boolean)
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_TypeFace()
-   * @model
-   * @generated
-   */
-  boolean isTypeFace();
-
-  /**
-   * Sets the value of the '{@link org.xtext.avi.pdfMk.StyleObject#isTypeFace <em>Type Face</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type Face</em>' attribute.
-   * @see #isTypeFace()
-   * @generated
-   */
-  void setTypeFace(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Alignment</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Alignment</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Alignment</em>' attribute.
-   * @see #setAlignment(boolean)
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_Alignment()
-   * @model
-   * @generated
-   */
-  boolean isAlignment();
-
-  /**
-   * Sets the value of the '{@link org.xtext.avi.pdfMk.StyleObject#isAlignment <em>Alignment</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Alignment</em>' attribute.
-   * @see #isAlignment()
-   * @generated
-   */
-  void setAlignment(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Italics</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Italics</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Italics</em>' attribute.
-   * @see #setItalics(boolean)
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_Italics()
-   * @model
-   * @generated
-   */
-  boolean isItalics();
-
-  /**
-   * Sets the value of the '{@link org.xtext.avi.pdfMk.StyleObject#isItalics <em>Italics</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Italics</em>' attribute.
-   * @see #isItalics()
-   * @generated
-   */
-  void setItalics(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Margin</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Margin</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Margin</em>' attribute.
-   * @see #setMargin(boolean)
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getStyleObject_Margin()
-   * @model
-   * @generated
-   */
-  boolean isMargin();
-
-  /**
-   * Sets the value of the '{@link org.xtext.avi.pdfMk.StyleObject#isMargin <em>Margin</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Margin</em>' attribute.
-   * @see #isMargin()
-   * @generated
-   */
-  void setMargin(boolean value);
+  EList<StyleObjectMembersWrapper> getMembers();
 
 } // StyleObject

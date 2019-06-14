@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MarginDefinition extends TextObjectMembersWrapper
+public interface MarginDefinition extends TextObjectMembersWrapper, StyleObjectMembersWrapper
 {
   /**
    * Returns the value of the '<em><b>Values</b></em>' attribute list.

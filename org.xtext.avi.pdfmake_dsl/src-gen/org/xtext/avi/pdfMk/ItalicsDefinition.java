@@ -20,7 +20,7 @@ package org.xtext.avi.pdfMk;
  * @model
  * @generated
  */
-public interface ItalicsDefinition extends TextObjectMembersWrapper
+public interface ItalicsDefinition extends TextObjectMembersWrapper, StyleObjectMembersWrapper
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

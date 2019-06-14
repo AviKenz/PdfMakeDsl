@@ -44,7 +44,7 @@ TextDefinition:
 	
 // TODO [L] add validattion rule (Enums String are not supported)
 TextAlignmentDefinition:
-	"alignment" ":" STRING;
+	key="alignment" ":" value=STRING;
 	
 ItalicsDefinition:
 	key="italics" ":" value=BooleanType
@@ -124,76 +124,55 @@ TableDefinition:
 						  "}";
 		
 
-/******************** Objects definition ********************/
-// TODO [M] write grammar to support text in []. see playground-style3
-//TextObject: 
-//	"{" text?=TextDefinition 
-//			  ("," style?=TextStyleDefinition)?
-//			  ("," fontSize?=FontSizeDefinition)? 
-//			  ("," alignment?=TextAlignmentDefinition)? 
-//			  ("," typeFace?=TypeFaceDefinition)? 
-//			  ("," italics?=ItalicsDefinition)?
-//			  ("," width?=WidthDefinition)?
-//			  ("," margin?=MarginDefinition)?
-//			  ("," listCounter?=ListCounterDefinition)?
-//		   "}";
-
+/****** Member objects wrapper ******/
 TextObjectMembersWrapper:
 	TextDefinition|TextStyleDefinition|FontSizeDefinition|TextAlignmentDefinition|
 	TypeFaceDefinition|ItalicsDefinition|WidthDefinition|
 	MarginDefinition|ListCounterDefinition;
+	
+StyleObjectMembersWrapper:
+	FontSizeDefinition|TypeFaceDefinition|TextAlignmentDefinition|ItalicsDefinition|MarginDefinition;
+	
+ImageObjectMembersWrapper:
+	ImageDefintion|ImageWidthDefintion|ImageHeightDefintion|ImageOpacityDefinition|ImageFitDefinition|ImagePageBreakDefinition;
+	
+InnerColumnObjectMembersWrapper:
+	(text+=StringObject? ("," text+=StringObject)*)|(textObject+=TextObject? ("," textObject+=TextObject)*)|(column+=ColumnDefinition? ("," column+=ColumnDefinition)*);
 
+// TODO[H] fix the error which appears when uncomment line below
+ColumnObjectMembersWrapper:
+	(text+=StringObject? ("," text+=StringObject)*)|(textObject+=TextObject? ("," textObject+=TextObject)*)/*|
+	 (column+=ColumnDefinition? ("," column+=ColumnDefinition)*) |(innerColumn+=InnerColumnObject? ("," innerColumn+=InnerColumnObject)*) */;
+
+ListObjectPropertiesWrapper:
+	value=(ListReversedDefinition|ListCounterDefinition|ListTypeDefinition|ListColorDefinition|ListMarkerColorDefinition);
+
+/******************** Objects definition ********************/
+// TODO [M] write grammar to support text in []. see playground-style3
 TextObject:
 	"{" (members+=TextObjectMembersWrapper ("," members+=TextObjectMembersWrapper)*) "}";
-
-
 		   
 ColumnTextObject: 
 	value=ColumnDefinition;
 
 StyleObject: 
 	key=ID ":" 
-	value="{" 
-	  		  (fontSize?=FontSizeDefinition)? 
-			  ("," typeFace?=TypeFaceDefinition)? 
-			  ("," alignment?=TextAlignmentDefinition)? 
-			  ("," italics?=ItalicsDefinition)? 
-			  ("," margin?=MarginDefinition)?
-		  "}";
+	value="{" (members+=StyleObjectMembersWrapper ("," members+=StyleObjectMembersWrapper)*) "}";
 
 StyleObjects: 
 	"{" 
 		(value+=StyleObject
 		("," value+=StyleObject)*)
 	"}";
+
+ImageObject:
+	value="{" (members+=ImageObjectMembersWrapper ("," members+=ImageObjectMembersWrapper)*) "}";
 	
 InnerColumnObject:
-	value= "["
-				(text+=StringObject? ("," text+=StringObject)*)
-				(textObject+=TextObject? ("," textObject+=TextObject)*)
-				(column+=ColumnDefinition? ("," column+=ColumnDefinition)*)
-			"]";
+	value="[" (members+=InnerColumnObjectMembersWrapper ("," members+=InnerColumnObjectMembersWrapper)*) "]";
    
 ColumnObject:
-	value="["
-			(text+=StringObject? ("," text+=StringObject)*)
-			(textObject+=TextObject? ("," textObject+=TextObject)*)
-			(column+=ColumnDefinition? ("," column+=ColumnDefinition)*)
-			(innerColumn+=InnerColumnObject? ("," innerColumn+=InnerColumnObject)*)
-		"]";
-		
-ImageObject:
-	value= "{"
-				(image?=ImageDefintion)?
-				("," width?=ImageWidthDefintion)?
-				("," height?=ImageHeightDefintion)?
-				("," opacity?=ImageOpacityDefinition)?
-				("," fit?=ImageFitDefinition)?
-				("," pageBreak?=ImagePageBreakDefinition)?
-			"}";
-
-ListObjectPropertiesWrapper:
-	value=(ListReversedDefinition|ListCounterDefinition|ListTypeDefinition|ListColorDefinition|ListMarkerColorDefinition);
+	value="[" (members+=ColumnObjectMembersWrapper ("," members+=ColumnObjectMembersWrapper)*) "]";
 
 ListElements:
 	elValues=STRING|TextObject|ColumnDefinition;

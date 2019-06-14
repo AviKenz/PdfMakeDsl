@@ -12,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
@@ -27,35 +26,14 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageFitDefinitionImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.ImageFitDefinitionImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.ImageFitDefinitionImpl#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ImageFitDefinitionImpl extends MinimalEObjectImpl.Container implements ImageFitDefinition
+public class ImageFitDefinitionImpl extends ImageObjectMembersWrapperImpl implements ImageFitDefinition
 {
-  /**
-   * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKey()
-   * @generated
-   * @ordered
-   */
-  protected static final String KEY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getKey() <em>Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKey()
-   * @generated
-   * @ordered
-   */
-  protected String key = KEY_EDEFAULT;
-
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -112,29 +90,6 @@ public class ImageFitDefinitionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getKey()
-  {
-    return key;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setKey(String newKey)
-  {
-    String oldKey = key;
-    key = newKey;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_FIT_DEFINITION__KEY, oldKey, key));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getValue()
   {
     return value;
@@ -177,8 +132,6 @@ public class ImageFitDefinitionImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_FIT_DEFINITION__KEY:
-        return getKey();
       case PdfMkPackage.IMAGE_FIT_DEFINITION__VALUE:
         return getValue();
       case PdfMkPackage.IMAGE_FIT_DEFINITION__VALUES:
@@ -198,9 +151,6 @@ public class ImageFitDefinitionImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_FIT_DEFINITION__KEY:
-        setKey((String)newValue);
-        return;
       case PdfMkPackage.IMAGE_FIT_DEFINITION__VALUE:
         setValue((String)newValue);
         return;
@@ -222,9 +172,6 @@ public class ImageFitDefinitionImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_FIT_DEFINITION__KEY:
-        setKey(KEY_EDEFAULT);
-        return;
       case PdfMkPackage.IMAGE_FIT_DEFINITION__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
@@ -245,8 +192,6 @@ public class ImageFitDefinitionImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_FIT_DEFINITION__KEY:
-        return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
       case PdfMkPackage.IMAGE_FIT_DEFINITION__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
       case PdfMkPackage.IMAGE_FIT_DEFINITION__VALUES:
@@ -266,9 +211,7 @@ public class ImageFitDefinitionImpl extends MinimalEObjectImpl.Container impleme
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (key: ");
-    result.append(key);
-    result.append(", value: ");
+    result.append(" (value: ");
     result.append(value);
     result.append(", values: ");
     result.append(values);

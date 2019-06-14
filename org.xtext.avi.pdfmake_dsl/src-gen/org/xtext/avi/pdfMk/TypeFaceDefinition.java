@@ -20,7 +20,7 @@ package org.xtext.avi.pdfMk;
  * @model
  * @generated
  */
-public interface TypeFaceDefinition extends TextObjectMembersWrapper
+public interface TypeFaceDefinition extends TextObjectMembersWrapper, StyleObjectMembersWrapper
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

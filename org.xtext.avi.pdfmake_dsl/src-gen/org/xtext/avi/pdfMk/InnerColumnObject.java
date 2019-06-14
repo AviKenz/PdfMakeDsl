@@ -17,9 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.avi.pdfMk.InnerColumnObject#getValue <em>Value</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.InnerColumnObject#getText <em>Text</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.InnerColumnObject#getTextObject <em>Text Object</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.InnerColumnObject#getColumn <em>Column</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.InnerColumnObject#getMembers <em>Members</em>}</li>
  * </ul>
  *
  * @see org.xtext.avi.pdfMk.PdfMkPackage#getInnerColumnObject()
@@ -55,51 +53,19 @@ public interface InnerColumnObject extends EObject
   void setValue(String value);
 
   /**
-   * Returns the value of the '<em><b>Text</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.avi.pdfMk.StringObject}.
+   * Returns the value of the '<em><b>Members</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.avi.pdfMk.InnerColumnObjectMembersWrapper}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Text</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Members</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Text</em>' containment reference list.
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getInnerColumnObject_Text()
+   * @return the value of the '<em>Members</em>' containment reference list.
+   * @see org.xtext.avi.pdfMk.PdfMkPackage#getInnerColumnObject_Members()
    * @model containment="true"
    * @generated
    */
-  EList<StringObject> getText();
-
-  /**
-   * Returns the value of the '<em><b>Text Object</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.avi.pdfMk.TextObject}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Text Object</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Text Object</em>' containment reference list.
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getInnerColumnObject_TextObject()
-   * @model containment="true"
-   * @generated
-   */
-  EList<TextObject> getTextObject();
-
-  /**
-   * Returns the value of the '<em><b>Column</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.avi.pdfMk.ColumnDefinition}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Column</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Column</em>' containment reference list.
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getInnerColumnObject_Column()
-   * @model containment="true"
-   * @generated
-   */
-  EList<ColumnDefinition> getColumn();
+  EList<InnerColumnObjectMembersWrapper> getMembers();
 
 } // InnerColumnObject

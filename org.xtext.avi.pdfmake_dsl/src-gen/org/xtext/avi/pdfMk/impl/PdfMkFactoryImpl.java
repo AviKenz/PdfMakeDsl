@@ -70,6 +70,7 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.TYPE_FACE_DEFINITION: return createTypeFaceDefinition();
       case PdfMkPackage.TEXT_STYLE_DEFINITION: return createTextStyleDefinition();
       case PdfMkPackage.TEXT_DEFINITION: return createTextDefinition();
+      case PdfMkPackage.TEXT_ALIGNMENT_DEFINITION: return createTextAlignmentDefinition();
       case PdfMkPackage.ITALICS_DEFINITION: return createItalicsDefinition();
       case PdfMkPackage.FONT_SIZE_DEFINITION: return createFontSizeDefinition();
       case PdfMkPackage.STYLE_DEFINITION: return createStyleDefinition();
@@ -94,14 +95,18 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.TABLE_BODY_DEFINITION: return createTableBodyDefinition();
       case PdfMkPackage.TABLE_DEFINITION: return createTableDefinition();
       case PdfMkPackage.TEXT_OBJECT_MEMBERS_WRAPPER: return createTextObjectMembersWrapper();
+      case PdfMkPackage.STYLE_OBJECT_MEMBERS_WRAPPER: return createStyleObjectMembersWrapper();
+      case PdfMkPackage.IMAGE_OBJECT_MEMBERS_WRAPPER: return createImageObjectMembersWrapper();
+      case PdfMkPackage.INNER_COLUMN_OBJECT_MEMBERS_WRAPPER: return createInnerColumnObjectMembersWrapper();
+      case PdfMkPackage.COLUMN_OBJECT_MEMBERS_WRAPPER: return createColumnObjectMembersWrapper();
+      case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER: return createListObjectPropertiesWrapper();
       case PdfMkPackage.TEXT_OBJECT: return createTextObject();
       case PdfMkPackage.COLUMN_TEXT_OBJECT: return createColumnTextObject();
       case PdfMkPackage.STYLE_OBJECT: return createStyleObject();
       case PdfMkPackage.STYLE_OBJECTS: return createStyleObjects();
+      case PdfMkPackage.IMAGE_OBJECT: return createImageObject();
       case PdfMkPackage.INNER_COLUMN_OBJECT: return createInnerColumnObject();
       case PdfMkPackage.COLUMN_OBJECT: return createColumnObject();
-      case PdfMkPackage.IMAGE_OBJECT: return createImageObject();
-      case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER: return createListObjectPropertiesWrapper();
       case PdfMkPackage.LIST_ELEMENTS: return createListElements();
       case PdfMkPackage.LIST_OBJECT: return createListObject();
       case PdfMkPackage.TABLE_OBJECT: return createTableObject();
@@ -167,6 +172,17 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
   {
     TextDefinitionImpl textDefinition = new TextDefinitionImpl();
     return textDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextAlignmentDefinition createTextAlignmentDefinition()
+  {
+    TextAlignmentDefinitionImpl textAlignmentDefinition = new TextAlignmentDefinitionImpl();
+    return textAlignmentDefinition;
   }
 
   /**
@@ -438,6 +454,61 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public StyleObjectMembersWrapper createStyleObjectMembersWrapper()
+  {
+    StyleObjectMembersWrapperImpl styleObjectMembersWrapper = new StyleObjectMembersWrapperImpl();
+    return styleObjectMembersWrapper;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageObjectMembersWrapper createImageObjectMembersWrapper()
+  {
+    ImageObjectMembersWrapperImpl imageObjectMembersWrapper = new ImageObjectMembersWrapperImpl();
+    return imageObjectMembersWrapper;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InnerColumnObjectMembersWrapper createInnerColumnObjectMembersWrapper()
+  {
+    InnerColumnObjectMembersWrapperImpl innerColumnObjectMembersWrapper = new InnerColumnObjectMembersWrapperImpl();
+    return innerColumnObjectMembersWrapper;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ColumnObjectMembersWrapper createColumnObjectMembersWrapper()
+  {
+    ColumnObjectMembersWrapperImpl columnObjectMembersWrapper = new ColumnObjectMembersWrapperImpl();
+    return columnObjectMembersWrapper;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListObjectPropertiesWrapper createListObjectPropertiesWrapper()
+  {
+    ListObjectPropertiesWrapperImpl listObjectPropertiesWrapper = new ListObjectPropertiesWrapperImpl();
+    return listObjectPropertiesWrapper;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TextObject createTextObject()
   {
     TextObjectImpl textObject = new TextObjectImpl();
@@ -482,6 +553,17 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ImageObject createImageObject()
+  {
+    ImageObjectImpl imageObject = new ImageObjectImpl();
+    return imageObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public InnerColumnObject createInnerColumnObject()
   {
     InnerColumnObjectImpl innerColumnObject = new InnerColumnObjectImpl();
@@ -497,28 +579,6 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
   {
     ColumnObjectImpl columnObject = new ColumnObjectImpl();
     return columnObject;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ImageObject createImageObject()
-  {
-    ImageObjectImpl imageObject = new ImageObjectImpl();
-    return imageObject;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ListObjectPropertiesWrapper createListObjectPropertiesWrapper()
-  {
-    ListObjectPropertiesWrapperImpl listObjectPropertiesWrapper = new ListObjectPropertiesWrapperImpl();
-    return listObjectPropertiesWrapper;
   }
 
   /**

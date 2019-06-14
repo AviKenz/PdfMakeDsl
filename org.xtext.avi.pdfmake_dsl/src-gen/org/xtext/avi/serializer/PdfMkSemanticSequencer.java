@@ -17,6 +17,7 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransi
 import org.xtext.avi.pdfMk.ColumnDefinition;
 import org.xtext.avi.pdfMk.ColumnGapDefintion;
 import org.xtext.avi.pdfMk.ColumnObject;
+import org.xtext.avi.pdfMk.ColumnObjectMembersWrapper;
 import org.xtext.avi.pdfMk.ColumnTextObject;
 import org.xtext.avi.pdfMk.Content;
 import org.xtext.avi.pdfMk.ContentObject;
@@ -31,6 +32,7 @@ import org.xtext.avi.pdfMk.ImageOpacityDefinition;
 import org.xtext.avi.pdfMk.ImagePageBreakDefinition;
 import org.xtext.avi.pdfMk.ImageWidthDefintion;
 import org.xtext.avi.pdfMk.InnerColumnObject;
+import org.xtext.avi.pdfMk.InnerColumnObjectMembersWrapper;
 import org.xtext.avi.pdfMk.ItalicsDefinition;
 import org.xtext.avi.pdfMk.ListColorDefinition;
 import org.xtext.avi.pdfMk.ListCounterDefinition;
@@ -53,6 +55,7 @@ import org.xtext.avi.pdfMk.TableCellItemElements;
 import org.xtext.avi.pdfMk.TableDefinition;
 import org.xtext.avi.pdfMk.TableObject;
 import org.xtext.avi.pdfMk.TableRowDefinition;
+import org.xtext.avi.pdfMk.TextAlignmentDefinition;
 import org.xtext.avi.pdfMk.TextDefinition;
 import org.xtext.avi.pdfMk.TextObject;
 import org.xtext.avi.pdfMk.TextStyleDefinition;
@@ -82,6 +85,9 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case PdfMkPackage.COLUMN_OBJECT:
 				sequence_ColumnObject(context, (ColumnObject) semanticObject); 
+				return; 
+			case PdfMkPackage.COLUMN_OBJECT_MEMBERS_WRAPPER:
+				sequence_ColumnObjectMembersWrapper(context, (ColumnObjectMembersWrapper) semanticObject); 
 				return; 
 			case PdfMkPackage.COLUMN_TEXT_OBJECT:
 				sequence_ColumnTextObject(context, (ColumnTextObject) semanticObject); 
@@ -124,6 +130,9 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case PdfMkPackage.INNER_COLUMN_OBJECT:
 				sequence_InnerColumnObject(context, (InnerColumnObject) semanticObject); 
+				return; 
+			case PdfMkPackage.INNER_COLUMN_OBJECT_MEMBERS_WRAPPER:
+				sequence_InnerColumnObjectMembersWrapper(context, (InnerColumnObjectMembersWrapper) semanticObject); 
 				return; 
 			case PdfMkPackage.ITALICS_DEFINITION:
 				sequence_ItalicsDefinition(context, (ItalicsDefinition) semanticObject); 
@@ -188,6 +197,9 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PdfMkPackage.TABLE_ROW_DEFINITION:
 				sequence_TableRowDefinition(context, (TableRowDefinition) semanticObject); 
 				return; 
+			case PdfMkPackage.TEXT_ALIGNMENT_DEFINITION:
+				sequence_TextAlignmentDefinition(context, (TextAlignmentDefinition) semanticObject); 
+				return; 
 			case PdfMkPackage.TEXT_DEFINITION:
 				sequence_TextDefinition(context, (TextDefinition) semanticObject); 
 				return; 
@@ -244,20 +256,22 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     ColumnObjectMembersWrapper returns ColumnObjectMembersWrapper
+	 *
+	 * Constraint:
+	 *     ((text+=StringObject text+=StringObject+) | text+=StringObject+ | (textObject+=TextObject textObject+=TextObject+) | textObject+=TextObject+)?
+	 */
+	protected void sequence_ColumnObjectMembersWrapper(ISerializationContext context, ColumnObjectMembersWrapper semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     ColumnObject returns ColumnObject
 	 *
 	 * Constraint:
-	 *     (
-	 *         value='[' 
-	 *         text+=StringObject? 
-	 *         text+=StringObject* 
-	 *         textObject+=TextObject? 
-	 *         textObject+=TextObject* 
-	 *         column+=ColumnDefinition? 
-	 *         column+=ColumnDefinition* 
-	 *         innerColumn+=InnerColumnObject? 
-	 *         innerColumn+=InnerColumnObject*
-	 *     )
+	 *     (value='[' members+=ColumnObjectMembersWrapper members+=ColumnObjectMembersWrapper*)
 	 */
 	protected void sequence_ColumnObject(ISerializationContext context, ColumnObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -350,6 +364,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Contexts:
 	 *     FontSizeDefinition returns FontSizeDefinition
 	 *     TextObjectMembersWrapper returns FontSizeDefinition
+	 *     StyleObjectMembersWrapper returns FontSizeDefinition
 	 *
 	 * Constraint:
 	 *     (key='fontSize' value=INT)
@@ -371,14 +386,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ImageDefintion returns ImageDefintion
+	 *     ImageObjectMembersWrapper returns ImageDefintion
 	 *
 	 * Constraint:
 	 *     (key='image' value=STRING)
 	 */
 	protected void sequence_ImageDefintion(ISerializationContext context, ImageDefintion semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_DEFINTION__VALUE));
 		}
@@ -392,6 +408,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ImageFitDefinition returns ImageFitDefinition
+	 *     ImageObjectMembersWrapper returns ImageFitDefinition
 	 *
 	 * Constraint:
 	 *     (key='fit' value='[' values+=INT values+=INT)
@@ -404,14 +421,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ImageHeightDefintion returns ImageHeightDefintion
+	 *     ImageObjectMembersWrapper returns ImageHeightDefintion
 	 *
 	 * Constraint:
 	 *     (key='height' value=INT)
 	 */
 	protected void sequence_ImageHeightDefintion(ISerializationContext context, ImageHeightDefintion semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_HEIGHT_DEFINTION__VALUE));
 		}
@@ -427,15 +445,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ImageObject returns ImageObject
 	 *
 	 * Constraint:
-	 *     (
-	 *         value='{' 
-	 *         image?=ImageDefintion? 
-	 *         width?=ImageWidthDefintion? 
-	 *         height?=ImageHeightDefintion? 
-	 *         opacity?=ImageOpacityDefinition? 
-	 *         fit?=ImageFitDefinition? 
-	 *         pageBreak?=ImagePageBreakDefinition?
-	 *     )
+	 *     (value='{' members+=ImageObjectMembersWrapper members+=ImageObjectMembersWrapper*)
 	 */
 	protected void sequence_ImageObject(ISerializationContext context, ImageObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -445,14 +455,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ImageOpacityDefinition returns ImageOpacityDefinition
+	 *     ImageObjectMembersWrapper returns ImageOpacityDefinition
 	 *
 	 * Constraint:
 	 *     (key='opacity' value=INT)
 	 */
 	protected void sequence_ImageOpacityDefinition(ISerializationContext context, ImageOpacityDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OPACITY_DEFINITION__VALUE));
 		}
@@ -466,14 +477,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ImagePageBreakDefinition returns ImagePageBreakDefinition
+	 *     ImageObjectMembersWrapper returns ImagePageBreakDefinition
 	 *
 	 * Constraint:
 	 *     (key='pageBreak' value=STRING)
 	 */
 	protected void sequence_ImagePageBreakDefinition(ISerializationContext context, ImagePageBreakDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__VALUE));
 		}
@@ -487,14 +499,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ImageWidthDefintion returns ImageWidthDefintion
+	 *     ImageObjectMembersWrapper returns ImageWidthDefintion
 	 *
 	 * Constraint:
 	 *     (key='width' value=INT)
 	 */
 	protected void sequence_ImageWidthDefintion(ISerializationContext context, ImageWidthDefintion semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.IMAGE_WIDTH_DEFINTION__VALUE));
 		}
@@ -507,18 +520,29 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     InnerColumnObject returns InnerColumnObject
+	 *     InnerColumnObjectMembersWrapper returns InnerColumnObjectMembersWrapper
 	 *
 	 * Constraint:
 	 *     (
-	 *         value='[' 
-	 *         text+=StringObject? 
-	 *         text+=StringObject* 
-	 *         textObject+=TextObject? 
-	 *         textObject+=TextObject* 
-	 *         column+=ColumnDefinition? 
-	 *         column+=ColumnDefinition*
-	 *     )
+	 *         (text+=StringObject text+=StringObject+) | 
+	 *         text+=StringObject+ | 
+	 *         (textObject+=TextObject textObject+=TextObject+) | 
+	 *         textObject+=TextObject+ | 
+	 *         (column+=ColumnDefinition column+=ColumnDefinition+) | 
+	 *         column+=ColumnDefinition+
+	 *     )?
+	 */
+	protected void sequence_InnerColumnObjectMembersWrapper(ISerializationContext context, InnerColumnObjectMembersWrapper semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     InnerColumnObject returns InnerColumnObject
+	 *
+	 * Constraint:
+	 *     (value='[' members+=InnerColumnObjectMembersWrapper members+=InnerColumnObjectMembersWrapper*)
 	 */
 	protected void sequence_InnerColumnObject(ISerializationContext context, InnerColumnObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -529,6 +553,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Contexts:
 	 *     ItalicsDefinition returns ItalicsDefinition
 	 *     TextObjectMembersWrapper returns ItalicsDefinition
+	 *     StyleObjectMembersWrapper returns ItalicsDefinition
 	 *
 	 * Constraint:
 	 *     (key='italics' value=BooleanType)
@@ -720,6 +745,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Contexts:
 	 *     MarginDefinition returns MarginDefinition
 	 *     TextObjectMembersWrapper returns MarginDefinition
+	 *     StyleObjectMembersWrapper returns MarginDefinition
 	 *
 	 * Constraint:
 	 *     (key='margin' values+=INT? values+=INT*)
@@ -773,15 +799,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     StyleObject returns StyleObject
 	 *
 	 * Constraint:
-	 *     (
-	 *         key=ID 
-	 *         value='{' 
-	 *         fontSize?=FontSizeDefinition? 
-	 *         typeFace?=TypeFaceDefinition? 
-	 *         alignment?=TextAlignmentDefinition? 
-	 *         italics?=ItalicsDefinition? 
-	 *         margin?=MarginDefinition?
-	 *     )
+	 *     (key=ID value='{' members+=StyleObjectMembersWrapper members+=StyleObjectMembersWrapper*)
 	 */
 	protected void sequence_StyleObject(ISerializationContext context, StyleObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -895,6 +913,29 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     TextAlignmentDefinition returns TextAlignmentDefinition
+	 *     TextObjectMembersWrapper returns TextAlignmentDefinition
+	 *     StyleObjectMembersWrapper returns TextAlignmentDefinition
+	 *
+	 * Constraint:
+	 *     (key='alignment' value=STRING)
+	 */
+	protected void sequence_TextAlignmentDefinition(ISerializationContext context, TextAlignmentDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_ALIGNMENT_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_ALIGNMENT_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTextAlignmentDefinitionAccess().getKeyAlignmentKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getTextAlignmentDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     TextDefinition returns TextDefinition
 	 *     TextObjectMembersWrapper returns TextDefinition
 	 *
@@ -954,6 +995,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Contexts:
 	 *     TypeFaceDefinition returns TypeFaceDefinition
 	 *     TextObjectMembersWrapper returns TypeFaceDefinition
+	 *     StyleObjectMembersWrapper returns TypeFaceDefinition
 	 *
 	 * Constraint:
 	 *     (key='bold' value=BooleanType)

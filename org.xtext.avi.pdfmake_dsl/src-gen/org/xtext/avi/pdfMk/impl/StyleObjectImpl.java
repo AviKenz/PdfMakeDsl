@@ -3,15 +3,25 @@
  */
 package org.xtext.avi.pdfMk.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.StyleObject;
+import org.xtext.avi.pdfMk.StyleObjectMembersWrapper;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,11 +33,7 @@ import org.xtext.avi.pdfMk.StyleObject;
  * <ul>
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isFontSize <em>Font Size</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isTypeFace <em>Type Face</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isAlignment <em>Alignment</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isItalics <em>Italics</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#isMargin <em>Margin</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.StyleObjectImpl#getMembers <em>Members</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,104 +81,14 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
   protected String value = VALUE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isFontSize() <em>Font Size</em>}' attribute.
+   * The cached value of the '{@link #getMembers() <em>Members</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isFontSize()
+   * @see #getMembers()
    * @generated
    * @ordered
    */
-  protected static final boolean FONT_SIZE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isFontSize() <em>Font Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isFontSize()
-   * @generated
-   * @ordered
-   */
-  protected boolean fontSize = FONT_SIZE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isTypeFace() <em>Type Face</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTypeFace()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean TYPE_FACE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isTypeFace() <em>Type Face</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTypeFace()
-   * @generated
-   * @ordered
-   */
-  protected boolean typeFace = TYPE_FACE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isAlignment() <em>Alignment</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isAlignment()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean ALIGNMENT_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isAlignment() <em>Alignment</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isAlignment()
-   * @generated
-   * @ordered
-   */
-  protected boolean alignment = ALIGNMENT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isItalics() <em>Italics</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isItalics()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean ITALICS_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isItalics() <em>Italics</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isItalics()
-   * @generated
-   * @ordered
-   */
-  protected boolean italics = ITALICS_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isMargin() <em>Margin</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isMargin()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean MARGIN_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isMargin() <em>Margin</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isMargin()
-   * @generated
-   * @ordered
-   */
-  protected boolean margin = MARGIN_EDEFAULT;
+  protected EList<StyleObjectMembersWrapper> members;
 
   /**
    * <!-- begin-user-doc -->
@@ -246,9 +162,13 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isFontSize()
+  public EList<StyleObjectMembersWrapper> getMembers()
   {
-    return fontSize;
+    if (members == null)
+    {
+      members = new EObjectContainmentEList<StyleObjectMembersWrapper>(StyleObjectMembersWrapper.class, this, PdfMkPackage.STYLE_OBJECT__MEMBERS);
+    }
+    return members;
   }
 
   /**
@@ -256,104 +176,15 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFontSize(boolean newFontSize)
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    boolean oldFontSize = fontSize;
-    fontSize = newFontSize;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLE_OBJECT__FONT_SIZE, oldFontSize, fontSize));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isTypeFace()
-  {
-    return typeFace;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTypeFace(boolean newTypeFace)
-  {
-    boolean oldTypeFace = typeFace;
-    typeFace = newTypeFace;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLE_OBJECT__TYPE_FACE, oldTypeFace, typeFace));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isAlignment()
-  {
-    return alignment;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAlignment(boolean newAlignment)
-  {
-    boolean oldAlignment = alignment;
-    alignment = newAlignment;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLE_OBJECT__ALIGNMENT, oldAlignment, alignment));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isItalics()
-  {
-    return italics;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setItalics(boolean newItalics)
-  {
-    boolean oldItalics = italics;
-    italics = newItalics;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLE_OBJECT__ITALICS, oldItalics, italics));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isMargin()
-  {
-    return margin;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setMargin(boolean newMargin)
-  {
-    boolean oldMargin = margin;
-    margin = newMargin;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.STYLE_OBJECT__MARGIN, oldMargin, margin));
+    switch (featureID)
+    {
+      case PdfMkPackage.STYLE_OBJECT__MEMBERS:
+        return ((InternalEList<?>)getMembers()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -370,16 +201,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
         return getKey();
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         return getValue();
-      case PdfMkPackage.STYLE_OBJECT__FONT_SIZE:
-        return isFontSize();
-      case PdfMkPackage.STYLE_OBJECT__TYPE_FACE:
-        return isTypeFace();
-      case PdfMkPackage.STYLE_OBJECT__ALIGNMENT:
-        return isAlignment();
-      case PdfMkPackage.STYLE_OBJECT__ITALICS:
-        return isItalics();
-      case PdfMkPackage.STYLE_OBJECT__MARGIN:
-        return isMargin();
+      case PdfMkPackage.STYLE_OBJECT__MEMBERS:
+        return getMembers();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -389,6 +212,7 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -400,20 +224,9 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         setValue((String)newValue);
         return;
-      case PdfMkPackage.STYLE_OBJECT__FONT_SIZE:
-        setFontSize((Boolean)newValue);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__TYPE_FACE:
-        setTypeFace((Boolean)newValue);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__ALIGNMENT:
-        setAlignment((Boolean)newValue);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__ITALICS:
-        setItalics((Boolean)newValue);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__MARGIN:
-        setMargin((Boolean)newValue);
+      case PdfMkPackage.STYLE_OBJECT__MEMBERS:
+        getMembers().clear();
+        getMembers().addAll((Collection<? extends StyleObjectMembersWrapper>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -435,20 +248,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
-      case PdfMkPackage.STYLE_OBJECT__FONT_SIZE:
-        setFontSize(FONT_SIZE_EDEFAULT);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__TYPE_FACE:
-        setTypeFace(TYPE_FACE_EDEFAULT);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__ALIGNMENT:
-        setAlignment(ALIGNMENT_EDEFAULT);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__ITALICS:
-        setItalics(ITALICS_EDEFAULT);
-        return;
-      case PdfMkPackage.STYLE_OBJECT__MARGIN:
-        setMargin(MARGIN_EDEFAULT);
+      case PdfMkPackage.STYLE_OBJECT__MEMBERS:
+        getMembers().clear();
         return;
     }
     super.eUnset(featureID);
@@ -468,16 +269,8 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
         return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
       case PdfMkPackage.STYLE_OBJECT__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case PdfMkPackage.STYLE_OBJECT__FONT_SIZE:
-        return fontSize != FONT_SIZE_EDEFAULT;
-      case PdfMkPackage.STYLE_OBJECT__TYPE_FACE:
-        return typeFace != TYPE_FACE_EDEFAULT;
-      case PdfMkPackage.STYLE_OBJECT__ALIGNMENT:
-        return alignment != ALIGNMENT_EDEFAULT;
-      case PdfMkPackage.STYLE_OBJECT__ITALICS:
-        return italics != ITALICS_EDEFAULT;
-      case PdfMkPackage.STYLE_OBJECT__MARGIN:
-        return margin != MARGIN_EDEFAULT;
+      case PdfMkPackage.STYLE_OBJECT__MEMBERS:
+        return members != null && !members.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -497,16 +290,6 @@ public class StyleObjectImpl extends MinimalEObjectImpl.Container implements Sty
     result.append(key);
     result.append(", value: ");
     result.append(value);
-    result.append(", fontSize: ");
-    result.append(fontSize);
-    result.append(", typeFace: ");
-    result.append(typeFace);
-    result.append(", alignment: ");
-    result.append(alignment);
-    result.append(", italics: ");
-    result.append(italics);
-    result.append(", margin: ");
-    result.append(margin);
     result.append(')');
     return result.toString();
   }

@@ -8,7 +8,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.avi.pdfMk.ImageDefintion;
 import org.xtext.avi.pdfMk.PdfMkPackage;
@@ -21,34 +20,13 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageDefintionImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.ImageDefintionImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ImageDefintionImpl extends MinimalEObjectImpl.Container implements ImageDefintion
+public class ImageDefintionImpl extends ImageObjectMembersWrapperImpl implements ImageDefintion
 {
-  /**
-   * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKey()
-   * @generated
-   * @ordered
-   */
-  protected static final String KEY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getKey() <em>Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKey()
-   * @generated
-   * @ordered
-   */
-  protected String key = KEY_EDEFAULT;
-
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -95,29 +73,6 @@ public class ImageDefintionImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getKey()
-  {
-    return key;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setKey(String newKey)
-  {
-    String oldKey = key;
-    key = newKey;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_DEFINTION__KEY, oldKey, key));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getValue()
   {
     return value;
@@ -146,8 +101,6 @@ public class ImageDefintionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_DEFINTION__KEY:
-        return getKey();
       case PdfMkPackage.IMAGE_DEFINTION__VALUE:
         return getValue();
     }
@@ -164,9 +117,6 @@ public class ImageDefintionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_DEFINTION__KEY:
-        setKey((String)newValue);
-        return;
       case PdfMkPackage.IMAGE_DEFINTION__VALUE:
         setValue((String)newValue);
         return;
@@ -184,9 +134,6 @@ public class ImageDefintionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_DEFINTION__KEY:
-        setKey(KEY_EDEFAULT);
-        return;
       case PdfMkPackage.IMAGE_DEFINTION__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
@@ -204,8 +151,6 @@ public class ImageDefintionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case PdfMkPackage.IMAGE_DEFINTION__KEY:
-        return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
       case PdfMkPackage.IMAGE_DEFINTION__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
@@ -223,9 +168,7 @@ public class ImageDefintionImpl extends MinimalEObjectImpl.Container implements 
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (key: ");
-    result.append(key);
-    result.append(", value: ");
+    result.append(" (value: ");
     result.append(value);
     result.append(')');
     return result.toString();

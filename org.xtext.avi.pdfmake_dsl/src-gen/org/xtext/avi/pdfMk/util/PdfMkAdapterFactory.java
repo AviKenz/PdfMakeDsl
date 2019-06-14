@@ -101,6 +101,11 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createTextDefinitionAdapter();
       }
       @Override
+      public Adapter caseTextAlignmentDefinition(TextAlignmentDefinition object)
+      {
+        return createTextAlignmentDefinitionAdapter();
+      }
+      @Override
       public Adapter caseItalicsDefinition(ItalicsDefinition object)
       {
         return createItalicsDefinitionAdapter();
@@ -221,6 +226,31 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createTextObjectMembersWrapperAdapter();
       }
       @Override
+      public Adapter caseStyleObjectMembersWrapper(StyleObjectMembersWrapper object)
+      {
+        return createStyleObjectMembersWrapperAdapter();
+      }
+      @Override
+      public Adapter caseImageObjectMembersWrapper(ImageObjectMembersWrapper object)
+      {
+        return createImageObjectMembersWrapperAdapter();
+      }
+      @Override
+      public Adapter caseInnerColumnObjectMembersWrapper(InnerColumnObjectMembersWrapper object)
+      {
+        return createInnerColumnObjectMembersWrapperAdapter();
+      }
+      @Override
+      public Adapter caseColumnObjectMembersWrapper(ColumnObjectMembersWrapper object)
+      {
+        return createColumnObjectMembersWrapperAdapter();
+      }
+      @Override
+      public Adapter caseListObjectPropertiesWrapper(ListObjectPropertiesWrapper object)
+      {
+        return createListObjectPropertiesWrapperAdapter();
+      }
+      @Override
       public Adapter caseTextObject(TextObject object)
       {
         return createTextObjectAdapter();
@@ -241,6 +271,11 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createStyleObjectsAdapter();
       }
       @Override
+      public Adapter caseImageObject(ImageObject object)
+      {
+        return createImageObjectAdapter();
+      }
+      @Override
       public Adapter caseInnerColumnObject(InnerColumnObject object)
       {
         return createInnerColumnObjectAdapter();
@@ -249,16 +284,6 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
       public Adapter caseColumnObject(ColumnObject object)
       {
         return createColumnObjectAdapter();
-      }
-      @Override
-      public Adapter caseImageObject(ImageObject object)
-      {
-        return createImageObjectAdapter();
-      }
-      @Override
-      public Adapter caseListObjectPropertiesWrapper(ListObjectPropertiesWrapper object)
-      {
-        return createListObjectPropertiesWrapperAdapter();
       }
       @Override
       public Adapter caseListElements(ListElements object)
@@ -388,6 +413,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTextDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextAlignmentDefinition <em>Text Alignment Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TextAlignmentDefinition
+   * @generated
+   */
+  public Adapter createTextAlignmentDefinitionAdapter()
   {
     return null;
   }
@@ -753,6 +793,81 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.StyleObjectMembersWrapper <em>Style Object Members Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.StyleObjectMembersWrapper
+   * @generated
+   */
+  public Adapter createStyleObjectMembersWrapperAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageObjectMembersWrapper <em>Image Object Members Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImageObjectMembersWrapper
+   * @generated
+   */
+  public Adapter createImageObjectMembersWrapperAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.InnerColumnObjectMembersWrapper <em>Inner Column Object Members Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.InnerColumnObjectMembersWrapper
+   * @generated
+   */
+  public Adapter createInnerColumnObjectMembersWrapperAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ColumnObjectMembersWrapper <em>Column Object Members Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ColumnObjectMembersWrapper
+   * @generated
+   */
+  public Adapter createColumnObjectMembersWrapperAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListObjectPropertiesWrapper <em>List Object Properties Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ListObjectPropertiesWrapper
+   * @generated
+   */
+  public Adapter createListObjectPropertiesWrapperAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -813,6 +928,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageObject <em>Image Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.ImageObject
+   * @generated
+   */
+  public Adapter createImageObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.InnerColumnObject <em>Inner Column Object</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -838,36 +968,6 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createColumnObjectAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ImageObject <em>Image Object</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.ImageObject
-   * @generated
-   */
-  public Adapter createImageObjectAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.ListObjectPropertiesWrapper <em>List Object Properties Wrapper</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.avi.pdfMk.ListObjectPropertiesWrapper
-   * @generated
-   */
-  public Adapter createListObjectPropertiesWrapperAdapter()
   {
     return null;
   }

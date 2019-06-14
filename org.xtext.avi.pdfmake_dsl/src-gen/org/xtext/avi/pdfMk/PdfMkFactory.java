@@ -69,6 +69,15 @@ public interface PdfMkFactory extends EFactory
   TextDefinition createTextDefinition();
 
   /**
+   * Returns a new object of class '<em>Text Alignment Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Alignment Definition</em>'.
+   * @generated
+   */
+  TextAlignmentDefinition createTextAlignmentDefinition();
+
+  /**
    * Returns a new object of class '<em>Italics Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -285,6 +294,51 @@ public interface PdfMkFactory extends EFactory
   TextObjectMembersWrapper createTextObjectMembersWrapper();
 
   /**
+   * Returns a new object of class '<em>Style Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Style Object Members Wrapper</em>'.
+   * @generated
+   */
+  StyleObjectMembersWrapper createStyleObjectMembersWrapper();
+
+  /**
+   * Returns a new object of class '<em>Image Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Object Members Wrapper</em>'.
+   * @generated
+   */
+  ImageObjectMembersWrapper createImageObjectMembersWrapper();
+
+  /**
+   * Returns a new object of class '<em>Inner Column Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Inner Column Object Members Wrapper</em>'.
+   * @generated
+   */
+  InnerColumnObjectMembersWrapper createInnerColumnObjectMembersWrapper();
+
+  /**
+   * Returns a new object of class '<em>Column Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Column Object Members Wrapper</em>'.
+   * @generated
+   */
+  ColumnObjectMembersWrapper createColumnObjectMembersWrapper();
+
+  /**
+   * Returns a new object of class '<em>List Object Properties Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Object Properties Wrapper</em>'.
+   * @generated
+   */
+  ListObjectPropertiesWrapper createListObjectPropertiesWrapper();
+
+  /**
    * Returns a new object of class '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -321,6 +375,15 @@ public interface PdfMkFactory extends EFactory
   StyleObjects createStyleObjects();
 
   /**
+   * Returns a new object of class '<em>Image Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Object</em>'.
+   * @generated
+   */
+  ImageObject createImageObject();
+
+  /**
    * Returns a new object of class '<em>Inner Column Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -337,24 +400,6 @@ public interface PdfMkFactory extends EFactory
    * @generated
    */
   ColumnObject createColumnObject();
-
-  /**
-   * Returns a new object of class '<em>Image Object</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Image Object</em>'.
-   * @generated
-   */
-  ImageObject createImageObject();
-
-  /**
-   * Returns a new object of class '<em>List Object Properties Wrapper</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>List Object Properties Wrapper</em>'.
-   * @generated
-   */
-  ListObjectPropertiesWrapper createListObjectPropertiesWrapper();
 
   /**
    * Returns a new object of class '<em>List Elements</em>'.

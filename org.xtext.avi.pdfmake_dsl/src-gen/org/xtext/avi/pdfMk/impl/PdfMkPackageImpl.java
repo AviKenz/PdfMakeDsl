@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.xtext.avi.pdfMk.ColumnDefinition;
 import org.xtext.avi.pdfMk.ColumnGapDefintion;
 import org.xtext.avi.pdfMk.ColumnObject;
+import org.xtext.avi.pdfMk.ColumnObjectMembersWrapper;
 import org.xtext.avi.pdfMk.ColumnTextObject;
 import org.xtext.avi.pdfMk.Content;
 import org.xtext.avi.pdfMk.ContentObject;
@@ -23,10 +24,12 @@ import org.xtext.avi.pdfMk.ImageDefintion;
 import org.xtext.avi.pdfMk.ImageFitDefinition;
 import org.xtext.avi.pdfMk.ImageHeightDefintion;
 import org.xtext.avi.pdfMk.ImageObject;
+import org.xtext.avi.pdfMk.ImageObjectMembersWrapper;
 import org.xtext.avi.pdfMk.ImageOpacityDefinition;
 import org.xtext.avi.pdfMk.ImagePageBreakDefinition;
 import org.xtext.avi.pdfMk.ImageWidthDefintion;
 import org.xtext.avi.pdfMk.InnerColumnObject;
+import org.xtext.avi.pdfMk.InnerColumnObjectMembersWrapper;
 import org.xtext.avi.pdfMk.ItalicsDefinition;
 import org.xtext.avi.pdfMk.ListColorDefinition;
 import org.xtext.avi.pdfMk.ListCounterDefinition;
@@ -43,6 +46,7 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.StringObject;
 import org.xtext.avi.pdfMk.StyleDefinition;
 import org.xtext.avi.pdfMk.StyleObject;
+import org.xtext.avi.pdfMk.StyleObjectMembersWrapper;
 import org.xtext.avi.pdfMk.StyleObjects;
 import org.xtext.avi.pdfMk.Styles;
 import org.xtext.avi.pdfMk.TableBodyDefinition;
@@ -50,6 +54,7 @@ import org.xtext.avi.pdfMk.TableCellItemElements;
 import org.xtext.avi.pdfMk.TableDefinition;
 import org.xtext.avi.pdfMk.TableObject;
 import org.xtext.avi.pdfMk.TableRowDefinition;
+import org.xtext.avi.pdfMk.TextAlignmentDefinition;
 import org.xtext.avi.pdfMk.TextDefinition;
 import org.xtext.avi.pdfMk.TextObject;
 import org.xtext.avi.pdfMk.TextObjectMembersWrapper;
@@ -99,6 +104,13 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * @generated
    */
   private EClass textDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textAlignmentDefinitionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -273,6 +285,41 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass styleObjectMembersWrapperEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass imageObjectMembersWrapperEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass innerColumnObjectMembersWrapperEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass columnObjectMembersWrapperEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass listObjectPropertiesWrapperEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass textObjectEClass = null;
 
   /**
@@ -301,6 +348,13 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass imageObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass innerColumnObjectEClass = null;
 
   /**
@@ -309,20 +363,6 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * @generated
    */
   private EClass columnObjectEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass imageObjectEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass listObjectPropertiesWrapperEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -551,6 +591,26 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTextAlignmentDefinition()
+  {
+    return textAlignmentDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTextAlignmentDefinition_Value()
+  {
+    return (EAttribute)textAlignmentDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getItalicsDefinition()
   {
     return italicsDefinitionEClass;
@@ -741,19 +801,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageDefintion_Key()
-  {
-    return (EAttribute)imageDefintionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getImageDefintion_Value()
   {
-    return (EAttribute)imageDefintionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)imageDefintionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -771,19 +821,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageWidthDefintion_Key()
-  {
-    return (EAttribute)imageWidthDefintionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getImageWidthDefintion_Value()
   {
-    return (EAttribute)imageWidthDefintionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)imageWidthDefintionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -801,19 +841,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageHeightDefintion_Key()
-  {
-    return (EAttribute)imageHeightDefintionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getImageHeightDefintion_Value()
   {
-    return (EAttribute)imageHeightDefintionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)imageHeightDefintionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -831,19 +861,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImagePageBreakDefinition_Key()
-  {
-    return (EAttribute)imagePageBreakDefinitionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getImagePageBreakDefinition_Value()
   {
-    return (EAttribute)imagePageBreakDefinitionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)imagePageBreakDefinitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -861,7 +881,7 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageFitDefinition_Key()
+  public EAttribute getImageFitDefinition_Value()
   {
     return (EAttribute)imageFitDefinitionEClass.getEStructuralFeatures().get(0);
   }
@@ -871,19 +891,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageFitDefinition_Value()
-  {
-    return (EAttribute)imageFitDefinitionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getImageFitDefinition_Values()
   {
-    return (EAttribute)imageFitDefinitionEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)imageFitDefinitionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -901,19 +911,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageOpacityDefinition_Key()
-  {
-    return (EAttribute)imageOpacityDefinitionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getImageOpacityDefinition_Value()
   {
-    return (EAttribute)imageOpacityDefinitionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)imageOpacityDefinitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1231,6 +1231,126 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getStyleObjectMembersWrapper()
+  {
+    return styleObjectMembersWrapperEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImageObjectMembersWrapper()
+  {
+    return imageObjectMembersWrapperEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImageObjectMembersWrapper_Key()
+  {
+    return (EAttribute)imageObjectMembersWrapperEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInnerColumnObjectMembersWrapper()
+  {
+    return innerColumnObjectMembersWrapperEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInnerColumnObjectMembersWrapper_Text()
+  {
+    return (EReference)innerColumnObjectMembersWrapperEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInnerColumnObjectMembersWrapper_TextObject()
+  {
+    return (EReference)innerColumnObjectMembersWrapperEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInnerColumnObjectMembersWrapper_Column()
+  {
+    return (EReference)innerColumnObjectMembersWrapperEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getColumnObjectMembersWrapper()
+  {
+    return columnObjectMembersWrapperEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnObjectMembersWrapper_Text()
+  {
+    return (EReference)columnObjectMembersWrapperEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getColumnObjectMembersWrapper_TextObject()
+  {
+    return (EReference)columnObjectMembersWrapperEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getListObjectPropertiesWrapper()
+  {
+    return listObjectPropertiesWrapperEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getListObjectPropertiesWrapper_Value()
+  {
+    return (EReference)listObjectPropertiesWrapperEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTextObject()
   {
     return textObjectEClass;
@@ -1301,49 +1421,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStyleObject_FontSize()
+  public EReference getStyleObject_Members()
   {
-    return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStyleObject_TypeFace()
-  {
-    return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStyleObject_Alignment()
-  {
-    return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStyleObject_Italics()
-  {
-    return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStyleObject_Margin()
-  {
-    return (EAttribute)styleObjectEClass.getEStructuralFeatures().get(6);
+    return (EReference)styleObjectEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1371,6 +1451,36 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getImageObject()
+  {
+    return imageObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImageObject_Value()
+  {
+    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getImageObject_Members()
+  {
+    return (EReference)imageObjectEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getInnerColumnObject()
   {
     return innerColumnObjectEClass;
@@ -1391,29 +1501,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getInnerColumnObject_Text()
+  public EReference getInnerColumnObject_Members()
   {
     return (EReference)innerColumnObjectEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getInnerColumnObject_TextObject()
-  {
-    return (EReference)innerColumnObjectEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getInnerColumnObject_Column()
-  {
-    return (EReference)innerColumnObjectEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1441,139 +1531,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getColumnObject_Text()
+  public EReference getColumnObject_Members()
   {
     return (EReference)columnObjectEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getColumnObject_TextObject()
-  {
-    return (EReference)columnObjectEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getColumnObject_Column()
-  {
-    return (EReference)columnObjectEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getColumnObject_InnerColumn()
-  {
-    return (EReference)columnObjectEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getImageObject()
-  {
-    return imageObjectEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImageObject_Value()
-  {
-    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImageObject_Image()
-  {
-    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImageObject_Width()
-  {
-    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImageObject_Height()
-  {
-    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImageObject_Opacity()
-  {
-    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImageObject_Fit()
-  {
-    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImageObject_PageBreak()
-  {
-    return (EAttribute)imageObjectEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getListObjectPropertiesWrapper()
-  {
-    return listObjectPropertiesWrapperEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getListObjectPropertiesWrapper_Value()
-  {
-    return (EReference)listObjectPropertiesWrapperEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1832,6 +1792,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     textDefinitionEClass = createEClass(TEXT_DEFINITION);
     createEAttribute(textDefinitionEClass, TEXT_DEFINITION__VALUE);
 
+    textAlignmentDefinitionEClass = createEClass(TEXT_ALIGNMENT_DEFINITION);
+    createEAttribute(textAlignmentDefinitionEClass, TEXT_ALIGNMENT_DEFINITION__VALUE);
+
     italicsDefinitionEClass = createEClass(ITALICS_DEFINITION);
     createEAttribute(italicsDefinitionEClass, ITALICS_DEFINITION__VALUE);
 
@@ -1858,28 +1821,22 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     createEAttribute(marginDefinitionEClass, MARGIN_DEFINITION__VALUES);
 
     imageDefintionEClass = createEClass(IMAGE_DEFINTION);
-    createEAttribute(imageDefintionEClass, IMAGE_DEFINTION__KEY);
     createEAttribute(imageDefintionEClass, IMAGE_DEFINTION__VALUE);
 
     imageWidthDefintionEClass = createEClass(IMAGE_WIDTH_DEFINTION);
-    createEAttribute(imageWidthDefintionEClass, IMAGE_WIDTH_DEFINTION__KEY);
     createEAttribute(imageWidthDefintionEClass, IMAGE_WIDTH_DEFINTION__VALUE);
 
     imageHeightDefintionEClass = createEClass(IMAGE_HEIGHT_DEFINTION);
-    createEAttribute(imageHeightDefintionEClass, IMAGE_HEIGHT_DEFINTION__KEY);
     createEAttribute(imageHeightDefintionEClass, IMAGE_HEIGHT_DEFINTION__VALUE);
 
     imagePageBreakDefinitionEClass = createEClass(IMAGE_PAGE_BREAK_DEFINITION);
-    createEAttribute(imagePageBreakDefinitionEClass, IMAGE_PAGE_BREAK_DEFINITION__KEY);
     createEAttribute(imagePageBreakDefinitionEClass, IMAGE_PAGE_BREAK_DEFINITION__VALUE);
 
     imageFitDefinitionEClass = createEClass(IMAGE_FIT_DEFINITION);
-    createEAttribute(imageFitDefinitionEClass, IMAGE_FIT_DEFINITION__KEY);
     createEAttribute(imageFitDefinitionEClass, IMAGE_FIT_DEFINITION__VALUE);
     createEAttribute(imageFitDefinitionEClass, IMAGE_FIT_DEFINITION__VALUES);
 
     imageOpacityDefinitionEClass = createEClass(IMAGE_OPACITY_DEFINITION);
-    createEAttribute(imageOpacityDefinitionEClass, IMAGE_OPACITY_DEFINITION__KEY);
     createEAttribute(imageOpacityDefinitionEClass, IMAGE_OPACITY_DEFINITION__VALUE);
 
     listReversedDefinitionEClass = createEClass(LIST_REVERSED_DEFINITION);
@@ -1924,6 +1881,23 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     textObjectMembersWrapperEClass = createEClass(TEXT_OBJECT_MEMBERS_WRAPPER);
     createEAttribute(textObjectMembersWrapperEClass, TEXT_OBJECT_MEMBERS_WRAPPER__KEY);
 
+    styleObjectMembersWrapperEClass = createEClass(STYLE_OBJECT_MEMBERS_WRAPPER);
+
+    imageObjectMembersWrapperEClass = createEClass(IMAGE_OBJECT_MEMBERS_WRAPPER);
+    createEAttribute(imageObjectMembersWrapperEClass, IMAGE_OBJECT_MEMBERS_WRAPPER__KEY);
+
+    innerColumnObjectMembersWrapperEClass = createEClass(INNER_COLUMN_OBJECT_MEMBERS_WRAPPER);
+    createEReference(innerColumnObjectMembersWrapperEClass, INNER_COLUMN_OBJECT_MEMBERS_WRAPPER__TEXT);
+    createEReference(innerColumnObjectMembersWrapperEClass, INNER_COLUMN_OBJECT_MEMBERS_WRAPPER__TEXT_OBJECT);
+    createEReference(innerColumnObjectMembersWrapperEClass, INNER_COLUMN_OBJECT_MEMBERS_WRAPPER__COLUMN);
+
+    columnObjectMembersWrapperEClass = createEClass(COLUMN_OBJECT_MEMBERS_WRAPPER);
+    createEReference(columnObjectMembersWrapperEClass, COLUMN_OBJECT_MEMBERS_WRAPPER__TEXT);
+    createEReference(columnObjectMembersWrapperEClass, COLUMN_OBJECT_MEMBERS_WRAPPER__TEXT_OBJECT);
+
+    listObjectPropertiesWrapperEClass = createEClass(LIST_OBJECT_PROPERTIES_WRAPPER);
+    createEReference(listObjectPropertiesWrapperEClass, LIST_OBJECT_PROPERTIES_WRAPPER__VALUE);
+
     textObjectEClass = createEClass(TEXT_OBJECT);
     createEReference(textObjectEClass, TEXT_OBJECT__MEMBERS);
 
@@ -1933,39 +1907,22 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     styleObjectEClass = createEClass(STYLE_OBJECT);
     createEAttribute(styleObjectEClass, STYLE_OBJECT__KEY);
     createEAttribute(styleObjectEClass, STYLE_OBJECT__VALUE);
-    createEAttribute(styleObjectEClass, STYLE_OBJECT__FONT_SIZE);
-    createEAttribute(styleObjectEClass, STYLE_OBJECT__TYPE_FACE);
-    createEAttribute(styleObjectEClass, STYLE_OBJECT__ALIGNMENT);
-    createEAttribute(styleObjectEClass, STYLE_OBJECT__ITALICS);
-    createEAttribute(styleObjectEClass, STYLE_OBJECT__MARGIN);
+    createEReference(styleObjectEClass, STYLE_OBJECT__MEMBERS);
 
     styleObjectsEClass = createEClass(STYLE_OBJECTS);
     createEReference(styleObjectsEClass, STYLE_OBJECTS__VALUE);
 
+    imageObjectEClass = createEClass(IMAGE_OBJECT);
+    createEAttribute(imageObjectEClass, IMAGE_OBJECT__VALUE);
+    createEReference(imageObjectEClass, IMAGE_OBJECT__MEMBERS);
+
     innerColumnObjectEClass = createEClass(INNER_COLUMN_OBJECT);
     createEAttribute(innerColumnObjectEClass, INNER_COLUMN_OBJECT__VALUE);
-    createEReference(innerColumnObjectEClass, INNER_COLUMN_OBJECT__TEXT);
-    createEReference(innerColumnObjectEClass, INNER_COLUMN_OBJECT__TEXT_OBJECT);
-    createEReference(innerColumnObjectEClass, INNER_COLUMN_OBJECT__COLUMN);
+    createEReference(innerColumnObjectEClass, INNER_COLUMN_OBJECT__MEMBERS);
 
     columnObjectEClass = createEClass(COLUMN_OBJECT);
     createEAttribute(columnObjectEClass, COLUMN_OBJECT__VALUE);
-    createEReference(columnObjectEClass, COLUMN_OBJECT__TEXT);
-    createEReference(columnObjectEClass, COLUMN_OBJECT__TEXT_OBJECT);
-    createEReference(columnObjectEClass, COLUMN_OBJECT__COLUMN);
-    createEReference(columnObjectEClass, COLUMN_OBJECT__INNER_COLUMN);
-
-    imageObjectEClass = createEClass(IMAGE_OBJECT);
-    createEAttribute(imageObjectEClass, IMAGE_OBJECT__VALUE);
-    createEAttribute(imageObjectEClass, IMAGE_OBJECT__IMAGE);
-    createEAttribute(imageObjectEClass, IMAGE_OBJECT__WIDTH);
-    createEAttribute(imageObjectEClass, IMAGE_OBJECT__HEIGHT);
-    createEAttribute(imageObjectEClass, IMAGE_OBJECT__OPACITY);
-    createEAttribute(imageObjectEClass, IMAGE_OBJECT__FIT);
-    createEAttribute(imageObjectEClass, IMAGE_OBJECT__PAGE_BREAK);
-
-    listObjectPropertiesWrapperEClass = createEClass(LIST_OBJECT_PROPERTIES_WRAPPER);
-    createEReference(listObjectPropertiesWrapperEClass, LIST_OBJECT_PROPERTIES_WRAPPER__VALUE);
+    createEReference(columnObjectEClass, COLUMN_OBJECT__MEMBERS);
 
     listElementsEClass = createEClass(LIST_ELEMENTS);
     createEAttribute(listElementsEClass, LIST_ELEMENTS__EL_VALUES);
@@ -2026,13 +1983,25 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
 
     // Add supertypes to classes
     typeFaceDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
+    typeFaceDefinitionEClass.getESuperTypes().add(this.getStyleObjectMembersWrapper());
     textStyleDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
     textDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
+    textAlignmentDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
+    textAlignmentDefinitionEClass.getESuperTypes().add(this.getStyleObjectMembersWrapper());
     italicsDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
+    italicsDefinitionEClass.getESuperTypes().add(this.getStyleObjectMembersWrapper());
     fontSizeDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
+    fontSizeDefinitionEClass.getESuperTypes().add(this.getStyleObjectMembersWrapper());
     widthDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
     columnDefinitionEClass.getESuperTypes().add(this.getListElements());
     marginDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
+    marginDefinitionEClass.getESuperTypes().add(this.getStyleObjectMembersWrapper());
+    imageDefintionEClass.getESuperTypes().add(this.getImageObjectMembersWrapper());
+    imageWidthDefintionEClass.getESuperTypes().add(this.getImageObjectMembersWrapper());
+    imageHeightDefintionEClass.getESuperTypes().add(this.getImageObjectMembersWrapper());
+    imagePageBreakDefinitionEClass.getESuperTypes().add(this.getImageObjectMembersWrapper());
+    imageFitDefinitionEClass.getESuperTypes().add(this.getImageObjectMembersWrapper());
+    imageOpacityDefinitionEClass.getESuperTypes().add(this.getImageObjectMembersWrapper());
     listCounterDefinitionEClass.getESuperTypes().add(this.getTextObjectMembersWrapper());
     textObjectEClass.getESuperTypes().add(this.getListElements());
 
@@ -2052,6 +2021,9 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
 
     initEClass(textDefinitionEClass, TextDefinition.class, "TextDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTextDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, TextDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textAlignmentDefinitionEClass, TextAlignmentDefinition.class, "TextAlignmentDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTextAlignmentDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, TextAlignmentDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(italicsDefinitionEClass, ItalicsDefinition.class, "ItalicsDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getItalicsDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ItalicsDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2079,28 +2051,22 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEAttribute(getMarginDefinition_Values(), ecorePackage.getEInt(), "values", null, 0, -1, MarginDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageDefintionEClass, ImageDefintion.class, "ImageDefintion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImageDefintion_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImageDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageDefintion_Value(), ecorePackage.getEString(), "value", null, 0, 1, ImageDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageWidthDefintionEClass, ImageWidthDefintion.class, "ImageWidthDefintion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImageWidthDefintion_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImageWidthDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageWidthDefintion_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ImageWidthDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageHeightDefintionEClass, ImageHeightDefintion.class, "ImageHeightDefintion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImageHeightDefintion_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImageHeightDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageHeightDefintion_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ImageHeightDefintion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imagePageBreakDefinitionEClass, ImagePageBreakDefinition.class, "ImagePageBreakDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImagePageBreakDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImagePageBreakDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImagePageBreakDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ImagePageBreakDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageFitDefinitionEClass, ImageFitDefinition.class, "ImageFitDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImageFitDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImageFitDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageFitDefinition_Value(), ecorePackage.getEString(), "value", null, 0, 1, ImageFitDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageFitDefinition_Values(), ecorePackage.getEInt(), "values", null, 0, -1, ImageFitDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageOpacityDefinitionEClass, ImageOpacityDefinition.class, "ImageOpacityDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImageOpacityDefinition_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImageOpacityDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageOpacityDefinition_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ImageOpacityDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(listReversedDefinitionEClass, ListReversedDefinition.class, "ListReversedDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2145,6 +2111,23 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEClass(textObjectMembersWrapperEClass, TextObjectMembersWrapper.class, "TextObjectMembersWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTextObjectMembersWrapper_Key(), ecorePackage.getEString(), "key", null, 0, 1, TextObjectMembersWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(styleObjectMembersWrapperEClass, StyleObjectMembersWrapper.class, "StyleObjectMembersWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(imageObjectMembersWrapperEClass, ImageObjectMembersWrapper.class, "ImageObjectMembersWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImageObjectMembersWrapper_Key(), ecorePackage.getEString(), "key", null, 0, 1, ImageObjectMembersWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(innerColumnObjectMembersWrapperEClass, InnerColumnObjectMembersWrapper.class, "InnerColumnObjectMembersWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInnerColumnObjectMembersWrapper_Text(), this.getStringObject(), null, "text", null, 0, -1, InnerColumnObjectMembersWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInnerColumnObjectMembersWrapper_TextObject(), this.getTextObject(), null, "textObject", null, 0, -1, InnerColumnObjectMembersWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInnerColumnObjectMembersWrapper_Column(), this.getColumnDefinition(), null, "column", null, 0, -1, InnerColumnObjectMembersWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(columnObjectMembersWrapperEClass, ColumnObjectMembersWrapper.class, "ColumnObjectMembersWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getColumnObjectMembersWrapper_Text(), this.getStringObject(), null, "text", null, 0, -1, ColumnObjectMembersWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColumnObjectMembersWrapper_TextObject(), this.getTextObject(), null, "textObject", null, 0, -1, ColumnObjectMembersWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(listObjectPropertiesWrapperEClass, ListObjectPropertiesWrapper.class, "ListObjectPropertiesWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getListObjectPropertiesWrapper_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, ListObjectPropertiesWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(textObjectEClass, TextObject.class, "TextObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTextObject_Members(), this.getTextObjectMembersWrapper(), null, "members", null, 0, -1, TextObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2154,39 +2137,22 @@ public class PdfMkPackageImpl extends EPackageImpl implements PdfMkPackage
     initEClass(styleObjectEClass, StyleObject.class, "StyleObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStyleObject_Key(), ecorePackage.getEString(), "key", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStyleObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStyleObject_FontSize(), ecorePackage.getEBoolean(), "fontSize", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStyleObject_TypeFace(), ecorePackage.getEBoolean(), "typeFace", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStyleObject_Alignment(), ecorePackage.getEBoolean(), "alignment", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStyleObject_Italics(), ecorePackage.getEBoolean(), "italics", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getStyleObject_Margin(), ecorePackage.getEBoolean(), "margin", null, 0, 1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStyleObject_Members(), this.getStyleObjectMembersWrapper(), null, "members", null, 0, -1, StyleObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(styleObjectsEClass, StyleObjects.class, "StyleObjects", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getStyleObjects_Value(), this.getStyleObject(), null, "value", null, 0, -1, StyleObjects.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(imageObjectEClass, ImageObject.class, "ImageObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImageObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getImageObject_Members(), this.getImageObjectMembersWrapper(), null, "members", null, 0, -1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(innerColumnObjectEClass, InnerColumnObject.class, "InnerColumnObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getInnerColumnObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInnerColumnObject_Text(), this.getStringObject(), null, "text", null, 0, -1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInnerColumnObject_TextObject(), this.getTextObject(), null, "textObject", null, 0, -1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInnerColumnObject_Column(), this.getColumnDefinition(), null, "column", null, 0, -1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInnerColumnObject_Members(), this.getInnerColumnObjectMembersWrapper(), null, "members", null, 0, -1, InnerColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(columnObjectEClass, ColumnObject.class, "ColumnObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getColumnObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getColumnObject_Text(), this.getStringObject(), null, "text", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getColumnObject_TextObject(), this.getTextObject(), null, "textObject", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getColumnObject_Column(), this.getColumnDefinition(), null, "column", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getColumnObject_InnerColumn(), this.getInnerColumnObject(), null, "innerColumn", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(imageObjectEClass, ImageObject.class, "ImageObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImageObject_Value(), ecorePackage.getEString(), "value", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getImageObject_Image(), ecorePackage.getEBoolean(), "image", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getImageObject_Width(), ecorePackage.getEBoolean(), "width", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getImageObject_Height(), ecorePackage.getEBoolean(), "height", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getImageObject_Opacity(), ecorePackage.getEBoolean(), "opacity", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getImageObject_Fit(), ecorePackage.getEBoolean(), "fit", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getImageObject_PageBreak(), ecorePackage.getEBoolean(), "pageBreak", null, 0, 1, ImageObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(listObjectPropertiesWrapperEClass, ListObjectPropertiesWrapper.class, "ListObjectPropertiesWrapper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getListObjectPropertiesWrapper_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, ListObjectPropertiesWrapper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getColumnObject_Members(), this.getColumnObjectMembersWrapper(), null, "members", null, 0, -1, ColumnObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(listElementsEClass, ListElements.class, "ListElements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getListElements_ElValues(), ecorePackage.getEString(), "elValues", null, 0, 1, ListElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

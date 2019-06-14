@@ -3,14 +3,24 @@
  */
 package org.xtext.avi.pdfMk.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.avi.pdfMk.ImageObject;
+import org.xtext.avi.pdfMk.ImageObjectMembersWrapper;
 import org.xtext.avi.pdfMk.PdfMkPackage;
 
 /**
@@ -22,12 +32,7 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#isImage <em>Image</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#isWidth <em>Width</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#isHeight <em>Height</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#isOpacity <em>Opacity</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#isFit <em>Fit</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#isPageBreak <em>Page Break</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.ImageObjectImpl#getMembers <em>Members</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,124 +60,14 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
   protected String value = VALUE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isImage() <em>Image</em>}' attribute.
+   * The cached value of the '{@link #getMembers() <em>Members</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isImage()
+   * @see #getMembers()
    * @generated
    * @ordered
    */
-  protected static final boolean IMAGE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isImage() <em>Image</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isImage()
-   * @generated
-   * @ordered
-   */
-  protected boolean image = IMAGE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isWidth() <em>Width</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isWidth()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean WIDTH_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isWidth() <em>Width</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isWidth()
-   * @generated
-   * @ordered
-   */
-  protected boolean width = WIDTH_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isHeight() <em>Height</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isHeight()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean HEIGHT_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isHeight() <em>Height</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isHeight()
-   * @generated
-   * @ordered
-   */
-  protected boolean height = HEIGHT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isOpacity() <em>Opacity</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isOpacity()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean OPACITY_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isOpacity() <em>Opacity</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isOpacity()
-   * @generated
-   * @ordered
-   */
-  protected boolean opacity = OPACITY_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isFit() <em>Fit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isFit()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean FIT_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isFit() <em>Fit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isFit()
-   * @generated
-   * @ordered
-   */
-  protected boolean fit = FIT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isPageBreak() <em>Page Break</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isPageBreak()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean PAGE_BREAK_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isPageBreak() <em>Page Break</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isPageBreak()
-   * @generated
-   * @ordered
-   */
-  protected boolean pageBreak = PAGE_BREAK_EDEFAULT;
+  protected EList<ImageObjectMembersWrapper> members;
 
   /**
    * <!-- begin-user-doc -->
@@ -223,9 +118,13 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isImage()
+  public EList<ImageObjectMembersWrapper> getMembers()
   {
-    return image;
+    if (members == null)
+    {
+      members = new EObjectContainmentEList<ImageObjectMembersWrapper>(ImageObjectMembersWrapper.class, this, PdfMkPackage.IMAGE_OBJECT__MEMBERS);
+    }
+    return members;
   }
 
   /**
@@ -233,127 +132,15 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImage(boolean newImage)
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    boolean oldImage = image;
-    image = newImage;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_OBJECT__IMAGE, oldImage, image));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isWidth()
-  {
-    return width;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setWidth(boolean newWidth)
-  {
-    boolean oldWidth = width;
-    width = newWidth;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_OBJECT__WIDTH, oldWidth, width));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isHeight()
-  {
-    return height;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setHeight(boolean newHeight)
-  {
-    boolean oldHeight = height;
-    height = newHeight;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_OBJECT__HEIGHT, oldHeight, height));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isOpacity()
-  {
-    return opacity;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOpacity(boolean newOpacity)
-  {
-    boolean oldOpacity = opacity;
-    opacity = newOpacity;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_OBJECT__OPACITY, oldOpacity, opacity));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isFit()
-  {
-    return fit;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFit(boolean newFit)
-  {
-    boolean oldFit = fit;
-    fit = newFit;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_OBJECT__FIT, oldFit, fit));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isPageBreak()
-  {
-    return pageBreak;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPageBreak(boolean newPageBreak)
-  {
-    boolean oldPageBreak = pageBreak;
-    pageBreak = newPageBreak;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.IMAGE_OBJECT__PAGE_BREAK, oldPageBreak, pageBreak));
+    switch (featureID)
+    {
+      case PdfMkPackage.IMAGE_OBJECT__MEMBERS:
+        return ((InternalEList<?>)getMembers()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -368,18 +155,8 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
     {
       case PdfMkPackage.IMAGE_OBJECT__VALUE:
         return getValue();
-      case PdfMkPackage.IMAGE_OBJECT__IMAGE:
-        return isImage();
-      case PdfMkPackage.IMAGE_OBJECT__WIDTH:
-        return isWidth();
-      case PdfMkPackage.IMAGE_OBJECT__HEIGHT:
-        return isHeight();
-      case PdfMkPackage.IMAGE_OBJECT__OPACITY:
-        return isOpacity();
-      case PdfMkPackage.IMAGE_OBJECT__FIT:
-        return isFit();
-      case PdfMkPackage.IMAGE_OBJECT__PAGE_BREAK:
-        return isPageBreak();
+      case PdfMkPackage.IMAGE_OBJECT__MEMBERS:
+        return getMembers();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -389,6 +166,7 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -397,23 +175,9 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
       case PdfMkPackage.IMAGE_OBJECT__VALUE:
         setValue((String)newValue);
         return;
-      case PdfMkPackage.IMAGE_OBJECT__IMAGE:
-        setImage((Boolean)newValue);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__WIDTH:
-        setWidth((Boolean)newValue);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__HEIGHT:
-        setHeight((Boolean)newValue);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__OPACITY:
-        setOpacity((Boolean)newValue);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__FIT:
-        setFit((Boolean)newValue);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__PAGE_BREAK:
-        setPageBreak((Boolean)newValue);
+      case PdfMkPackage.IMAGE_OBJECT__MEMBERS:
+        getMembers().clear();
+        getMembers().addAll((Collection<? extends ImageObjectMembersWrapper>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -432,23 +196,8 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
       case PdfMkPackage.IMAGE_OBJECT__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
-      case PdfMkPackage.IMAGE_OBJECT__IMAGE:
-        setImage(IMAGE_EDEFAULT);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__WIDTH:
-        setWidth(WIDTH_EDEFAULT);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__HEIGHT:
-        setHeight(HEIGHT_EDEFAULT);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__OPACITY:
-        setOpacity(OPACITY_EDEFAULT);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__FIT:
-        setFit(FIT_EDEFAULT);
-        return;
-      case PdfMkPackage.IMAGE_OBJECT__PAGE_BREAK:
-        setPageBreak(PAGE_BREAK_EDEFAULT);
+      case PdfMkPackage.IMAGE_OBJECT__MEMBERS:
+        getMembers().clear();
         return;
     }
     super.eUnset(featureID);
@@ -466,18 +215,8 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
     {
       case PdfMkPackage.IMAGE_OBJECT__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case PdfMkPackage.IMAGE_OBJECT__IMAGE:
-        return image != IMAGE_EDEFAULT;
-      case PdfMkPackage.IMAGE_OBJECT__WIDTH:
-        return width != WIDTH_EDEFAULT;
-      case PdfMkPackage.IMAGE_OBJECT__HEIGHT:
-        return height != HEIGHT_EDEFAULT;
-      case PdfMkPackage.IMAGE_OBJECT__OPACITY:
-        return opacity != OPACITY_EDEFAULT;
-      case PdfMkPackage.IMAGE_OBJECT__FIT:
-        return fit != FIT_EDEFAULT;
-      case PdfMkPackage.IMAGE_OBJECT__PAGE_BREAK:
-        return pageBreak != PAGE_BREAK_EDEFAULT;
+      case PdfMkPackage.IMAGE_OBJECT__MEMBERS:
+        return members != null && !members.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -495,18 +234,6 @@ public class ImageObjectImpl extends MinimalEObjectImpl.Container implements Ima
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (value: ");
     result.append(value);
-    result.append(", image: ");
-    result.append(image);
-    result.append(", width: ");
-    result.append(width);
-    result.append(", height: ");
-    result.append(height);
-    result.append(", opacity: ");
-    result.append(opacity);
-    result.append(", fit: ");
-    result.append(fit);
-    result.append(", pageBreak: ");
-    result.append(pageBreak);
     result.append(')');
     return result.toString();
   }

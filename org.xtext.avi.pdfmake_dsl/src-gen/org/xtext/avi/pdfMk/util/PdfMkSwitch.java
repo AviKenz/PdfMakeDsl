@@ -92,6 +92,7 @@ public class PdfMkSwitch<T> extends Switch<T>
         TypeFaceDefinition typeFaceDefinition = (TypeFaceDefinition)theEObject;
         T result = caseTypeFaceDefinition(typeFaceDefinition);
         if (result == null) result = caseTextObjectMembersWrapper(typeFaceDefinition);
+        if (result == null) result = caseStyleObjectMembersWrapper(typeFaceDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -111,11 +112,21 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PdfMkPackage.TEXT_ALIGNMENT_DEFINITION:
+      {
+        TextAlignmentDefinition textAlignmentDefinition = (TextAlignmentDefinition)theEObject;
+        T result = caseTextAlignmentDefinition(textAlignmentDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(textAlignmentDefinition);
+        if (result == null) result = caseStyleObjectMembersWrapper(textAlignmentDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PdfMkPackage.ITALICS_DEFINITION:
       {
         ItalicsDefinition italicsDefinition = (ItalicsDefinition)theEObject;
         T result = caseItalicsDefinition(italicsDefinition);
         if (result == null) result = caseTextObjectMembersWrapper(italicsDefinition);
+        if (result == null) result = caseStyleObjectMembersWrapper(italicsDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -124,6 +135,7 @@ public class PdfMkSwitch<T> extends Switch<T>
         FontSizeDefinition fontSizeDefinition = (FontSizeDefinition)theEObject;
         T result = caseFontSizeDefinition(fontSizeDefinition);
         if (result == null) result = caseTextObjectMembersWrapper(fontSizeDefinition);
+        if (result == null) result = caseStyleObjectMembersWrapper(fontSizeDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -162,6 +174,7 @@ public class PdfMkSwitch<T> extends Switch<T>
         MarginDefinition marginDefinition = (MarginDefinition)theEObject;
         T result = caseMarginDefinition(marginDefinition);
         if (result == null) result = caseTextObjectMembersWrapper(marginDefinition);
+        if (result == null) result = caseStyleObjectMembersWrapper(marginDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -169,6 +182,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ImageDefintion imageDefintion = (ImageDefintion)theEObject;
         T result = caseImageDefintion(imageDefintion);
+        if (result == null) result = caseImageObjectMembersWrapper(imageDefintion);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -176,6 +190,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ImageWidthDefintion imageWidthDefintion = (ImageWidthDefintion)theEObject;
         T result = caseImageWidthDefintion(imageWidthDefintion);
+        if (result == null) result = caseImageObjectMembersWrapper(imageWidthDefintion);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -183,6 +198,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ImageHeightDefintion imageHeightDefintion = (ImageHeightDefintion)theEObject;
         T result = caseImageHeightDefintion(imageHeightDefintion);
+        if (result == null) result = caseImageObjectMembersWrapper(imageHeightDefintion);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -190,6 +206,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ImagePageBreakDefinition imagePageBreakDefinition = (ImagePageBreakDefinition)theEObject;
         T result = caseImagePageBreakDefinition(imagePageBreakDefinition);
+        if (result == null) result = caseImageObjectMembersWrapper(imagePageBreakDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -197,6 +214,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ImageFitDefinition imageFitDefinition = (ImageFitDefinition)theEObject;
         T result = caseImageFitDefinition(imageFitDefinition);
+        if (result == null) result = caseImageObjectMembersWrapper(imageFitDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -204,6 +222,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ImageOpacityDefinition imageOpacityDefinition = (ImageOpacityDefinition)theEObject;
         T result = caseImageOpacityDefinition(imageOpacityDefinition);
+        if (result == null) result = caseImageObjectMembersWrapper(imageOpacityDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -285,6 +304,41 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PdfMkPackage.STYLE_OBJECT_MEMBERS_WRAPPER:
+      {
+        StyleObjectMembersWrapper styleObjectMembersWrapper = (StyleObjectMembersWrapper)theEObject;
+        T result = caseStyleObjectMembersWrapper(styleObjectMembersWrapper);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.IMAGE_OBJECT_MEMBERS_WRAPPER:
+      {
+        ImageObjectMembersWrapper imageObjectMembersWrapper = (ImageObjectMembersWrapper)theEObject;
+        T result = caseImageObjectMembersWrapper(imageObjectMembersWrapper);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.INNER_COLUMN_OBJECT_MEMBERS_WRAPPER:
+      {
+        InnerColumnObjectMembersWrapper innerColumnObjectMembersWrapper = (InnerColumnObjectMembersWrapper)theEObject;
+        T result = caseInnerColumnObjectMembersWrapper(innerColumnObjectMembersWrapper);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.COLUMN_OBJECT_MEMBERS_WRAPPER:
+      {
+        ColumnObjectMembersWrapper columnObjectMembersWrapper = (ColumnObjectMembersWrapper)theEObject;
+        T result = caseColumnObjectMembersWrapper(columnObjectMembersWrapper);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER:
+      {
+        ListObjectPropertiesWrapper listObjectPropertiesWrapper = (ListObjectPropertiesWrapper)theEObject;
+        T result = caseListObjectPropertiesWrapper(listObjectPropertiesWrapper);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PdfMkPackage.TEXT_OBJECT:
       {
         TextObject textObject = (TextObject)theEObject;
@@ -314,6 +368,13 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PdfMkPackage.IMAGE_OBJECT:
+      {
+        ImageObject imageObject = (ImageObject)theEObject;
+        T result = caseImageObject(imageObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PdfMkPackage.INNER_COLUMN_OBJECT:
       {
         InnerColumnObject innerColumnObject = (InnerColumnObject)theEObject;
@@ -325,20 +386,6 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ColumnObject columnObject = (ColumnObject)theEObject;
         T result = caseColumnObject(columnObject);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PdfMkPackage.IMAGE_OBJECT:
-      {
-        ImageObject imageObject = (ImageObject)theEObject;
-        T result = caseImageObject(imageObject);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PdfMkPackage.LIST_OBJECT_PROPERTIES_WRAPPER:
-      {
-        ListObjectPropertiesWrapper listObjectPropertiesWrapper = (ListObjectPropertiesWrapper)theEObject;
-        T result = caseListObjectPropertiesWrapper(listObjectPropertiesWrapper);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -471,6 +518,22 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTextDefinition(TextDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Text Alignment Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Text Alignment Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextAlignmentDefinition(TextAlignmentDefinition object)
   {
     return null;
   }
@@ -860,6 +923,86 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Style Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Style Object Members Wrapper</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStyleObjectMembersWrapper(StyleObjectMembersWrapper object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Object Members Wrapper</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageObjectMembersWrapper(ImageObjectMembersWrapper object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Inner Column Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Inner Column Object Members Wrapper</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInnerColumnObjectMembersWrapper(InnerColumnObjectMembersWrapper object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Column Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Column Object Members Wrapper</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColumnObjectMembersWrapper(ColumnObjectMembersWrapper object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Object Properties Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Object Properties Wrapper</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListObjectPropertiesWrapper(ListObjectPropertiesWrapper object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -924,6 +1067,22 @@ public class PdfMkSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Image Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Image Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImageObject(ImageObject object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Inner Column Object</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -951,38 +1110,6 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseColumnObject(ColumnObject object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Image Object</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Image Object</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImageObject(ImageObject object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>List Object Properties Wrapper</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>List Object Properties Wrapper</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseListObjectPropertiesWrapper(ListObjectPropertiesWrapper object)
   {
     return null;
   }
