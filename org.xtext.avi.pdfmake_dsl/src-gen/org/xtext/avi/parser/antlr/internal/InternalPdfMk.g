@@ -279,13 +279,21 @@ ruleColumnTextWidthType returns [AntlrDatatypeRuleToken current=new AntlrDatatyp
 @after {
 	leaveRule();
 }:
-	this_INT_0=RULE_INT
-	{
-		$current.merge(this_INT_0);
-	}
-	{
-		newLeafNode(this_INT_0, grammarAccess.getColumnTextWidthTypeAccess().getINTTerminalRuleCall());
-	}
+	(
+		this_INT_0=RULE_INT
+		{
+			$current.merge(this_INT_0);
+		}
+		{
+			newLeafNode(this_INT_0, grammarAccess.getColumnTextWidthTypeAccess().getINTTerminalRuleCall_0());
+		}
+		    |
+		kw='*'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getColumnTextWidthTypeAccess().getAsteriskKeyword_1());
+		}
+	)
 ;
 
 // Entry rule entryRuleTextStyleDefinition

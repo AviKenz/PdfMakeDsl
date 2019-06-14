@@ -33,6 +33,7 @@ public class PdfMkParser extends AbstractContentAssistParser {
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, PdfMkGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getTextAlignmentTypeAccess().getAlternatives(), "rule__TextAlignmentType__Alternatives");
 			builder.put(grammarAccess.getBooleanTypeAccess().getAlternatives(), "rule__BooleanType__Alternatives");
+			builder.put(grammarAccess.getColumnTextWidthTypeAccess().getAlternatives(), "rule__ColumnTextWidthType__Alternatives");
 			builder.put(grammarAccess.getTableCellItemElementsAccess().getElementsAlternatives_0(), "rule__TableCellItemElements__ElementsAlternatives_0");
 			builder.put(grammarAccess.getTextObjectMembersWrapperAccess().getAlternatives(), "rule__TextObjectMembersWrapper__Alternatives");
 			builder.put(grammarAccess.getStyleObjectMembersWrapperAccess().getAlternatives(), "rule__StyleObjectMembersWrapper__Alternatives");

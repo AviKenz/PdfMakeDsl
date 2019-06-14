@@ -165,9 +165,9 @@ ruleColumnTextWidthType
 	}
 	:
 	(
-		{ before(grammarAccess.getColumnTextWidthTypeAccess().getINTTerminalRuleCall()); }
-		RULE_INT
-		{ after(grammarAccess.getColumnTextWidthTypeAccess().getINTTerminalRuleCall()); }
+		{ before(grammarAccess.getColumnTextWidthTypeAccess().getAlternatives()); }
+		(rule__ColumnTextWidthType__Alternatives)
+		{ after(grammarAccess.getColumnTextWidthTypeAccess().getAlternatives()); }
 	)
 ;
 finally {
@@ -1239,6 +1239,27 @@ rule__BooleanType__Alternatives
 		{ before(grammarAccess.getBooleanTypeAccess().getFalseKeyword_1()); }
 		'false'
 		{ after(grammarAccess.getBooleanTypeAccess().getFalseKeyword_1()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ColumnTextWidthType__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getColumnTextWidthTypeAccess().getINTTerminalRuleCall_0()); }
+		RULE_INT
+		{ after(grammarAccess.getColumnTextWidthTypeAccess().getINTTerminalRuleCall_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getColumnTextWidthTypeAccess().getAsteriskKeyword_1()); }
+		'*'
+		{ after(grammarAccess.getColumnTextWidthTypeAccess().getAsteriskKeyword_1()); }
 	)
 ;
 finally {

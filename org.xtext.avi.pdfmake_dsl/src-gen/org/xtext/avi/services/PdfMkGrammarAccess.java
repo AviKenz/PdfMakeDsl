@@ -41,7 +41,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		//// TODO [?] import: see INT in Terminals.xtext
 		//// TODO [L] autovervollstaendigung beim style
 		//// TODO [L] stack for style see playground-margin
-		//// TODO [M] fix semi-column problem see like by ContentObjects
 		//// TODO [I] for import "http://www.xtext.org/avi/PdfMk"
 		///******************** ********************/ /************ Root Model ****************/ DocDefinition:
 		//	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
@@ -173,15 +172,22 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class ColumnTextWidthTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ColumnTextWidthType");
-		private final RuleCall cINTTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Keyword cAsteriskKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
 		
-		//// TODO [?] add "auto" and "*"
 		//ColumnTextWidthType:
-		//	INT;
+		//	INT | "*";
 		@Override public ParserRule getRule() { return rule; }
 		
+		//INT | "*"
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
 		//INT
-		public RuleCall getINTTerminalRuleCall() { return cINTTerminalRuleCall; }
+		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		
+		//"*"
+		public Keyword getAsteriskKeyword_1() { return cAsteriskKeyword_1; }
 	}
 	public class TextStyleDefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextStyleDefinition");
@@ -255,7 +261,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
-		//// TODO [L] add validattion rule (Enums String are not supported)
 		//TextAlignmentDefinition:
 		//	key="alignment" ":" value=STRING;
 		@Override public ParserRule getRule() { return rule; }
@@ -525,7 +530,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValuesINTTerminalRuleCall_4_1_0 = (RuleCall)cValuesAssignment_4_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//// TODO [?] limit values element to 4
 		//MarginDefinition:
 		//	key="margin" ":" "[" values+=INT? ("," values+=INT)* "]";
 		@Override public ParserRule getRule() { return rule; }
@@ -668,7 +672,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
-		//// TODO [L] check with validator if value is either before or after	
 		//ImagePageBreakDefinition:
 		//	key="pageBreak" ":" value=STRING;
 		@Override public ParserRule getRule() { return rule; }
@@ -1382,6 +1385,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTextObjectAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
 		private final RuleCall cTextObjectTextObjectParserRuleCall_1_1_1_0 = (RuleCall)cTextObjectAssignment_1_1_1.eContents().get(0);
 		
+		//// TODO[H] fix the error which appears when uncomment line below
 		//ColumnObjectMembersWrapper:
 		//	text+=StringObject? ("," text+=StringObject)* | textObject+=TextObject? ("," textObject+=TextObject)*;
 		@Override public ParserRule getRule() { return rule; }
@@ -2284,7 +2288,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	//// TODO [?] import: see INT in Terminals.xtext
 	//// TODO [L] autovervollstaendigung beim style
 	//// TODO [L] stack for style see playground-margin
-	//// TODO [M] fix semi-column problem see like by ContentObjects
 	//// TODO [I] for import "http://www.xtext.org/avi/PdfMk"
 	///******************** ********************/ /************ Root Model ****************/ DocDefinition:
 	//	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
@@ -2336,9 +2339,8 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getBooleanTypeAccess().getRule();
 	}
 	
-	//// TODO [?] add "auto" and "*"
 	//ColumnTextWidthType:
-	//	INT;
+	//	INT | "*";
 	public ColumnTextWidthTypeElements getColumnTextWidthTypeAccess() {
 		return pColumnTextWidthType;
 	}
@@ -2368,7 +2370,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getTextDefinitionAccess().getRule();
 	}
 	
-	//// TODO [L] add validattion rule (Enums String are not supported)
 	//TextAlignmentDefinition:
 	//	key="alignment" ":" value=STRING;
 	public TextAlignmentDefinitionElements getTextAlignmentDefinitionAccess() {
@@ -2441,7 +2442,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getColumnDefinitionAccess().getRule();
 	}
 	
-	//// TODO [?] limit values element to 4
 	//MarginDefinition:
 	//	key="margin" ":" "[" values+=INT? ("," values+=INT)* "]";
 	public MarginDefinitionElements getMarginDefinitionAccess() {
@@ -2482,7 +2482,6 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getImageHeightDefintionAccess().getRule();
 	}
 	
-	//// TODO [L] check with validator if value is either before or after	
 	//ImagePageBreakDefinition:
 	//	key="pageBreak" ":" value=STRING;
 	public ImagePageBreakDefinitionElements getImagePageBreakDefinitionAccess() {
@@ -2659,6 +2658,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		return getInnerColumnObjectMembersWrapperAccess().getRule();
 	}
 	
+	//// TODO[H] fix the error which appears when uncomment line below
 	//ColumnObjectMembersWrapper:
 	//	text+=StringObject? ("," text+=StringObject)* | textObject+=TextObject? ("," textObject+=TextObject)*;
 	public ColumnObjectMembersWrapperElements getColumnObjectMembersWrapperAccess() {

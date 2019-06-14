@@ -4,10 +4,13 @@
 package org.xtext.avi.validation;
 
 import org.eclipse.xtext.validation.Check;
-import org.xtext.avi.pdfMk.ListReversedDefinition;
+import org.xtext.avi.pdfMk.ImageDefintion;
+import org.xtext.avi.pdfMk.ImagePageBreakDefinition;
+import org.xtext.avi.pdfMk.ListTypeDefinition;
+import org.xtext.avi.pdfMk.MarginDefinition;
 import org.xtext.avi.pdfMk.PdfMkPackage;
+import org.xtext.avi.pdfMk.TextAlignmentDefinition;
 import org.xtext.avi.pdfMk.TextDefinition;
-import org.xtext.avi.pdfMk.TextStyleDefinition;
 import org.xtext.avi.validation.AbstractPdfMkValidator;
 
 /**
@@ -19,21 +22,60 @@ import org.xtext.avi.validation.AbstractPdfMkValidator;
 public class PdfMkValidator extends AbstractPdfMkValidator {
   public static final String INVALID_NAME = "invalidName";
   
+  public static final String INVALID_VALUE = "invalidValue";
+  
   @Check
   public void checkText(final TextDefinition textDefinition) {
-    boolean _equalsIgnoreCase = textDefinition.getValue().equalsIgnoreCase("a");
+    boolean _equalsIgnoreCase = textDefinition.getValue().trim().equalsIgnoreCase("");
     if (_equalsIgnoreCase) {
       this.warning("Text should not be empty", PdfMkPackage.Literals.TEXT_DEFINITION__VALUE, PdfMkValidator.INVALID_NAME);
     }
   }
   
   @Check
-  public void test(final ListReversedDefinition revDef) {
-    this.warning("Warn U", PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE, PdfMkValidator.INVALID_NAME);
+  public void checkImagePageBreakValue(final ImagePageBreakDefinition imagePageBreakDefinition) {
+    if (((!imagePageBreakDefinition.getValue().equalsIgnoreCase("before")) && (!imagePageBreakDefinition.getValue().equalsIgnoreCase("after")))) {
+      this.error("only \'before\' or \'after\' allowed here !", PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__VALUE, PdfMkValidator.INVALID_VALUE);
+    }
   }
   
   @Check
-  public void testStyle(final TextStyleDefinition styleDefinition) {
-    this.warning("Warn U", PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__VALUE, PdfMkValidator.INVALID_NAME);
+  public void checkTextAlginmentValue(final TextAlignmentDefinition textAlginmentDefinition) {
+    if (((((!textAlginmentDefinition.getValue().equalsIgnoreCase("center")) && 
+      (!textAlginmentDefinition.getValue().equalsIgnoreCase("left"))) && 
+      (!textAlginmentDefinition.getValue().equalsIgnoreCase("right"))) && 
+      (!textAlginmentDefinition.getValue().equalsIgnoreCase("justify")))) {
+      this.error("only \'center\', \'left\', \'right\', \'justify\' allowed here", PdfMkPackage.Literals.TEXT_ALIGNMENT_DEFINITION__VALUE, PdfMkValidator.INVALID_VALUE);
+    }
+  }
+  
+  @Check
+  public void checkTextMargins(final MarginDefinition marginDefinition) {
+    int _size = marginDefinition.getValues().size();
+    boolean _greaterThan = (_size > 4);
+    if (_greaterThan) {
+      this.error("max 4 values allowed", PdfMkPackage.Literals.MARGIN_DEFINITION__VALUES, PdfMkValidator.INVALID_VALUE);
+    }
+  }
+  
+  @Check
+  public void checkImagePath(final ImageDefintion imageDefinition) {
+    boolean _equalsIgnoreCase = imageDefinition.getValue().trim().equalsIgnoreCase("");
+    if (_equalsIgnoreCase) {
+      this.error("image path must be given", PdfMkPackage.Literals.IMAGE_DEFINTION__VALUE, PdfMkValidator.INVALID_VALUE);
+    }
+  }
+  
+  @Check
+  public void checkListMarkerType(final ListTypeDefinition listMarkerTypeDefinition) {
+    if ((((((((!listMarkerTypeDefinition.getValue().equalsIgnoreCase("none")) && 
+      (!listMarkerTypeDefinition.getValue().equalsIgnoreCase("circle"))) && 
+      (!listMarkerTypeDefinition.getValue().equalsIgnoreCase("square"))) && 
+      (!listMarkerTypeDefinition.getValue().equalsIgnoreCase("lower-roman"))) && 
+      (!listMarkerTypeDefinition.getValue().equalsIgnoreCase("upper-roman"))) && 
+      (!listMarkerTypeDefinition.getValue().equalsIgnoreCase("upper-alpha"))) && 
+      (!listMarkerTypeDefinition.getValue().equalsIgnoreCase("lower-alpha")))) {
+      this.warning("List marker type not allowed", PdfMkPackage.Literals.LIST_TYPE_DEFINITION__VALUE, PdfMkValidator.INVALID_VALUE);
+    }
   }
 }

@@ -5,7 +5,6 @@ generate pdfMk "http://www.xtext.org/avi/PdfMk"
 // TODO [?] import: see INT in Terminals.xtext
 // TODO [L] autovervollstaendigung beim style
 // TODO [L] stack for style see playground-margin
-// TODO [M] fix semi-column problem see like by ContentObjects
 // TODO [I] for import "http://www.xtext.org/avi/PdfMk"
 /******************** ********************/
 
@@ -31,9 +30,8 @@ TypeFaceDefinition:
 BooleanType:
 	"true"|"false";
 	
-// TODO [?] add "auto" and "*"
 ColumnTextWidthType: 
-	INT;
+	INT|"*";
 	
 // TODO [L] checken ob sich der style name im root element 'styles' befindet	
 TextStyleDefinition:
@@ -42,7 +40,6 @@ TextStyleDefinition:
 TextDefinition:
 	key="text" ":" value=STRING;
 	
-// TODO [L] add validattion rule (Enums String are not supported)
 TextAlignmentDefinition:
 	key="alignment" ":" value=STRING;
 	
@@ -66,7 +63,6 @@ ColumnDefinition:
 		key="columns" ":" (value+=ColumnObject? ("," value+=ColumnObject)*)
    "}";
 
-// TODO [?] limit values element to 4
 MarginDefinition:
 	key="margin" ":" "[" (values+=INT)? ("," values+=INT)* "]";
 	
@@ -80,9 +76,8 @@ ImageWidthDefintion:
 ImageHeightDefintion:
 	key="height" ":" value=INT;
 
-// TODO [L] check with validator if value is either before or after	
 ImagePageBreakDefinition:
-	key="pageBreak" ":" value= STRING;
+	key="pageBreak" ":" value=STRING;
 	
 ImageFitDefinition:
 	key="fit" ":" value="[" (values+=INT) ("," values+=INT) "]";

@@ -6,9 +6,11 @@ package org.xtext.avi.validation
 import org.eclipse.xtext.validation.Check
 import org.xtext.avi.pdfMk.TextDefinition
 import org.xtext.avi.pdfMk.PdfMkPackage
-import org.xtext.avi.pdfMk.ListReversedDefinition
-import org.xtext.avi.pdfMk.StyleDefinition
-import org.xtext.avi.pdfMk.TextStyleDefinition
+import org.xtext.avi.pdfMk.ImagePageBreakDefinition
+import org.xtext.avi.pdfMk.TextAlignmentDefinition
+import org.xtext.avi.pdfMk.MarginDefinition
+import org.xtext.avi.pdfMk.ImageDefintion
+import org.xtext.avi.pdfMk.ListTypeDefinition
 
 /**
  * This class contains custom validation rules. 
@@ -18,32 +20,57 @@ import org.xtext.avi.pdfMk.TextStyleDefinition
 class PdfMkValidator extends AbstractPdfMkValidator {
 	
 	public static val INVALID_NAME = 'invalidName'
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					PdfMkPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
-	
+	public static val INVALID_VALUE = 'invalidValue'
 	
 	@Check
 	def checkText(TextDefinition textDefinition) {
-		if( textDefinition.value.equalsIgnoreCase("a") ) {
+		if( textDefinition.value.trim().equalsIgnoreCase("") ) {
 			warning("Text should not be empty", PdfMkPackage.Literals.TEXT_DEFINITION__VALUE, INVALID_NAME);
 		}
 	}
 	
 	@Check
-	def test(ListReversedDefinition revDef) {
-		warning("Warn U", PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE, INVALID_NAME);
-		
+	def checkImagePageBreakValue(ImagePageBreakDefinition imagePageBreakDefinition) {
+		if(!imagePageBreakDefinition.value.equalsIgnoreCase("before") && !imagePageBreakDefinition.value.equalsIgnoreCase("after")) {
+			error("only 'before' or 'after' allowed here !", PdfMkPackage.Literals.IMAGE_PAGE_BREAK_DEFINITION__VALUE, INVALID_VALUE);
+		}
 	}
 	
 	@Check
-	def testStyle(TextStyleDefinition styleDefinition) {
-		warning("Warn U", PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__VALUE, INVALID_NAME);
+	def checkTextAlginmentValue(TextAlignmentDefinition textAlginmentDefinition) {
+		if(!textAlginmentDefinition.value.equalsIgnoreCase("center") &&
+			!textAlginmentDefinition.value.equalsIgnoreCase("left") &&
+			!textAlginmentDefinition.value.equalsIgnoreCase("right") &&
+			!textAlginmentDefinition.value.equalsIgnoreCase("justify")) {
+				error("only 'center', 'left', 'right', 'justify' allowed here", PdfMkPackage.Literals.TEXT_ALIGNMENT_DEFINITION__VALUE, INVALID_VALUE);
+			}
+	}
+	
+	// only 4 margins allowed
+	@Check
+	def checkTextMargins(MarginDefinition marginDefinition) {
+		if(marginDefinition.values.size > 4) {
+			error("max 4 values allowed", PdfMkPackage.Literals.MARGIN_DEFINITION__VALUES, INVALID_VALUE);
+		}
+	}
+	
+	@Check
+	def checkImagePath(ImageDefintion imageDefinition) {
+		if( imageDefinition.value.trim.equalsIgnoreCase("") ) {
+			error("image path must be given", PdfMkPackage.Literals.IMAGE_DEFINTION__VALUE, INVALID_VALUE);
+		}
+	}
+	
+	@Check
+	def checkListMarkerType(ListTypeDefinition listMarkerTypeDefinition) {
+		if(!listMarkerTypeDefinition.value.equalsIgnoreCase("none") &&
+			!listMarkerTypeDefinition.value.equalsIgnoreCase("circle") &&
+			!listMarkerTypeDefinition.value.equalsIgnoreCase("square") &&
+			!listMarkerTypeDefinition.value.equalsIgnoreCase("lower-roman") &&
+			!listMarkerTypeDefinition.value.equalsIgnoreCase("upper-roman") &&
+			!listMarkerTypeDefinition.value.equalsIgnoreCase("upper-alpha") &&
+			!listMarkerTypeDefinition.value.equalsIgnoreCase("lower-alpha")) {
+				warning("List marker type not allowed", PdfMkPackage.Literals.LIST_TYPE_DEFINITION__VALUE, INVALID_VALUE);
+			}
 	}
 }
