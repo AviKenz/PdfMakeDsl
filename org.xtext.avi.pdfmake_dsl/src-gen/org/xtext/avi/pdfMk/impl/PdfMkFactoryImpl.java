@@ -93,6 +93,7 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.TABLE_ROW_DEFINITION: return createTableRowDefinition();
       case PdfMkPackage.TABLE_BODY_DEFINITION: return createTableBodyDefinition();
       case PdfMkPackage.TABLE_DEFINITION: return createTableDefinition();
+      case PdfMkPackage.TEXT_OBJECT_MEMBERS_WRAPPER: return createTextObjectMembersWrapper();
       case PdfMkPackage.TEXT_OBJECT: return createTextObject();
       case PdfMkPackage.COLUMN_TEXT_OBJECT: return createColumnTextObject();
       case PdfMkPackage.STYLE_OBJECT: return createStyleObject();
@@ -419,6 +420,17 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
   {
     TableDefinitionImpl tableDefinition = new TableDefinitionImpl();
     return tableDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextObjectMembersWrapper createTextObjectMembersWrapper()
+  {
+    TextObjectMembersWrapperImpl textObjectMembersWrapper = new TextObjectMembersWrapperImpl();
+    return textObjectMembersWrapper;
   }
 
   /**

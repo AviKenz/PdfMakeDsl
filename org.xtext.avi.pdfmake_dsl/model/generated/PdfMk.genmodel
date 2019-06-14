@@ -14,23 +14,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//StringObject/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//TypeFaceDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TypeFaceDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TypeFaceDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//TextStyleDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextStyleDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextStyleDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//TextDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ItalicsDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ItalicsDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ItalicsDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//FontSizeDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//FontSizeDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//FontSizeDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//StyleDefinition">
@@ -38,7 +33,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//StyleDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//WidthDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//WidthDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//WidthDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ColumnGapDefintion">
@@ -51,7 +45,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ColumnDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//MarginDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//MarginDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//MarginDefinition/values"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ImageDefintion">
@@ -88,7 +81,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListStartDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ListCounterDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListCounterDefinition/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//ListCounterDefinition/value"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ListTypeDefinition">
@@ -119,16 +111,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TableDefinition/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TableDefinition/body"/>
     </genClasses>
+    <genClasses ecoreClass="PdfMk.ecore#//TextObjectMembersWrapper">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObjectMembersWrapper/key"/>
+    </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//TextObject">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/style"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/fontSize"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/alignment"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/typeFace"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/italics"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/width"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/margin"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PdfMk.ecore#//TextObject/listCounter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//TextObject/members"/>
     </genClasses>
     <genClasses ecoreClass="PdfMk.ecore#//ColumnTextObject">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PdfMk.ecore#//ColumnTextObject/value"/>

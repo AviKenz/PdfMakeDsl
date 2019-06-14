@@ -7,6 +7,8 @@ import org.eclipse.xtext.validation.Check
 import org.xtext.avi.pdfMk.TextDefinition
 import org.xtext.avi.pdfMk.PdfMkPackage
 import org.xtext.avi.pdfMk.ListReversedDefinition
+import org.xtext.avi.pdfMk.StyleDefinition
+import org.xtext.avi.pdfMk.TextStyleDefinition
 
 /**
  * This class contains custom validation rules. 
@@ -38,5 +40,10 @@ class PdfMkValidator extends AbstractPdfMkValidator {
 	def test(ListReversedDefinition revDef) {
 		warning("Warn U", PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE, INVALID_NAME);
 		
+	}
+	
+	@Check
+	def testStyle(TextStyleDefinition styleDefinition) {
+		warning("Warn U", PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__VALUE, INVALID_NAME);
 	}
 }

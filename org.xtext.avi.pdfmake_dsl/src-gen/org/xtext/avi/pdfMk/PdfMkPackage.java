@@ -123,6 +123,34 @@ public interface PdfMkPackage extends EPackage
   int STRING_OBJECT_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextObjectMembersWrapperImpl <em>Text Object Members Wrapper</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.avi.pdfMk.impl.TextObjectMembersWrapperImpl
+   * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObjectMembersWrapper()
+   * @generated
+   */
+  int TEXT_OBJECT_MEMBERS_WRAPPER = 28;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_OBJECT_MEMBERS_WRAPPER__KEY = 0;
+
+  /**
+   * The number of structural features of the '<em>Text Object Members Wrapper</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TypeFaceDefinitionImpl <em>Type Face Definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -139,7 +167,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_FACE_DEFINITION__KEY = 0;
+  int TYPE_FACE_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -148,7 +176,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_FACE_DEFINITION__VALUE = 1;
+  int TYPE_FACE_DEFINITION__VALUE = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Type Face Definition</em>' class.
@@ -157,7 +185,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TYPE_FACE_DEFINITION_FEATURE_COUNT = 2;
+  int TYPE_FACE_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextStyleDefinitionImpl <em>Text Style Definition</em>}' class.
@@ -176,7 +204,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_STYLE_DEFINITION__KEY = 0;
+  int TEXT_STYLE_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -185,7 +213,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_STYLE_DEFINITION__VALUE = 1;
+  int TEXT_STYLE_DEFINITION__VALUE = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Text Style Definition</em>' class.
@@ -194,7 +222,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_STYLE_DEFINITION_FEATURE_COUNT = 2;
+  int TEXT_STYLE_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.TextDefinitionImpl <em>Text Definition</em>}' class.
@@ -213,7 +241,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_DEFINITION__KEY = 0;
+  int TEXT_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -222,7 +250,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_DEFINITION__VALUE = 1;
+  int TEXT_DEFINITION__VALUE = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Text Definition</em>' class.
@@ -231,7 +259,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_DEFINITION_FEATURE_COUNT = 2;
+  int TEXT_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ItalicsDefinitionImpl <em>Italics Definition</em>}' class.
@@ -250,7 +278,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITALICS_DEFINITION__KEY = 0;
+  int ITALICS_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -259,7 +287,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITALICS_DEFINITION__VALUE = 1;
+  int ITALICS_DEFINITION__VALUE = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Italics Definition</em>' class.
@@ -268,7 +296,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ITALICS_DEFINITION_FEATURE_COUNT = 2;
+  int ITALICS_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.FontSizeDefinitionImpl <em>Font Size Definition</em>}' class.
@@ -287,7 +315,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONT_SIZE_DEFINITION__KEY = 0;
+  int FONT_SIZE_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -296,7 +324,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONT_SIZE_DEFINITION__VALUE = 1;
+  int FONT_SIZE_DEFINITION__VALUE = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Font Size Definition</em>' class.
@@ -305,7 +333,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FONT_SIZE_DEFINITION_FEATURE_COUNT = 2;
+  int FONT_SIZE_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.StyleDefinitionImpl <em>Style Definition</em>}' class.
@@ -361,7 +389,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WIDTH_DEFINITION__KEY = 0;
+  int WIDTH_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -370,7 +398,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WIDTH_DEFINITION__VALUE = 1;
+  int WIDTH_DEFINITION__VALUE = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Width Definition</em>' class.
@@ -379,7 +407,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WIDTH_DEFINITION_FEATURE_COUNT = 2;
+  int WIDTH_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnGapDefintionImpl <em>Column Gap Defintion</em>}' class.
@@ -426,7 +454,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListElements()
    * @generated
    */
-  int LIST_ELEMENTS = 36;
+  int LIST_ELEMENTS = 37;
 
   /**
    * The feature id for the '<em><b>El Values</b></em>' attribute.
@@ -518,7 +546,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MARGIN_DEFINITION__KEY = 0;
+  int MARGIN_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Values</b></em>' attribute list.
@@ -527,7 +555,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MARGIN_DEFINITION__VALUES = 1;
+  int MARGIN_DEFINITION__VALUES = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Margin Definition</em>' class.
@@ -536,7 +564,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MARGIN_DEFINITION_FEATURE_COUNT = 2;
+  int MARGIN_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ImageDefintionImpl <em>Image Defintion</em>}' class.
@@ -860,7 +888,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_COUNTER_DEFINITION__KEY = 0;
+  int LIST_COUNTER_DEFINITION__KEY = TEXT_OBJECT_MEMBERS_WRAPPER__KEY;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -869,7 +897,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_COUNTER_DEFINITION__VALUE = 1;
+  int LIST_COUNTER_DEFINITION__VALUE = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>List Counter Definition</em>' class.
@@ -878,7 +906,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_COUNTER_DEFINITION_FEATURE_COUNT = 2;
+  int LIST_COUNTER_DEFINITION_FEATURE_COUNT = TEXT_OBJECT_MEMBERS_WRAPPER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ListTypeDefinitionImpl <em>List Type Definition</em>}' class.
@@ -1147,7 +1175,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObject()
    * @generated
    */
-  int TEXT_OBJECT = 28;
+  int TEXT_OBJECT = 29;
 
   /**
    * The feature id for the '<em><b>El Values</b></em>' attribute.
@@ -1159,85 +1187,13 @@ public interface PdfMkPackage extends EPackage
   int TEXT_OBJECT__EL_VALUES = LIST_ELEMENTS__EL_VALUES;
 
   /**
-   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * The feature id for the '<em><b>Members</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT__TEXT = LIST_ELEMENTS_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Style</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__STYLE = LIST_ELEMENTS_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Font Size</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__FONT_SIZE = LIST_ELEMENTS_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Alignment</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__ALIGNMENT = LIST_ELEMENTS_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Type Face</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__TYPE_FACE = LIST_ELEMENTS_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Italics</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__ITALICS = LIST_ELEMENTS_FEATURE_COUNT + 5;
-
-  /**
-   * The feature id for the '<em><b>Width</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__WIDTH = LIST_ELEMENTS_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Margin</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__MARGIN = LIST_ELEMENTS_FEATURE_COUNT + 7;
-
-  /**
-   * The feature id for the '<em><b>List Counter</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_OBJECT__LIST_COUNTER = LIST_ELEMENTS_FEATURE_COUNT + 8;
+  int TEXT_OBJECT__MEMBERS = LIST_ELEMENTS_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Text Object</em>' class.
@@ -1246,7 +1202,7 @@ public interface PdfMkPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_OBJECT_FEATURE_COUNT = LIST_ELEMENTS_FEATURE_COUNT + 9;
+  int TEXT_OBJECT_FEATURE_COUNT = LIST_ELEMENTS_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.
@@ -1256,7 +1212,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnTextObject()
    * @generated
    */
-  int COLUMN_TEXT_OBJECT = 29;
+  int COLUMN_TEXT_OBJECT = 30;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1284,7 +1240,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObject()
    * @generated
    */
-  int STYLE_OBJECT = 30;
+  int STYLE_OBJECT = 31;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1366,7 +1322,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyleObjects()
    * @generated
    */
-  int STYLE_OBJECTS = 31;
+  int STYLE_OBJECTS = 32;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -1394,7 +1350,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getInnerColumnObject()
    * @generated
    */
-  int INNER_COLUMN_OBJECT = 32;
+  int INNER_COLUMN_OBJECT = 33;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1449,7 +1405,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getColumnObject()
    * @generated
    */
-  int COLUMN_OBJECT = 33;
+  int COLUMN_OBJECT = 34;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1513,7 +1469,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getImageObject()
    * @generated
    */
-  int IMAGE_OBJECT = 34;
+  int IMAGE_OBJECT = 35;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1595,7 +1551,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObjectPropertiesWrapper()
    * @generated
    */
-  int LIST_OBJECT_PROPERTIES_WRAPPER = 35;
+  int LIST_OBJECT_PROPERTIES_WRAPPER = 36;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1623,7 +1579,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getListObject()
    * @generated
    */
-  int LIST_OBJECT = 37;
+  int LIST_OBJECT = 38;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1678,7 +1634,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTableObject()
    * @generated
    */
-  int TABLE_OBJECT = 38;
+  int TABLE_OBJECT = 39;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1724,7 +1680,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObject()
    * @generated
    */
-  int CONTENT_OBJECT = 39;
+  int CONTENT_OBJECT = 40;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1752,7 +1708,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContentObjects()
    * @generated
    */
-  int CONTENT_OBJECTS = 40;
+  int CONTENT_OBJECTS = 41;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -1780,7 +1736,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getStyles()
    * @generated
    */
-  int STYLES = 41;
+  int STYLES = 42;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1817,7 +1773,7 @@ public interface PdfMkPackage extends EPackage
    * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getContent()
    * @generated
    */
-  int CONTENT = 42;
+  int CONTENT = 43;
 
   /**
    * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1911,17 +1867,6 @@ public interface PdfMkPackage extends EPackage
   EClass getTypeFaceDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TypeFaceDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.TypeFaceDefinition#getKey()
-   * @see #getTypeFaceDefinition()
-   * @generated
-   */
-  EAttribute getTypeFaceDefinition_Key();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TypeFaceDefinition#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1941,17 +1886,6 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EClass getTextStyleDefinition();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextStyleDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.TextStyleDefinition#getKey()
-   * @see #getTextStyleDefinition()
-   * @generated
-   */
-  EAttribute getTextStyleDefinition_Key();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextStyleDefinition#getValue <em>Value</em>}'.
@@ -1975,17 +1909,6 @@ public interface PdfMkPackage extends EPackage
   EClass getTextDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.TextDefinition#getKey()
-   * @see #getTextDefinition()
-   * @generated
-   */
-  EAttribute getTextDefinition_Key();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextDefinition#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2007,17 +1930,6 @@ public interface PdfMkPackage extends EPackage
   EClass getItalicsDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ItalicsDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.ItalicsDefinition#getKey()
-   * @see #getItalicsDefinition()
-   * @generated
-   */
-  EAttribute getItalicsDefinition_Key();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ItalicsDefinition#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2037,17 +1949,6 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EClass getFontSizeDefinition();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.FontSizeDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.FontSizeDefinition#getKey()
-   * @see #getFontSizeDefinition()
-   * @generated
-   */
-  EAttribute getFontSizeDefinition_Key();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.FontSizeDefinition#getValue <em>Value</em>}'.
@@ -2101,17 +2002,6 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EClass getWidthDefinition();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.WidthDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.WidthDefinition#getKey()
-   * @see #getWidthDefinition()
-   * @generated
-   */
-  EAttribute getWidthDefinition_Key();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.WidthDefinition#getValue <em>Value</em>}'.
@@ -2208,17 +2098,6 @@ public interface PdfMkPackage extends EPackage
    * @generated
    */
   EClass getMarginDefinition();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.MarginDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.MarginDefinition#getKey()
-   * @see #getMarginDefinition()
-   * @generated
-   */
-  EAttribute getMarginDefinition_Key();
 
   /**
    * Returns the meta object for the attribute list '{@link org.xtext.avi.pdfMk.MarginDefinition#getValues <em>Values</em>}'.
@@ -2509,17 +2388,6 @@ public interface PdfMkPackage extends EPackage
   EClass getListCounterDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListCounterDefinition#getKey <em>Key</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Key</em>'.
-   * @see org.xtext.avi.pdfMk.ListCounterDefinition#getKey()
-   * @see #getListCounterDefinition()
-   * @generated
-   */
-  EAttribute getListCounterDefinition_Key();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.ListCounterDefinition#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2755,6 +2623,27 @@ public interface PdfMkPackage extends EPackage
   EReference getTableDefinition_Body();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextObjectMembersWrapper <em>Text Object Members Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text Object Members Wrapper</em>'.
+   * @see org.xtext.avi.pdfMk.TextObjectMembersWrapper
+   * @generated
+   */
+  EClass getTextObjectMembersWrapper();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObjectMembersWrapper#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.avi.pdfMk.TextObjectMembersWrapper#getKey()
+   * @see #getTextObjectMembersWrapper()
+   * @generated
+   */
+  EAttribute getTextObjectMembersWrapper_Key();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.TextObject <em>Text Object</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2765,103 +2654,15 @@ public interface PdfMkPackage extends EPackage
   EClass getTextObject();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isText <em>Text</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.avi.pdfMk.TextObject#getMembers <em>Members</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Text</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isText()
+   * @return the meta object for the containment reference list '<em>Members</em>'.
+   * @see org.xtext.avi.pdfMk.TextObject#getMembers()
    * @see #getTextObject()
    * @generated
    */
-  EAttribute getTextObject_Text();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isStyle <em>Style</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Style</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isStyle()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Style();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isFontSize <em>Font Size</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Font Size</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isFontSize()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_FontSize();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isAlignment <em>Alignment</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Alignment</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isAlignment()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Alignment();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isTypeFace <em>Type Face</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type Face</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isTypeFace()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_TypeFace();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isItalics <em>Italics</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Italics</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isItalics()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Italics();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isWidth <em>Width</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Width</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isWidth()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Width();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isMargin <em>Margin</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Margin</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isMargin()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_Margin();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.avi.pdfMk.TextObject#isListCounter <em>List Counter</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>List Counter</em>'.
-   * @see org.xtext.avi.pdfMk.TextObject#isListCounter()
-   * @see #getTextObject()
-   * @generated
-   */
-  EAttribute getTextObject_ListCounter();
+  EReference getTextObject_Members();
 
   /**
    * Returns the meta object for class '{@link org.xtext.avi.pdfMk.ColumnTextObject <em>Column Text Object</em>}'.
@@ -3521,14 +3322,6 @@ public interface PdfMkPackage extends EPackage
     EClass TYPE_FACE_DEFINITION = eINSTANCE.getTypeFaceDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TYPE_FACE_DEFINITION__KEY = eINSTANCE.getTypeFaceDefinition_Key();
-
-    /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3545,14 +3338,6 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EClass TEXT_STYLE_DEFINITION = eINSTANCE.getTextStyleDefinition();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_STYLE_DEFINITION__KEY = eINSTANCE.getTextStyleDefinition_Key();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3573,14 +3358,6 @@ public interface PdfMkPackage extends EPackage
     EClass TEXT_DEFINITION = eINSTANCE.getTextDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_DEFINITION__KEY = eINSTANCE.getTextDefinition_Key();
-
-    /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3599,14 +3376,6 @@ public interface PdfMkPackage extends EPackage
     EClass ITALICS_DEFINITION = eINSTANCE.getItalicsDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ITALICS_DEFINITION__KEY = eINSTANCE.getItalicsDefinition_Key();
-
-    /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3623,14 +3392,6 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EClass FONT_SIZE_DEFINITION = eINSTANCE.getFontSizeDefinition();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute FONT_SIZE_DEFINITION__KEY = eINSTANCE.getFontSizeDefinition_Key();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3675,14 +3436,6 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EClass WIDTH_DEFINITION = eINSTANCE.getWidthDefinition();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute WIDTH_DEFINITION__KEY = eINSTANCE.getWidthDefinition_Key();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3761,14 +3514,6 @@ public interface PdfMkPackage extends EPackage
      * @generated
      */
     EClass MARGIN_DEFINITION = eINSTANCE.getMarginDefinition();
-
-    /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MARGIN_DEFINITION__KEY = eINSTANCE.getMarginDefinition_Key();
 
     /**
      * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
@@ -4005,14 +3750,6 @@ public interface PdfMkPackage extends EPackage
     EClass LIST_COUNTER_DEFINITION = eINSTANCE.getListCounterDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LIST_COUNTER_DEFINITION__KEY = eINSTANCE.getListCounterDefinition_Key();
-
-    /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4203,6 +3940,24 @@ public interface PdfMkPackage extends EPackage
     EReference TABLE_DEFINITION__BODY = eINSTANCE.getTableDefinition_Body();
 
     /**
+     * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextObjectMembersWrapperImpl <em>Text Object Members Wrapper</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.avi.pdfMk.impl.TextObjectMembersWrapperImpl
+     * @see org.xtext.avi.pdfMk.impl.PdfMkPackageImpl#getTextObjectMembersWrapper()
+     * @generated
+     */
+    EClass TEXT_OBJECT_MEMBERS_WRAPPER = eINSTANCE.getTextObjectMembersWrapper();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_OBJECT_MEMBERS_WRAPPER__KEY = eINSTANCE.getTextObjectMembersWrapper_Key();
+
+    /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.TextObjectImpl <em>Text Object</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4213,76 +3968,12 @@ public interface PdfMkPackage extends EPackage
     EClass TEXT_OBJECT = eINSTANCE.getTextObject();
 
     /**
-     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Members</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TEXT_OBJECT__TEXT = eINSTANCE.getTextObject_Text();
-
-    /**
-     * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__STYLE = eINSTANCE.getTextObject_Style();
-
-    /**
-     * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__FONT_SIZE = eINSTANCE.getTextObject_FontSize();
-
-    /**
-     * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__ALIGNMENT = eINSTANCE.getTextObject_Alignment();
-
-    /**
-     * The meta object literal for the '<em><b>Type Face</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__TYPE_FACE = eINSTANCE.getTextObject_TypeFace();
-
-    /**
-     * The meta object literal for the '<em><b>Italics</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__ITALICS = eINSTANCE.getTextObject_Italics();
-
-    /**
-     * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__WIDTH = eINSTANCE.getTextObject_Width();
-
-    /**
-     * The meta object literal for the '<em><b>Margin</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__MARGIN = eINSTANCE.getTextObject_Margin();
-
-    /**
-     * The meta object literal for the '<em><b>List Counter</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TEXT_OBJECT__LIST_COUNTER = eINSTANCE.getTextObject_ListCounter();
+    EReference TEXT_OBJECT__MEMBERS = eINSTANCE.getTextObject_Members();
 
     /**
      * The meta object literal for the '{@link org.xtext.avi.pdfMk.impl.ColumnTextObjectImpl <em>Column Text Object</em>}' class.

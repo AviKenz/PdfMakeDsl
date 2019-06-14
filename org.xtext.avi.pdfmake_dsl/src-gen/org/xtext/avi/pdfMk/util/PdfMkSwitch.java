@@ -91,6 +91,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         TypeFaceDefinition typeFaceDefinition = (TypeFaceDefinition)theEObject;
         T result = caseTypeFaceDefinition(typeFaceDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(typeFaceDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -98,6 +99,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         TextStyleDefinition textStyleDefinition = (TextStyleDefinition)theEObject;
         T result = caseTextStyleDefinition(textStyleDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(textStyleDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -105,6 +107,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         TextDefinition textDefinition = (TextDefinition)theEObject;
         T result = caseTextDefinition(textDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(textDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -112,6 +115,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ItalicsDefinition italicsDefinition = (ItalicsDefinition)theEObject;
         T result = caseItalicsDefinition(italicsDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(italicsDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -119,6 +123,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         FontSizeDefinition fontSizeDefinition = (FontSizeDefinition)theEObject;
         T result = caseFontSizeDefinition(fontSizeDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(fontSizeDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -133,6 +138,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         WidthDefinition widthDefinition = (WidthDefinition)theEObject;
         T result = caseWidthDefinition(widthDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(widthDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -155,6 +161,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         MarginDefinition marginDefinition = (MarginDefinition)theEObject;
         T result = caseMarginDefinition(marginDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(marginDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -218,6 +225,7 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         ListCounterDefinition listCounterDefinition = (ListCounterDefinition)theEObject;
         T result = caseListCounterDefinition(listCounterDefinition);
+        if (result == null) result = caseTextObjectMembersWrapper(listCounterDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -267,6 +275,13 @@ public class PdfMkSwitch<T> extends Switch<T>
       {
         TableDefinition tableDefinition = (TableDefinition)theEObject;
         T result = caseTableDefinition(tableDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case PdfMkPackage.TEXT_OBJECT_MEMBERS_WRAPPER:
+      {
+        TextObjectMembersWrapper textObjectMembersWrapper = (TextObjectMembersWrapper)theEObject;
+        T result = caseTextObjectMembersWrapper(textObjectMembersWrapper);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -824,6 +839,22 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTableDefinition(TableDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Text Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Text Object Members Wrapper</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextObjectMembersWrapper(TextObjectMembersWrapper object)
   {
     return null;
   }

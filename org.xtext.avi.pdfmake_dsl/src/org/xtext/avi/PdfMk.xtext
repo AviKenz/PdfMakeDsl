@@ -126,17 +126,27 @@ TableDefinition:
 
 /******************** Objects definition ********************/
 // TODO [M] write grammar to support text in []. see playground-style3
-TextObject: 
-	"{" text?=TextDefinition 
-			  ("," style?=TextStyleDefinition)?
-			  ("," fontSize?=FontSizeDefinition)? 
-			  ("," alignment?=TextAlignmentDefinition)? 
-			  ("," typeFace?=TypeFaceDefinition)? 
-			  ("," italics?=ItalicsDefinition)?
-			  ("," width?=WidthDefinition)?
-			  ("," margin?=MarginDefinition)?
-			  ("," listCounter?=ListCounterDefinition)?
-		   "}";
+//TextObject: 
+//	"{" text?=TextDefinition 
+//			  ("," style?=TextStyleDefinition)?
+//			  ("," fontSize?=FontSizeDefinition)? 
+//			  ("," alignment?=TextAlignmentDefinition)? 
+//			  ("," typeFace?=TypeFaceDefinition)? 
+//			  ("," italics?=ItalicsDefinition)?
+//			  ("," width?=WidthDefinition)?
+//			  ("," margin?=MarginDefinition)?
+//			  ("," listCounter?=ListCounterDefinition)?
+//		   "}";
+
+TextObjectMembersWrapper:
+	TextDefinition|TextStyleDefinition|FontSizeDefinition|TextAlignmentDefinition|
+	TypeFaceDefinition|ItalicsDefinition|WidthDefinition|
+	MarginDefinition|ListCounterDefinition;
+
+TextObject:
+	"{" (members+=TextObjectMembersWrapper ("," members+=TextObjectMembersWrapper)*) "}";
+
+
 		   
 ColumnTextObject: 
 	value=ColumnDefinition;

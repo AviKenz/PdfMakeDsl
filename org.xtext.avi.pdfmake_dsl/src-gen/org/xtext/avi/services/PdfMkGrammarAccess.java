@@ -1142,166 +1142,113 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
+	public class TextObjectMembersWrapperElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextObjectMembersWrapper");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cTextDefinitionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cTextStyleDefinitionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cFontSizeDefinitionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cTextAlignmentDefinitionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cTypeFaceDefinitionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cItalicsDefinitionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cWidthDefinitionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cMarginDefinitionParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cListCounterDefinitionParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		
+		///******************** Objects definition ********************/ // TODO [M] write grammar to support text in []. see playground-style3
+		////TextObject: 
+		////	"{" text?=TextDefinition 
+		////			  ("," style?=TextStyleDefinition)?
+		////			  ("," fontSize?=FontSizeDefinition)? 
+		////			  ("," alignment?=TextAlignmentDefinition)? 
+		////			  ("," typeFace?=TypeFaceDefinition)? 
+		////			  ("," italics?=ItalicsDefinition)?
+		////			  ("," width?=WidthDefinition)?
+		////			  ("," margin?=MarginDefinition)?
+		////			  ("," listCounter?=ListCounterDefinition)?
+		////		   "}";
+		//TextObjectMembersWrapper:
+		//	TextDefinition | TextStyleDefinition | FontSizeDefinition | TextAlignmentDefinition | TypeFaceDefinition |
+		//	ItalicsDefinition | WidthDefinition | MarginDefinition | ListCounterDefinition;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//TextDefinition | TextStyleDefinition | FontSizeDefinition | TextAlignmentDefinition | TypeFaceDefinition |
+		//ItalicsDefinition | WidthDefinition | MarginDefinition | ListCounterDefinition
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//TextDefinition
+		public RuleCall getTextDefinitionParserRuleCall_0() { return cTextDefinitionParserRuleCall_0; }
+		
+		//TextStyleDefinition
+		public RuleCall getTextStyleDefinitionParserRuleCall_1() { return cTextStyleDefinitionParserRuleCall_1; }
+		
+		//FontSizeDefinition
+		public RuleCall getFontSizeDefinitionParserRuleCall_2() { return cFontSizeDefinitionParserRuleCall_2; }
+		
+		//TextAlignmentDefinition
+		public RuleCall getTextAlignmentDefinitionParserRuleCall_3() { return cTextAlignmentDefinitionParserRuleCall_3; }
+		
+		//TypeFaceDefinition
+		public RuleCall getTypeFaceDefinitionParserRuleCall_4() { return cTypeFaceDefinitionParserRuleCall_4; }
+		
+		//ItalicsDefinition
+		public RuleCall getItalicsDefinitionParserRuleCall_5() { return cItalicsDefinitionParserRuleCall_5; }
+		
+		//WidthDefinition
+		public RuleCall getWidthDefinitionParserRuleCall_6() { return cWidthDefinitionParserRuleCall_6; }
+		
+		//MarginDefinition
+		public RuleCall getMarginDefinitionParserRuleCall_7() { return cMarginDefinitionParserRuleCall_7; }
+		
+		//ListCounterDefinition
+		public RuleCall getListCounterDefinitionParserRuleCall_8() { return cListCounterDefinitionParserRuleCall_8; }
+	}
 	public class TextObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.TextObject");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTextAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTextTextDefinitionParserRuleCall_1_0 = (RuleCall)cTextAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cStyleAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cStyleTextStyleDefinitionParserRuleCall_2_1_0 = (RuleCall)cStyleAssignment_2_1.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cFontSizeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cFontSizeFontSizeDefinitionParserRuleCall_3_1_0 = (RuleCall)cFontSizeAssignment_3_1.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cAlignmentAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cAlignmentTextAlignmentDefinitionParserRuleCall_4_1_0 = (RuleCall)cAlignmentAssignment_4_1.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cTypeFaceAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cTypeFaceTypeFaceDefinitionParserRuleCall_5_1_0 = (RuleCall)cTypeFaceAssignment_5_1.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cItalicsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cItalicsItalicsDefinitionParserRuleCall_6_1_0 = (RuleCall)cItalicsAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cWidthAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cWidthWidthDefinitionParserRuleCall_7_1_0 = (RuleCall)cWidthAssignment_7_1.eContents().get(0);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cCommaKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cMarginAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cMarginMarginDefinitionParserRuleCall_8_1_0 = (RuleCall)cMarginAssignment_8_1.eContents().get(0);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cCommaKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cListCounterAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cListCounterListCounterDefinitionParserRuleCall_9_1_0 = (RuleCall)cListCounterAssignment_9_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cMembersAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cMembersTextObjectMembersWrapperParserRuleCall_1_0_0 = (RuleCall)cMembersAssignment_1_0.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
+		private final Keyword cCommaKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cMembersAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cMembersTextObjectMembersWrapperParserRuleCall_1_1_1_0 = (RuleCall)cMembersAssignment_1_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		///******************** Objects definition ********************/ // TODO [M] write grammar to support text in []. see playground-style3
 		//TextObject:
-		//	"{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
-		//	alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)? (","
-		//	width?=WidthDefinition)? ("," margin?=MarginDefinition)? ("," listCounter?=ListCounterDefinition)?
-		//	"}";
+		//	"{" (members+=TextObjectMembersWrapper ("," members+=TextObjectMembersWrapper)*) "}";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
-		//alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)? (","
-		//width?=WidthDefinition)? ("," margin?=MarginDefinition)? ("," listCounter?=ListCounterDefinition)? "}"
+		//"{" (members+=TextObjectMembersWrapper ("," members+=TextObjectMembersWrapper)*) "}"
 		public Group getGroup() { return cGroup; }
 		
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//text?=TextDefinition
-		public Assignment getTextAssignment_1() { return cTextAssignment_1; }
+		//members+=TextObjectMembersWrapper ("," members+=TextObjectMembersWrapper)*
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//TextDefinition
-		public RuleCall getTextTextDefinitionParserRuleCall_1_0() { return cTextTextDefinitionParserRuleCall_1_0; }
+		//members+=TextObjectMembersWrapper
+		public Assignment getMembersAssignment_1_0() { return cMembersAssignment_1_0; }
 		
-		//("," style?=TextStyleDefinition)?
-		public Group getGroup_2() { return cGroup_2; }
+		//TextObjectMembersWrapper
+		public RuleCall getMembersTextObjectMembersWrapperParserRuleCall_1_0_0() { return cMembersTextObjectMembersWrapperParserRuleCall_1_0_0; }
 		
-		//","
-		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
-		
-		//style?=TextStyleDefinition
-		public Assignment getStyleAssignment_2_1() { return cStyleAssignment_2_1; }
-		
-		//TextStyleDefinition
-		public RuleCall getStyleTextStyleDefinitionParserRuleCall_2_1_0() { return cStyleTextStyleDefinitionParserRuleCall_2_1_0; }
-		
-		//("," fontSize?=FontSizeDefinition)?
-		public Group getGroup_3() { return cGroup_3; }
+		//("," members+=TextObjectMembersWrapper)*
+		public Group getGroup_1_1() { return cGroup_1_1; }
 		
 		//","
-		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		public Keyword getCommaKeyword_1_1_0() { return cCommaKeyword_1_1_0; }
 		
-		//fontSize?=FontSizeDefinition
-		public Assignment getFontSizeAssignment_3_1() { return cFontSizeAssignment_3_1; }
+		//members+=TextObjectMembersWrapper
+		public Assignment getMembersAssignment_1_1_1() { return cMembersAssignment_1_1_1; }
 		
-		//FontSizeDefinition
-		public RuleCall getFontSizeFontSizeDefinitionParserRuleCall_3_1_0() { return cFontSizeFontSizeDefinitionParserRuleCall_3_1_0; }
-		
-		//("," alignment?=TextAlignmentDefinition)?
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//","
-		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
-		
-		//alignment?=TextAlignmentDefinition
-		public Assignment getAlignmentAssignment_4_1() { return cAlignmentAssignment_4_1; }
-		
-		//TextAlignmentDefinition
-		public RuleCall getAlignmentTextAlignmentDefinitionParserRuleCall_4_1_0() { return cAlignmentTextAlignmentDefinitionParserRuleCall_4_1_0; }
-		
-		//("," typeFace?=TypeFaceDefinition)?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//","
-		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
-		
-		//typeFace?=TypeFaceDefinition
-		public Assignment getTypeFaceAssignment_5_1() { return cTypeFaceAssignment_5_1; }
-		
-		//TypeFaceDefinition
-		public RuleCall getTypeFaceTypeFaceDefinitionParserRuleCall_5_1_0() { return cTypeFaceTypeFaceDefinitionParserRuleCall_5_1_0; }
-		
-		//("," italics?=ItalicsDefinition)?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//","
-		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
-		
-		//italics?=ItalicsDefinition
-		public Assignment getItalicsAssignment_6_1() { return cItalicsAssignment_6_1; }
-		
-		//ItalicsDefinition
-		public RuleCall getItalicsItalicsDefinitionParserRuleCall_6_1_0() { return cItalicsItalicsDefinitionParserRuleCall_6_1_0; }
-		
-		//("," width?=WidthDefinition)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//","
-		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
-		
-		//width?=WidthDefinition
-		public Assignment getWidthAssignment_7_1() { return cWidthAssignment_7_1; }
-		
-		//WidthDefinition
-		public RuleCall getWidthWidthDefinitionParserRuleCall_7_1_0() { return cWidthWidthDefinitionParserRuleCall_7_1_0; }
-		
-		//("," margin?=MarginDefinition)?
-		public Group getGroup_8() { return cGroup_8; }
-		
-		//","
-		public Keyword getCommaKeyword_8_0() { return cCommaKeyword_8_0; }
-		
-		//margin?=MarginDefinition
-		public Assignment getMarginAssignment_8_1() { return cMarginAssignment_8_1; }
-		
-		//MarginDefinition
-		public RuleCall getMarginMarginDefinitionParserRuleCall_8_1_0() { return cMarginMarginDefinitionParserRuleCall_8_1_0; }
-		
-		//("," listCounter?=ListCounterDefinition)?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//","
-		public Keyword getCommaKeyword_9_0() { return cCommaKeyword_9_0; }
-		
-		//listCounter?=ListCounterDefinition
-		public Assignment getListCounterAssignment_9_1() { return cListCounterAssignment_9_1; }
-		
-		//ListCounterDefinition
-		public RuleCall getListCounterListCounterDefinitionParserRuleCall_9_1_0() { return cListCounterListCounterDefinitionParserRuleCall_9_1_0; }
+		//TextObjectMembersWrapper
+		public RuleCall getMembersTextObjectMembersWrapperParserRuleCall_1_1_1_0() { return cMembersTextObjectMembersWrapperParserRuleCall_1_1_1_0; }
 		
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
 	}
 	public class ColumnTextObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.avi.PdfMk.ColumnTextObject");
@@ -2254,6 +2201,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	private final TableRowDefinitionElements pTableRowDefinition;
 	private final TableBodyDefinitionElements pTableBodyDefinition;
 	private final TableDefinitionElements pTableDefinition;
+	private final TextObjectMembersWrapperElements pTextObjectMembersWrapper;
 	private final TextObjectElements pTextObject;
 	private final ColumnTextObjectElements pColumnTextObject;
 	private final StyleObjectElements pStyleObject;
@@ -2311,6 +2259,7 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTableRowDefinition = new TableRowDefinitionElements();
 		this.pTableBodyDefinition = new TableBodyDefinitionElements();
 		this.pTableDefinition = new TableDefinitionElements();
+		this.pTextObjectMembersWrapper = new TextObjectMembersWrapperElements();
 		this.pTextObject = new TextObjectElements();
 		this.pColumnTextObject = new ColumnTextObjectElements();
 		this.pStyleObject = new StyleObjectElements();
@@ -2691,11 +2640,30 @@ public class PdfMkGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	///******************** Objects definition ********************/ // TODO [M] write grammar to support text in []. see playground-style3
+	////TextObject: 
+	////	"{" text?=TextDefinition 
+	////			  ("," style?=TextStyleDefinition)?
+	////			  ("," fontSize?=FontSizeDefinition)? 
+	////			  ("," alignment?=TextAlignmentDefinition)? 
+	////			  ("," typeFace?=TypeFaceDefinition)? 
+	////			  ("," italics?=ItalicsDefinition)?
+	////			  ("," width?=WidthDefinition)?
+	////			  ("," margin?=MarginDefinition)?
+	////			  ("," listCounter?=ListCounterDefinition)?
+	////		   "}";
+	//TextObjectMembersWrapper:
+	//	TextDefinition | TextStyleDefinition | FontSizeDefinition | TextAlignmentDefinition | TypeFaceDefinition |
+	//	ItalicsDefinition | WidthDefinition | MarginDefinition | ListCounterDefinition;
+	public TextObjectMembersWrapperElements getTextObjectMembersWrapperAccess() {
+		return pTextObjectMembersWrapper;
+	}
+	
+	public ParserRule getTextObjectMembersWrapperRule() {
+		return getTextObjectMembersWrapperAccess().getRule();
+	}
+	
 	//TextObject:
-	//	"{" text?=TextDefinition ("," style?=TextStyleDefinition)? ("," fontSize?=FontSizeDefinition)? (","
-	//	alignment?=TextAlignmentDefinition)? ("," typeFace?=TypeFaceDefinition)? ("," italics?=ItalicsDefinition)? (","
-	//	width?=WidthDefinition)? ("," margin?=MarginDefinition)? ("," listCounter?=ListCounterDefinition)?
-	//	"}";
+	//	"{" (members+=TextObjectMembersWrapper ("," members+=TextObjectMembersWrapper)*) "}";
 	public TextObjectElements getTextObjectAccess() {
 		return pTextObject;
 	}

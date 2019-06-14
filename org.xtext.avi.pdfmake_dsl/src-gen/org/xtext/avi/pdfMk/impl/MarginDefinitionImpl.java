@@ -5,14 +5,9 @@ package org.xtext.avi.pdfMk.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
@@ -27,34 +22,13 @@ import org.xtext.avi.pdfMk.PdfMkPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.impl.MarginDefinitionImpl#getKey <em>Key</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.MarginDefinitionImpl#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MarginDefinitionImpl extends MinimalEObjectImpl.Container implements MarginDefinition
+public class MarginDefinitionImpl extends TextObjectMembersWrapperImpl implements MarginDefinition
 {
-  /**
-   * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKey()
-   * @generated
-   * @ordered
-   */
-  protected static final String KEY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getKey() <em>Key</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKey()
-   * @generated
-   * @ordered
-   */
-  protected String key = KEY_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
    * <!-- begin-user-doc -->
@@ -91,29 +65,6 @@ public class MarginDefinitionImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getKey()
-  {
-    return key;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setKey(String newKey)
-  {
-    String oldKey = key;
-    key = newKey;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.MARGIN_DEFINITION__KEY, oldKey, key));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<Integer> getValues()
   {
     if (values == null)
@@ -133,8 +84,6 @@ public class MarginDefinitionImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case PdfMkPackage.MARGIN_DEFINITION__KEY:
-        return getKey();
       case PdfMkPackage.MARGIN_DEFINITION__VALUES:
         return getValues();
     }
@@ -152,9 +101,6 @@ public class MarginDefinitionImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case PdfMkPackage.MARGIN_DEFINITION__KEY:
-        setKey((String)newValue);
-        return;
       case PdfMkPackage.MARGIN_DEFINITION__VALUES:
         getValues().clear();
         getValues().addAll((Collection<? extends Integer>)newValue);
@@ -173,9 +119,6 @@ public class MarginDefinitionImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case PdfMkPackage.MARGIN_DEFINITION__KEY:
-        setKey(KEY_EDEFAULT);
-        return;
       case PdfMkPackage.MARGIN_DEFINITION__VALUES:
         getValues().clear();
         return;
@@ -193,8 +136,6 @@ public class MarginDefinitionImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case PdfMkPackage.MARGIN_DEFINITION__KEY:
-        return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
       case PdfMkPackage.MARGIN_DEFINITION__VALUES:
         return values != null && !values.isEmpty();
     }
@@ -212,9 +153,7 @@ public class MarginDefinitionImpl extends MinimalEObjectImpl.Container implement
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (key: ");
-    result.append(key);
-    result.append(", values: ");
+    result.append(" (values: ");
     result.append(values);
     result.append(')');
     return result.toString();

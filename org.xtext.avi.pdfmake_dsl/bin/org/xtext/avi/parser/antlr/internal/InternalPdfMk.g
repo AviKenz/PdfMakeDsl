@@ -1784,6 +1784,104 @@ ruleTableDefinition returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleTextObjectMembersWrapper
+entryRuleTextObjectMembersWrapper returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTextObjectMembersWrapperRule()); }
+	iv_ruleTextObjectMembersWrapper=ruleTextObjectMembersWrapper
+	{ $current=$iv_ruleTextObjectMembersWrapper.current; }
+	EOF;
+
+// Rule TextObjectMembersWrapper
+ruleTextObjectMembersWrapper returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getTextDefinitionParserRuleCall_0());
+		}
+		this_TextDefinition_0=ruleTextDefinition
+		{
+			$current = $this_TextDefinition_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getTextStyleDefinitionParserRuleCall_1());
+		}
+		this_TextStyleDefinition_1=ruleTextStyleDefinition
+		{
+			$current = $this_TextStyleDefinition_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getFontSizeDefinitionParserRuleCall_2());
+		}
+		this_FontSizeDefinition_2=ruleFontSizeDefinition
+		{
+			$current = $this_FontSizeDefinition_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getTextAlignmentDefinitionParserRuleCall_3());
+		}
+		ruleTextAlignmentDefinition
+		{
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getTypeFaceDefinitionParserRuleCall_4());
+		}
+		this_TypeFaceDefinition_4=ruleTypeFaceDefinition
+		{
+			$current = $this_TypeFaceDefinition_4.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getItalicsDefinitionParserRuleCall_5());
+		}
+		this_ItalicsDefinition_5=ruleItalicsDefinition
+		{
+			$current = $this_ItalicsDefinition_5.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getWidthDefinitionParserRuleCall_6());
+		}
+		this_WidthDefinition_6=ruleWidthDefinition
+		{
+			$current = $this_WidthDefinition_6.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getMarginDefinitionParserRuleCall_7());
+		}
+		this_MarginDefinition_7=ruleMarginDefinition
+		{
+			$current = $this_MarginDefinition_7.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getTextObjectMembersWrapperAccess().getListCounterDefinitionParserRuleCall_8());
+		}
+		this_ListCounterDefinition_8=ruleListCounterDefinition
+		{
+			$current = $this_ListCounterDefinition_8.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
 // Entry rule entryRuleTextObject
 entryRuleTextObject returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTextObjectRule()); }
@@ -1806,226 +1904,53 @@ ruleTextObject returns [EObject current=null]
 		}
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getTextObjectAccess().getTextTextDefinitionParserRuleCall_1_0());
-				}
-				lv_text_1_0=ruleTextDefinition
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTextObjectRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getTextObjectAccess().getMembersTextObjectMembersWrapperParserRuleCall_1_0_0());
 					}
-					set(
-						$current,
-						"text",
-						true,
-						"org.xtext.avi.PdfMk.TextDefinition");
-					afterParserOrEnumRuleCall();
-				}
+					lv_members_1_0=ruleTextObjectMembersWrapper
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
+						}
+						add(
+							$current,
+							"members",
+							lv_members_1_0,
+							"org.xtext.avi.PdfMk.TextObjectMembersWrapper");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
+			(
+				otherlv_2=','
+				{
+					newLeafNode(otherlv_2, grammarAccess.getTextObjectAccess().getCommaKeyword_1_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getTextObjectAccess().getMembersTextObjectMembersWrapperParserRuleCall_1_1_1_0());
+						}
+						lv_members_3_0=ruleTextObjectMembersWrapper
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getTextObjectRule());
+							}
+							add(
+								$current,
+								"members",
+								lv_members_3_0,
+								"org.xtext.avi.PdfMk.TextObjectMembersWrapper");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
 		)
-		(
-			otherlv_2=','
-			{
-				newLeafNode(otherlv_2, grammarAccess.getTextObjectAccess().getCommaKeyword_2_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getStyleTextStyleDefinitionParserRuleCall_2_1_0());
-					}
-					lv_style_3_0=ruleTextStyleDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"style",
-							true,
-							"org.xtext.avi.PdfMk.TextStyleDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_4=','
-			{
-				newLeafNode(otherlv_4, grammarAccess.getTextObjectAccess().getCommaKeyword_3_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getFontSizeFontSizeDefinitionParserRuleCall_3_1_0());
-					}
-					lv_fontSize_5_0=ruleFontSizeDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"fontSize",
-							true,
-							"org.xtext.avi.PdfMk.FontSizeDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_6=','
-			{
-				newLeafNode(otherlv_6, grammarAccess.getTextObjectAccess().getCommaKeyword_4_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getAlignmentTextAlignmentDefinitionParserRuleCall_4_1_0());
-					}
-					lv_alignment_7_0=ruleTextAlignmentDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"alignment",
-							true,
-							"org.xtext.avi.PdfMk.TextAlignmentDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_8=','
-			{
-				newLeafNode(otherlv_8, grammarAccess.getTextObjectAccess().getCommaKeyword_5_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getTypeFaceTypeFaceDefinitionParserRuleCall_5_1_0());
-					}
-					lv_typeFace_9_0=ruleTypeFaceDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"typeFace",
-							true,
-							"org.xtext.avi.PdfMk.TypeFaceDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_10=','
-			{
-				newLeafNode(otherlv_10, grammarAccess.getTextObjectAccess().getCommaKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getItalicsItalicsDefinitionParserRuleCall_6_1_0());
-					}
-					lv_italics_11_0=ruleItalicsDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"italics",
-							true,
-							"org.xtext.avi.PdfMk.ItalicsDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_12=','
-			{
-				newLeafNode(otherlv_12, grammarAccess.getTextObjectAccess().getCommaKeyword_7_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getWidthWidthDefinitionParserRuleCall_7_1_0());
-					}
-					lv_width_13_0=ruleWidthDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"width",
-							true,
-							"org.xtext.avi.PdfMk.WidthDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_14=','
-			{
-				newLeafNode(otherlv_14, grammarAccess.getTextObjectAccess().getCommaKeyword_8_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getMarginMarginDefinitionParserRuleCall_8_1_0());
-					}
-					lv_margin_15_0=ruleMarginDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"margin",
-							true,
-							"org.xtext.avi.PdfMk.MarginDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_16=','
-			{
-				newLeafNode(otherlv_16, grammarAccess.getTextObjectAccess().getCommaKeyword_9_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTextObjectAccess().getListCounterListCounterDefinitionParserRuleCall_9_1_0());
-					}
-					lv_listCounter_17_0=ruleListCounterDefinition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTextObjectRule());
-						}
-						set(
-							$current,
-							"listCounter",
-							true,
-							"org.xtext.avi.PdfMk.ListCounterDefinition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		otherlv_18='}'
+		otherlv_4='}'
 		{
-			newLeafNode(otherlv_18, grammarAccess.getTextObjectAccess().getRightCurlyBracketKeyword_10());
+			newLeafNode(otherlv_4, grammarAccess.getTextObjectAccess().getRightCurlyBracketKeyword_2());
 		}
 	)
 ;

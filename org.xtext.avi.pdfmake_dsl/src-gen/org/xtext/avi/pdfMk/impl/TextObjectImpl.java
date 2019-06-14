@@ -3,14 +3,21 @@
  */
 package org.xtext.avi.pdfMk.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.TextObject;
+import org.xtext.avi.pdfMk.TextObjectMembersWrapper;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,15 +27,7 @@ import org.xtext.avi.pdfMk.TextObject;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isText <em>Text</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isStyle <em>Style</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isFontSize <em>Font Size</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isAlignment <em>Alignment</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isTypeFace <em>Type Face</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isItalics <em>Italics</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isWidth <em>Width</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isMargin <em>Margin</em>}</li>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isListCounter <em>List Counter</em>}</li>
+ *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#getMembers <em>Members</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,184 +35,14 @@ import org.xtext.avi.pdfMk.TextObject;
 public class TextObjectImpl extends ListElementsImpl implements TextObject
 {
   /**
-   * The default value of the '{@link #isText() <em>Text</em>}' attribute.
+   * The cached value of the '{@link #getMembers() <em>Members</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isText()
+   * @see #getMembers()
    * @generated
    * @ordered
    */
-  protected static final boolean TEXT_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isText() <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isText()
-   * @generated
-   * @ordered
-   */
-  protected boolean text = TEXT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isStyle() <em>Style</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStyle()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean STYLE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isStyle() <em>Style</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isStyle()
-   * @generated
-   * @ordered
-   */
-  protected boolean style = STYLE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isFontSize() <em>Font Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isFontSize()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean FONT_SIZE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isFontSize() <em>Font Size</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isFontSize()
-   * @generated
-   * @ordered
-   */
-  protected boolean fontSize = FONT_SIZE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isAlignment() <em>Alignment</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isAlignment()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean ALIGNMENT_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isAlignment() <em>Alignment</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isAlignment()
-   * @generated
-   * @ordered
-   */
-  protected boolean alignment = ALIGNMENT_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isTypeFace() <em>Type Face</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTypeFace()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean TYPE_FACE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isTypeFace() <em>Type Face</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTypeFace()
-   * @generated
-   * @ordered
-   */
-  protected boolean typeFace = TYPE_FACE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isItalics() <em>Italics</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isItalics()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean ITALICS_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isItalics() <em>Italics</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isItalics()
-   * @generated
-   * @ordered
-   */
-  protected boolean italics = ITALICS_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isWidth() <em>Width</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isWidth()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean WIDTH_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isWidth() <em>Width</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isWidth()
-   * @generated
-   * @ordered
-   */
-  protected boolean width = WIDTH_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isMargin() <em>Margin</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isMargin()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean MARGIN_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isMargin() <em>Margin</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isMargin()
-   * @generated
-   * @ordered
-   */
-  protected boolean margin = MARGIN_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isListCounter() <em>List Counter</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isListCounter()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean LIST_COUNTER_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isListCounter() <em>List Counter</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isListCounter()
-   * @generated
-   * @ordered
-   */
-  protected boolean listCounter = LIST_COUNTER_EDEFAULT;
+  protected EList<TextObjectMembersWrapper> members;
 
   /**
    * <!-- begin-user-doc -->
@@ -241,9 +70,13 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isText()
+  public EList<TextObjectMembersWrapper> getMembers()
   {
-    return text;
+    if (members == null)
+    {
+      members = new EObjectContainmentEList<TextObjectMembersWrapper>(TextObjectMembersWrapper.class, this, PdfMkPackage.TEXT_OBJECT__MEMBERS);
+    }
+    return members;
   }
 
   /**
@@ -251,196 +84,15 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setText(boolean newText)
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    boolean oldText = text;
-    text = newText;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__TEXT, oldText, text));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isStyle()
-  {
-    return style;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStyle(boolean newStyle)
-  {
-    boolean oldStyle = style;
-    style = newStyle;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__STYLE, oldStyle, style));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isFontSize()
-  {
-    return fontSize;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFontSize(boolean newFontSize)
-  {
-    boolean oldFontSize = fontSize;
-    fontSize = newFontSize;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__FONT_SIZE, oldFontSize, fontSize));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isAlignment()
-  {
-    return alignment;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAlignment(boolean newAlignment)
-  {
-    boolean oldAlignment = alignment;
-    alignment = newAlignment;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__ALIGNMENT, oldAlignment, alignment));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isTypeFace()
-  {
-    return typeFace;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTypeFace(boolean newTypeFace)
-  {
-    boolean oldTypeFace = typeFace;
-    typeFace = newTypeFace;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__TYPE_FACE, oldTypeFace, typeFace));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isItalics()
-  {
-    return italics;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setItalics(boolean newItalics)
-  {
-    boolean oldItalics = italics;
-    italics = newItalics;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__ITALICS, oldItalics, italics));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isWidth()
-  {
-    return width;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setWidth(boolean newWidth)
-  {
-    boolean oldWidth = width;
-    width = newWidth;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__WIDTH, oldWidth, width));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isMargin()
-  {
-    return margin;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setMargin(boolean newMargin)
-  {
-    boolean oldMargin = margin;
-    margin = newMargin;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__MARGIN, oldMargin, margin));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isListCounter()
-  {
-    return listCounter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setListCounter(boolean newListCounter)
-  {
-    boolean oldListCounter = listCounter;
-    listCounter = newListCounter;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__LIST_COUNTER, oldListCounter, listCounter));
+    switch (featureID)
+    {
+      case PdfMkPackage.TEXT_OBJECT__MEMBERS:
+        return ((InternalEList<?>)getMembers()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -453,24 +105,8 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__TEXT:
-        return isText();
-      case PdfMkPackage.TEXT_OBJECT__STYLE:
-        return isStyle();
-      case PdfMkPackage.TEXT_OBJECT__FONT_SIZE:
-        return isFontSize();
-      case PdfMkPackage.TEXT_OBJECT__ALIGNMENT:
-        return isAlignment();
-      case PdfMkPackage.TEXT_OBJECT__TYPE_FACE:
-        return isTypeFace();
-      case PdfMkPackage.TEXT_OBJECT__ITALICS:
-        return isItalics();
-      case PdfMkPackage.TEXT_OBJECT__WIDTH:
-        return isWidth();
-      case PdfMkPackage.TEXT_OBJECT__MARGIN:
-        return isMargin();
-      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
-        return isListCounter();
+      case PdfMkPackage.TEXT_OBJECT__MEMBERS:
+        return getMembers();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -480,37 +116,15 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__TEXT:
-        setText((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__STYLE:
-        setStyle((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__FONT_SIZE:
-        setFontSize((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__ALIGNMENT:
-        setAlignment((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__TYPE_FACE:
-        setTypeFace((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__ITALICS:
-        setItalics((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__WIDTH:
-        setWidth((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__MARGIN:
-        setMargin((Boolean)newValue);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
-        setListCounter((Boolean)newValue);
+      case PdfMkPackage.TEXT_OBJECT__MEMBERS:
+        getMembers().clear();
+        getMembers().addAll((Collection<? extends TextObjectMembersWrapper>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -526,32 +140,8 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__TEXT:
-        setText(TEXT_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__STYLE:
-        setStyle(STYLE_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__FONT_SIZE:
-        setFontSize(FONT_SIZE_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__ALIGNMENT:
-        setAlignment(ALIGNMENT_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__TYPE_FACE:
-        setTypeFace(TYPE_FACE_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__ITALICS:
-        setItalics(ITALICS_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__WIDTH:
-        setWidth(WIDTH_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__MARGIN:
-        setMargin(MARGIN_EDEFAULT);
-        return;
-      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
-        setListCounter(LIST_COUNTER_EDEFAULT);
+      case PdfMkPackage.TEXT_OBJECT__MEMBERS:
+        getMembers().clear();
         return;
     }
     super.eUnset(featureID);
@@ -567,59 +157,10 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__TEXT:
-        return text != TEXT_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__STYLE:
-        return style != STYLE_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__FONT_SIZE:
-        return fontSize != FONT_SIZE_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__ALIGNMENT:
-        return alignment != ALIGNMENT_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__TYPE_FACE:
-        return typeFace != TYPE_FACE_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__ITALICS:
-        return italics != ITALICS_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__WIDTH:
-        return width != WIDTH_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__MARGIN:
-        return margin != MARGIN_EDEFAULT;
-      case PdfMkPackage.TEXT_OBJECT__LIST_COUNTER:
-        return listCounter != LIST_COUNTER_EDEFAULT;
+      case PdfMkPackage.TEXT_OBJECT__MEMBERS:
+        return members != null && !members.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (text: ");
-    result.append(text);
-    result.append(", style: ");
-    result.append(style);
-    result.append(", fontSize: ");
-    result.append(fontSize);
-    result.append(", alignment: ");
-    result.append(alignment);
-    result.append(", typeFace: ");
-    result.append(typeFace);
-    result.append(", italics: ");
-    result.append(italics);
-    result.append(", width: ");
-    result.append(width);
-    result.append(", margin: ");
-    result.append(margin);
-    result.append(", listCounter: ");
-    result.append(listCounter);
-    result.append(')');
-    return result.toString();
   }
 
 } //TextObjectImpl

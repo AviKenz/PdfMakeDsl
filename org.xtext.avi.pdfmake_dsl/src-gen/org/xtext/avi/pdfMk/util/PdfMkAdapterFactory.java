@@ -216,6 +216,11 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createTableDefinitionAdapter();
       }
       @Override
+      public Adapter caseTextObjectMembersWrapper(TextObjectMembersWrapper object)
+      {
+        return createTextObjectMembersWrapperAdapter();
+      }
+      @Override
       public Adapter caseTextObject(TextObject object)
       {
         return createTextObjectAdapter();
@@ -728,6 +733,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTableDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextObjectMembersWrapper <em>Text Object Members Wrapper</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TextObjectMembersWrapper
+   * @generated
+   */
+  public Adapter createTextObjectMembersWrapperAdapter()
   {
     return null;
   }

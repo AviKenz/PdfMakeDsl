@@ -276,6 +276,15 @@ public interface PdfMkFactory extends EFactory
   TableDefinition createTableDefinition();
 
   /**
+   * Returns a new object of class '<em>Text Object Members Wrapper</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Object Members Wrapper</em>'.
+   * @generated
+   */
+  TextObjectMembersWrapper createTextObjectMembersWrapper();
+
+  /**
    * Returns a new object of class '<em>Text Object</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

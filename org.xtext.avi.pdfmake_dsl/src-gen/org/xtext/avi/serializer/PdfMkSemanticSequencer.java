@@ -349,14 +349,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     FontSizeDefinition returns FontSizeDefinition
+	 *     TextObjectMembersWrapper returns FontSizeDefinition
 	 *
 	 * Constraint:
 	 *     (key='fontSize' value=INT)
 	 */
 	protected void sequence_FontSizeDefinition(ISerializationContext context, FontSizeDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.FONT_SIZE_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.FONT_SIZE_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.FONT_SIZE_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.FONT_SIZE_DEFINITION__VALUE));
 		}
@@ -527,14 +528,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ItalicsDefinition returns ItalicsDefinition
+	 *     TextObjectMembersWrapper returns ItalicsDefinition
 	 *
 	 * Constraint:
 	 *     (key='italics' value=BooleanType)
 	 */
 	protected void sequence_ItalicsDefinition(ISerializationContext context, ItalicsDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.ITALICS_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.ITALICS_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.ITALICS_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.ITALICS_DEFINITION__VALUE));
 		}
@@ -569,14 +571,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     ListCounterDefinition returns ListCounterDefinition
+	 *     TextObjectMembersWrapper returns ListCounterDefinition
 	 *
 	 * Constraint:
 	 *     (key='counter' value=INT)
 	 */
 	protected void sequence_ListCounterDefinition(ISerializationContext context, ListCounterDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.LIST_COUNTER_DEFINITION__VALUE));
 		}
@@ -716,6 +719,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     MarginDefinition returns MarginDefinition
+	 *     TextObjectMembersWrapper returns MarginDefinition
 	 *
 	 * Constraint:
 	 *     (key='margin' values+=INT? values+=INT*)
@@ -892,14 +896,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     TextDefinition returns TextDefinition
+	 *     TextObjectMembersWrapper returns TextDefinition
 	 *
 	 * Constraint:
 	 *     (key='text' value=STRING)
 	 */
 	protected void sequence_TextDefinition(ISerializationContext context, TextDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__VALUE));
 		}
@@ -916,17 +921,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ListElements returns TextObject
 	 *
 	 * Constraint:
-	 *     (
-	 *         text?=TextDefinition 
-	 *         style?=TextStyleDefinition? 
-	 *         fontSize?=FontSizeDefinition? 
-	 *         alignment?=TextAlignmentDefinition? 
-	 *         typeFace?=TypeFaceDefinition? 
-	 *         italics?=ItalicsDefinition? 
-	 *         width?=WidthDefinition? 
-	 *         margin?=MarginDefinition? 
-	 *         listCounter?=ListCounterDefinition?
-	 *     )
+	 *     (members+=TextObjectMembersWrapper members+=TextObjectMembersWrapper*)
 	 */
 	protected void sequence_TextObject(ISerializationContext context, TextObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -936,14 +931,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     TextStyleDefinition returns TextStyleDefinition
+	 *     TextObjectMembersWrapper returns TextStyleDefinition
 	 *
 	 * Constraint:
 	 *     (key='style' value=STRING)
 	 */
 	protected void sequence_TextStyleDefinition(ISerializationContext context, TextStyleDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__VALUE));
 		}
@@ -957,14 +953,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     TypeFaceDefinition returns TypeFaceDefinition
+	 *     TextObjectMembersWrapper returns TypeFaceDefinition
 	 *
 	 * Constraint:
 	 *     (key='bold' value=BooleanType)
 	 */
 	protected void sequence_TypeFaceDefinition(ISerializationContext context, TypeFaceDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TYPE_FACE_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TYPE_FACE_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TYPE_FACE_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TYPE_FACE_DEFINITION__VALUE));
 		}
@@ -978,14 +975,15 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     WidthDefinition returns WidthDefinition
+	 *     TextObjectMembersWrapper returns WidthDefinition
 	 *
 	 * Constraint:
 	 *     (key='width' value=ColumnTextWidthType)
 	 */
 	protected void sequence_WidthDefinition(ISerializationContext context, WidthDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_OBJECT_MEMBERS_WRAPPER__KEY));
 			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.WIDTH_DEFINITION__VALUE));
 		}

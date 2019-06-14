@@ -7,6 +7,7 @@ import org.eclipse.xtext.validation.Check;
 import org.xtext.avi.pdfMk.ListReversedDefinition;
 import org.xtext.avi.pdfMk.PdfMkPackage;
 import org.xtext.avi.pdfMk.TextDefinition;
+import org.xtext.avi.pdfMk.TextStyleDefinition;
 import org.xtext.avi.validation.AbstractPdfMkValidator;
 
 /**
@@ -29,5 +30,10 @@ public class PdfMkValidator extends AbstractPdfMkValidator {
   @Check
   public void test(final ListReversedDefinition revDef) {
     this.warning("Warn U", PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE, PdfMkValidator.INVALID_NAME);
+  }
+  
+  @Check
+  public void testStyle(final TextStyleDefinition styleDefinition) {
+    this.warning("Warn U", PdfMkPackage.Literals.TEXT_STYLE_DEFINITION__VALUE, PdfMkValidator.INVALID_NAME);
   }
 }
