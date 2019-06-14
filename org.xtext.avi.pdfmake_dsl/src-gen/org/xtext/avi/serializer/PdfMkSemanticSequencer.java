@@ -53,6 +53,7 @@ import org.xtext.avi.pdfMk.TableCellItemElements;
 import org.xtext.avi.pdfMk.TableDefinition;
 import org.xtext.avi.pdfMk.TableObject;
 import org.xtext.avi.pdfMk.TableRowDefinition;
+import org.xtext.avi.pdfMk.TextDefinition;
 import org.xtext.avi.pdfMk.TextObject;
 import org.xtext.avi.pdfMk.TextStyleDefinition;
 import org.xtext.avi.pdfMk.TypeFaceDefinition;
@@ -187,6 +188,9 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case PdfMkPackage.TABLE_ROW_DEFINITION:
 				sequence_TableRowDefinition(context, (TableRowDefinition) semanticObject); 
 				return; 
+			case PdfMkPackage.TEXT_DEFINITION:
+				sequence_TextDefinition(context, (TextDefinition) semanticObject); 
+				return; 
 			case PdfMkPackage.TEXT_OBJECT:
 				sequence_TextObject(context, (TextObject) semanticObject); 
 				return; 
@@ -302,7 +306,7 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ContentObjects returns ContentObjects
 	 *
 	 * Constraint:
-	 *     (value+=ContentObject value+=ContentObject*)
+	 *     (value+=ContentObject value+=ContentObject*)?
 	 */
 	protected void sequence_ContentObjects(ISerializationContext context, ContentObjects semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -887,12 +891,32 @@ public class PdfMkSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     TextDefinition returns TextDefinition
+	 *
+	 * Constraint:
+	 *     (key='text' value=STRING)
+	 */
+	protected void sequence_TextDefinition(ISerializationContext context, TextDefinition semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__KEY));
+			if (transientValues.isValueTransient(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PdfMkPackage.Literals.TEXT_DEFINITION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTextDefinitionAccess().getKeyTextKeyword_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getTextDefinitionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     TextObject returns TextObject
 	 *     ListElements returns TextObject
 	 *
 	 * Constraint:
 	 *     (
-	 *         value='{' 
 	 *         text?=TextDefinition 
 	 *         style?=TextStyleDefinition? 
 	 *         fontSize?=FontSizeDefinition? 

@@ -96,6 +96,11 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
         return createTextStyleDefinitionAdapter();
       }
       @Override
+      public Adapter caseTextDefinition(TextDefinition object)
+      {
+        return createTextDefinitionAdapter();
+      }
+      @Override
       public Adapter caseItalicsDefinition(ItalicsDefinition object)
       {
         return createItalicsDefinitionAdapter();
@@ -363,6 +368,21 @@ public class PdfMkAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTextStyleDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.avi.pdfMk.TextDefinition <em>Text Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.avi.pdfMk.TextDefinition
+   * @generated
+   */
+  public Adapter createTextDefinitionAdapter()
   {
     return null;
   }

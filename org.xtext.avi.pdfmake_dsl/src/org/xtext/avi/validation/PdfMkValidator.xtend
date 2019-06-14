@@ -3,6 +3,10 @@
  */
 package org.xtext.avi.validation
 
+import org.eclipse.xtext.validation.Check
+import org.xtext.avi.pdfMk.TextDefinition
+import org.xtext.avi.pdfMk.PdfMkPackage
+import org.xtext.avi.pdfMk.ListReversedDefinition
 
 /**
  * This class contains custom validation rules. 
@@ -11,7 +15,7 @@ package org.xtext.avi.validation
  */
 class PdfMkValidator extends AbstractPdfMkValidator {
 	
-//	public static val INVALID_NAME = 'invalidName'
+	public static val INVALID_NAME = 'invalidName'
 //
 //	@Check
 //	def checkGreetingStartsWithCapital(Greeting greeting) {
@@ -22,4 +26,17 @@ class PdfMkValidator extends AbstractPdfMkValidator {
 //		}
 //	}
 	
+	
+	@Check
+	def checkText(TextDefinition textDefinition) {
+		if( textDefinition.value.equalsIgnoreCase("a") ) {
+			warning("Text should not be empty", PdfMkPackage.Literals.TEXT_DEFINITION__VALUE, INVALID_NAME);
+		}
+	}
+	
+	@Check
+	def test(ListReversedDefinition revDef) {
+		warning("Warn U", PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE, INVALID_NAME);
+		
+	}
 }

@@ -101,6 +101,13 @@ public class PdfMkSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case PdfMkPackage.TEXT_DEFINITION:
+      {
+        TextDefinition textDefinition = (TextDefinition)theEObject;
+        T result = caseTextDefinition(textDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case PdfMkPackage.ITALICS_DEFINITION:
       {
         ItalicsDefinition italicsDefinition = (ItalicsDefinition)theEObject;
@@ -433,6 +440,22 @@ public class PdfMkSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTextStyleDefinition(TextStyleDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Text Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Text Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTextDefinition(TextDefinition object)
   {
     return null;
   }

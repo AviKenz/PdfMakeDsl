@@ -69,6 +69,7 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
       case PdfMkPackage.STRING_OBJECT: return createStringObject();
       case PdfMkPackage.TYPE_FACE_DEFINITION: return createTypeFaceDefinition();
       case PdfMkPackage.TEXT_STYLE_DEFINITION: return createTextStyleDefinition();
+      case PdfMkPackage.TEXT_DEFINITION: return createTextDefinition();
       case PdfMkPackage.ITALICS_DEFINITION: return createItalicsDefinition();
       case PdfMkPackage.FONT_SIZE_DEFINITION: return createFontSizeDefinition();
       case PdfMkPackage.STYLE_DEFINITION: return createStyleDefinition();
@@ -154,6 +155,17 @@ public class PdfMkFactoryImpl extends EFactoryImpl implements PdfMkFactory
   {
     TextStyleDefinitionImpl textStyleDefinition = new TextStyleDefinitionImpl();
     return textStyleDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextDefinition createTextDefinition()
+  {
+    TextDefinitionImpl textDefinition = new TextDefinitionImpl();
+    return textDefinition;
   }
 
   /**

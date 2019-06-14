@@ -301,10 +301,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:22:7: ( 'text:' )
-            // InternalPdfMk.g:22:9: 'text:'
+            // InternalPdfMk.g:22:7: ( 'alignment' )
+            // InternalPdfMk.g:22:9: 'alignment'
             {
-            match("text:"); 
+            match("alignment"); 
 
 
             }
@@ -362,10 +362,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:25:7: ( 'alignment' )
-            // InternalPdfMk.g:25:9: 'alignment'
+            // InternalPdfMk.g:25:7: ( 'bold' )
+            // InternalPdfMk.g:25:9: 'bold'
             {
-            match("alignment"); 
+            match("bold"); 
 
 
             }
@@ -383,10 +383,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:26:7: ( 'bold' )
-            // InternalPdfMk.g:26:9: 'bold'
+            // InternalPdfMk.g:26:7: ( 'style' )
+            // InternalPdfMk.g:26:9: 'style'
             {
-            match("bold"); 
+            match("style"); 
 
 
             }
@@ -404,10 +404,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:27:7: ( 'style' )
-            // InternalPdfMk.g:27:9: 'style'
+            // InternalPdfMk.g:27:7: ( 'text' )
+            // InternalPdfMk.g:27:9: 'text'
             {
-            match("style"); 
+            match("text"); 
 
 
             }
@@ -824,10 +824,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:10030:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalPdfMk.g:10030:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalPdfMk.g:9997:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalPdfMk.g:9997:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalPdfMk.g:10030:11: ( '^' )?
+            // InternalPdfMk.g:9997:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -836,7 +836,7 @@ public class InternalPdfMkLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalPdfMk.g:10030:11: '^'
+                    // InternalPdfMk.g:9997:11: '^'
                     {
                     match('^'); 
 
@@ -854,7 +854,7 @@ public class InternalPdfMkLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalPdfMk.g:10030:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalPdfMk.g:9997:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -903,10 +903,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:10032:10: ( ( '0' .. '9' )+ )
-            // InternalPdfMk.g:10032:12: ( '0' .. '9' )+
+            // InternalPdfMk.g:9999:10: ( ( '0' .. '9' )+ )
+            // InternalPdfMk.g:9999:12: ( '0' .. '9' )+
             {
-            // InternalPdfMk.g:10032:12: ( '0' .. '9' )+
+            // InternalPdfMk.g:9999:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -920,7 +920,7 @@ public class InternalPdfMkLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalPdfMk.g:10032:13: '0' .. '9'
+            	    // InternalPdfMk.g:9999:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -952,10 +952,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:10034:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalPdfMk.g:10034:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalPdfMk.g:10001:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalPdfMk.g:10001:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalPdfMk.g:10034:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalPdfMk.g:10001:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -973,10 +973,10 @@ public class InternalPdfMkLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalPdfMk.g:10034:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalPdfMk.g:10001:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalPdfMk.g:10034:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalPdfMk.g:10001:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -992,7 +992,7 @@ public class InternalPdfMkLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalPdfMk.g:10034:21: '\\\\' .
+                    	    // InternalPdfMk.g:10001:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1000,7 +1000,7 @@ public class InternalPdfMkLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalPdfMk.g:10034:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalPdfMk.g:10001:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1025,10 +1025,10 @@ public class InternalPdfMkLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalPdfMk.g:10034:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalPdfMk.g:10001:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalPdfMk.g:10034:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalPdfMk.g:10001:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1044,7 +1044,7 @@ public class InternalPdfMkLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalPdfMk.g:10034:54: '\\\\' .
+                    	    // InternalPdfMk.g:10001:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1052,7 +1052,7 @@ public class InternalPdfMkLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalPdfMk.g:10034:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalPdfMk.g:10001:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1095,12 +1095,12 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:10036:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalPdfMk.g:10036:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalPdfMk.g:10003:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalPdfMk.g:10003:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalPdfMk.g:10036:24: ( options {greedy=false; } : . )*
+            // InternalPdfMk.g:10003:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1125,7 +1125,7 @@ public class InternalPdfMkLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalPdfMk.g:10036:52: .
+            	    // InternalPdfMk.g:10003:52: .
             	    {
             	    matchAny(); 
 
@@ -1155,12 +1155,12 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:10038:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalPdfMk.g:10038:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalPdfMk.g:10005:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalPdfMk.g:10005:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalPdfMk.g:10038:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalPdfMk.g:10005:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1173,7 +1173,7 @@ public class InternalPdfMkLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalPdfMk.g:10038:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalPdfMk.g:10005:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1193,7 +1193,7 @@ public class InternalPdfMkLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalPdfMk.g:10038:40: ( ( '\\r' )? '\\n' )?
+            // InternalPdfMk.g:10005:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1202,9 +1202,9 @@ public class InternalPdfMkLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalPdfMk.g:10038:41: ( '\\r' )? '\\n'
+                    // InternalPdfMk.g:10005:41: ( '\\r' )? '\\n'
                     {
-                    // InternalPdfMk.g:10038:41: ( '\\r' )?
+                    // InternalPdfMk.g:10005:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1213,7 +1213,7 @@ public class InternalPdfMkLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalPdfMk.g:10038:41: '\\r'
+                            // InternalPdfMk.g:10005:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1245,10 +1245,10 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:10040:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalPdfMk.g:10040:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPdfMk.g:10007:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalPdfMk.g:10007:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalPdfMk.g:10040:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalPdfMk.g:10007:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1302,8 +1302,8 @@ public class InternalPdfMkLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalPdfMk.g:10042:16: ( . )
-            // InternalPdfMk.g:10042:18: .
+            // InternalPdfMk.g:10009:16: ( . )
+            // InternalPdfMk.g:10009:18: .
             {
             matchAny(); 
 
@@ -1631,19 +1631,19 @@ public class InternalPdfMkLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\6\44\7\uffff\12\44\1\37\2\uffff\3\37\2\uffff\4\44\1\uffff\3\44\1\113\1\114\2\44\1\117\7\uffff\13\44\5\uffff\6\44\1\144\2\uffff\1\44\1\146\1\uffff\16\44\1\167\1\44\1\171\3\44\1\uffff\1\44\1\uffff\1\44\1\177\1\u0080\15\44\3\uffff\1\u008e\1\u008f\3\44\2\uffff\1\u0094\1\44\1\u0096\1\u0097\1\44\1\u0099\7\44\2\uffff\3\44\1\u00a4\1\uffff\1\44\2\uffff\1\44\1\uffff\2\44\1\u00a9\1\44\1\u00ab\3\44\1\u00af\1\44\1\uffff\1\u00b1\1\u00b2\1\u00b3\1\u00b4\1\uffff\1\44\1\uffff\2\44\1\u00b8\1\uffff\1\44\4\uffff\2\44\1\u00bc\1\uffff\1\u00bd\1\44\1\u00bf\2\uffff\1\44\1\uffff\1\u00c1\1\uffff";
+        "\1\uffff\6\44\5\uffff\1\44\2\uffff\11\44\1\37\2\uffff\3\37\2\uffff\4\44\1\uffff\3\44\1\113\1\114\2\44\1\117\5\uffff\1\44\2\uffff\12\44\5\uffff\6\44\1\144\2\uffff\1\44\1\146\1\uffff\16\44\1\167\1\170\1\171\3\44\1\uffff\1\44\1\uffff\1\44\1\177\1\u0080\15\44\3\uffff\1\u008e\1\u008f\3\44\2\uffff\1\u0094\1\44\1\u0096\1\u0097\1\44\1\u0099\7\44\2\uffff\3\44\1\u00a4\1\uffff\1\44\2\uffff\1\44\1\uffff\2\44\1\u00a9\1\44\1\u00ab\3\44\1\u00af\1\44\1\uffff\1\u00b1\1\u00b2\1\u00b3\1\u00b4\1\uffff\1\44\1\uffff\2\44\1\u00b8\1\uffff\1\44\4\uffff\2\44\1\u00bc\1\uffff\1\u00bd\1\44\1\u00bf\2\uffff\1\44\1\uffff\1\u00c1\1\uffff";
     static final String DFA12_eofS =
         "\u00c2\uffff";
     static final String DFA12_minS =
-        "\1\0\2\141\2\154\1\141\1\144\7\uffff\1\154\1\157\1\164\1\155\1\151\1\157\1\141\1\145\1\141\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\165\1\170\1\160\1\142\1\uffff\1\154\1\156\1\164\2\60\1\141\1\162\1\60\7\uffff\1\151\1\144\1\171\2\141\1\144\1\154\1\162\1\151\1\147\1\166\5\uffff\1\145\1\164\1\145\1\154\1\163\1\164\1\60\2\uffff\1\143\1\60\1\uffff\1\147\1\144\1\171\2\154\1\147\1\164\1\157\1\156\1\164\2\147\2\145\1\60\1\72\1\60\2\145\1\123\1\uffff\1\151\1\uffff\1\156\2\60\1\145\1\151\1\145\1\150\1\155\1\162\1\164\1\145\1\151\1\145\1\150\1\102\1\162\3\uffff\2\60\1\151\1\164\1\155\2\uffff\1\60\1\143\2\60\1\156\1\60\1\145\2\156\1\162\1\164\1\162\1\163\2\uffff\1\172\1\171\1\145\1\60\1\uffff\1\163\2\uffff\1\163\1\uffff\1\162\1\164\1\60\1\103\1\60\3\145\1\60\1\156\1\uffff\4\60\1\uffff\1\157\1\uffff\1\141\1\144\1\60\1\uffff\1\164\4\uffff\1\154\1\153\1\60\1\uffff\1\60\1\157\1\60\2\uffff\1\162\1\uffff\1\60\1\uffff";
+        "\1\0\2\141\2\154\1\141\1\144\5\uffff\1\154\2\uffff\1\157\1\164\1\155\1\151\1\157\1\141\1\145\1\141\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\165\1\170\1\160\1\142\1\uffff\1\154\1\156\1\164\2\60\1\141\1\162\1\60\5\uffff\1\151\2\uffff\1\144\1\171\2\141\1\144\1\154\1\162\1\151\1\147\1\166\5\uffff\1\145\1\164\1\145\1\154\1\163\1\164\1\60\2\uffff\1\143\1\60\1\uffff\1\147\1\144\1\171\2\154\1\147\1\164\1\157\1\156\1\164\2\147\2\145\3\60\2\145\1\123\1\uffff\1\151\1\uffff\1\156\2\60\1\145\1\151\1\145\1\150\1\155\1\162\1\164\1\145\1\151\1\145\1\150\1\102\1\162\3\uffff\2\60\1\151\1\164\1\155\2\uffff\1\60\1\143\2\60\1\156\1\60\1\145\2\156\1\162\1\164\1\162\1\163\2\uffff\1\172\1\171\1\145\1\60\1\uffff\1\163\2\uffff\1\163\1\uffff\1\162\1\164\1\60\1\103\1\60\3\145\1\60\1\156\1\uffff\4\60\1\uffff\1\157\1\uffff\1\141\1\144\1\60\1\uffff\1\164\4\uffff\1\154\1\153\1\60\1\uffff\1\60\1\157\1\60\2\uffff\1\162\1\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\171\1\157\1\154\1\160\1\141\1\144\7\uffff\1\154\1\157\2\164\1\151\1\157\1\141\1\145\1\141\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\165\1\170\1\160\1\142\1\uffff\1\154\1\156\1\164\2\172\1\141\1\162\1\172\7\uffff\1\151\1\154\1\171\2\141\1\144\1\165\1\162\1\151\1\147\1\166\5\uffff\1\145\1\164\1\145\1\154\1\163\1\164\1\172\2\uffff\1\143\1\172\1\uffff\1\147\1\144\1\171\2\154\1\147\1\164\1\165\1\156\1\164\1\153\1\147\2\145\1\172\1\72\1\172\2\145\1\123\1\uffff\1\151\1\uffff\1\156\2\172\1\145\1\151\1\145\1\150\1\155\1\162\1\164\1\145\1\151\1\145\1\150\1\102\1\162\3\uffff\2\172\1\151\1\164\1\155\2\uffff\1\172\1\143\2\172\1\156\1\172\1\145\2\156\1\162\1\164\1\162\1\163\2\uffff\1\172\1\171\1\145\1\172\1\uffff\1\163\2\uffff\1\163\1\uffff\1\162\1\164\1\172\1\103\1\172\3\145\1\172\1\156\1\uffff\4\172\1\uffff\1\157\1\uffff\1\141\1\144\1\172\1\uffff\1\164\4\uffff\1\154\1\153\1\172\1\uffff\1\172\1\157\1\172\2\uffff\1\162\1\uffff\1\172\1\uffff";
+        "\1\uffff\1\171\1\157\1\154\1\160\1\141\1\144\5\uffff\1\154\2\uffff\1\157\2\164\1\151\1\157\1\141\1\145\1\141\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\165\1\170\1\160\1\142\1\uffff\1\154\1\156\1\164\2\172\1\141\1\162\1\172\5\uffff\1\151\2\uffff\1\154\1\171\2\141\1\144\1\165\1\162\1\151\1\147\1\166\5\uffff\1\145\1\164\1\145\1\154\1\163\1\164\1\172\2\uffff\1\143\1\172\1\uffff\1\147\1\144\1\171\2\154\1\147\1\164\1\165\1\156\1\164\1\153\1\147\2\145\3\172\2\145\1\123\1\uffff\1\151\1\uffff\1\156\2\172\1\145\1\151\1\145\1\150\1\155\1\162\1\164\1\145\1\151\1\145\1\150\1\102\1\162\3\uffff\2\172\1\151\1\164\1\155\2\uffff\1\172\1\143\2\172\1\156\1\172\1\145\2\156\1\162\1\164\1\162\1\163\2\uffff\1\172\1\171\1\145\1\172\1\uffff\1\163\2\uffff\1\163\1\uffff\1\162\1\164\1\172\1\103\1\172\3\145\1\172\1\156\1\uffff\4\172\1\uffff\1\157\1\uffff\1\141\1\144\1\172\1\uffff\1\164\4\uffff\1\154\1\153\1\172\1\uffff\1\172\1\157\1\172\2\uffff\1\162\1\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\7\uffff\1\7\1\10\1\11\1\12\1\13\1\15\1\16\13\uffff\1\45\1\46\3\uffff\1\52\1\53\4\uffff\1\45\10\uffff\1\7\1\10\1\11\1\12\1\13\1\15\1\16\13\uffff\1\46\1\47\1\50\1\51\1\52\7\uffff\1\3\1\4\2\uffff\1\6\24\uffff\1\32\1\uffff\1\5\20\uffff\1\1\1\14\1\36\5\uffff\1\20\1\41\15\uffff\1\42\1\2\4\uffff\1\21\1\uffff\1\27\1\24\1\uffff\1\37\12\uffff\1\43\4\uffff\1\26\1\uffff\1\30\3\uffff\1\33\1\uffff\1\22\1\25\1\35\1\44\3\uffff\1\23\3\uffff\1\34\1\17\1\uffff\1\31\1\uffff\1\40";
+        "\7\uffff\1\7\1\10\1\11\1\12\1\13\1\uffff\1\15\1\16\12\uffff\1\45\1\46\3\uffff\1\52\1\53\4\uffff\1\45\10\uffff\1\7\1\10\1\11\1\12\1\13\1\uffff\1\15\1\16\12\uffff\1\46\1\47\1\50\1\51\1\52\7\uffff\1\3\1\4\2\uffff\1\6\24\uffff\1\32\1\uffff\1\5\20\uffff\1\1\1\21\1\36\5\uffff\1\17\1\41\15\uffff\1\42\1\2\4\uffff\1\20\1\uffff\1\27\1\24\1\uffff\1\37\12\uffff\1\43\4\uffff\1\26\1\uffff\1\30\3\uffff\1\33\1\uffff\1\22\1\25\1\35\1\44\3\uffff\1\23\3\uffff\1\34\1\14\1\uffff\1\31\1\uffff\1\40";
     static final String DFA12_specialS =
         "\1\1\32\uffff\1\2\1\0\u00a5\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\37\2\36\2\37\1\36\22\37\1\36\1\37\1\33\4\37\1\34\4\37\1\12\2\37\1\35\12\32\1\13\2\37\1\7\3\37\32\31\1\14\1\37\1\15\1\30\1\31\1\37\1\16\1\17\1\23\1\6\1\31\1\2\1\31\1\25\1\21\3\31\1\24\1\31\1\4\1\26\1\31\1\27\1\20\1\1\1\3\1\5\1\22\3\31\1\10\1\37\1\11\uff82\37",
+            "\11\37\2\36\2\37\1\36\22\37\1\36\1\37\1\33\4\37\1\34\4\37\1\12\2\37\1\35\12\32\1\13\2\37\1\7\3\37\32\31\1\15\1\37\1\16\1\30\1\31\1\37\1\14\1\17\1\23\1\6\1\31\1\2\1\31\1\25\1\21\3\31\1\24\1\31\1\4\1\26\1\31\1\27\1\20\1\1\1\3\1\5\1\22\3\31\1\10\1\37\1\11\uff82\37",
             "\1\43\3\uffff\1\41\14\uffff\1\40\6\uffff\1\42",
             "\1\45\7\uffff\1\47\5\uffff\1\46",
             "\1\50",
@@ -1655,9 +1655,9 @@ public class InternalPdfMkLexer extends Lexer {
             "",
             "",
             "",
+            "\1\62",
             "",
             "",
-            "\1\64",
             "\1\65",
             "\1\66",
             "\1\70\6\uffff\1\67",
@@ -1693,9 +1693,9 @@ public class InternalPdfMkLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
             "\1\120",
+            "",
+            "",
             "\1\122\7\uffff\1\121",
             "\1\123",
             "\1\124",
@@ -1738,7 +1738,7 @@ public class InternalPdfMkLexer extends Lexer {
             "\1\165",
             "\1\166",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
-            "\1\170",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             "\1\172",
             "\1\173",
@@ -1911,11 +1911,11 @@ public class InternalPdfMkLexer extends Lexer {
 
                         else if ( (LA12_0==':') ) {s = 11;}
 
-                        else if ( (LA12_0=='[') ) {s = 12;}
+                        else if ( (LA12_0=='a') ) {s = 12;}
 
-                        else if ( (LA12_0==']') ) {s = 13;}
+                        else if ( (LA12_0=='[') ) {s = 13;}
 
-                        else if ( (LA12_0=='a') ) {s = 14;}
+                        else if ( (LA12_0==']') ) {s = 14;}
 
                         else if ( (LA12_0=='b') ) {s = 15;}
 

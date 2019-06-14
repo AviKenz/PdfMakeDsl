@@ -6,6 +6,7 @@ generate pdfMk "http://www.xtext.org/avi/PdfMk"
 // TODO [L] autovervollstaendigung beim style
 // TODO [L] stack for style see playground-margin
 // TODO [M] fix semi-column problem see like by ContentObjects
+// TODO [I] for import "http://www.xtext.org/avi/PdfMk"
 /******************** ********************/
 
 
@@ -14,7 +15,6 @@ generate pdfMk "http://www.xtext.org/avi/PdfMk"
 /************ Root Model ****************/
 DocDefinition:
 	"var" "dd" "=" "{" content=Content ("," styles=Styles)? "}";
-
 
 
 
@@ -40,7 +40,7 @@ TextStyleDefinition:
 	key="style" ":" value=STRING;
 	
 TextDefinition:
-	"text:" STRING | "[" STRING "]";
+	key="text" ":" value=STRING;
 	
 // TODO [L] add validattion rule (Enums String are not supported)
 TextAlignmentDefinition:
@@ -127,8 +127,8 @@ TableDefinition:
 /******************** Objects definition ********************/
 // TODO [M] write grammar to support text in []. see playground-style3
 TextObject: 
-	value="{" text?=TextDefinition 
-			  ("," style?=TextStyleDefinition)? 
+	"{" text?=TextDefinition 
+			  ("," style?=TextStyleDefinition)?
 			  ("," fontSize?=FontSizeDefinition)? 
 			  ("," alignment?=TextAlignmentDefinition)? 
 			  ("," typeFace?=TypeFaceDefinition)? 
@@ -207,7 +207,7 @@ ContentObject:
 	value=(StringObject|TextObject|ColumnTextObject|ImageObject|ListObject|TableObject);
 	
 ContentObjects:
-	"[" 
+	{ContentObjects} "[" 
 		(value+=ContentObject
 		("," value+=ContentObject)* 
 		

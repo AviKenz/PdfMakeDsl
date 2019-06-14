@@ -20,7 +20,6 @@ import org.xtext.avi.pdfMk.TextObject;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isText <em>Text</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isStyle <em>Style</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.impl.TextObjectImpl#isFontSize <em>Font Size</em>}</li>
@@ -36,26 +35,6 @@ import org.xtext.avi.pdfMk.TextObject;
  */
 public class TextObjectImpl extends ListElementsImpl implements TextObject
 {
-  /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
-
   /**
    * The default value of the '{@link #isText() <em>Text</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -255,29 +234,6 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   protected EClass eStaticClass()
   {
     return PdfMkPackage.Literals.TEXT_OBJECT;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getValue()
-  {
-    return value;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setValue(String newValue)
-  {
-    String oldValue = value;
-    value = newValue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PdfMkPackage.TEXT_OBJECT__VALUE, oldValue, value));
   }
 
   /**
@@ -497,8 +453,6 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__VALUE:
-        return getValue();
       case PdfMkPackage.TEXT_OBJECT__TEXT:
         return isText();
       case PdfMkPackage.TEXT_OBJECT__STYLE:
@@ -531,9 +485,6 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__VALUE:
-        setValue((String)newValue);
-        return;
       case PdfMkPackage.TEXT_OBJECT__TEXT:
         setText((Boolean)newValue);
         return;
@@ -575,9 +526,6 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__VALUE:
-        setValue(VALUE_EDEFAULT);
-        return;
       case PdfMkPackage.TEXT_OBJECT__TEXT:
         setText(TEXT_EDEFAULT);
         return;
@@ -619,8 +567,6 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
   {
     switch (featureID)
     {
-      case PdfMkPackage.TEXT_OBJECT__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
       case PdfMkPackage.TEXT_OBJECT__TEXT:
         return text != TEXT_EDEFAULT;
       case PdfMkPackage.TEXT_OBJECT__STYLE:
@@ -654,9 +600,7 @@ public class TextObjectImpl extends ListElementsImpl implements TextObject
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (value: ");
-    result.append(value);
-    result.append(", text: ");
+    result.append(" (text: ");
     result.append(text);
     result.append(", style: ");
     result.append(style);

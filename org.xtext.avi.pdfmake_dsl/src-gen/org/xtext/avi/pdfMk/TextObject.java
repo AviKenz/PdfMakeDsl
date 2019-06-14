@@ -13,7 +13,6 @@ package org.xtext.avi.pdfMk;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.avi.pdfMk.TextObject#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isText <em>Text</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isStyle <em>Style</em>}</li>
  *   <li>{@link org.xtext.avi.pdfMk.TextObject#isFontSize <em>Font Size</em>}</li>
@@ -31,32 +30,6 @@ package org.xtext.avi.pdfMk;
  */
 public interface TextObject extends ListElements
 {
-  /**
-   * Returns the value of the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Value</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
-   * @see org.xtext.avi.pdfMk.PdfMkPackage#getTextObject_Value()
-   * @model
-   * @generated
-   */
-  String getValue();
-
-  /**
-   * Sets the value of the '{@link org.xtext.avi.pdfMk.TextObject#getValue <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' attribute.
-   * @see #getValue()
-   * @generated
-   */
-  void setValue(String value);
-
   /**
    * Returns the value of the '<em><b>Text</b></em>' attribute.
    * <!-- begin-user-doc -->

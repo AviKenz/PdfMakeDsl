@@ -3,9 +3,9 @@
 '='=17
 '['=23
 ']'=24
-'alignment'=25
+'alignment'=22
 'body'=43
-'bold'=26
+'bold'=25
 'color'=41
 'columns'=31
 'content'=46
@@ -23,10 +23,10 @@
 'opacity'=37
 'pageBreak'=35
 'reversed'=38
-'style'=27
+'style'=26
 'styles'=45
 'table'=44
-'text:'=22
+'text'=27
 'true'=11
 'type'=40
 'ul'=13

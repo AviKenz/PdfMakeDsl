@@ -33,8 +33,6 @@ public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (ruleCall.getRule() == grammarAccess.getTextAlignmentDefinitionRule())
 			return getTextAlignmentDefinitionToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getTextDefinitionRule())
-			return getTextDefinitionToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -46,16 +44,6 @@ public class PdfMkSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "alignment:\"\"";
-	}
-	
-	/**
-	 * TextDefinition:
-	 * 	"text:" STRING | "[" STRING "]";
-	 */
-	protected String getTextDefinitionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "text:\"\"";
 	}
 	
 	@Override

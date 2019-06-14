@@ -60,6 +60,15 @@ public interface PdfMkFactory extends EFactory
   TextStyleDefinition createTextStyleDefinition();
 
   /**
+   * Returns a new object of class '<em>Text Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Definition</em>'.
+   * @generated
+   */
+  TextDefinition createTextDefinition();
+
+  /**
    * Returns a new object of class '<em>Italics Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -3,6 +3,10 @@
  */
 package org.xtext.avi.validation;
 
+import org.eclipse.xtext.validation.Check;
+import org.xtext.avi.pdfMk.ListReversedDefinition;
+import org.xtext.avi.pdfMk.PdfMkPackage;
+import org.xtext.avi.pdfMk.TextDefinition;
 import org.xtext.avi.validation.AbstractPdfMkValidator;
 
 /**
@@ -12,4 +16,18 @@ import org.xtext.avi.validation.AbstractPdfMkValidator;
  */
 @SuppressWarnings("all")
 public class PdfMkValidator extends AbstractPdfMkValidator {
+  public static final String INVALID_NAME = "invalidName";
+  
+  @Check
+  public void checkText(final TextDefinition textDefinition) {
+    boolean _equalsIgnoreCase = textDefinition.getValue().equalsIgnoreCase("a");
+    if (_equalsIgnoreCase) {
+      this.warning("Text should not be empty", PdfMkPackage.Literals.TEXT_DEFINITION__VALUE, PdfMkValidator.INVALID_NAME);
+    }
+  }
+  
+  @Check
+  public void test(final ListReversedDefinition revDef) {
+    this.warning("Warn U", PdfMkPackage.Literals.LIST_REVERSED_DEFINITION__VALUE, PdfMkValidator.INVALID_NAME);
+  }
 }
