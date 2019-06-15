@@ -7,6 +7,10 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import org.xtext.avi.pdfMk.TextObject
+import org.xtext.avi.pdfMk.TextObjectMembersWrapper
+import org.xtext.avi.pdfMk.TextDefinition
+import org.xtext.avi.pdfMk.StringObject
 
 /**
  * Generates code from your model files on save.
@@ -21,5 +25,19 @@ class PdfMkGenerator extends AbstractGenerator {
 //				.filter(Greeting)
 //				.map[name]
 //				.join(', '))
+
+//		for(item : resource.allContents.toIterable.filter(TextDefinition)) {
+//			fsa.generateFile("generateText.txt", item.compile);
+//		}
+
+		// extract plain text
+		fsa.generateFile("report.txt", "+++PLAIN TEXT+++ \r\n\r\n\r\n" + resource.allContents.filter(TextDefinition)
+																				.map[value].join("\r\n") + "" 
+																		  + resource.allContents.filter(StringObject)
+																			    .map[value].join("\r\n"));
+																			    
 	}
+	
+
+	
 }
