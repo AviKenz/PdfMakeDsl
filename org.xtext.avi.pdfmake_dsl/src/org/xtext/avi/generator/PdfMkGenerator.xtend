@@ -7,10 +7,12 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import org.xtext.avi.pdfMk.TextObject
-import org.xtext.avi.pdfMk.TextObjectMembersWrapper
+import org.xtext.avi.pdfMk.Content
+import java.util.Iterator
 import org.xtext.avi.pdfMk.TextDefinition
 import org.xtext.avi.pdfMk.StringObject
+import org.xtext.avi.pdfMk.StyleDefinition
+import org.xtext.avi.pdfMk.ImageDefintion
 
 /**
  * Generates code from your model files on save.
@@ -18,6 +20,8 @@ import org.xtext.avi.pdfMk.StringObject
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class PdfMkGenerator extends AbstractGenerator {
+	
+	static final String REPORT_FILE_NAME = "report.txt";
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 //		fsa.generateFile('greetings.txt', 'People to greet: ' + 
@@ -31,13 +35,45 @@ class PdfMkGenerator extends AbstractGenerator {
 //		}
 
 		// extract plain text
-		fsa.generateFile("report.txt", "+++PLAIN TEXT+++ \r\n\r\n\r\n" + resource.allContents.filter(TextDefinition)
-																				.map[value].join("\r\n") + "" 
-																		  + resource.allContents.filter(StringObject)
-																			    .map[value].join("\r\n"));
-																			    
+		fsa.generateFile(REPORT_FILE_NAME, 
+		
+			"+++ Plain text +++ \r\n" + resource.allContents.filter(TextDefinition)
+												.map[value].join("\r\n") + "" 
+										    + resource.allContents.filter(StringObject)
+											    .map[value].join("\r\n") +
+				
+			"\r\n\r\n\r\n +++ Image paths +++ \r\n" + resource.allContents.filter(ImageDefintion)
+												.map[value].join(" \r\n") +
+											    
+		    "\r\n\r\n\r\n +++ Defined styles +++ \r\n" + resource.allContents.filter(StyleDefinition)
+		    									.map[key].join(", ") +
+		    									
+			"\r\n\r\n\r\n +++ Counters +++ \r\n" + resource.allContents.toIterable.filter(TextDefinition).compile
+											    
+	    );
 	}
 	
-
+	def compile(Iterable<TextDefinition> textDefinition) {
+		var wordCount = 0;
+		var letterCount = 0;
+//		for(i:0 ..< textDefinition.size) {
+//			res += textDefinition.get(i).key;
+//			res += " haha ";
+//			res += textDefinition.get(i).value;
+//		}
+		val itor = textDefinition.iterator;
+		while( itor.hasNext() ) {
+			val el = itor.next();
+			// count words
+			val words = el.value.split(" ");
+			wordCount += words.size;
+			
+			// count letters
+			for(i:0 ..< words.size) {
+				letterCount += words.get(i).length;
+			}
+		}
+		return "Words: " + wordCount + " | Letters: " + letterCount;
+	}
 	
 }
